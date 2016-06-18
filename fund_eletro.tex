@@ -3,6 +3,7 @@
 \section{Introdução}
 
 \section{Fatos experimentais}
+
 \subsection{Lei de Gauss para os fluxos elétrico e magnético}
 De acordo com \cite{jackson_classical_1999} e \cite{sommerfeld_52} , os conceitos, definições e resultados em eletromagnetismo clássico partem das experiências de Cavendish e Coulomb no final do Séc. $XVIII$. A partir desses experimentos foi estabelecida a Lei de Coulomb
 \begin{equation}\label{eq.forc_elet}
@@ -96,14 +97,36 @@ Na demonstração acima escolhemos uma esfera como \textit{superfície Gaussiana
 \caption{\textit{Esfera Gaussiana enclausurando uma carga positiva $q$. Nessas condições, o ângulo entre o vetor campo elétrico e o vetor normal à superfície infinitesimal $d\textbf{A}$ é zero.}}
 \label{fig.esfe_gauss}
 \end{figure}
-\begin{huge}
-INCLUIR AQUI DEFINIÇÕES BÁSICAS SOBRE CAMPO MAGNÉTICO
-\end{huge}
+
+Uma carga elétrica produz um campo elétrico, e de maneira similar uma barra magnética, ou ímã, produz um \textit{campo magnético} $\textbf{B}$. Um ímã possui um polo norte de onde partem as linhas de campo magnético e um polo sul por onde as linhas de campo magnético retornam ao ímã (figura \ref{fig.barras_mag}). Diferentemente das cargas elétricas que são observadas isoldamente na natureza, os dois polos magnéticos sempre aparecem aos pares, ou seja, monopolos magnéticos não existem isoladamente apesar de a suposição de sua existência ser de interesse teórico. Assim, sempre que um ímã é fracionado, mesmo que em partes muito elementares, o resultado sempre será um novo ímã com dois polos magnéticos conforme a figura \ref{fig.barras_mag}.
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=.7]{barras_magn}
+\caption{\textit{Barras magnéticas onde polos de mesmo sinal se repelem e polos de sinais contrários se atraem.}}
+\label{fig.barras_mag}
+\end{figure}
+Como não existem monopolos magnéticos, o campo magnético deve ser definido de forma diferente do campo elétrico, e experimentalmente foram observadas algumas características relacionadas ao movimento de uma carga elétrica $q$ com velocidade $\textbf{v}$ num campo magnético $\textbf{B}$:
+\begin{itemize}
+\item a magnitude da força magnética $\textbf{F}_B$ é proporcional à $v$, $B$ e $q$, onde $v$ e $B$ são as magnitudes da velocidade e do campo magnético respectivamente,
+\item a direção de $\textbf{F}_B$ é perpendicular ao plano formado por $\textbf{v}$ e $\textbf{B}$,
+\item $\textbf{F}_B$ é proporcional ao $\sin\theta$, o ângulo formado por $\textbf{v}$ e $\textbf{B}$. Se $\textbf{v}$ e $\textbf{B}$ são paralelos então $\textbf{F}_B=0$, e
+\item o sentido de $\textbf{F}_B$ depende do sinal da carga $q$.
+\end{itemize}
+Essas observações são ilustradas na figura \ref{fig.froca_mag_veloc} e a força magnética é definida como
+\begin{equation*}
+\textbf{F}_B=q\textbf{v}\times\textbf{B}.
+\end{equation*}
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=.5]{forca_camp_mag_veloc}
+\caption{\textit{Força magnética agindo numa carga elétrica que se desloca num campo magnético.}}
+\label{fig.froca_mag_veloc}
+\end{figure}
 Teoricamente, poderíamos tentar determinar a lei de Gauss para o fluxo magnético com o mesmo procedimento aplicado ao fluxo elétrico e obter
 \begin{equation*}
 \Phi_\textbf{B}=\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=\frac{q_m}{\mu_0},
 \end{equation*} 
-onde $q_m$ é a carga magnética (suposto monopolo magnético) enclausurado pela superfície Gaussiana, $B$ é o campo magnético e $\mu_0$ é a permeabilidade magnética no vácuo. No entanto, não foi constatada a existência de qualquer carga magnética isolada mesmo após muitos esforços. Como $q_m=0$, temos que a lei de Gauss para o magnetismo é
+onde $q_m$ é a carga magnética (suposto monopolo magnético) enclausurado pela superfície Gaussiana, $B$ é o campo magnético e $\mu_0$ é a \textit{permeabilidade magnética no vácuo}. No entanto, não foi constatada a existência de qualquer carga magnética isolada mesmo após muitos esforços. Como $q_m=0$, temos que a lei de Gauss para o magnetismo é
 \begin{equation}\label{eq.gauss_flux_mag}
 \Phi_\textbf{B}=\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=0.
 \end{equation}
