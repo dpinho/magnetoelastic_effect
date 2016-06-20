@@ -15,7 +15,7 @@ O campo elétrico $\textbf{E}$ é definido como sendo a força elétrica por uni
 \begin{equation}\label{eq.camp_elet}
 \textbf{E}=\lim_{q_2\to 0}\frac{\textbf{F}}{q_2}.
 \end{equation}
-A carga de prova foi tomada infinitesimalmente pequena para que o campo gerado por ela não perturbe a carga fonte. Experimentalmente, tanto a direção da força como a razão entre a força e a quantidade de carga vão se tornando constantes à medida que a quantidade de carga se torna cada vez menor, definindo a magnitude e a direção do campo elétrico. No SI, a unidade de medida de carga é o \textit{coulomb} $(C)$, o campo elétrico é o \textit{newton/coulomb} $(N/C)$ ou o \textit{volt/metro} $(V/m)$, e a constante $k=(4\pi\,\epsilon_0)^{-1}$ onde $\epsilon_0\simeq8.854\times10^{-12}$ é a permissividade elétrica no vácuo medida em \textit{farad/m} $(F/m)$.
+A carga de prova foi tomada infinitesimalmente pequena para que o campo gerado por ela não perturbe a carga fonte. Experimentalmente, tanto a direção da força como a razão entre a força e a quantidade de carga vão se tornando constantes à medida que a quantidade de carga se torna cada vez menor, definindo a magnitude e a direção do campo elétrico. No SI, a unidade de medida de carga é o \textit{coulomb} $(C)$, o campo elétrico é o \textit{newton/coulomb} $(N/C)$ ou o \textit{volt/metro} $(V/m)$, e a constante $k=(4\pi\,\epsilon_0)^{-1}$ onde $\epsilon_0\simeq8.854\times10^{-12}$ é a \textit{permissividade elétrica no vácuo} medida em \textit{farad/m} $(F/m)$.
 
 Substituindo a equação \ref{eq.camp_elet} em \ref{eq.forc_elet} temos que o campo elétrico agindo num ponto $\textbf{x}$ qualquer devido a uma carga $q_1$ no ponto $\textbf{x}_1$ é
 \begin{equation}\label{eq.campo_eletrico}
@@ -50,7 +50,7 @@ medida, no SI, em $C/m^3$. A quantidade total de carga $Q=\sum_i \Delta\,q_i$ no
 Q=\int_{V}\rho(\textbf{x}_0)\,dV.
 \end{equation*}
 
-O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétrico que atravessa uma dada superfície, e é dado pela equação
+O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétrico que atravessam uma dada superfície, e é dado pela equação
 \begin{equation*}
 \Phi_\textbf{E}=\textbf{E}\cdot\textbf{A}. 
 \end{equation*} 
@@ -93,7 +93,7 @@ Na demonstração acima escolhemos uma esfera como \textit{superfície Gaussiana
 \end{equation*}
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=.6]{esfera_gaussiana}
+\includegraphics[scale=.3]{esfera_gaussiana}
 \caption{\textit{Esfera Gaussiana enclausurando uma carga positiva $q$. Nessas condições, o ângulo entre o vetor campo elétrico e o vetor normal à superfície infinitesimal $d\textbf{A}$ é zero.}}
 \label{fig.esfe_gauss}
 \end{figure}
@@ -118,7 +118,7 @@ Essas observações são ilustradas na figura \ref{fig.froca_mag_veloc} e a for�
 \end{equation*}
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=.5]{forca_camp_mag_veloc}
+\includegraphics[scale=.4]{forca_camp_mag_veloc}
 \caption{\textit{Força magnética agindo numa carga elétrica que se desloca num campo magnético.}}
 \label{fig.froca_mag_veloc}
 \end{figure}
@@ -126,7 +126,7 @@ Teoricamente, poderíamos tentar determinar a lei de Gauss para o fluxo magnéti
 \begin{equation*}
 \Phi_\textbf{B}=\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=\frac{q_m}{\mu_0},
 \end{equation*} 
-onde $q_m$ é a carga magnética (suposto monopolo magnético) enclausurado pela superfície Gaussiana, $B$ é o campo magnético e $\mu_0$ é a \textit{permeabilidade magnética no vácuo}. No entanto, não foi constatada a existência de qualquer carga magnética isolada mesmo após muitos esforços. Como $q_m=0$, temos que a lei de Gauss para o magnetismo é
+onde $q_m$ é a carga magnética (suposto monopolo magnético) enclausurado pela superfície Gaussiana, $B$ é o campo magnético e $\mu_0$ é a \textit{permeabilidade magnética no vácuo} com valor $\mu_0=4\,\pi\times 10^{-7} T.m/A$. No entanto, não foi constatada a existência de qualquer carga magnética isolada mesmo após muitos esforços. Como $q_m=0$, temos que a lei de Gauss para o magnetismo é
 \begin{equation}\label{eq.gauss_flux_mag}
 \Phi_\textbf{B}=\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=0.
 \end{equation}
@@ -138,7 +138,53 @@ Conforme podemos ver na figura tal, a equação \ref{eq.gauss_flux_mag} implica 
 \label{fig.flux_elet_magn}
 \end{figure}
 
+\subsection{A Lei de Ampère}
+Correntes elétricas podem ser produzidas por cargas elétricas que se movem num fio condutor. Essas correntes elétricas são fontes de campos magnéticos $d\,\textbf{B}$, num determinado ponto $x$, e que podem ser calculados em função da corrente $I$ num intervalo infinitesimal $d\,\textbf{l}$ do fio. Visualização na figura \ref{fig.corrente_fio}. A fonte de corrente infinitesimal é dada por $I\,d\,\textbf{l}$ e $r$ é a distância entre o ponto de aplicação do campo magnético e a fonte de corrente infinitesimal. O vetor $\textbf{n}$ é o vetor normal que aponta na direção de $x$ e o vetor $d\,\textbf{l}$ aponta na direção e sentido da corrente $I$. 
+\begin{figure}
+\centering
+\includegraphics[scale=1.1]{corrente_fio}
+\caption{\textit{Campo magnético no ponto $\textbf{x}$ devido a passagem de uma corrente elétrica $I$ pelo fio. Observe que a magnitude do campo depende também do ângulo $\theta$ entre $\textbf{l}$ e $\textbf{n}$}.}
+\label{fig.corrente_fio}
+\end{figure}
+Assim sendo, a \textit{Lei de Biot-Savart} tem definição análoga à lei de Coulomb e pode ser expressa como
+\begin{equation}\label{eq.lei_biot_savart}
+d\,\textbf{B}=\frac{\mu_0\,I}{4\,\pi}\frac{d(\textbf{l}\times\textbf{n})}{r^2},
+\end{equation}
+e o campo magnético no volume ao redor do fio pode ser obtido integrando sobre a direção perpendicular ao plano formado por $\textbf{l}$ e $\textbf{n}$ ao longo do comprimento do fio.
+\begin{equation}
+\textbf{B}=\frac{\mu_0I}{4\,\pi}\int_{\textbf{l}}\frac{d(\textbf{l}\times\textbf{n})}{r^2}.
+\end{equation}
 
+Considere agora um laço circular (linha de campo magnético) de raio $r$ contido num plano perpendicular ao fio condutor, divido em pequenos comprimentos $\Delta\textbf{s}=\Delta s\,\pmb{\phi}$, cujos vetores correspondentes apontam na direção do vetor tangencial à circunferência naquele ponto, conforme  a figura tal. Esse laço fechado contido num plano é denominado \textit{laço Amperiano} e é usado para calcular o campo magnético referente àquela linha de campo tomando o limite quando $\Delta\textbf{s}\to 0$ e integrando no intervalo dado pelo comprimento da circunferência. Repare, pela figura \ref{fig.corrente_fio}, que nesse caso $\theta=\pi rd$ e que $\pmb{\phi}$ é perpendicular ao plano formado por $\textbf{l}$ e $\textbf{n}$, portanto a magnitute do vetor  $\textbf{B}$ na direção $\pmb{\phi}$ é dada pela lei de Biot-Savart na equação \ref{eq.lei_biot_savart}.
+\begin{equation*}
+\int_{s}\textbf{B}\cdot d\textbf{s}=B\int_{s}ds=\frac{\mu_0I}{2\pi\,r}2\pi\,r=\mu_0I.
+\end{equation*} 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.5]{laco_amperiano}
+\caption{\textit{Laço amperiano seguindo a regra da mão direita: posicionando o polegar no sentido da corrente, o campo magnético tem o mesmo sentido dos demais dedos curvando em torno do fio.}}
+\label{fig.laco_amperiano}
+\end{figure}
+
+Vamos considerar um outro exemplo de laço amperiano cujo contorno denotado por $abcda$ se sobrepõe a duas linhas de campo magnético coplanares, observado na figura tal. No desenvolvimento abaixo, a primeira e terceira integrais zeram pois o campo magnético é perpendicular ao caminho de integração nesses intervalos, e $B_2(r_2\theta)$ e $B_1[r_1(2\pi-\theta)]$ são os comprimentos dos arcos $bc$ e $da$, respectivamente. A integral de linha do campo magnético no contorno $abcda$ é
+\begin{align*}
+\int_{abcda}\textbf{B}\cdot d\textbf{s}&=\int_{ab}\textbf{B}\cdot d\textbf{s}+\int_{bc}\textbf{B}\cdot d\textbf{s}+\int_{cd}\textbf{B}\cdot d\textbf{s}=\int_{da}\textbf{B}\cdot d\textbf{s}\\
+&=0+B_2(r_2\theta)+0+B_1[r_1(2\pi-\theta)]\\
+&=\frac{\mu_0I}{2\pi\,r_2}(r_2\theta)+\frac{\mu_0I}{2\pi\,r_1}[r_1(2\pi-\theta)]\\
+&=\frac{\mu_0I}{2\pi}\theta+\frac{\mu_0I}{2\pi}(2\pi-\theta)\\
+&=\mu_0I.
+\end{align*}
+\begin{figure}
+\centering
+\includegraphics[scale=.5]{laco_amperiano_2}
+\caption{\textit{Laço amperiano passando por duas linhas de campo. O ponto no centro significa que o sentido da corrente elétrica está ``saindo do plano do papel".}}
+\label{fig.laco_amper_2}
+\end{figure}
+Vemos o mesmo resultado se o laço amperiano envolve uma ou duas linhas de campo magnético e, usando coordenadas cilíndricas, podemos demonstrar que o mesmo resultado é válido para uma quantidade arbitrária de linhas de campo magnético, ou seja, a integral de linha do campo magnético através de qualquer laço amperiano fechado é proporcional à corrente elétrica inscrita no laço. A \textit{Lei de Ampère} é dada por
+\begin{equation*}
+\int_{s}\textbf{B}\cdot d\textbf{s}=\mu_0I.
+\end{equation*}
+Analogamente à lei de Gauss para campos elétricos, para ser aplicada a lei de Ampère é necessário que o laço possua alguma simetria em relação ao fio. No caso de um fio condutor suficientemente grande para que suas extremidades não interfiram na aplicação, temos uma simetria cilíndrica e a lei de Ampère pode ser aplicada normalmente. Caso contrário, devemos utilizar a lei de Biot-Savart. 
 
 
 \section{Equações de Maxwell}
