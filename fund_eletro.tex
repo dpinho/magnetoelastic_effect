@@ -54,7 +54,7 @@ O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétri
 \begin{equation*}
 \Phi_\textbf{E}=\textbf{E}\cdot\textbf{A}. 
 \end{equation*} 
-O \textit{vetor área} é definido como a magnitude da área da superfície atravessada apontando na direção do vetor normal, $\textbf{A}=A\,\textbf{n}$, e estamos considerando um campo elétrico uniforme $\textbf{E}$ que se desloca na direção $\textbf{n}$, ou seja, é perpendicular à superfície $A$ como podemos observar na figura \ref{fig.flux_ele}.
+O \textit{vetor área} é definido como a magnitude da área da superfície atravessada apontando na direção do vetor normal à superfície, $\textbf{A}=A\,\textbf{n}$, e estamos considerando um campo elétrico uniforme $\textbf{E}$ que se desloca na direção $\textbf{n}$, ou seja, é perpendicular à superfície $A$ como podemos observar na figura \ref{fig.flux_ele}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=.5]{campo_area}
@@ -185,6 +185,84 @@ Vemos o mesmo resultado se o laço amperiano envolve uma ou duas linhas de campo
 \int_{s}\textbf{B}\cdot d\textbf{s}=\mu_0I.
 \end{equation*}
 Analogamente à lei de Gauss para campos elétricos, para ser aplicada a lei de Ampère é necessário que o laço possua alguma simetria em relação ao fio. No caso de um fio condutor suficientemente grande para que suas extremidades não interfiram na aplicação, temos uma simetria cilíndrica e a lei de Ampère pode ser aplicada normalmente. Caso contrário, devemos utilizar a lei de Biot-Savart. 
+
+Agora considere a seguinte situação, descrita por Maxwell, onde o circuito elétrico está interrompido por um capacitor. 
+\begin{figure}
+\centering
+\includegraphics[scale=.3]{capacitor}
+\caption{\textit{Quando há corrente no circuito, cargas positivas se acumulam numa placa do capacitor assim como cargas negativas se acumulam na outra placa. Tal acúmulo gera um fluxo elétrico variável entre as placas.}}
+\label{fig.capacitor}
+\end{figure}
+Como vimos pela lei de Ampère, o campo magnético depende somente da corrente no circuito e do comprimento da circunferência que limita a superfície atravessada pelo fio condutor, e não depende dessa superfície em si. Portanto, o campo magnético referente à curva $C$ da figura \ref{fig.capacitor} pode ser calculado considerando a superfície $S_1$ ou a superfície $S_2$. A superfície $S_1$ é atravessada pela corrente $I$ a qual produz o campo magnético $\mathbf{B}$, mas superfície $S_2$ não é atravessada por $I$ e, no entanto, é produzido o mesmo campo magnético $\mathbf{B}$. Assim podemos sugerir que exista um outro fenômeno físico entre as placas do capacitor que seja responsável pela geração de $\mathbf{B}$. À medida que o capacitor vai sendo carregado, cargas elétricas opostas vão se acumulando em sua placas gerando um campo elétrico variável entre as placas, o qual produz um fluxo elétrico variável através da área da placa do capacitor. Maxwell mostrou que que o produto da variação desse fluxo elétrico pela permissividade elétrica no vácuo era numericamente igual à corrente $I$, e por isso produzia o mesmo campo $\mathbf{B}$ quando integrado longo da curva $C$,
+\begin{equation*}
+I_d=\epsilon_0\frac{d\phi_E}{dt}.
+\end{equation*}
+Tal produto foi denominado \textit{corrente deslocada} e foi adicionado à lei de Ampère, a qual se tornou a \textit{lei de Ampére generalizada} ou \textit{lei de Ampère-Maxwell},
+\begin{equation*}
+\int_s\mathbf{B}\cdot d\mathbf{s}=\mu_0I+\mu_0\epsilon_0\frac{d\phi_E}{dt}.
+\end{equation*}
+Note que quando consideramos a superfície $S_1$, $I_d=0$ já que o fluxo elétrico é constante e assim $\mathbf{B}$ é dado somente por $I$. Quando consideramos a superfície $S_2$, $I=0$ e $\mathbf{B}$ é dado somente por $I_d$. 
+
+
+
+
+\subsection{A Lei de Faraday}
+Analogamente ao caso da força gravitacional, o \textit{trabalho} $W$ realizado por uma força elétrica $\textbf{F}_e$ para levar uma carga elétrica $q$ de um ponto $A$ até um ponto $B$ é definido como
+\begin{equation}\label{eq.trabalho}
+W=\int_{A}^{B}\textbf{F}_e\cdot d\textbf{s}.
+\end{equation}
+A diferença entre a \textit{energia potencial} $U$ em cada um dos pontos $A$ e $B$ é o que ocasiona o deslocamento da carga, assim a variação da energia potencial tem definição
+\begin{equation}\label{eq.energia_potencial}
+\Delta U=U_b-U_a=-\int_{A}^{B}\textbf{F}_e\cdot d\textbf{s}=-W.
+\end{equation}
+A \textit{diferença de potencial elétrico}, $\Delta V$, também chamada \textit{ddp}, é variação da energia potencial por unidade de carga elétrica $q$. Utilizando a equação \ref{eq.camp_elet}, que relaciona força elétrica e campo elétrico, podemos definir a ddp como
+\begin{equation}\label{eq.ddp}
+\Delta V=-\int_{A}^{B}\frac{\textbf{F}_e}{q}\cdot d\textbf{s}=-\int_{A}^{B}\textbf{E}\cdot d\textbf{s}
+\end{equation}
+A ddp representa a quantidade de trabalho por unidade de carga para mover a carga do ponto $A$ ao ponto $B$ e sua unidade de medida no SI é o volt ($V=\frac{J}{C}$). Observe nas definições acima que só importa os valores no pontos $A$ e $B$, e não importa necessariamente o caminho que a carga vai percorrer de um ponto até o outro. 
+
+Agora, num circuito elétrico fechado, as cargas percorrem um determinado caminho a partir de uma fonte de energia elétrica. Essa fonte é chamada de \textit{força eletromotriz}, representada por $\varepsilon$, e que pode ser pensada como uma ``bomba" de cargas que as impulsiona de um potencial menor para um potencial maior. A força eletromotriz é definida como o trabalho realizado para mover uma carga unitária na direção de maior potencial, matematicamente,
+\begin{equation*}
+\varepsilon=\frac{dW}{dq}, 
+\end{equation*}
+também medida em volt. Como o campo magnético não produz trabalho, o trabalho realizado sobre o movimento das cargas deve ser devido a um campo elétrico e para escrever a força eletromotriz em termos do campo elétrico de forma análoga ao que foi feito nas equações \ref{eq.trabalho}, \ref{eq.energia_potencial} e \ref{eq.ddp}, devemos utilizar uma integral de linha, pois nesse caso a corrente percorre um determinado caminho. Como o campo elétrico é não-conservativo (senão não haveria corrente) o valor da integral é diferente de zero. Assim,
+\begin{equation}\label{eq.emf_E_nc}
+\varepsilon=\int_{linha}\pmb{E}\cdot d\pmb{s}.
+\end{equation}
+ 
+O \textit{fluxo magnético} é definido de maneira similar ao fluxo elétrico e o entendimento pode ser acompanhado pela figura \ref{fig.flux_ele}. O fluxo magnético através de uma superfície é definido como
+\begin{equation*}
+\phi_B=\textbf{B}\textbf{A}=B\,A\,\cos\theta,
+\end{equation*}
+onde o vetor área é $\textbf{A}=A\textbf{n}$, $\textbf{n}$ é o vetor normal à superfície atravessada, $A$ é a magnitude da área, $B=\textbf{B}\cdot\textbf{n}$ é a componente do campo magnético na direção do vetor normal e $\theta$ é o ângulo entre $\textbf{B}$ e $\pmb{A}$. Tomando um elemento infinitesimal da área e integrando sobre a superfície o fluxo magnético é
+\begin{equation*}
+\phi_B=\int\int_S\pmb{B}\,d\pmb{A},
+\end{equation*}
+medido em \textit{Weber}, $Wb=\frac{T}{m^2}$. 
+
+Em 1831, Faraday descobriu que se pode criar um campo elétrico variando um campo magnético em função do tempo num fenômeno que foi batizado de \textit{indução eletromagnética}. Um dos experimentos de Faraday (figura tal) consiste em movimentar um ímã dentro de uma bobina feita de fio condutor onde se pode observar a geração de uma corrente elétrica, como se a bobina estivesse conectada a fonte de força eletromotriz. O experimento mostra que a força eletromotriz induzida é proporcional à taxa (negativa) de variação do fluxo magnético através da bobina, a \textit{lei de Faraday} é
+\begin{equation*}
+\varepsilon=-\frac{d\phi_B}{dt}.
+\end{equation*}
+Podemos reescrever a lei de Faraday usando a equação \ref{eq.emf_E_nc},
+\begin{equation*}
+\varepsilon=\int_{linha}\pmb{E}\cdot d\pmb{s}=-\frac{d\phi_B}{dt},
+\end{equation*}
+o que implica que a variação do fluxo magnético induz um campo elétrico não-conservativo que varia com o tempo, diferente do campo elétrico conservativo gerado por cargas elétricas estacionárias.
+
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale=5]{•}
+%\caption{\textit{•}}
+%\label{fig.exper_faraday}
+%\end{figure}
+
+
+
+
+
+
+
 
 
 \section{Equações de Maxwell}
