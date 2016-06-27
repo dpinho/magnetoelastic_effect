@@ -9,7 +9,7 @@ De acordo com \cite{jackson_classical_1999} e \cite{sommerfeld_52} , os conceito
 \begin{equation}\label{eq.forc_elet}
 \textbf{F}=k\,\frac{q_1\,q_2}{||\textbf{x}_1-\textbf{x}_2||^2}\frac{\textbf{x}_1-\textbf{x}_2}{||\textbf{x}_1-\textbf{x}_2||},
 \end{equation}
-onde $q_i$ são as cargas elétricas (campos escalares) presentes nos pontos $\textbf{x}_i$, respectivamente, $k$ (campo escalar) é uma constante de proporcionalidade cujo valor depende do sistema de unidades de medida adotado, $||\textbf{x}_1-\textbf{x}_2||^2$ é a distância euclidiana entre as cargas e $\textbf{F}$ é a força elétrica exercida pela carga $q_1$ sobre a carga $q_2$. As notações em negrito representam campos vetorias pertencentes ao espaço $\mathbb{R}^3$, e o vetor normal que fornece a direção de interação entre as cargas é dado por $(\textbf{x}_1-\textbf{x}_2)/||\textbf{x}_1-\textbf{x}_2||$.
+onde $q_i$ são as cargas elétricas (campos escalares) presentes nos pontos $\textbf{x}_i$, respectivamente, $k$ (campo escalar) é uma constante de proporcionalidade cujo valor depende do sistema de unidades de medida adotado, $||\textbf{x}_1-\textbf{x}_2||^2$ é a distância Euclidiana entre as cargas e $\textbf{F}$ é a força elétrica exercida pela carga $q_1$ sobre a carga $q_2$. As notações em negrito representam campos vetorias pertencentes ao espaço $\mathbb{R}^3$, e o vetor normal que fornece a direção de interação entre as cargas é dado por $(\textbf{x}_1-\textbf{x}_2)/||\textbf{x}_1-\textbf{x}_2||$.
 
 O campo elétrico $\textbf{E}$ é definido como sendo a força elétrica por unidade de carga em um determinado ponto que contém a carga de prova $q_2$, portanto é uma função vetorial que depende da posição da carga de prova em relação à carga fonte $q_1$, ou seja,
 \begin{equation}\label{eq.camp_elet}
@@ -25,7 +25,7 @@ como podemos observar na figura \ref{fig.camp_eletr} simulando um sistema de coo
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=1.5]{camp_elet}
-\caption{\textit{Exemplificação da interação entre cargas elétricas devido à geração, em função de $q_1$, de um campo elétrico. A força elétrica $\textbf{F}$ atuando numa carga qualquer $q$ tem mesma direção do campo elétrico $\textbf{E}$, com mesmo sentido ou sentido oposto conforme a carga $q$ é positiva ou negativa, respectivamente.}}
+\caption{\textit{Exemplificação da interação entre cargas elétricas devido à geração, em função de $q_1$ (positiva), de um campo elétrico. A força elétrica $\textbf{F}$ atuando numa carga qualquer $q$ tem mesma direção do campo elétrico $\textbf{E}$, com mesmo sentido ou sentido oposto conforme a carga $q$ é positiva ou negativa, respectivamente.}}
 \label{fig.camp_eletr}
 \end{figure}
 
@@ -41,16 +41,16 @@ Num sistema com mais de uma carga fonte produzindo campos elétricos, foi observ
 \begin{equation*}
 \textbf{E}=k\,\sum_{i=1}^{n}q_i\,\frac{\textbf{x}_i-\textbf{x}}{||\textbf{x}_i-\textbf{x}||^3}.
 \end{equation*} 
-O campo elétrico devido a um pequeno número de cargas pode ser calculado a partir do princípio da superposição linear. Mas se temos uma quantidade muito grande de cargas num determinado volume $V$, devemos calcular a \textit{densidade volumétrica de carga} $\rho$ num volume infinitesimal situado em $\textbf{x}_0$ e em seguida integrar sobre o volume $V$ para obter a quantidade total de carga $Q$. A densidade de carga é definida por
+O campo elétrico devido a um pequeno número de cargas pode ser calculado a partir do princípio da superposição linear. Mas se temos uma quantidade muito grande de cargas num determinado volume $V$, devemos calcular a \textit{densidade volumétrica de carga elétrica} $\rho$ num volume infinitesimal situado em $\textbf{x}_0$ e em seguida integrar sobre o volume $V$ para obter a quantidade total de carga $Q$. A densidade de carga é definida por
 \begin{equation*}
 \rho(\textbf{x}_0)=\lim_{\Delta V_i \to 0}\frac{\Delta q_i}{\Delta V_i}=\frac{d\,q}{d\,V},
 \end{equation*}
 medida, no SI, em $C/m^3$. A quantidade total de carga $Q=\sum_i \Delta\,q_i$ no volume $V$ é
 \begin{equation*}
-Q=\int_{V}\rho(\textbf{x}_0)\,dV.
+Q=\int\int\int_{V}\rho(\textbf{x}_0)\,dV.
 \end{equation*}
 
-O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétrico que atravessam uma dada superfície, e é dado pela equação
+O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétrico que atravessam uma superfície qualquer, e é dado pela equação
 \begin{equation*}
 \Phi_\textbf{E}=\textbf{E}\cdot\textbf{A}. 
 \end{equation*} 
@@ -65,11 +65,11 @@ Mas se o campo elétrico se propaga formando um ângulo $\theta$ com o vetor nor
 \begin{equation*}
 \Phi_\textbf{E}=\textbf{E}\cdot\textbf{A}=E\,A\,\cos\theta,
 \end{equation*}
-com $E=\textbf{E}\cdot\textbf{n}$ sendo a componente do campo elétrico na direção $\textbf{n}$. Em geral uma superfície pode ser curva e estamos interessados numa superfície \textit{fechada}, ou seja, aquela que engloba um determinado volume, o qual contém uma carga elétrica. Tomando uma área bem pequena dessa superfície, $\Delta\textbf{A}_i$, o campo elétrico pode ser variável em cada parte da superfície e nessas condições temos que o fluxo nessa pequena região é dado por
+com $E=\textbf{E}\cdot\textbf{n}$ sendo a componente do campo elétrico na direção $\textbf{n}$. Em geral uma superfície $S$ pode ser curva e estamos interessados numa superfície \textit{fechada}, ou seja, aquela que engloba um determinado volume, o qual contém uma carga elétrica (exemplo na figura \ref{fig.esfe_gauss}). Tomando uma área bem pequena dessa superfície, $\Delta\textbf{A}_i$, o campo elétrico pode ser variável em cada parte da superfície e nessas condições temos que o fluxo nessa pequena região é dado por
 \begin{equation*}
 \Delta\,\Phi_\textbf{E}=\textbf{E}_i\cdot\Delta\,\textbf{A}_i.
 \end{equation*}
-O fluxo positivo atravessando toda a superfície de dentro para fora é calculado tomando o limite quando $\Delta\textbf{A}_i\to 0$ e aumentando infinitamente a quantidade dessas pequenas áreas
+O fluxo positivo atravessando toda a superfície de dentro para fora é calculado tomando o limite quando $\Delta\textbf{A}_i\to 0$ e aumentando infinitamente a quantidade dessas pequenas áreas até cobrir a superfície $S$
 \begin{equation}\label{eq.fluxo_eletr}
 \Phi_\textbf{E}=\lim_{i\to\infty}\sum_i\textbf{E}_i\cdot\textit{d}\textbf{A}_i=\int\int_S\textbf{E}\cdot\textit{d}\textbf{A}.
 \end{equation}
@@ -114,7 +114,7 @@ Como não existem monopolos magnéticos, o campo magnético deve ser definido de
 \end{itemize}
 Essas observações são ilustradas na figura \ref{fig.froca_mag_veloc} e a força magnética é definida como
 \begin{equation*}
-\textbf{F}_B=q\textbf{v}\times\textbf{B}.
+\textbf{F}_B=q\,\textbf{v}\times\textbf{B}.
 \end{equation*}
 \begin{figure}[!htb]
 \centering
@@ -126,11 +126,11 @@ Teoricamente, poderíamos tentar determinar a lei de Gauss para o fluxo magnéti
 \begin{equation*}
 \Phi_\textbf{B}=\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=\frac{q_m}{\mu_0},
 \end{equation*} 
-onde $q_m$ é a carga magnética (suposto monopolo magnético) enclausurado pela superfície Gaussiana, $B$ é o campo magnético e $\mu_0$ é a \textit{permeabilidade magnética no vácuo} com valor $\mu_0=4\,\pi\times 10^{-7} T.m/A$. No entanto, não foi constatada a existência de qualquer carga magnética isolada mesmo após muitos esforços. Como $q_m=0$, temos que a lei de Gauss para o magnetismo é
+onde $q_m$ é a carga magnética (suposto monopolo magnético) enclausurado pela superfície Gaussiana, $\mathbf{B}$ é o campo magnético e $\mu_0$ é a \textit{permeabilidade magnética no vácuo} com valor $\mu_0=4\,\pi\times 10^{-7}\, T\,m/A$. No entanto, não foi constatada a existência de qualquer carga magnética isolada mesmo após muitos esforços. Como $q_m=0$, temos que a lei de Gauss para o magnetismo é
 \begin{equation}\label{eq.gauss_flux_mag}
 \Phi_\textbf{B}=\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=0.
 \end{equation}
-Conforme podemos ver na figura tal, a equação \ref{eq.gauss_flux_mag} implica que a quantidade de linhas do campo magnético saindo da superfície é igual à quantidade que está entrando, ou seja, não há uma origem isolada e um término isolado para o fluxo magnético como há para o fluxo elétrico. Outro problema é que a barra imantada atravessa a superfície que, de acordo com a hipóteses da lei de Gauss, deveria ser fechada.
+Conforme podemos ver na figura \ref{fig.flux_elet_magn}, a equação \ref{eq.gauss_flux_mag} implica que a quantidade de linhas do campo magnético saindo da superfície é igual à quantidade que está entrando, ou seja, não há uma origem isolada e um término isolado para o fluxo magnético como há para o fluxo elétrico. Outro problema é que a barra imantada atravessa a superfície que, de acordo com a hipóteses da lei de Gauss, deveria ser fechada.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=.3]{flux_ele_mag}
@@ -139,23 +139,23 @@ Conforme podemos ver na figura tal, a equação \ref{eq.gauss_flux_mag} implica 
 \end{figure}
 
 \subsection{A Lei de Ampère}
-Correntes elétricas podem ser produzidas por cargas elétricas que se movem num fio condutor. Essas correntes elétricas são fontes de campos magnéticos $d\,\textbf{B}$, num determinado ponto $x$, e que podem ser calculados em função da corrente $I$ num intervalo infinitesimal $d\,\textbf{l}$ do fio. Visualização na figura \ref{fig.corrente_fio}. A fonte de corrente infinitesimal é dada por $I\,d\,\textbf{l}$ e $r$ é a distância entre o ponto de aplicação do campo magnético e a fonte de corrente infinitesimal. O vetor $\textbf{n}$ é o vetor normal que aponta na direção de $x$ e o vetor $d\,\textbf{l}$ aponta na direção e sentido da corrente $I$. 
+Correntes elétricas podem ser produzidas por cargas elétricas que se movem num fio condutor. Essas correntes elétricas são fontes de campos magnéticos $d\,\textbf{B}$, num determinado ponto $\mathbf{x}$, e que podem ser calculados em função da corrente $I$ num intervalo infinitesimal $d\,\textbf{l}$ do fio. Visualização na figura \ref{fig.corrente_fio}. A fonte de corrente infinitesimal é dada por $I\,d\,\textbf{l}$ e $r$ é a distância entre o ponto de aplicação do campo magnético e a fonte de corrente infinitesimal. O vetor $\textbf{n}$ é o vetor normal que aponta na direção de $\mathbf{x}$ e o vetor $d\,\textbf{l}$ aponta na direção e sentido da corrente $I$. Repare ainda que o campo magnético depende do ângulo $\theta$ entre $\mathbf{n}$ e $d\mathbf{l}$.
 \begin{figure}
 \centering
 \includegraphics[scale=1.1]{corrente_fio}
-\caption{\textit{Campo magnético no ponto $\textbf{x}$ devido a passagem de uma corrente elétrica $I$ pelo fio. Observe que a magnitude do campo depende também do ângulo $\theta$ entre $\textbf{l}$ e $\textbf{n}$}.}
+\caption{\textit{Campo magnético no ponto $\mathbf{x}$ devido a passagem de uma corrente elétrica $I$ pelo fio. Observe que a magnitude do campo depende também do ângulo $\theta$ entre $\textbf{l}$ e $\textbf{n}$}.}
 \label{fig.corrente_fio}
 \end{figure}
-Assim sendo, a \textit{Lei de Biot-Savart} tem definição análoga à lei de Coulomb e pode ser expressa como
+Assim sendo, a \textit{Lei de Biot-Savart} tem definição análoga à do campo elétrico (derivada da lei de Coulomb) e pode ser expressa como
 \begin{equation}\label{eq.lei_biot_savart}
-d\,\textbf{B}=\frac{\mu_0\,I}{4\,\pi}\frac{d(\textbf{l}\times\textbf{n})}{r^2},
+d\,\textbf{B}=\frac{\mu_0}{4\,\pi}\frac{I}{r^2}\,d(\textbf{l}\times\textbf{n}),
 \end{equation}
 e o campo magnético no volume ao redor do fio pode ser obtido integrando sobre a direção perpendicular ao plano formado por $\textbf{l}$ e $\textbf{n}$ ao longo do comprimento do fio.
 \begin{equation}
 \textbf{B}=\frac{\mu_0I}{4\,\pi}\int_{\textbf{l}}\frac{d(\textbf{l}\times\textbf{n})}{r^2}.
 \end{equation}
 
-Considere agora um laço circular (linha de campo magnético) de raio $r$ contido num plano perpendicular ao fio condutor, divido em pequenos comprimentos $\Delta\textbf{s}=\Delta s\,\pmb{\phi}$, cujos vetores correspondentes apontam na direção do vetor tangencial à circunferência naquele ponto, conforme  a figura tal. Esse laço fechado contido num plano é denominado \textit{laço Amperiano} e é usado para calcular o campo magnético referente àquela linha de campo tomando o limite quando $\Delta\textbf{s}\to 0$ e integrando no intervalo dado pelo comprimento da circunferência. Repare, pela figura \ref{fig.corrente_fio}, que nesse caso $\theta=\pi rd$ e que $\pmb{\phi}$ é perpendicular ao plano formado por $\textbf{l}$ e $\textbf{n}$, portanto a magnitute do vetor  $\textbf{B}$ na direção $\pmb{\phi}$ é dada pela lei de Biot-Savart na equação \ref{eq.lei_biot_savart}.
+Considere agora um laço circular (linha de campo magnético) de raio $r$ contido num plano perpendicular ao fio condutor, onde esse laço está dividido em pequenos comprimentos $\Delta\textbf{s}=\Delta s\,\pmb{\phi}$, cujos vetores correspondentes a cada ponto do laço apontam na direção do vetor tangencial à circunferência naquele ponto, conforme  a figura \ref{fig.laco_amperiano}. Esse laço fechado contido num plano é denominado \textit{laço Amperiano} e é usado para calcular o campo magnético referente àquela linha de campo tomando o limite quando $\Delta\textbf{s}\to 0$ e integrando no intervalo dado pelo comprimento da circunferência. Nesse caso, $\theta=\pi$ e $\pmb{\phi}$ é perpendicular ao plano formado por $\textbf{l}$ e $\textbf{n}$, portanto a magnitute do vetor  $\textbf{B}$ na direção $\pmb{\phi}$ é dada pela lei de Biot-Savart na equação \ref{eq.lei_biot_savart}.
 \begin{equation*}
 \int_{s}\textbf{B}\cdot d\textbf{s}=B\int_{s}ds=\frac{\mu_0I}{2\pi\,r}2\pi\,r=\mu_0I.
 \end{equation*} 
@@ -166,9 +166,9 @@ Considere agora um laço circular (linha de campo magnético) de raio $r$ contid
 \label{fig.laco_amperiano}
 \end{figure}
 
-Vamos considerar um outro exemplo de laço amperiano cujo contorno denotado por $abcda$ se sobrepõe a duas linhas de campo magnético coplanares, observado na figura tal. No desenvolvimento abaixo, a primeira e terceira integrais zeram pois o campo magnético é perpendicular ao caminho de integração nesses intervalos, e $B_2(r_2\theta)$ e $B_1[r_1(2\pi-\theta)]$ são os comprimentos dos arcos $bc$ e $da$, respectivamente. A integral de linha do campo magnético no contorno $abcda$ é
+Vamos considerar um outro exemplo de laço amperiano cujo contorno denotado por $abcda$ se sobrepõe a duas linhas de campo magnético coplanares, observado na figura \ref{fig.laco_amper_2}. No desenvolvimento abaixo, a primeira e terceira integrais zeram pois o campo magnético é perpendicular ao caminho de integração nesses intervalos, e $B_2(r_2\theta)$ e $B_1[r_1(2\pi-\theta)]$ são os comprimentos dos arcos $bc$ e $da$, respectivamente. A integral de linha do campo magnético no contorno $abcda$ é
 \begin{align*}
-\int_{abcda}\textbf{B}\cdot d\textbf{s}&=\int_{ab}\textbf{B}\cdot d\textbf{s}+\int_{bc}\textbf{B}\cdot d\textbf{s}+\int_{cd}\textbf{B}\cdot d\textbf{s}=\int_{da}\textbf{B}\cdot d\textbf{s}\\
+\int_{abcda}\textbf{B}\cdot d\textbf{s}&=\int_{ab}\textbf{B}\cdot d\textbf{s}+\int_{bc}\textbf{B}\cdot d\textbf{s}+\int_{cd}\textbf{B}\cdot d\textbf{s}+\int_{da}\textbf{B}\cdot d\textbf{s}\\
 &=0+B_2(r_2\theta)+0+B_1[r_1(2\pi-\theta)]\\
 &=\frac{\mu_0I}{2\pi\,r_2}(r_2\theta)+\frac{\mu_0I}{2\pi\,r_1}[r_1(2\pi-\theta)]\\
 &=\frac{\mu_0I}{2\pi}\theta+\frac{\mu_0I}{2\pi}(2\pi-\theta)\\
@@ -177,14 +177,14 @@ Vamos considerar um outro exemplo de laço amperiano cujo contorno denotado por 
 \begin{figure}
 \centering
 \includegraphics[scale=.5]{laco_amperiano_2}
-\caption{\textit{Laço amperiano passando por duas linhas de campo. O ponto no centro significa que o sentido da corrente elétrica está ``saindo do plano do papel".}}
+\caption{\textit{Laço amperiano passando por duas linhas de campo magnético. O ponto no centro significa que o sentido da corrente elétrica está ``saindo do plano do papel".}}
 \label{fig.laco_amper_2}
 \end{figure}
 Vemos o mesmo resultado se o laço amperiano envolve uma ou duas linhas de campo magnético e, usando coordenadas cilíndricas, podemos demonstrar que o mesmo resultado é válido para uma quantidade arbitrária de linhas de campo magnético, ou seja, a integral de linha do campo magnético através de qualquer laço amperiano fechado é proporcional à corrente elétrica inscrita no laço. A \textit{Lei de Ampère} é dada por
 \begin{equation*}
 \int_{s}\textbf{B}\cdot d\textbf{s}=\mu_0I.
 \end{equation*}
-Analogamente à lei de Gauss para campos elétricos, para ser aplicada a lei de Ampère é necessário que o laço possua alguma simetria em relação ao fio. No caso de um fio condutor suficientemente grande para que suas extremidades não interfiram na aplicação, temos uma simetria cilíndrica e a lei de Ampère pode ser aplicada normalmente. Caso contrário, devemos utilizar a lei de Biot-Savart. 
+Analogamente à lei de Gauss para campos elétricos, para ser aplicada a lei de Ampère é necessário que o laço possua alguma simetria em relação ao fio. No caso de um fio condutor suficientemente comprido para que suas extremidades não interfiram na aplicação, temos uma simetria cilíndrica e a lei de Ampère pode ser aplicada normalmente. Caso o fio não seja suficientemente comprido, devemos utilizar a lei de Biot-Savart. 
 
 Agora considere a seguinte situação, descrita por Maxwell, onde o circuito elétrico está interrompido por um capacitor. 
 \begin{figure}
@@ -193,7 +193,7 @@ Agora considere a seguinte situação, descrita por Maxwell, onde o circuito el�
 \caption{\textit{Quando há corrente no circuito, cargas positivas se acumulam numa placa do capacitor assim como cargas negativas se acumulam na outra placa. Tal acúmulo gera um fluxo elétrico variável entre as placas.}}
 \label{fig.capacitor}
 \end{figure}
-Como vimos pela lei de Ampère, o campo magnético depende somente da corrente no circuito e do comprimento da circunferência que limita a superfície atravessada pelo fio condutor, e não depende dessa superfície em si. Portanto, o campo magnético referente à curva $C$ da figura \ref{fig.capacitor} pode ser calculado considerando a superfície $S_1$ ou a superfície $S_2$. A superfície $S_1$ é atravessada pela corrente $I$ a qual produz o campo magnético $\mathbf{B}$, mas superfície $S_2$ não é atravessada por $I$ e, no entanto, é produzido o mesmo campo magnético $\mathbf{B}$. Assim podemos sugerir que exista um outro fenômeno físico entre as placas do capacitor que seja responsável pela geração de $\mathbf{B}$. À medida que o capacitor vai sendo carregado, cargas elétricas opostas vão se acumulando em sua placas gerando um campo elétrico variável entre as placas, o qual produz um fluxo elétrico variável através da área da placa do capacitor. Maxwell mostrou que que o produto da variação desse fluxo elétrico pela permissividade elétrica no vácuo era numericamente igual à corrente $I$, e por isso produzia o mesmo campo $\mathbf{B}$ quando integrado longo da curva $C$,
+Como vimos pela lei de Ampère, o campo magnético depende somente da corrente no circuito e do comprimento da circunferência que limita a superfície atravessada pelo fio condutor, e não depende dessa superfície em si. Portanto, o campo magnético referente à curva $C$ da figura \ref{fig.capacitor} pode ser calculado considerando a superfície $S_1$ ou a superfície $S_2$. A superfície $S_1$ é atravessada pela corrente $I$ a qual produz o campo magnético $\mathbf{B}$, mas superfície $S_2$ não é atravessada por $I$ e, no entanto, é produzido o mesmo campo magnético $\mathbf{B}$. Assim podemos sugerir que exista um outro fenômeno físico entre as placas do capacitor que seja responsável pela geração de $\mathbf{B}$. À medida que o capacitor vai sendo carregado, cargas elétricas opostas vão se acumulando em suas placas gerando um campo elétrico variável entre as placas, o qual produz um fluxo elétrico variável através da área da placa do capacitor. Maxwell mostrou que o produto da variação desse fluxo elétrico pela permissividade elétrica no vácuo era numericamente igual à corrente $I$, e por isso produzia o mesmo campo $\mathbf{B}$ quando integrado longo da curva $C$,
 \begin{equation*}
 I_d=\epsilon_0\frac{d\phi_E}{dt}.
 \end{equation*}
@@ -215,7 +215,7 @@ A diferença entre a \textit{energia potencial} $U$ em cada um dos pontos $A$ e 
 \begin{equation}\label{eq.energia_potencial}
 \Delta U=U_b-U_a=-\int_{A}^{B}\textbf{F}_e\cdot d\textbf{s}=-W.
 \end{equation}
-A \textit{diferença de potencial elétrico}, $\Delta V$, também chamada \textit{ddp}, é variação da energia potencial por unidade de carga elétrica $q$. Utilizando a equação \ref{eq.camp_elet}, que relaciona força elétrica e campo elétrico, podemos definir a ddp como
+A \textit{diferença de potencial elétrico}, $\Delta V$, também chamada \textit{ddp}, é a variação da energia potencial por unidade de carga elétrica $q$. Utilizando a equação \ref{eq.camp_elet}, que relaciona força elétrica e campo elétrico, podemos definir a ddp como
 \begin{equation}\label{eq.ddp}
 \Delta V=-\int_{A}^{B}\frac{\textbf{F}_e}{q}\cdot d\textbf{s}=-\int_{A}^{B}\textbf{E}\cdot d\textbf{s}
 \end{equation}
@@ -230,7 +230,7 @@ também medida em volt. Como o campo magnético não produz trabalho, o trabalho
 \varepsilon=\int_{linha}\pmb{E}\cdot d\pmb{s}.
 \end{equation}
  
-O \textit{fluxo magnético} é definido de maneira similar ao fluxo elétrico e o entendimento pode ser acompanhado pela figura \ref{fig.flux_ele}. O fluxo magnético através de uma superfície é definido como
+O \textit{fluxo magnético} é definido de maneira similar ao fluxo elétrico e seu entendimento também pode ser acompanhado pela figura \ref{fig.flux_ele}. O fluxo magnético através de uma superfície é definido como
 \begin{equation*}
 \phi_B=\textbf{B}\textbf{A}=B\,A\,\cos\theta,
 \end{equation*}
@@ -250,18 +250,12 @@ Podemos reescrever a lei de Faraday usando a equação \ref{eq.emf_E_nc},
 \end{equation*}
 o que implica que a variação do fluxo magnético induz um campo elétrico não-conservativo que varia com o tempo, diferente do campo elétrico conservativo gerado por cargas elétricas estacionárias.
 
-%\begin{figure}[!htb]
-%\centering
-%\includegraphics[scale=5]{•}
-%\caption{\textit{•}}
-%\label{fig.exper_faraday}
-%\end{figure}
-
-
-
-
-
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=.5]{experi_faraday}
+\caption{\textit{Experimento de indução eletromagnética promovido por Michael Faraday.}}
+\label{fig.exper_faraday}
+\end{figure}
 
 
 
