@@ -4,7 +4,7 @@
 
 \section{Fatos experimentais}
 
-\subsection{Lei de Gauss para os fluxos elétrico e magnético}
+\subsection{Lei de Gauss para os fluxos elétrico e magnético}\label{sec.lei_gauss}
 De acordo com \cite{jackson_classical_1999} e \cite{sommerfeld_52} , os conceitos, definições e resultados em eletromagnetismo clássico partem das experiências de Cavendish e Coulomb no final do Séc. $XVIII$. A partir desses experimentos foi estabelecida a Lei de Coulomb
 \begin{equation}\label{eq.forc_elet}
 \textbf{F}=k\,\frac{q_1\,q_2}{||\textbf{x}_1-\textbf{x}_2||^2}\frac{\textbf{x}_1-\textbf{x}_2}{||\textbf{x}_1-\textbf{x}_2||},
@@ -46,9 +46,9 @@ O campo elétrico devido a um pequeno número de cargas pode ser calculado a par
 \rho(\textbf{x}_0)=\lim_{\Delta V_i \to 0}\frac{\Delta q_i}{\Delta V_i}=\frac{d\,q}{d\,V},
 \end{equation*}
 medida, no SI, em $C/m^3$. A quantidade total de carga $Q=\sum_i \Delta\,q_i$ no volume $V$ é
-\begin{equation*}
+\begin{equation}\label{eq.densidade_carga}
 Q=\int\int\int_{V}\rho(\textbf{x}_0)\,dV.
-\end{equation*}
+\end{equation}
 
 O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétrico que atravessam uma superfície qualquer, e é dado pela equação
 \begin{equation*}
@@ -57,7 +57,9 @@ O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétri
 O \textit{vetor área} é definido como a magnitude da área da superfície atravessada apontando na direção do vetor normal à superfície, $\textbf{A}=A\,\textbf{n}$, e estamos considerando um campo elétrico uniforme $\textbf{E}$ que se desloca na direção $\textbf{n}$, ou seja, é perpendicular à superfície $A$ como podemos observar na figura \ref{fig.flux_ele}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=.5]{campo_area}
+\subfloat{\includegraphics[scale=.4]{campo_area_2}}
+\quad
+\subfloat{\includegraphics[scale=.4]{campo_area}}
 \caption{\textit{Fluxo elétrico, linhas de campo elétrico passando através de uma superfície.}}
 \label{fig.flux_ele}
 \end{figure}
@@ -88,9 +90,9 @@ assim o fluxo elétrico é calculado usando a equação \ref{eq.fluxo_eletr}.
 &=\frac{q}{\epsilon_0}.
 \end{align*}
 Na demonstração acima escolhemos uma esfera como \textit{superfície Gaussiana} mas, introduzindo o conceito de \textit{ângulo sólido}, vemos que a demonstração é válida para qualquer superfície fechada, utilizada em aplicações que apresentem mais ou menos alguma simetria (esférica, planar ou cilíndrica). Para mais detalhes consultar \cite{jackson_classical_1999}. Assim, concluímos que o fluxo elétrico através de uma superfície fechada que apresente mais ou menos alguma simetria é diretamente proporcional à quantidade de carga enclausurada pela superfície. Matematicamente, a \textit{lei de Gauss} para o fluxo elétrico é
-\begin{equation*}
+\begin{equation}\label{eq.fluxo_eletrico}
 \Phi_\textbf{E}=\int\int_S\textbf{E}\cdot\textit{d}\textbf{A}=\frac{q}{\epsilon_0}.
-\end{equation*}
+\end{equation}
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=.3]{esfera_gaussiana}
@@ -198,9 +200,9 @@ Como vimos pela lei de Ampère, o campo magnético depende somente da corrente n
 I_d=\epsilon_0\frac{d\phi_E}{dt}.
 \end{equation*}
 Tal produto foi denominado \textit{corrente deslocada} e foi adicionado à lei de Ampère, a qual se tornou a \textit{lei de Ampére generalizada} ou \textit{lei de Ampère-Maxwell},
-\begin{equation*}
+\begin{equation}\label{eq.ampere_generalizada}
 \int_s\mathbf{B}\cdot d\mathbf{s}=\mu_0I+\mu_0\epsilon_0\frac{d\phi_E}{dt}.
-\end{equation*}
+\end{equation}
 Note que quando consideramos a superfície $S_1$, $I_d=0$ já que o fluxo elétrico é constante e assim $\mathbf{B}$ é dado somente por $I$. Quando consideramos a superfície $S_2$, $I=0$ e $\mathbf{B}$ é dado somente por $I_d$. 
 
 
@@ -225,29 +227,29 @@ Agora, num circuito elétrico fechado, as cargas percorrem um determinado caminh
 \begin{equation*}
 \varepsilon=\frac{dW}{dq}, 
 \end{equation*}
-também medida em volt. Como o campo magnético não produz trabalho, o trabalho realizado sobre o movimento das cargas deve ser devido a um campo elétrico e para escrever a força eletromotriz em termos do campo elétrico de forma análoga ao que foi feito nas equações \ref{eq.trabalho}, \ref{eq.energia_potencial} e \ref{eq.ddp}, devemos utilizar uma integral de linha, pois nesse caso a corrente percorre um determinado caminho. Como o campo elétrico é não-conservativo (senão não haveria corrente) o valor da integral é diferente de zero. Assim,
+também medida em volt. Como o campo magnético não produz trabalho, o trabalho realizado sobre o movimento das cargas deve ser devido a um campo elétrico e para escrever a força eletromotriz em termos do campo elétrico de forma análoga ao que foi feito nas equações \ref{eq.trabalho}, \ref{eq.energia_potencial} e \ref{eq.ddp}, devemos utilizar uma integral de linha, pois nesse caso a corrente percorre um determinado caminho. Como o campo elétrico é não-conservativo (senão não haveria corrente) o valor da integral na equação \ref{eq.ddp} é diferente de zero. Assim,
 \begin{equation}\label{eq.emf_E_nc}
-\varepsilon=\int_{linha}\pmb{E}\cdot d\pmb{s}.
+\varepsilon=\int_s\pmb{E}\cdot d\pmb{s}.
 \end{equation}
  
 O \textit{fluxo magnético} é definido de maneira similar ao fluxo elétrico e seu entendimento também pode ser acompanhado pela figura \ref{fig.flux_ele}. O fluxo magnético através de uma superfície é definido como
 \begin{equation*}
-\phi_B=\textbf{B}\textbf{A}=B\,A\,\cos\theta,
+\phi_\mathbf{B}=\textbf{B}\textbf{A}=B\,A\,\cos\theta,
 \end{equation*}
 onde o vetor área é $\textbf{A}=A\textbf{n}$, $\textbf{n}$ é o vetor normal à superfície atravessada, $A$ é a magnitude da área, $B=\textbf{B}\cdot\textbf{n}$ é a componente do campo magnético na direção do vetor normal e $\theta$ é o ângulo entre $\textbf{B}$ e $\pmb{A}$. Tomando um elemento infinitesimal da área e integrando sobre a superfície o fluxo magnético é
-\begin{equation*}
-\phi_B=\int\int_S\pmb{B}\,d\pmb{A},
-\end{equation*}
-medido em \textit{Weber}, $Wb=\frac{T}{m^2}$. 
+\begin{equation}\label{eq.fluxo_mag}
+\phi_{\mathbf{B}}=\int\int_S\pmb{B}\,d\pmb{A},
+\end{equation}
+medido em \textit{Weber}, $T/m^2$. 
 
-Em 1831, Faraday descobriu que se pode criar um campo elétrico variando um campo magnético em função do tempo num fenômeno que foi batizado de \textit{indução eletromagnética}. Um dos experimentos de Faraday (figura tal) consiste em movimentar um ímã dentro de uma bobina feita de fio condutor onde se pode observar a geração de uma corrente elétrica, como se a bobina estivesse conectada a fonte de força eletromotriz. O experimento mostra que a força eletromotriz induzida é proporcional à taxa (negativa) de variação do fluxo magnético através da bobina, a \textit{lei de Faraday} é
+Em 1831, Faraday descobriu que se pode criar um campo elétrico variando um campo magnético em função do tempo num fenômeno que foi batizado de \textit{indução eletromagnética}. Um dos experimentos de Faraday (figura \ref{fig.exper_faraday}) consiste em movimentar um ímã dentro de uma bobina feita de fio condutor onde se pode observar a geração de uma corrente elétrica, como se a bobina estivesse conectada a fonte de força eletromotriz. O experimento mostra que a força eletromotriz induzida é proporcional à taxa (negativa) de variação do fluxo magnético através da bobina, a \textit{lei de Faraday} é
 \begin{equation*}
-\varepsilon=-\frac{d\phi_B}{dt}.
+\varepsilon=-\frac{d\phi_\mathbf{B}}{dt}.
 \end{equation*}
 Podemos reescrever a lei de Faraday usando a equação \ref{eq.emf_E_nc},
-\begin{equation*}
-\varepsilon=\int_{linha}\pmb{E}\cdot d\pmb{s}=-\frac{d\phi_B}{dt},
-\end{equation*}
+\begin{equation}\label{eq.lei_faraday}
+\varepsilon=\int_s\pmb{E}\cdot d\pmb{s}=-\frac{d\phi_\mathbf{B}}{dt},
+\end{equation}
 o que implica que a variação do fluxo magnético induz um campo elétrico não-conservativo que varia com o tempo, diferente do campo elétrico conservativo gerado por cargas elétricas estacionárias.
 
 \begin{figure}[!htb]
@@ -258,8 +260,66 @@ o que implica que a variação do fluxo magnético induz um campo elétrico não
 \end{figure}
 
 
-
 \section{Equações de Maxwell}
+Vimos pela equação \ref{eq.fluxo_eletrico}, que o fluxo elétrico através de uma superfície fechada é proporcional à quantidade de carga elétrica enclausurada por essa superfície. Quando temos uma quantidade de carga muito grande devemos calcular o fluxo elétrico devido à densidade carga, e substituindo a equação \ref{eq.densidade_carga} na equação \ref{eq.fluxo_eletrico} temos
+\begin{align*}
+\int\int_S\textbf{E}\cdot\textit{d}\textbf{A}&=\frac{q}{\epsilon_0}\\
+&=\frac{Q}{\epsilon_0}\\
+&=\frac{1}{\epsilon_0}\int\int\int_{V}\rho\,dV\\
+\int\int_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int\int_{V}\rho\,dV.
+\end{align*}
+A equação acima é conhecida como a primeira equação de Maxwell para o eletromagnetismo escrita na forma integral. 
+
+
+A segunda equação de Maxwell é similar à primeira e, como não existem monopolos magnéticos, tal equação fica definida como a propria equação \ref{eq.gauss_flux_mag} já discutida na subseção \ref{sec.lei_gauss},
+\begin{equation*}
+\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=0.
+\end{equation*}
+
+
+A \textit{corrente elétrica média} é definida como a taxa com que uma quantidade de carga atravessa uma determinada área de seção transversal de um meio condutor,
+\begin{equation*}
+I_m=\frac{\Delta\,Q}{\Delta\,t},
+\end{equation*}
+medida em coulomb por segundo $(C/s)$ no SI. Em termos microscópicos, a quantidade de carga que atravessa uma superfície num determinado tempo é dada em função da \textit{densidade de corrente elétrica} $\mathbf{J}$,
+\begin{equation}\label{eq.densidade_corrente}
+I=\int\int_S\mathbf{J}\cdot\,d\mathbf{A},
+\end{equation}
+onde a densidade de corrente elétrica é medida em $(A/m^2)$ no SI. 
+\begin{figure}
+\centering
+\includegraphics[scale=.3]{corrente_condutor}
+\caption{\textit{Cargas elétrica fluindo no intervalo $\Delta\,x$ de um condutor com área de seção transversal $A$.}}
+\label{fig.corre_condu}
+\end{figure}
+Observando a figura \ref{fig.corre_condu} que mostra uma corrente fluindo num condutor, onde $q$ é a carga elétrica de cada partícula, $n$ é quantidade de partículas num determinado volume do condutor e $\Delta\,x$ é o comprimento do mesmo, temos que a quantidade de carga nesse volume é $\Delta\,Q=n\,q\,(A\,\Delta\,x)$. Se as partículas se movem com velocidade $v$, então a posição a cada intervalo de tempo é dada por $\Delta\,x=v\,\Delta\,t$, e a corrente elétrica média nesse intervalo do condutor é
+\begin{equation*}
+I_m=\frac{\Delta\,Q}{\Delta\,t}=n\,q\,A\,v.
+\end{equation*}
+Como a densidade de corrente é a corrente média por área, temos que a mesma pode ser escrita como 
+\begin{equation*}
+\mathbf{J}=n\,q\,\mathbf{v}.
+\end{equation*}
+
+A terceira equação de Maxwell em sua forma integral pode ser obtida substituindo as equações \ref{eq.densidade_corrente} e \ref{eq.fluxo_eletrico} na equação \ref{eq.ampere_generalizada},
+\begin{align*}
+\int_s\mathbf{B}\cdot d\mathbf{s}&=\mu_0I+\mu_0\epsilon_0\frac{d\phi_E}{dt}\\
+\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}
+\end{align*}
+
+A quarta e última equação de Maxwell é obtida substituindo a equação do fluxo magnético \ref{eq.fluxo_mag} na lei de Faraday \ref{eq.lei_faraday},
+\begin{align*}
+\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d\phi_\mathbf{B}}{dt}\\
+\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d}{dt}\int\int_S\pmb{B}\,d\pmb{A}.
+\end{align*}
+
+Todos os fenômenos eletromagnéticos são governados por essas quatro equações de Maxwell  e os últimos duzentos anos acumularam evidências suficientes para tal fato. Como vimos, todas as equações têm princípios experimentais, são deduzidas em termos de cálculo diferencial e integral, e são satisfeitas pelas variáveis físicas $\rho$ e $\mathbf{J}$ que são as fontes dos campos elétrico e magnético respectivamente. As equações são sumarizadas a seguir:
+\begin{align*}
+\int\int_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int\int_{V}\rho\,dV,\\\\
+\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\\
+\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A},\\\\
+\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d}{dt}\int\int_S\pmb{B}\,d\pmb{A}.
+\end{align*}
 
 \section{Generalizações da teoria}
 
