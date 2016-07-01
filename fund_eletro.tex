@@ -323,7 +323,26 @@ Todos os fenômenos eletromagnéticos são governados por essas quatro equaçõe
 
 \section{Generalizações da teoria}
 
-Nosso intuito é utilizar as equações de Maxwell para determinar a composição de uma determinada região da subsuperfície. As informaçãoes sobre as propriedades eletromagnéticas de uma região dependem dos parâmetros $\rho$ e $\mathbf{J}$ de cada região, e esses parâmetros são usados para definir e inserir nas equações de Maxwell dois campos vetoriais, $\mathbf{D}$ e $\mathbf{H}$, que estão diretamente ligados às características do meio como veremos a seguir.
+Nosso intuito é utilizar as equações de Maxwell para ajudar a determinar a composição de uma determinada região da subsuperfície. As informaçãoes sobre as propriedades eletromagnéticas de uma região dependem dos parâmetros $\rho$ e $\mathbf{J}$ de cada região, e esses parâmetros são usados para definir e inserir nas equações de Maxwell dois campos vetoriais, $\mathbf{D}$ e $\mathbf{H}$, que estão diretamente ligados às características do meio como veremos a seguir.
+
+Um átomo eletricamente neutro também tem algumas de suas características alteradas quando expostos num campo elétrico, pois as cargas positivas (no núcleo) são empurradas numa direção e as cargas negativas (elétrons) são empurradas para uma direção oposta. Na verdade, se o campo elétrico é muito forte, pode ser criada uma alteração permanente ``ionizando" o átomo. A aplicação de campo elétrico não tão extremo faz com que um equilíbrio seja rapidamente estabilizado criando um centro de cargas positivas e outro de cargas negativas deixando o átomo \textit{polarizado}, o qual agora passa a ter um pequeno \textit{momento de dipolo elétrico}, $\mathbf{p}$, que tem a mesma direção do campo elétrico e é proporcional ao mesmo.
+\begin{equation*}
+\mathbf{p}=\alpha\,\mathbf{E},
+\end{equation*}
+onde $\alpha$ é a constante de \textit{polarizabilidade atômica}. 
+
+Numa substância dielétrica (isolante) qualquer quando exposta a um campo elétrico, cada átomo eletricamente neutro gera um pequeno momento de dipolo elétrico que se alinha como o campo aplicado. Se as moléculas já possuem naturalmente um momento de dipolo, todos eles experimentam um torque e também se alinham ao campo elétrico, assim a substância se torna polarizada e podemos definir a \textit{polarização} $\mathbf{P}$ de uma substância como o momento de dipolo elétrico por unidade de volume,
+\begin{equation}
+\mathbf{P}=\lim_{\Delta\,V\to 0}\frac{\mathbf{p}}{\Delta\,V}.
+\end{equation}
+Suponha que temos uma longa cadeia de dipolos conforme a figura \ref{fig.penquenos_dipolos}, onde cada concentração de cargas se cancela com a concentração vizinha mas que ao final restarão duas concentrações de cargas opostas, como se vários pequenos deslocamentos resultassem num único deslocamento maior. 
+\begin{figure}
+\centering
+\includegraphics[scale=.7]{pequenos_dipolos}
+\caption{\textit{As cargas em vermelho são negativas e em azul as positivas.}}
+\label{fig.penquenos_dipolos}
+\end{figure}
+As cargas nas extremidades são chamadas \textit{cargas de fronteira} e para calcular o acumulo dessas cargas resultantes de uma polarização $\mathbf{P}$ vamos considerar um tubo feito de um material dielétrico paralelo a $\mathbf{P}$ de acordo com a figura tal. Sendo $P$ a polarização de uma minúscula amostra do volume, $A$ a área de seção transversal do tubo e $d$ o comprimento da amostra, temos que o momento de dipolo é dado por $P\,A\,d$. Em termos de carga elétrica, esse momento de dipolo também pode ser definido como $q\,d$, onde $q$ é a carga elétrica no limite direito da amostra, e de onde se deduz que $q=P\,A$.
 
 
 
