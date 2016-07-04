@@ -163,7 +163,7 @@ Considere agora um laço circular (linha de campo magnético) de raio $r$ contid
 \end{equation*} 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=.5]{laco_amperiano}
+\includegraphics[scale=.4]{laco_amperiano}
 \caption{\textit{Laço amperiano seguindo a regra da mão direita: posicionando o polegar no sentido da corrente, o campo magnético tem o mesmo sentido dos demais dedos curvando em torno do fio.}}
 \label{fig.laco_amperiano}
 \end{figure}
@@ -314,18 +314,18 @@ A quarta e última equação de Maxwell é obtida substituindo a equação do fl
 \end{align*}
 
 Todos os fenômenos eletromagnéticos são governados por essas quatro equações de Maxwell  e os últimos duzentos anos acumularam evidências suficientes para tal fato. Como vimos, todas as equações têm princípios experimentais, são deduzidas formalmente em termos de cálculo diferencial e integral, e são satisfeitas pelas variáveis físicas $\rho$ e $\mathbf{J}$ que são as fontes dos campos elétrico e magnético respectivamente. As equações são sumarizadas a seguir:
-\begin{align*}
-\int\int_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int\int_{V}\rho\,dV,\\\\
-\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\\
-\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A},\\\\
+\begin{align}\label{eq.maxwell_1}
+\int\int_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int\int_{V}\rho\,dV,\\\nonumber\\\label{eq.maxwell_2}
+\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\nonumber\\\label{eq.maxwell_3}
+\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A},\\\nonumber\\\label{eq.maxwell_4}
 \int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d}{dt}\int\int_S\pmb{B}\,d\pmb{A}.
-\end{align*}
+\end{align}
 
 \section{Generalizações da teoria}
 
 Nosso intuito é utilizar as equações de Maxwell para ajudar a determinar a composição de uma determinada região da subsuperfície. As informaçãoes sobre as propriedades eletromagnéticas de uma região dependem dos parâmetros $\rho$ e $\mathbf{J}$ de cada região, e esses parâmetros são usados para definir e inserir nas equações de Maxwell dois campos vetoriais, $\mathbf{D}$ e $\mathbf{H}$, que estão diretamente ligados às características do meio como veremos a seguir.
 
-De acordo com \cite{griffiths}, um átomo eletricamente neutro também tem algumas de suas características alteradas quando expostos num campo elétrico, pois as cargas positivas (no núcleo) são empurradas numa direção e as cargas negativas (elétrons) são empurradas para uma direção oposta. Na verdade, se o campo elétrico é muito forte, pode ser criada uma alteração permanente ``ionizando" o átomo. A aplicação de campo elétrico não tão extremo faz com que um equilíbrio seja rapidamente estabilizado criando um centro de cargas positivas e outro de cargas negativas deixando o átomo \textit{polarizado}, o qual agora passa a ter um pequeno \textit{momento de dipolo elétrico}, $\mathbf{p}$, que tem a mesma direção do campo elétrico e é proporcional ao mesmo.
+De acordo com \cite{griffiths}, um átomo eletricamente neutro também tem algumas de suas características alteradas quando expostos a campo elétrico $\mathbf{E}$, pois as cargas positivas (no núcleo) são empurradas numa direção e as cargas negativas (elétrons) são empurradas num sentido oposto. Na verdade, se o campo elétrico é muito forte, pode ser criada uma alteração permanente ``ionizando" o átomo. A aplicação de campo elétrico não tão extremo faz com que um equilíbrio seja rapidamente estabilizado criando um centro de cargas positivas e outro de cargas negativas deixando o átomo \textit{polarizado}, o qual agora passa a ter um pequeno \textit{momento de dipolo elétrico}, $\mathbf{p}$, que tem a mesma direção do campo elétrico e é proporcional ao mesmo.
 \begin{equation*}
 \mathbf{p}=\alpha\,\mathbf{E},
 \end{equation*}
@@ -349,8 +349,41 @@ Suponha que temos uma longa cadeia de dipolos conforme a figura \ref{fig.penquen
 \label{fig.polari_cilindro}
 \end{figure}
 Sendo $P$ a polarização de uma minúscula amostra do volume, $A$ a área de seção transversal do tubo e $d$ o comprimento da amostra, temos que o momento de dipolo da amostra é dado por $P\,A\,d$. Em termos de carga elétrica, esse momento de dipolo também pode ser definido como $q\,d$, onde $q$ é a carga elétrica no limite direito da amostra, e de onde se deduz que $q=P\,A$. Com a polarização, cargas são acumuladas no inteiror do corpo formando uma densidade de carga de polarização $\rho_p$, ocorrendo então um fenômeno de divergência da polarização através da superfície do tubo análago ao fenômeno da lei de Gauss. Assim, como um corpo dielétrico é eletricamente neutro, a quantidade total de carga negativa acumulada no interior do tubo é igual e oposta à quantidade de carga positiva empurrada através da superfície,
-\begin{equation*}
+\begin{equation}\label{eq.polarizacao_densidade}
 \int\int\int_V\rho_p\,d\,V=\int\int_S\mathbf{P}\cdot d\mathbf{A}.
+\end{equation}
+Um meio não possui somente cargas de polarização mas também pode possuir \textit{cargas livres}, as quais se movimentam livremente sob a ação de um campo elétrico. Denotando por $Q_f$ a quantidade de cargas livres e $Q_p$ as cargas de polarização, temos que a quantidade total de cargas de um meio qualquer é dada por
+\begin{equation*}
+Q=Q_f+Q_p,
+\end{equation*} 
+e usando a equação \ref{eq.densidade_carga}, temos que a densidade de carga do meio é
+\begin{equation}\label{eq.densi_carga_f_p}
+\int\int\int_{V}\rho\,dV=\int\int\int_{V}\rho_f\,dV+\int\int\int_{V}\rho_p\,dV.
+\end{equation}
+Substituindo a equação \ref{eq.densi_carga_f_p} na equação \ref{eq.maxwell_1}, a lei de Gauss para o fluxo elétrico se torna
+\begin{equation}\label{eq.lei_gauss_polarizacao}
+\int\int_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV+\int\int\int_{V}\rho_p\,dV.
+\end{equation}
+Substituindo a equação \ref{eq.lei_gauss_polarizacao} na equação \ref{eq.polarizacao_densidade}, temos uma relação entre as cargas livres e de polarização com a lei de Gauss,
+\begin{align*}
+\int\int_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}&=\int\int\int_{V}\rho_f\,dV+\int\int\int_{V}\rho_p\,dV\\
+\int\int_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}&=\int\int\int_{V}\rho_f\,dV+\int\int_S\mathbf{P}\cdot d\mathbf{A}\\
+\int\int_S\epsilon_0\,(\mathbf{E}-\mathbf{P})\cdot d\mathbf{A}&=\int\int\int_{V}\rho_f\,dV,
+\end{align*}
+onde a expressão $\mathbf{D}=\epsilon_0\,\mathbf{E}-\mathbf{P}$ é chamada \textit{campo de densidade de fluxo elétrico}, e por fim
+\begin{equation*}
+\int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV
 \end{equation*}
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Conclusões}
