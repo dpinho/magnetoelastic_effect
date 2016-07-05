@@ -140,7 +140,7 @@ Conforme podemos ver na figura \ref{fig.flux_elet_magn}, a equação \ref{eq.gau
 \label{fig.flux_elet_magn}
 \end{figure}
 
-\subsection{A Lei de Ampère}
+\subsection{A Lei de Ampère}\label{sec.lei_ampere}
 Correntes elétricas podem ser produzidas por cargas elétricas que se movem num fio condutor. Essas correntes elétricas são fontes de campos magnéticos $d\,\textbf{B}$, num determinado ponto $\mathbf{x}$, e que podem ser calculados em função da corrente $I$ num intervalo infinitesimal $d\,\textbf{l}$ do fio. Visualização na figura \ref{fig.corrente_fio}. A fonte de corrente infinitesimal é dada por $I\,d\,\textbf{l}$ e $r$ é a distância entre o ponto de aplicação do campo magnético e a fonte de corrente infinitesimal. O vetor $\textbf{n}$ é o vetor normal que aponta na direção de $\mathbf{x}$ e o vetor $d\,\textbf{l}$ aponta na direção e sentido da corrente $I$. Repare ainda que o campo magnético depende do ângulo $\theta$ entre $\mathbf{n}$ e $d\mathbf{l}$.
 \begin{figure}
 \centering
@@ -323,7 +323,9 @@ Todos os fenômenos eletromagnéticos são governados por essas quatro equaçõe
 
 \section{Generalizações da teoria}
 
-Nosso intuito é utilizar as equações de Maxwell para ajudar a determinar a composição de uma determinada região da subsuperfície. As informaçãoes sobre as propriedades eletromagnéticas de uma região dependem dos parâmetros $\rho$ e $\mathbf{J}$ de cada região, e esses parâmetros são usados para definir e inserir nas equações de Maxwell dois campos vetoriais, $\mathbf{D}$ e $\mathbf{H}$, que estão diretamente ligados às características do meio como veremos a seguir.
+\subsection{Ação dos campos elétrico e magnético na matéria}
+
+Nosso intuito é utilizar as equações de Maxwell para ajudar a determinar a composição de uma determinada região da subsuperfície. As informaçãoes sobre as propriedades eletromagnéticas de um material que compõe uma região dependem dos parâmetros $\rho$ e $\mathbf{J}$ de cada região, e esses parâmetros são usados para definir e inserir nas equações de Maxwell dois campos vetoriais, $\mathbf{D}$ e $\mathbf{H}$, que estão diretamente ligados às características do meio como veremos a seguir.
 
 De acordo com \cite{griffiths}, um átomo eletricamente neutro também tem algumas de suas características alteradas quando expostos a campo elétrico $\mathbf{E}$, pois as cargas positivas (no núcleo) são empurradas numa direção e as cargas negativas (elétrons) são empurradas num sentido oposto. Na verdade, se o campo elétrico é muito forte, pode ser criada uma alteração permanente ``ionizando" o átomo. A aplicação de campo elétrico não tão extremo faz com que um equilíbrio seja rapidamente estabilizado criando um centro de cargas positivas e outro de cargas negativas deixando o átomo \textit{polarizado}, o qual agora passa a ter um pequeno \textit{momento de dipolo elétrico}, $\mathbf{p}$, que tem a mesma direção do campo elétrico e é proporcional ao mesmo.
 \begin{equation*}
@@ -350,7 +352,7 @@ Suponha que temos uma longa cadeia de dipolos conforme a figura \ref{fig.penquen
 \end{figure}
 Sendo $P$ a polarização de uma minúscula amostra do volume, $A$ a área de seção transversal do tubo e $d$ o comprimento da amostra, temos que o momento de dipolo da amostra é dado por $P\,A\,d$. Em termos de carga elétrica, esse momento de dipolo também pode ser definido como $q\,d$, onde $q$ é a carga elétrica no limite direito da amostra, e de onde se deduz que $q=P\,A$. Com a polarização, cargas são acumuladas no inteiror do corpo formando uma densidade de carga de polarização $\rho_p$, ocorrendo então um fenômeno de divergência da polarização através da superfície do tubo análago ao fenômeno da lei de Gauss. Assim, como um corpo dielétrico é eletricamente neutro, a quantidade total de carga negativa acumulada no interior do tubo é igual e oposta à quantidade de carga positiva empurrada através da superfície,
 \begin{equation}\label{eq.polarizacao_densidade}
-\int\int\int_V\rho_p\,d\,V=\int\int_S\mathbf{P}\cdot d\mathbf{A}.
+\int\int\int_V\rho_p\,d\,V=-\int\int_S\mathbf{P}\cdot d\mathbf{A}.
 \end{equation}
 Um meio não possui somente cargas de polarização mas também pode possuir \textit{cargas livres}, as quais se movimentam livremente sob a ação de um campo elétrico. Denotando por $Q_f$ a quantidade de cargas livres e $Q_p$ as cargas de polarização, temos que a quantidade total de cargas de um meio qualquer é dada por
 \begin{equation*}
@@ -372,15 +374,24 @@ Substituindo a equação \ref{eq.lei_gauss_polarizacao} na equação \ref{eq.pol
 \end{align*}
 onde a expressão $\mathbf{D}=\epsilon_0\,\mathbf{E}-\mathbf{P}$ é chamada \textit{campo de densidade de fluxo elétrico}, e por fim
 \begin{equation*}
-\int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV
+\int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV.
 \end{equation*}
 
-
-
-
-
-
-
+Vimos na subseç\~ao \ref{sec.lei_ampere} que correntes el\'etricas geram campos magn\'eticos, mas na verdade todos os fen\^omenos magn\'eticos são devidos a cargas el\'etricas em movimento. Se examinarmos um material magn\'etico qualquer em n\'ivel at\^omico, encontraremos pequenas correntes, as do el\'etron orbitando o n\'ucleo do \'atomo e a rota\c{c}\~ao de cada el\'etron em torno de seu pr\'oprio eixo. Em termos macrosc\'opicos essas correntes em la\c{c}os s\~ao t\~ao pequenos que s\~ao tratados como o \textit{momento de dipolo magn\'etico}, $\mathbf{m}$, similar ao que foi feito para o momento de dipolo el\'etrico. Quando um campo magn\'etico externo \'e aplicado ocorre o alinhamento desses dipolos magn\'eticos e o corpo se torna magneticamente polarizado ou \textit{magnetizado}. O estado de polariza\c{c}\~ao magn\'etica de um material \'e medido pelo momento de dipolo magn\'etico por unidade infinitesimal de volume, ou \textit{magnetiza\c{c}\~ao}
+\begin{equation*}
+\mathbf{M}=\lim_{\Delta\,V\to 0}\frac{\mathbf{m}}{\Delta\,V}.
+\end{equation*}   
+A densidade de corrente el\'etrica pode ser composta pelas \textit{densidade de correntes livres} $\mathbf{J}_f$, \textit{densidade de correntes de polariza\c{c}\~ao} $\mathbf{J}_p$ e \textit{densidade de correntes de magnetiza\c{c}\~ao} $\mathbf{J}_m$. Quando a magnetiza\c{c}\~ao de um material \'e uniforme, as correntes dos la\c{c}os internos (sem considerar a superf\'icie) se cancelam e n\~ao h\'a a gera\c{c}\~ao de densidade de correntes de magnetiza\c{c}\~ao, e quando a magnetiza\c{c}\~ao \'e n\~ao uniforme a diferen\c{c}a entre as correntes em cada la\c{c}o faz com que $\mathbf{J}_m$ seja diferente de zero. Na figura \ref{fig.magnetizacao} eh apresentado um exemplo com duas amostras infinitesimais de um material juntamente com os vetores que indicam a intensidade e a dire\c{c}\~ao da magnetiza\c{c}\~ao, e os tri\^angulos que indicam o sentido e intensidade da corrente.
+\begin{figure}
+\centering
+\includegraphics[scale=.5]{magnetizacao}
+\caption{\textit{A magnetiza\c{c}\~ao n\~ao uniforme produz densidade de corrente de magnetiza\c{c}\~ao.}}
+\label{fig.magnetizacao}
+\end{figure}     
+Nas superf\'icies onde as amostras se juntam a corrente final na dire\c{c}\~ao do eixo $x$ \'e dada pela diferen\c{c}a entre as correntes em cada amostra, geradas por suas respectivas magnetiza\c{c}\~oes na dire\c{c}\~ao do eixo $z$. Analogamente, sendo a magnetizacao no sentido do eixo $y$, a corrente resultante tamb\'em ser\'a na dire\c{c}\~ao do eixo $x$ mas em sentido oposto. Usando essa diferen\c{c}a de sentido das correstes resultantes e a equa\c{c}\~ao \ref{eq.densidade_corrente} podemos demonstrar que a densidade de corrente de magnetiza\c{c}\~ao \'e dada por
+\begin{equation*}
+\int\int_S\mathbf{J}_m\cdot d\,\mathbf{A}=\int_s \mathbf{M}\cdot d\,\mathbf{s}.
+\end{equation*}
 
 
 
