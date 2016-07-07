@@ -310,7 +310,7 @@ A terceira equação de Maxwell em sua forma integral pode ser obtida substituin
 A quarta e última equação de Maxwell é obtida substituindo a equação do fluxo magnético \ref{eq.fluxo_mag} na lei de Faraday \ref{eq.lei_faraday},
 \begin{align*}
 \int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d\phi_\mathbf{B}}{dt}\\
-\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d}{dt}\int\int_S\pmb{B}\,d\pmb{A}.
+\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d}{dt}\int\int_S\pmb{B}\cdot d\pmb{A}.
 \end{align*}
 
 Todos os fenômenos eletromagnéticos são governados por essas quatro equações de Maxwell  e os últimos duzentos anos acumularam evidências suficientes para tal fato. Como vimos, todas as equações têm princípios experimentais, são deduzidas formalmente em termos de cálculo diferencial e integral, e são satisfeitas pelas variáveis físicas $\rho$ e $\mathbf{J}$ que são as fontes dos campos elétrico e magnético respectivamente. As equações são sumarizadas a seguir:
@@ -318,12 +318,12 @@ Todos os fenômenos eletromagnéticos são governados por essas quatro equaçõe
 \int\int_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int\int_{V}\rho\,dV,\\\nonumber\\\label{eq.maxwell_2}
 \int\int_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\nonumber\\\label{eq.maxwell_3}
 \int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A},\\\nonumber\\\label{eq.maxwell_4}
-\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d}{dt}\int\int_S\pmb{B}\,d\pmb{A}.
+\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d}{dt}\int\int_S\pmb{B}\cdot d\pmb{A}.
 \end{align}
 
 \section{Generalizações da teoria}
 
-\subsection{Ação dos campos elétrico e magnético na matéria}
+\subsection{Ação do campo elétrico na matéria}
 
 Nosso intuito é utilizar as equações de Maxwell para ajudar a determinar a composição de uma determinada região da subsuperfície. As informaçãoes sobre as propriedades eletromagnéticas de um material que compõe uma região dependem dos parâmetros $\rho$ e $\mathbf{J}$ de cada região, e esses parâmetros são usados para definir e inserir nas equações de Maxwell dois campos vetoriais, $\mathbf{D}$ e $\mathbf{H}$, que estão diretamente ligados às características do meio como veremos a seguir.
 
@@ -377,6 +377,8 @@ onde a expressão $\mathbf{D}=\epsilon_0\,\mathbf{E}-\mathbf{P}$ é chamada \tex
 \int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV.
 \end{equation*}
 
+\subsection{A\c{c}\~ao de campo magn\'etico na mat\'eria}
+
 Vimos na subseç\~ao \ref{sec.lei_ampere} que correntes el\'etricas geram campos magn\'eticos, mas na verdade todos os fen\^omenos magn\'eticos são devidos a cargas el\'etricas em movimento. Se examinarmos um material magn\'etico qualquer em n\'ivel at\^omico, encontraremos pequenas correntes, as do el\'etron orbitando o n\'ucleo do \'atomo e a rota\c{c}\~ao de cada el\'etron em torno de seu pr\'oprio eixo. Em termos macrosc\'opicos essas correntes em la\c{c}os s\~ao t\~ao pequenos que s\~ao tratados como o \textit{momento de dipolo magn\'etico}, $\mathbf{m}$, similar ao que foi feito para o momento de dipolo el\'etrico. Quando um campo magn\'etico externo \'e aplicado ocorre o alinhamento desses dipolos magn\'eticos e o corpo se torna magneticamente polarizado ou \textit{magnetizado}. O estado de polariza\c{c}\~ao magn\'etica de um material \'e medido pelo momento de dipolo magn\'etico por unidade infinitesimal de volume, ou \textit{magnetiza\c{c}\~ao}
 \begin{equation*}
 \mathbf{M}=\lim_{\Delta\,V\to 0}\frac{\mathbf{m}}{\Delta\,V}.
@@ -389,11 +391,32 @@ A densidade de corrente el\'etrica pode ser composta pelas \textit{densidade de 
 \label{fig.magnetizacao}
 \end{figure}     
 Nas superf\'icies onde as amostras se juntam a corrente final na dire\c{c}\~ao do eixo $x$ \'e dada pela diferen\c{c}a entre as correntes em cada amostra, geradas por suas respectivas magnetiza\c{c}\~oes na dire\c{c}\~ao do eixo $z$. Analogamente, sendo a magnetizacao no sentido do eixo $y$, a corrente resultante tamb\'em ser\'a na dire\c{c}\~ao do eixo $x$ mas em sentido oposto. Usando essa diferen\c{c}a de sentido das correstes resultantes e a equa\c{c}\~ao \ref{eq.densidade_corrente} podemos demonstrar que a densidade de corrente de magnetiza\c{c}\~ao \'e dada por
-\begin{equation*}
+\begin{equation}\label{eq.magnetizacao_densi_corrente}
 \int\int_S\mathbf{J}_m\cdot d\,\mathbf{A}=\int_s \mathbf{M}\cdot d\,\mathbf{s}.
-\end{equation*}
+\end{equation}
 
 
+Se a concentra\c{c}\~ao de cargas em um volume muda, ent\~ao essa diferen\c{c}ca entre a quantidade inicial e a final tem que ter passado pela superf\'cie (saindo ou entrando) que engloba o volume. Assim, a varia\c{c}\~ao no tempo de uma quantidade carga saindo de um certo volume \'e igual a corrente que atravessa a superf\'icie desse volume. Considerando a densidade de cargas e correntes de polariza\c{c}\~ao, e usando as equa\c{c}\~oes \ref{eq.densidade_carga} e \ref{eq.densidade_corrente}, temos
+\begin{align*}
+\frac{d\,Q}{d\,t}&=-\int\int_S\mathbf{J}_p\cdot d\mathbf{A}\\
+\int\int\int_V\frac{\partial}{\partial\,t}\rho_p\,dV&=-\int\int_S\mathbf{J}_p\cdot d\mathbf{A}.
+\end{align*}
+Mas, pela equa\c{c}\~ao \ref{eq.polarizacao_densidade}, podemos escrever
+\begin{equation}\label{eq.polarizacao_densi_corrente}
+\int\int_S\mathbf{J}_p\cdot d\mathbf{A}=\int\int_S\mathbf{P}\cdot d\mathbf{A}.
+\end{equation} 
+Considerando os tr\^es tipos de densidade de correntes, $\mathbf{J}_f$, $\mathbf{J}_p$ e $\mathbf{J}_m$, podemos escrever a lei de Amp\`ere generalizada dada pela equa\c{c}\~ao \ref{eq.maxwell_3} na forma
+\begin{align*}
+\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}\\\\
+\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\int\int_S\mathbf{J}_p\cdot\,d\mathbf{A}+\int\int_S\mathbf{J}_m\cdot\,d\mathbf{A}.
+\end{align*}
+Substituindo as equa\c{c}\~oes \ref{eq.magnetizacao_densi_corrente} e \ref{eq.polarizacao_densi_corrente}, podemos reescrever a lei de Amp\`ere generalizada como
+\begin{align*}
+\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\int\int_S\mathbf{P}\cdot d\mathbf{A}+\int_s \mathbf{M}\cdot d\,\mathbf{s}\\\\
+\int_s(\frac{\mathbf{B}}{\mu_0}-\mathbf{M})\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S(\epsilon_0\,\textbf{E}+\mathbf{P})\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A},
+\end{align*}
+onde $\frac{\mathbf{B}}{\mu_0}-\mathbf{M}=\mathbf{H}$ \'e definido como o \textit{campo auxiliar}. Em atividades experimentais \'e mais f\'acil medir o campo 
+$\mathbf{E}$ a partir da aplica\c{c}\~ao de uma diferen\c{c}a de potencial num circuito el\'etrico do que medir o campo $\mathbf{D}$ a partir da concentra\c{c}ao de cargas el\'etricas. Com o campo $\mathbf{H}$ acontece o contr\'ario, \'e mais f\'acil medi-lo a partir da corrente el\'etrica numa bobina do que medir o campo magn\'etico $\mathbf{B}$, j\'a que este \'ultimo depende do tipo de material usado. Portanto, alguns pesquisadores e autores costumam chamar $\mathbf{H}$ de campo magn\'etico e $\mathbf{B}$ de campo de densidade de fluxo magn\'etico, mas esta \'ultima defini\c{c}\~ao, como vimos, pode se confundir com outro tipo de medida, $\phi_\mathbf{B}$.
 
 
 
