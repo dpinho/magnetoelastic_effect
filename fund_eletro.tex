@@ -377,6 +377,19 @@ onde a expressão $\mathbf{D}=\epsilon_0\,\mathbf{E}-\mathbf{P}$ é chamada \tex
 \int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV.
 \end{equation*}
 
+Para muitas subst\^ancias, a polariza\c{c}\~ao \'e proporcional ao campo el\'etrico
+\begin{equation*}
+\mathbf{P}=\epsilon_0\chi_e\mathbf{E},
+\end{equation*}
+onde $\chi_e$ \'e a \textit{susceptibilidade el\'etrica} do meio e depende das caracter\'isticas deste, os quais s\~ao chamados \textit{diel\'etricos lineares}. Substituindo essa rela\c{c}\~ao na equa\c{c}\~ao do campo de desnidade de fluxo el\'etrico temos
+\begin{align*}
+\mathbf{D}&=\epsilon_0\mathbf{E}-\mathbf{P}\\
+&=\epsilon_0\mathbf{E}-\epsilon_0\chi_e\mathbf{E}\\
+&=\epsilon_0(1-\chi_e)\mathbf{E}\\
+&=\epsilon\,\mathbf{E},
+\end{align*}
+e assim vemos que, para materiais diel\'etricos lineares, $\mathbf{D}$ tamb\'em \'e proporcional a $\mathbf{E}$, onde $\epsilon$ \'e chamado \textit{permissividade el\'etrica do meio}.
+
 \subsection{A\c{c}\~ao de campo magn\'etico na mat\'eria}
 
 Vimos na subseç\~ao \ref{sec.lei_ampere} que correntes el\'etricas geram campos magn\'eticos, mas na verdade todos os fen\^omenos magn\'eticos são devidos a cargas el\'etricas em movimento. Se examinarmos um material magn\'etico qualquer em n\'ivel at\^omico, encontraremos pequenas correntes, as do el\'etron orbitando o n\'ucleo do \'atomo e a rota\c{c}\~ao de cada el\'etron em torno de seu pr\'oprio eixo. Em termos macrosc\'opicos essas correntes em la\c{c}os s\~ao t\~ao pequenos que s\~ao tratados como o \textit{momento de dipolo magn\'etico}, $\mathbf{m}$, similar ao que foi feito para o momento de dipolo el\'etrico. Quando um campo magn\'etico externo \'e aplicado ocorre o alinhamento desses dipolos magn\'eticos e o corpo se torna magneticamente polarizado ou \textit{magnetizado}. O estado de polariza\c{c}\~ao magn\'etica de um material \'e medido pelo momento de dipolo magn\'etico por unidade infinitesimal de volume, ou \textit{magnetiza\c{c}\~ao}
@@ -415,8 +428,85 @@ Substituindo as equa\c{c}\~oes \ref{eq.magnetizacao_densi_corrente} e \ref{eq.po
 \int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\int\int_S\mathbf{P}\cdot d\mathbf{A}+\int_s \mathbf{M}\cdot d\,\mathbf{s}\\\\
 \int_s(\frac{\mathbf{B}}{\mu_0}-\mathbf{M})\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S(\epsilon_0\,\textbf{E}+\mathbf{P})\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A},
 \end{align*}
-onde $\frac{\mathbf{B}}{\mu_0}-\mathbf{M}=\mathbf{H}$ \'e definido como o \textit{campo auxiliar}. Em atividades experimentais \'e mais f\'acil medir o campo 
-$\mathbf{E}$ a partir da aplica\c{c}\~ao de uma diferen\c{c}a de potencial num circuito el\'etrico do que medir o campo $\mathbf{D}$ a partir da concentra\c{c}ao de cargas el\'etricas. Com o campo $\mathbf{H}$ acontece o contr\'ario, \'e mais f\'acil medi-lo a partir da corrente el\'etrica numa bobina do que medir o campo magn\'etico $\mathbf{B}$, j\'a que este \'ultimo depende do tipo de material usado. Portanto, alguns pesquisadores e autores costumam chamar $\mathbf{H}$ de campo magn\'etico e $\mathbf{B}$ de campo de densidade de fluxo magn\'etico, mas esta \'ultima defini\c{c}\~ao, como vimos, pode se confundir com outro tipo de medida, $\phi_\mathbf{B}$.
+onde $\frac{\mathbf{B}}{\mu_0}-\mathbf{M}=\mathbf{H}$ \'e definido como o \textit{campo magn\'etico auxiliar}. Em atividades experimentais \'e mais f\'acil medir o campo 
+$\mathbf{E}$ a partir da aplica\c{c}\~ao de uma diferen\c{c}a de potencial num circuito el\'etrico do que medir o campo $\mathbf{D}$ a partir da concentra\c{c}\~ao de cargas el\'etricas. Com o campo $\mathbf{H}$ acontece o contr\'ario, \'e mais f\'acil medi-lo a partir da corrente el\'etrica numa bobina do que medir o campo magn\'etico $\mathbf{B}$, j\'a que este \'ultimo depende do tipo de material usado. Portanto, alguns pesquisadores e autores costumam chamar $\mathbf{H}$ de campo magn\'etico e $\mathbf{B}$ de campo de densidade de fluxo magn\'etico, mas esta \'ultima defini\c{c}\~ao, como vimos, pode se confundir com outro tipo de medida, $\phi_\mathbf{B}$.
+
+Para algumas subst\^ancias, a magnetiza\c{c}\~ao \'e proporcional ao campo magn\'etico auxiliar
+\begin{equation*}
+\mathbf{M}=\chi_m\mathbf{H},
+\end{equation*}
+onde $\chi_m$ \'e a \textit{susceptilidade magn\'etica do meio} e depende das caracter\'isticas deste. Substituindo essa \'ultima equa\c{c}\~ao na equa\c{c}\~ao do campo magn\'etico auxiliar temos
+\begin{align*}
+\mathbf{B}&=\mu_0\,(\mathbf{H}+\mathbf{M})\\
+&=\mu_0\,(\mathbf{H}+\chi_m\mathbf{H})\\
+&=\mu_0\,(1+\chi_m)\,\mathbf{H}\\
+&=\mu\,\mathbf{H},
+\end{align*}
+onde $\mu$ \'e a \textit{permeabilidade magn\'etica do meio}.
+
+Assim, podemos escrever as equa\c{c}\~oes de Maxwell considerando a a\c{c}\~ao dos campos el\'etrico e magn\'etico na mat\'eria como
+\begin{align}\label{eq.max_meio_1}
+\int\int_S\mathbf{D}\cdot d\mathbf{A}&=\int\int\int_{V}\rho_f\,dV,\\\nonumber\\\label{eq.max_meio_2}
+\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\nonumber\\\label{eq.max_meio_3}
+\int_s\mathbf{H}\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S\mathbf{D}\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A},\\\nonumber\\\label{eq.max_meio_4}
+\int_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d}{dt}\int\int_S\mathbf{B}\cdot d\mathbf{A}.
+\end{align}
+
+\subsection{Forma diferencial das Equa\c{c}oes de Maxwell}
+
+Experimentalmente tem-se obtido excelentes resultados aplicando as equa\c{c}\~oes de Maxwell em sua forma diferencial, onde s\~ao assumidas algumas hip\'oteses acerca da diferenciabilidade dos campos envolvidos. Utilizando essas hip\'oteses, podemos transcrever as equa\c{c}\~oes da forma integral para a forma diferencial.
+
+Portanto, considerando uma regi\~ao fechada do espa\c{c}o $\mathbb{R}^3$ de volume $V$ e limitada pela superf\'icie $A$, temos pela equa\c{c}\~ao \ref{eq.max_meio_1} que
+\begin{equation*}
+\int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV.
+\end{equation*}
+Supondo que o campo de densidade de fluxo el\'etrico seja de classe $C^1$, podemos usar o teorema da Diverg\^encia
+\begin{equation*}
+\int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_V\nabla\cdot\mathbf{D}\,dV,
+\end{equation*}
+e realizar a substitui\c{c}\~ao
+\begin{equation*}
+\int\int\int_V\nabla\cdot\mathbf{D}\,dV=\int\int\int_{V}\rho_f\,dV.
+\end{equation*}
+Como a rela\c{c}\~ao acima \'e v\'alida para qualquer volume $V$ e supondo $\rho_f$ cont\'inuo, podemos reescrever a primeira equa\c{c}\~ao de Maxwell como
+\begin{equation*}
+\nabla\cdot\mathbf{D}=\rho_f.
+\end{equation*}
+
+Analogamente \`a situa\c{c}\~ao anterior, usando ainda o teorema da Diverg\^encia e supondo que o campo magn\'etico $\mathbf{B}$ seja de classe $C^1$, podemos escrever a segunda equa\c{c}\~ao de Maxwell, equa\c{c}\~ao \ref{eq.max_meio_2}, como
+\begin{align*}
+\int\int\int_V\nabla\cdot\mathbf{B}\,dV&=0\\\\
+\nabla\cdot\mathbf{B}\,dV&=0.
+\end{align*}
+
+Utilizando o teorema de Stokes e considerando que o campo  magn\'etico auxiliar $\mathbf{H}$ seja de classe $C^1$, temos
+\begin{equation*}
+\int_s\mathbf{H}\cdot d\mathbf{s}=\int\int_S(\nabla\times\mathbf{H})\,d\mathbf{A}.
+\end{equation*}
+Supondo que a superf\'icie $A$ seja constante no tempo, podemos substituir a express\~ao anterior na lei de Amp\`ere-Maxwell (equa`\c{c}\~ao \ref{eq.max_meio_3}) para chegar a
+\begin{equation*}
+\int\int_S(\nabla\times\mathbf{H})\,d\mathbf{A}-\int\int_S\frac{\partial}{\partial t}\,\mathbf{D}\cdot d\mathbf{A}=\int\int_S\mathbf{J}_f\,\cdot d\mathbf{A}.
+\end{equation*}
+Matematicamente n\~ao podemos usar a arbitrariedade de escolha da superf\'icie $A$, mas resultados experimentais tem sustentado que
+\begin{equation*}
+\nabla\times\mathbf{H}-\frac{\partial}{\partial t}\,\mathbf{D}=\mathbf{J}_f.
+\end{equation*}
+
+Com desenvolvimento similar ao anteiror, podemos deduzir que a forma diferencial da quarta equa\c{c}\~ao de Maxwell, equa\c{c}ao \ref{eq.max_meio_4}, \'e
+\begin{equation*}
+\nabla\times\mathbf{E}=-\frac{\partial}{\partial t}\mathbf{D}.
+\end{equation*}
+
+Sumarizando as equa\c{c}\~oes de Maxwell em suas formas diferenciais e considerando as propriedades eletromagn\'eticas do meio, temos
+\begin{align}
+\nabla\cdot\mathbf{D}&=\rho_f,\\\nonumber\\
+\nabla\cdot\mathbf{B}\,dV&=0,\\\nonumber\\
+\nabla\times\mathbf{H}-\frac{\partial}{\partial t}\,\mathbf{D}&=\mathbf{J}_f,\\\nonumber\\
+\nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{D}.
+\end{align} 
+
+
+
 
 
 
