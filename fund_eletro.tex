@@ -426,9 +426,9 @@ Considerando os tr\^es tipos de densidade de correntes, $\mathbf{J}_f$, $\mathbf
 Substituindo as equa\c{c}\~oes \ref{eq.magnetizacao_densi_corrente} e \ref{eq.polarizacao_densi_corrente}, podemos reescrever a lei de Amp\`ere generalizada como
 \begin{align*}
 \int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\int\int_S\mathbf{P}\cdot d\mathbf{A}+\int_s \mathbf{M}\cdot d\,\mathbf{s}\\\\
-\int_s(\frac{\mathbf{B}}{\mu_0}-\mathbf{M})\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S(\epsilon_0\,\textbf{E}+\mathbf{P})\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A},
+\int_s(\frac{\mathbf{B}}{\mu_0}-\mathbf{M})\cdot d\mathbf{s}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S(\epsilon_0\,\textbf{E}+\mathbf{P})\cdot\textit{d}\textbf{A},
 \end{align*}
-onde $\frac{\mathbf{B}}{\mu_0}-\mathbf{M}=\mathbf{H}$ \'e definido como o \textit{campo magn\'etico auxiliar}. Em atividades experimentais \'e mais f\'acil medir o campo 
+onde $\frac{1}{\mu_0}\mathbf{B}-\mathbf{M}=\mathbf{H}$ \'e definido como o \textit{campo magn\'etico auxiliar}. Em atividades experimentais \'e mais f\'acil medir o campo 
 $\mathbf{E}$ a partir da aplica\c{c}\~ao de uma diferen\c{c}a de potencial num circuito el\'etrico do que medir o campo $\mathbf{D}$ a partir da concentra\c{c}\~ao de cargas el\'etricas. Com o campo $\mathbf{H}$ acontece o contr\'ario, \'e mais f\'acil medi-lo a partir da corrente el\'etrica numa bobina do que medir o campo magn\'etico $\mathbf{B}$, j\'a que este \'ultimo depende do tipo de material usado. Portanto, alguns pesquisadores e autores costumam chamar $\mathbf{H}$ de campo magn\'etico e $\mathbf{B}$ de campo de densidade de fluxo magn\'etico, mas esta \'ultima defini\c{c}\~ao, como vimos, pode se confundir com outro tipo de medida, $\phi_\mathbf{B}$.
 
 Para algumas subst\^ancias, a magnetiza\c{c}\~ao \'e proporcional ao campo magn\'etico auxiliar
@@ -448,7 +448,7 @@ Assim, podemos escrever as equa\c{c}\~oes de Maxwell considerando a a\c{c}\~ao d
 \begin{align}\label{eq.max_meio_1}
 \int\int_S\mathbf{D}\cdot d\mathbf{A}&=\int\int\int_{V}\rho_f\,dV,\\\nonumber\\\label{eq.max_meio_2}
 \int\int_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\nonumber\\\label{eq.max_meio_3}
-\int_s\mathbf{H}\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S\mathbf{D}\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A},\\\nonumber\\\label{eq.max_meio_4}
+\int_s\mathbf{H}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\mathbf{D}\cdot\textit{d}\textbf{A},\\\nonumber\\\label{eq.max_meio_4}
 \int_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d}{dt}\int\int_S\mathbf{B}\cdot d\mathbf{A}.
 \end{align}
 
@@ -476,18 +476,18 @@ Como a rela\c{c}\~ao acima \'e v\'alida para qualquer volume $V$ e supondo $\rho
 Analogamente \`a situa\c{c}\~ao anterior, usando ainda o teorema da Diverg\^encia e supondo que o campo magn\'etico $\mathbf{B}$ seja de classe $C^1$, podemos escrever a segunda equa\c{c}\~ao de Maxwell, equa\c{c}\~ao \ref{eq.max_meio_2}, como
 \begin{align*}
 \int\int\int_V\nabla\cdot\mathbf{B}\,dV&=0\\\\
-\nabla\cdot\mathbf{B}\,dV&=0.
+\nabla\cdot\mathbf{B}&=0.
 \end{align*}
 
 Utilizando o teorema de Stokes e considerando que o campo  magn\'etico auxiliar $\mathbf{H}$ seja de classe $C^1$, temos
 \begin{equation*}
 \int_s\mathbf{H}\cdot d\mathbf{s}=\int\int_S(\nabla\times\mathbf{H})\,d\mathbf{A}.
 \end{equation*}
-Supondo que a superf\'icie $A$ seja constante no tempo, podemos substituir a express\~ao anterior na lei de Amp\`ere-Maxwell (equa`\c{c}\~ao \ref{eq.max_meio_3}) para chegar a
+Supondo que a superf\'icie $A$ seja constante no tempo, podemos substituir a express\~ao anterior na lei de Amp\`ere-Maxwell (equa\c{c}\~ao \ref{eq.max_meio_3}) para chegar a
 \begin{equation*}
 \int\int_S(\nabla\times\mathbf{H})\,d\mathbf{A}-\int\int_S\frac{\partial}{\partial t}\,\mathbf{D}\cdot d\mathbf{A}=\int\int_S\mathbf{J}_f\,\cdot d\mathbf{A}.
 \end{equation*}
-Matematicamente n\~ao podemos usar a arbitrariedade de escolha da superf\'icie $A$, mas resultados experimentais tem sustentado que
+Matematicamente n\~ao podemos usar a arbitrariedade de escolha da superf\'icie $A$, mas resultados experimentais tem sustentado que, de fato,
 \begin{equation*}
 \nabla\times\mathbf{H}-\frac{\partial}{\partial t}\,\mathbf{D}=\mathbf{J}_f.
 \end{equation*}
@@ -500,8 +500,8 @@ Com desenvolvimento similar ao anteiror, podemos deduzir que a forma diferencial
 Sumarizando as equa\c{c}\~oes de Maxwell em suas formas diferenciais e considerando as propriedades eletromagn\'eticas do meio, temos
 \begin{align}
 \nabla\cdot\mathbf{D}&=\rho_f,\\\nonumber\\
-\nabla\cdot\mathbf{B}\,dV&=0,\\\nonumber\\
-\nabla\times\mathbf{H}-\frac{\partial}{\partial t}\,\mathbf{D}&=\mathbf{J}_f,\\\nonumber\\
+\nabla\cdot\mathbf{B}&=0,\\\nonumber\\
+\nabla\times\mathbf{H}&=\mathbf{J}_f+\frac{\partial}{\partial t}\,\mathbf{D},\\\nonumber\\
 \nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{D}.
 \end{align} 
 
