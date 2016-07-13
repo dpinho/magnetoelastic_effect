@@ -47,7 +47,7 @@ O campo elétrico devido a um pequeno número de cargas pode ser calculado a par
 \end{equation*}
 medida, no SI, em $C/m^3$. A quantidade total de carga $Q=\sum_i \Delta\,q_i$ no volume $V$ é
 \begin{equation}\label{eq.densidade_carga}
-Q=\int\int\int_{V}\rho(\textbf{x}_0)\,dV.
+Q=\iiint_{V}\rho(\textbf{x}_0)\,dV.
 \end{equation}
 
 O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétrico que atravessam uma superfície qualquer, e é dado pela equação
@@ -73,7 +73,7 @@ com $E=\textbf{E}\cdot\textbf{n}$ sendo a componente do campo elétrico na dire�
 \end{equation*}
 O fluxo positivo atravessando toda a superfície de dentro para fora é calculado tomando o limite quando $\Delta\textbf{A}_i\to 0$ e aumentando infinitamente a quantidade dessas pequenas áreas até cobrir a superfície $S$
 \begin{equation}\label{eq.fluxo_eletr}
-\Phi_\textbf{E}=\lim_{i\to\infty}\sum_i\textbf{E}_i\cdot\textit{d}\textbf{A}_i=\int\int_S\textbf{E}\cdot\textit{d}\textbf{A}.
+\Phi_\textbf{E}=\lim_{i\to\infty}\sum_i\textbf{E}_i\cdot\textit{d}\textbf{A}_i=\oiint_S\textbf{E}\cdot\textit{d}\textbf{A}.
 \end{equation}
 
 Considere uma carga pontual positiva $q$ localizada no centro de uma esfera imaginária de raio $r$, onde essa carga produz um campo elétrico que aponta na direção radial conforme a figura \ref{fig.esfe_gauss}. Sabemos que a área da superfície dessa esfera é dada por $A=4\pi\,r^2$ e que, segundo a equação \ref{eq.campo_eletrico}, a magnitude do campo elétrico em qualquer ponto da superfície esférica é
@@ -82,16 +82,16 @@ E=\frac{q}{4\pi\epsilon_0\,r^2},
 \end{equation*}
 assim o fluxo elétrico é calculado usando a equação \ref{eq.fluxo_eletr}.
 \begin{align*}
-\Phi_\textbf{E}&=\int\int_S\textbf{E}\cdot\textit{d}\textbf{A}\\
-&=\int\int_S\textbf{E}\cdot\textbf{n}\,\textit{d}A\\
-&=E\,\int\int_S\textit{d}A\\
+\Phi_\textbf{E}&=\oiint_S\textbf{E}\cdot\textit{d}\textbf{A}\\
+&=\oiint_S\textbf{E}\cdot\textbf{n}\,\textit{d}A\\
+&=E\,\oiint_S\textit{d}A\\
 &=E\,A\\
 &=\frac{q}{4\pi\epsilon_0\,r^2}\,4\pi\,r^2\\
 &=\frac{q}{\epsilon_0}.
 \end{align*}
 Na demonstração acima escolhemos uma esfera como \textit{superfície Gaussiana} mas, introduzindo o conceito de \textit{ângulo sólido}, vemos que a demonstração é válida para qualquer superfície fechada, utilizada em aplicações que apresentem mais ou menos alguma simetria (esférica, planar ou cilíndrica). Para mais detalhes consultar \cite{jackson_classical_1999}. Assim, concluímos que o fluxo elétrico através de uma superfície fechada que apresente mais ou menos alguma simetria é diretamente proporcional à quantidade de carga enclausurada pela superfície. Matematicamente, a \textit{lei de Gauss} para o fluxo elétrico é
 \begin{equation}\label{eq.fluxo_eletrico}
-\Phi_\textbf{E}=\int\int_S\textbf{E}\cdot\textit{d}\textbf{A}=\frac{q}{\epsilon_0}.
+\Phi_\textbf{E}=\oiint_S\textbf{E}\cdot\textit{d}\textbf{A}=\frac{q}{\epsilon_0}.
 \end{equation}
 \begin{figure}[!htb]
 \centering
@@ -126,11 +126,11 @@ Essas observações são ilustradas na figura \ref{fig.froca_mag_veloc} e a for�
 \end{figure}
 Teoricamente, poderíamos tentar determinar a lei de Gauss para o fluxo magnético com o mesmo procedimento aplicado ao fluxo elétrico e obter
 \begin{equation*}
-\Phi_\textbf{B}=\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=\frac{q_m}{\mu_0},
+\Phi_\textbf{B}=\oiint_S\textbf{B}\cdot\textit{d}\textbf{A}=\frac{q_m}{\mu_0},
 \end{equation*} 
 onde $q_m$ é a carga magnética (suposto monopolo magnético) enclausurado pela superfície Gaussiana, $\mathbf{B}$ é o campo magnético e $\mu_0$ é a \textit{permeabilidade magnética no vácuo} com valor $\mu_0=4\,\pi\times 10^{-7}\, T\,m/A$. No entanto, não foi constatada a existência de qualquer carga magnética isolada mesmo após muitos esforços. Como $q_m=0$, temos que a lei de Gauss para o magnetismo é
 \begin{equation}\label{eq.gauss_flux_mag}
-\Phi_\textbf{B}=\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=0.
+\Phi_\textbf{B}=\oiint_S\textbf{B}\cdot\textit{d}\textbf{A}=0.
 \end{equation}
 Conforme podemos ver na figura \ref{fig.flux_elet_magn}, a equação \ref{eq.gauss_flux_mag} implica que a quantidade de linhas do campo magnético saindo da superfície é igual à quantidade que está entrando, ou seja, não há uma origem isolada e um término isolado para o fluxo magnético como há para o fluxo elétrico. Outro problema é que a barra imantada atravessa a superfície que, de acordo com a hipóteses da lei de Gauss, deveria ser fechada.
 \begin{figure}[!htb]
@@ -159,7 +159,7 @@ e o campo magnético no volume ao redor do fio pode ser obtido integrando sobre 
 
 Considere agora um laço circular (linha de campo magnético) de raio $r$ contido num plano perpendicular ao fio condutor, onde esse laço está dividido em pequenos comprimentos $\Delta\textbf{s}=\Delta s\,\pmb{\phi}$, cujos vetores correspondentes a cada ponto do laço apontam na direção do vetor tangencial à circunferência naquele ponto, conforme  a figura \ref{fig.laco_amperiano}. Esse laço fechado contido num plano é denominado \textit{laço Amperiano} e é usado para calcular o campo magnético referente àquela linha de campo tomando o limite quando $\Delta\textbf{s}\to 0$ e integrando no intervalo dado pelo comprimento da circunferência. Nesse caso, $\theta=\pi$ e $\pmb{\phi}$ é perpendicular ao plano formado por $\textbf{l}$ e $\textbf{n}$, portanto a magnitute do vetor  $\textbf{B}$ na direção $\pmb{\phi}$ é dada pela lei de Biot-Savart na equação \ref{eq.lei_biot_savart}.
 \begin{equation*}
-\int_{s}\textbf{B}\cdot d\textbf{s}=B\int_{s}ds=\frac{\mu_0I}{2\pi\,r}2\pi\,r=\mu_0I.
+\oint_{s}\textbf{B}\cdot d\textbf{s}=B\oint_{s}ds=\frac{\mu_0I}{2\pi\,r}2\pi\,r=\mu_0I.
 \end{equation*} 
 \begin{figure}[h]
 \centering
@@ -170,7 +170,7 @@ Considere agora um laço circular (linha de campo magnético) de raio $r$ contid
 
 Vamos considerar um outro exemplo de laço amperiano cujo contorno denotado por $abcda$ se sobrepõe a duas linhas de campo magnético coplanares, observado na figura \ref{fig.laco_amper_2}. No desenvolvimento abaixo, a primeira e terceira integrais zeram pois o campo magnético é perpendicular ao caminho de integração nesses intervalos, e $B_2(r_2\theta)$ e $B_1[r_1(2\pi-\theta)]$ são os comprimentos dos arcos $bc$ e $da$, respectivamente. A integral de linha do campo magnético no contorno $abcda$ é
 \begin{align*}
-\int_{abcda}\textbf{B}\cdot d\textbf{s}&=\int_{ab}\textbf{B}\cdot d\textbf{s}+\int_{bc}\textbf{B}\cdot d\textbf{s}+\int_{cd}\textbf{B}\cdot d\textbf{s}+\int_{da}\textbf{B}\cdot d\textbf{s}\\
+\oint_{abcda}\textbf{B}\cdot d\textbf{s}&=\oint_{ab}\textbf{B}\cdot d\textbf{s}+\oint_{bc}\textbf{B}\cdot d\textbf{s}+\oint_{cd}\textbf{B}\cdot d\textbf{s}+\oint_{da}\textbf{B}\cdot d\textbf{s}\\
 &=0+B_2(r_2\theta)+0+B_1[r_1(2\pi-\theta)]\\
 &=\frac{\mu_0I}{2\pi\,r_2}(r_2\theta)+\frac{\mu_0I}{2\pi\,r_1}[r_1(2\pi-\theta)]\\
 &=\frac{\mu_0I}{2\pi}\theta+\frac{\mu_0I}{2\pi}(2\pi-\theta)\\
@@ -184,7 +184,7 @@ Vamos considerar um outro exemplo de laço amperiano cujo contorno denotado por 
 \end{figure}
 Vemos o mesmo resultado se o laço amperiano envolve uma ou duas linhas de campo magnético e, usando coordenadas cilíndricas, podemos demonstrar que o mesmo resultado é válido para uma quantidade arbitrária de linhas de campo magnético, ou seja, a integral de linha do campo magnético através de qualquer laço amperiano fechado é proporcional à corrente elétrica inscrita no laço. A \textit{Lei de Ampère} é dada por
 \begin{equation*}
-\int_{s}\textbf{B}\cdot d\textbf{s}=\mu_0I.
+\oint_{s}\textbf{B}\cdot d\textbf{s}=\mu_0I.
 \end{equation*}
 Analogamente à lei de Gauss para campos elétricos, para ser aplicada a lei de Ampère é necessário que o laço possua alguma simetria em relação ao fio. No caso de um fio condutor suficientemente comprido para que suas extremidades não interfiram na aplicação, temos uma simetria cilíndrica e a lei de Ampère pode ser aplicada normalmente. Caso o fio não seja suficientemente comprido, devemos utilizar a lei de Biot-Savart. 
 
@@ -201,7 +201,7 @@ I_d=\epsilon_0\frac{d\phi_E}{dt}.
 \end{equation*}
 Tal produto foi denominado \textit{corrente deslocada} e foi adicionado à lei de Ampère, a qual se tornou a \textit{lei de Ampére generalizada} ou \textit{lei de Ampère-Maxwell},
 \begin{equation}\label{eq.ampere_generalizada}
-\int_s\mathbf{B}\cdot d\mathbf{s}=\mu_0I+\mu_0\epsilon_0\frac{d\phi_E}{dt}.
+\oint_s\mathbf{B}\cdot d\mathbf{s}=\mu_0I+\mu_0\epsilon_0\frac{d\phi_E}{dt}.
 \end{equation}
 Note que quando consideramos a superfície $S_1$, $I_d=0$ já que o fluxo elétrico é constante e assim $\mathbf{B}$ é dado somente por $I$. Quando consideramos a superfície $S_2$, $I=0$ e $\mathbf{B}$ é dado somente por $I_d$. 
 
@@ -229,16 +229,16 @@ Agora, num circuito elétrico fechado, as cargas percorrem um determinado caminh
 \end{equation*}
 também medida em volt. Como o campo magnético não produz trabalho, o trabalho realizado sobre o movimento das cargas deve ser devido a um campo elétrico e para escrever a força eletromotriz em termos do campo elétrico de forma análoga ao que foi feito nas equações \ref{eq.trabalho}, \ref{eq.energia_potencial} e \ref{eq.ddp}, devemos utilizar uma integral de linha, pois nesse caso a corrente percorre um determinado caminho. Como o campo elétrico é não-conservativo (senão não haveria corrente) o valor da integral na equação \ref{eq.ddp} é diferente de zero. Assim,
 \begin{equation}\label{eq.emf_E_nc}
-\varepsilon=\int_s\pmb{E}\cdot d\pmb{s}.
+\varepsilon=\oint_s\pmb{E}\cdot d\pmb{s}.
 \end{equation}
  
 O \textit{fluxo magnético} é definido de maneira similar ao fluxo elétrico e seu entendimento também pode ser acompanhado pela figura \ref{fig.flux_ele}. O fluxo magnético através de uma superfície é definido como
 \begin{equation*}
-\phi_\mathbf{B}=\textbf{B}\textbf{A}=B\,A\,\cos\theta,
+\phi_\mathbf{B}=\textbf{B}\cdot\textbf{A}=B\,A\,\cos\theta,
 \end{equation*}
 onde o vetor área é $\textbf{A}=A\textbf{n}$, $\textbf{n}$ é o vetor normal à superfície atravessada, $A$ é a magnitude da área, $B=\textbf{B}\cdot\textbf{n}$ é a componente do campo magnético na direção do vetor normal e $\theta$ é o ângulo entre $\textbf{B}$ e $\pmb{A}$. Tomando um elemento infinitesimal da área e integrando sobre a superfície o fluxo magnético é
 \begin{equation}\label{eq.fluxo_mag}
-\phi_{\mathbf{B}}=\int\int_S\pmb{B}\,d\pmb{A},
+\phi_{\mathbf{B}}=\iint_S\mathbf{B}\cdot d\mathbf{A},
 \end{equation}
 medido em \textit{Weber}, $T/m^2$. 
 
@@ -248,7 +248,7 @@ Em 1831, Faraday descobriu que se pode criar um campo elétrico variando um camp
 \end{equation*}
 Podemos reescrever a lei de Faraday usando a equação \ref{eq.emf_E_nc},
 \begin{equation}\label{eq.lei_faraday}
-\varepsilon=\int_s\pmb{E}\cdot d\pmb{s}=-\frac{d\phi_\mathbf{B}}{dt},
+\varepsilon=\oint_s\pmb{E}\cdot d\pmb{s}=-\frac{d\phi_\mathbf{B}}{dt},
 \end{equation}
 o que implica que a variação do fluxo magnético induz um campo elétrico não-conservativo que varia com o tempo, diferente do campo elétrico conservativo gerado por cargas elétricas estacionárias.
 
@@ -263,17 +263,17 @@ o que implica que a variação do fluxo magnético induz um campo elétrico não
 \section{Equações de Maxwell}
 Vimos pela equação \ref{eq.fluxo_eletrico}, que o fluxo elétrico através de uma superfície fechada é proporcional à quantidade de carga elétrica enclausurada por essa superfície. Quando temos uma quantidade de carga muito grande devemos calcular o fluxo elétrico devido à densidade carga, e substituindo a equação \ref{eq.densidade_carga} na equação \ref{eq.fluxo_eletrico} temos
 \begin{align*}
-\int\int_S\textbf{E}\cdot\textit{d}\textbf{A}&=\frac{q}{\epsilon_0}\\
+\oiint_S\textbf{E}\cdot\textit{d}\textbf{A}&=\frac{q}{\epsilon_0}\\
 &=\frac{Q}{\epsilon_0}\\
-&=\frac{1}{\epsilon_0}\int\int\int_{V}\rho\,dV\\
-\int\int_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int\int_{V}\rho\,dV.
+&=\frac{1}{\epsilon_0}\iiint_{V}\rho\,dV\\
+\oiint_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\iiint_{V}\rho\,dV.
 \end{align*}
 A equação acima é conhecida como a primeira equação de Maxwell para o eletromagnetismo escrita na forma integral. 
 
 
 A segunda equação de Maxwell é similar à primeira e, como não existem monopolos magnéticos, tal equação fica definida como a propria equação \ref{eq.gauss_flux_mag} já discutida na subseção \ref{sec.lei_gauss},
 \begin{equation*}
-\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}=0.
+\oiint_S\textbf{B}\cdot\textit{d}\textbf{A}=0.
 \end{equation*}
 
 
@@ -283,7 +283,7 @@ I_m=\frac{\Delta\,Q}{\Delta\,t},
 \end{equation*}
 medida em coulomb por segundo $(C/s)$ no SI. Em termos microscópicos, a quantidade de carga que atravessa uma superfície num determinado tempo é dada em função da \textit{densidade de corrente elétrica} $\mathbf{J}$,
 \begin{equation}\label{eq.densidade_corrente}
-I=\int\int_S\mathbf{J}\cdot\,d\mathbf{A},
+I=\oiint_S\mathbf{J}\cdot\,d\mathbf{A},
 \end{equation}
 onde a densidade de corrente elétrica é medida em $(A/m^2)$ no SI. 
 \begin{figure}
@@ -303,22 +303,22 @@ Como a densidade de corrente é a corrente média por área, temos que a mesma p
 
 A terceira equação de Maxwell em sua forma integral pode ser obtida substituindo as equações \ref{eq.densidade_corrente} e \ref{eq.fluxo_eletrico} na equação \ref{eq.ampere_generalizada},
 \begin{align*}
-\int_s\mathbf{B}\cdot d\mathbf{s}&=\mu_0I+\mu_0\epsilon_0\frac{d\phi_E}{dt}\\
-\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}
+\oint_s\mathbf{B}\cdot d\mathbf{s}&=\mu_0I+\mu_0\epsilon_0\frac{d\phi_E}{dt}\\
+\oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\iint_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}
 \end{align*}
 
 A quarta e última equação de Maxwell é obtida substituindo a equação do fluxo magnético \ref{eq.fluxo_mag} na lei de Faraday \ref{eq.lei_faraday},
 \begin{align*}
-\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d\phi_\mathbf{B}}{dt}\\
-\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d}{dt}\int\int_S\pmb{B}\cdot d\pmb{A}.
+\oint_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d\phi_\mathbf{B}}{dt}\\
+\oint_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{A}.
 \end{align*}
 
 Todos os fenômenos eletromagnéticos são governados por essas quatro equações de Maxwell  e os últimos duzentos anos acumularam evidências suficientes para tal fato. Como vimos, todas as equações têm princípios experimentais, são deduzidas formalmente em termos de cálculo diferencial e integral, e são satisfeitas pelas variáveis físicas $\rho$ e $\mathbf{J}$ que são as fontes dos campos elétrico e magnético respectivamente. As equações são sumarizadas a seguir:
 \begin{align}\label{eq.maxwell_1}
-\int\int_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int\int_{V}\rho\,dV,\\\nonumber\\\label{eq.maxwell_2}
-\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\nonumber\\\label{eq.maxwell_3}
-\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A},\\\nonumber\\\label{eq.maxwell_4}
-\int_s\pmb{E}\cdot d\pmb{s}&=-\frac{d}{dt}\int\int_S\pmb{B}\cdot d\pmb{A}.
+\oiint_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\iiint_{V}\rho\,dV,\\\nonumber\\\label{eq.maxwell_2}
+\oiint_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\nonumber\\\label{eq.maxwell_3}
+\oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\iint_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A},\\\nonumber\\\label{eq.maxwell_4}
+\oint_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{A}.
 \end{align}
 
 \section{Generalizações da teoria}
@@ -352,7 +352,7 @@ Suponha que temos uma longa cadeia de dipolos conforme a figura \ref{fig.penquen
 \end{figure}
 Sendo $P$ a polarização de uma minúscula amostra do volume, $A$ a área de seção transversal do tubo e $d$ o comprimento da amostra, temos que o momento de dipolo da amostra é dado por $P\,A\,d$. Em termos de carga elétrica, esse momento de dipolo também pode ser definido como $q\,d$, onde $q$ é a carga elétrica no limite direito da amostra, e de onde se deduz que $q=P\,A$. Com a polarização, cargas são acumuladas no inteiror do corpo formando uma densidade de carga de polarização $\rho_p$, ocorrendo então um fenômeno de divergência da polarização através da superfície do tubo análago ao fenômeno da lei de Gauss. Assim, como um corpo dielétrico é eletricamente neutro, a quantidade total de carga negativa acumulada no interior do tubo é igual e oposta à quantidade de carga positiva empurrada através da superfície,
 \begin{equation}\label{eq.polarizacao_densidade}
-\int\int\int_V\rho_p\,d\,V=-\int\int_S\mathbf{P}\cdot d\mathbf{A}.
+\iiint_V\rho_p\,d\,V=-\oiint_S\mathbf{P}\cdot d\mathbf{A}.
 \end{equation}
 Um meio não possui somente cargas de polarização mas também pode possuir \textit{cargas livres}, as quais se movimentam livremente sob a ação de um campo elétrico. Denotando por $Q_f$ a quantidade de cargas livres e $Q_p$ as cargas de polarização, temos que a quantidade total de cargas de um meio qualquer é dada por
 \begin{equation*}
@@ -360,21 +360,21 @@ Q=Q_f+Q_p,
 \end{equation*} 
 e usando a equação \ref{eq.densidade_carga}, temos que a densidade de carga do meio é
 \begin{equation}\label{eq.densi_carga_f_p}
-\int\int\int_{V}\rho\,dV=\int\int\int_{V}\rho_f\,dV+\int\int\int_{V}\rho_p\,dV.
+\iiint_{V}\rho\,dV=\iiint_{V}\rho_f\,dV+\iiint_{V}\rho_p\,dV.
 \end{equation}
 Substituindo a equação \ref{eq.densi_carga_f_p} na equação \ref{eq.maxwell_1}, a lei de Gauss para o fluxo elétrico se torna
 \begin{equation}\label{eq.lei_gauss_polarizacao}
-\int\int_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV+\int\int\int_{V}\rho_p\,dV.
+\oiint_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}=\iiint_{V}\rho_f\,dV+\iiint_{V}\rho_p\,dV.
 \end{equation}
 Substituindo a equação \ref{eq.lei_gauss_polarizacao} na equação \ref{eq.polarizacao_densidade}, temos uma relação entre as cargas livres e de polarização com a lei de Gauss,
 \begin{align*}
-\int\int_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}&=\int\int\int_{V}\rho_f\,dV+\int\int\int_{V}\rho_p\,dV\\
-\int\int_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}&=\int\int\int_{V}\rho_f\,dV+\int\int_S\mathbf{P}\cdot d\mathbf{A}\\
-\int\int_S\epsilon_0\,(\mathbf{E}-\mathbf{P})\cdot d\mathbf{A}&=\int\int\int_{V}\rho_f\,dV,
+\oiint_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}&=\iiint_{V}\rho_f\,dV+\iiint_{V}\rho_p\,dV\\
+\oiint_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}&=\iiint_{V}\rho_f\,dV+\oiint_S\mathbf{P}\cdot d\mathbf{A}\\
+\oiint_S\epsilon_0\,(\mathbf{E}-\mathbf{P})\cdot d\mathbf{A}&=\iiint_{V}\rho_f\,dV,
 \end{align*}
 onde a expressão $\mathbf{D}=\epsilon_0\,\mathbf{E}-\mathbf{P}$ é chamada \textit{campo de densidade de fluxo elétrico}, e por fim
 \begin{equation*}
-\int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV.
+\oiint_S\mathbf{D}\cdot d\mathbf{A}=\iiint_{V}\rho_f\,dV.
 \end{equation*}
 
 Para muitas subst\^ancias, a polariza\c{c}\~ao \'e proporcional ao campo el\'etrico
@@ -405,28 +405,28 @@ A densidade de corrente el\'etrica pode ser composta pelas \textit{densidade de 
 \end{figure}     
 Nas superf\'icies onde as amostras se juntam a corrente final na dire\c{c}\~ao do eixo $x$ \'e dada pela diferen\c{c}a entre as correntes em cada amostra, geradas por suas respectivas magnetiza\c{c}\~oes na dire\c{c}\~ao do eixo $z$. Analogamente, sendo a magnetizacao no sentido do eixo $y$, a corrente resultante tamb\'em ser\'a na dire\c{c}\~ao do eixo $x$ mas em sentido oposto. Usando essa diferen\c{c}a de sentido das correstes resultantes e a equa\c{c}\~ao \ref{eq.densidade_corrente} podemos demonstrar que a densidade de corrente de magnetiza\c{c}\~ao \'e dada por
 \begin{equation}\label{eq.magnetizacao_densi_corrente}
-\int\int_S\mathbf{J}_m\cdot d\,\mathbf{A}=\int_s \mathbf{M}\cdot d\,\mathbf{s}.
+\iint_S\mathbf{J}_m\cdot d\,\mathbf{A}=\oint_s \mathbf{M}\cdot d\,\mathbf{s}.
 \end{equation}
 
 
 Se a concentra\c{c}\~ao de cargas em um volume muda, ent\~ao essa diferen\c{c}ca entre a quantidade inicial e a final tem que ter passado pela superf\'cie (saindo ou entrando) que engloba o volume. Assim, a varia\c{c}\~ao no tempo de uma quantidade carga saindo de um certo volume \'e igual a corrente que atravessa a superf\'icie desse volume. Considerando a densidade de cargas e correntes de polariza\c{c}\~ao, e usando as equa\c{c}\~oes \ref{eq.densidade_carga} e \ref{eq.densidade_corrente}, temos
 \begin{align*}
-\frac{d\,Q}{d\,t}&=-\int\int_S\mathbf{J}_p\cdot d\mathbf{A}\\
-\int\int\int_V\frac{\partial}{\partial\,t}\rho_p\,dV&=-\int\int_S\mathbf{J}_p\cdot d\mathbf{A}.
+\frac{d\,Q}{d\,t}&=-\iint_S\mathbf{J}_p\cdot d\mathbf{A}\\
+\iiint_V\frac{\partial}{\partial\,t}\rho_p\,dV&=-\iint_S\mathbf{J}_p\cdot d\mathbf{A}.
 \end{align*}
 Mas, pela equa\c{c}\~ao \ref{eq.polarizacao_densidade}, podemos escrever
 \begin{equation}\label{eq.polarizacao_densi_corrente}
-\int\int_S\mathbf{J}_p\cdot d\mathbf{A}=\int\int_S\mathbf{P}\cdot d\mathbf{A}.
+\iint_S\mathbf{J}_p\cdot d\mathbf{A}=\oiint_S\mathbf{P}\cdot d\mathbf{A}.
 \end{equation} 
 Considerando os tr\^es tipos de densidade de correntes, $\mathbf{J}_f$, $\mathbf{J}_p$ e $\mathbf{J}_m$, podemos escrever a lei de Amp\`ere generalizada dada pela equa\c{c}\~ao \ref{eq.maxwell_3} na forma
 \begin{align*}
-\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}\\\\
-\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\int\int_S\mathbf{J}_p\cdot\,d\mathbf{A}+\int\int_S\mathbf{J}_m\cdot\,d\mathbf{A}.
+\oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\\iint_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}\\\\
+\oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\iint_S\mathbf{J}_f\cdot\,d\mathbf{A}+\iint_S\mathbf{J}_p\cdot\,d\mathbf{A}+\iint_S\mathbf{J}_m\cdot\,d\mathbf{A}.
 \end{align*}
 Substituindo as equa\c{c}\~oes \ref{eq.magnetizacao_densi_corrente} e \ref{eq.polarizacao_densi_corrente}, podemos reescrever a lei de Amp\`ere generalizada como
 \begin{align*}
-\int_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\int\int_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\int\int_S\mathbf{P}\cdot d\mathbf{A}+\int_s \mathbf{M}\cdot d\,\mathbf{s}\\\\
-\int_s(\frac{\mathbf{B}}{\mu_0}-\mathbf{M})\cdot d\mathbf{s}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S(\epsilon_0\,\textbf{E}+\mathbf{P})\cdot\textit{d}\textbf{A},
+\oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\iint_S\mathbf{J}_f\cdot\,d\mathbf{A}+\oiint_S\mathbf{P}\cdot d\mathbf{A}+\oint_s \mathbf{M}\cdot d\,\mathbf{s}\\\\
+\oint_s(\frac{\mathbf{B}}{\mu_0}-\mathbf{M})\cdot d\mathbf{s}&=\iint_S\mathbf{J}_f\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S(\epsilon_0\,\textbf{E}+\mathbf{P})\cdot\textit{d}\textbf{A},
 \end{align*}
 onde $\frac{1}{\mu_0}\mathbf{B}-\mathbf{M}=\mathbf{H}$ \'e definido como o \textit{campo magn\'etico auxiliar}. Em atividades experimentais \'e mais f\'acil medir o campo 
 $\mathbf{E}$ a partir da aplica\c{c}\~ao de uma diferen\c{c}a de potencial num circuito el\'etrico do que medir o campo $\mathbf{D}$ a partir da concentra\c{c}\~ao de cargas el\'etricas. Com o campo $\mathbf{H}$ acontece o contr\'ario, \'e mais f\'acil medi-lo a partir da corrente el\'etrica numa bobina do que medir o campo magn\'etico $\mathbf{B}$, j\'a que este \'ultimo depende do tipo de material usado. Portanto, alguns pesquisadores e autores costumam chamar $\mathbf{H}$ de campo magn\'etico e $\mathbf{B}$ de campo de densidade de fluxo magn\'etico, mas esta \'ultima defini\c{c}\~ao, como vimos, pode se confundir com outro tipo de medida, $\phi_\mathbf{B}$.
@@ -446,10 +446,10 @@ onde $\mu$ \'e a \textit{permeabilidade magn\'etica do meio}.
 
 Assim, podemos escrever as equa\c{c}\~oes de Maxwell considerando a a\c{c}\~ao dos campos el\'etrico e magn\'etico na mat\'eria como
 \begin{align}\label{eq.max_meio_1}
-\int\int_S\mathbf{D}\cdot d\mathbf{A}&=\int\int\int_{V}\rho_f\,dV,\\\nonumber\\\label{eq.max_meio_2}
-\int\int_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\nonumber\\\label{eq.max_meio_3}
-\int_s\mathbf{H}\cdot d\mathbf{s}&=\int\int_S\mathbf{J}_f\cdot\,d\mathbf{A}+\frac{d}{dt}\int\int_S\mathbf{D}\cdot\textit{d}\textbf{A},\\\nonumber\\\label{eq.max_meio_4}
-\int_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d}{dt}\int\int_S\mathbf{B}\cdot d\mathbf{A}.
+\oiint_S\mathbf{D}\cdot d\mathbf{A}&=\iiint_{V}\rho_f\,dV,\\\nonumber\\\label{eq.max_meio_2}
+\oiint_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\nonumber\\\label{eq.max_meio_3}
+\oint_s\mathbf{H}\cdot d\mathbf{s}&=\iint_S\mathbf{J}_f\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S\mathbf{D}\cdot\textit{d}\textbf{A},\\\nonumber\\\label{eq.max_meio_4}
+\oint_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{A}.
 \end{align}
 
 \subsection{Forma diferencial das Equa\c{c}oes de Maxwell}
@@ -458,15 +458,15 @@ Experimentalmente tem-se obtido excelentes resultados aplicando as equa\c{c}\~oe
 
 Portanto, considerando uma regi\~ao fechada do espa\c{c}o $\mathbb{R}^3$ de volume $V$ e limitada pela superf\'icie $A$, temos pela equa\c{c}\~ao \ref{eq.max_meio_1} que
 \begin{equation*}
-\int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_{V}\rho_f\,dV.
+\oiint_S\mathbf{D}\cdot d\mathbf{A}=\iiint_{V}\rho_f\,dV.
 \end{equation*}
 Supondo que o campo de densidade de fluxo el\'etrico seja de classe $C^1$, podemos usar o teorema da Diverg\^encia
 \begin{equation*}
-\int\int_S\mathbf{D}\cdot d\mathbf{A}=\int\int\int_V\nabla\cdot\mathbf{D}\,dV,
+\oiint_S\mathbf{D}\cdot d\mathbf{A}=\iiint_V\nabla\cdot\mathbf{D}\,dV,
 \end{equation*}
 e realizar a substitui\c{c}\~ao
 \begin{equation*}
-\int\int\int_V\nabla\cdot\mathbf{D}\,dV=\int\int\int_{V}\rho_f\,dV.
+\iiint_V\nabla\cdot\mathbf{D}\,dV=\iiint_{V}\rho_f\,dV.
 \end{equation*}
 Como a rela\c{c}\~ao acima \'e v\'alida para qualquer volume $V$ e supondo $\rho_f$ cont\'inuo, podemos reescrever a primeira equa\c{c}\~ao de Maxwell como
 \begin{equation*}
@@ -475,24 +475,24 @@ Como a rela\c{c}\~ao acima \'e v\'alida para qualquer volume $V$ e supondo $\rho
 
 Analogamente \`a situa\c{c}\~ao anterior, usando ainda o teorema da Diverg\^encia e supondo que o campo magn\'etico $\mathbf{B}$ seja de classe $C^1$, podemos escrever a segunda equa\c{c}\~ao de Maxwell, equa\c{c}\~ao \ref{eq.max_meio_2}, como
 \begin{align*}
-\int\int\int_V\nabla\cdot\mathbf{B}\,dV&=0\\\\
+\iiint_V\nabla\cdot\mathbf{B}\,dV&=0\\\\
 \nabla\cdot\mathbf{B}&=0.
 \end{align*}
 
 Utilizando o teorema de Stokes e considerando que o campo  magn\'etico auxiliar $\mathbf{H}$ seja de classe $C^1$, temos
 \begin{equation*}
-\int_s\mathbf{H}\cdot d\mathbf{s}=\int\int_S(\nabla\times\mathbf{H})\,d\mathbf{A}.
+\oint_s\mathbf{H}\cdot d\mathbf{s}=\iint_S(\nabla\times\mathbf{H})\,d\mathbf{A}.
 \end{equation*}
 Supondo que a superf\'icie $A$ seja constante no tempo, podemos substituir a express\~ao anterior na lei de Amp\`ere-Maxwell (equa\c{c}\~ao \ref{eq.max_meio_3}) para chegar a
 \begin{equation*}
-\int\int_S(\nabla\times\mathbf{H})\,d\mathbf{A}-\int\int_S\frac{\partial}{\partial t}\,\mathbf{D}\cdot d\mathbf{A}=\int\int_S\mathbf{J}_f\,\cdot d\mathbf{A}.
+\iint_S(\nabla\times\mathbf{H})\,d\mathbf{A}-\oiint_S\frac{\partial}{\partial t}\,\mathbf{D}\cdot d\mathbf{A}=\iint_S\mathbf{J}_f\,\cdot d\mathbf{A}.
 \end{equation*}
 Matematicamente n\~ao podemos usar a arbitrariedade de escolha da superf\'icie $A$, mas resultados experimentais tem sustentado que, de fato,
 \begin{equation*}
 \nabla\times\mathbf{H}-\frac{\partial}{\partial t}\,\mathbf{D}=\mathbf{J}_f.
 \end{equation*}
 
-Com desenvolvimento similar ao anteiror, podemos deduzir que a forma diferencial da quarta equa\c{c}\~ao de Maxwell, equa\c{c}ao \ref{eq.max_meio_4}, \'e
+Com desenvolvimento similar ao anteiror, podemos deduzir que a forma diferencial da quarta equa\c{c}\~ao de Maxwell, equa\c{c}\~ao \ref{eq.max_meio_4}, \'e
 \begin{equation*}
 \nabla\times\mathbf{E}=-\frac{\partial}{\partial t}\mathbf{D}.
 \end{equation*}
@@ -504,6 +504,52 @@ Sumarizando as equa\c{c}\~oes de Maxwell em suas formas diferenciais e considera
 \nabla\times\mathbf{H}&=\mathbf{J}_f+\frac{\partial}{\partial t}\,\mathbf{D},\\\nonumber\\
 \nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{D}.
 \end{align} 
+
+\subsection{Condi\c{c}\~oes de Contorno entre Meios de Diferentes Composi\c{c}\~oes}
+
+Segundo \cite{jackson_classical_1999}, as equa\c{c}\~oes de Maxwell em suas formas integrais (\ref{eq.max_meio_1} \`a \ref{eq.max_meio_4}) podem ser usadas para dedu\c{c}\~ao de rela\c{c}\~oes envolvendo as componentes tangenciais e normais dos campos el\'etrico e magn\'etico em ambos os lados da superf\'icie de contato entre dois meios com caracter\'isticas eletromagn\'eticas diferentes. Para a utiliza\c{c}\~ao das equa\c{c}\~oes \ref{eq.max_meio_1} e \ref{eq.max_meio_2}, consideramos um cilindro com altura infinitesimal onde cada uma de suas bases circulares pertencem a uma das camadas em quest\~ao. E para estudar as equa\c{c}\~oes \ref{eq.max_meio_3} e \ref{eq.max_meio_4}, utilizamos um circuito retangular tamb\'em de altura infinitesimal com cada um dos lados maiores pertencentes a uma das camadas. O esquema geom\'etrico dessa abordagem pode ser visto na figura tal. 
+
+Como a altura do cilindro tende a zero, a superf\'icie lateral do cilindro n\~ao contribui para o c\'alculo da integral do lado esquerdo da equa\c{c}\~ao \ref{eq.max_meio_1}, onde tal contribui\c{c}\~ao \'e devida somente \`as \'areas das bases que s\~ao paralelas entre si e tangentes a superf\'icie que separa as duas camadas. Nessas condi\c{c}\~oes temos
+\begin{equation*}
+\oiint_S\mathbf{D}\cdot d\mathbf{A} = (\mathbf{D}_2-\mathbf{D}_1)\cdot\mathbf{n}\,\Delta A,
+\end{equation*}
+onde $\mathbf{D}_i$ \'e o campo de densidade de fluxo el\'etrico nas camadas 1 e 2, e $\mathbf{n}$ \'e o vetor normal \`a superf\'icie infinitesimal $dA$. Se a densidade volum\'etrica de carga \'e singular na superf\'icie de contato de forma a produzir uma densiddade de carga superficial, $\sigma$, ent\~ao a integral do lado direito da equa\c{c}\~ao \ref{eq.max_meio_1} fica
+\begin{equation*}
+\iiint_V\rho_f\,dV=\sigma\,\Delta A.
+\end{equation*}
+Assim, a componente normal da diferen\c{c}a entre os campos de densidade de fluxo el\'etrico em cada camada \'e dado por
+\begin{equation*}
+(\mathbf{D}_2-\mathbf{D}_1)\cdot\mathbf{n}=\sigma. 
+\end{equation*} 
+Usando a defini\c{c}\~ao de \textit{salto} da componente normal de um campo dada por \cite{erigen_1963} temos
+\begin{equation}\label{eq.gau_meio_1}
+(\mathbf{D}_2-\mathbf{D}_1)\cdot\mathbf{n}=\left[\left[\mathbf{D}\right]\right]\cdot\mathbf{n}=\sigma.
+\end{equation}
+
+Analogamente, podemos determinar o salto da componente normal do campo magn\'etico a partir da equa\c{c}\~ao \ref{eq.max_meio_2},
+\begin{equation*}
+(\mathbf{B}_2-\mathbf{B}_1)\cdot\mathbf{n}=\left[\left[\mathbf{B}\right]\right]\cdot\mathbf{n}=0.
+\end{equation*}  
+Ou seja, a componente normal do campo magn\'etico \'e cont\'inua na transi\c{c}\~ao das camadas, e a descontinuidade da componente normal do campo de densidade de fluxo el\'etrico \'e igual a densidade superficial de carga no ponto de transi\c{c}\~ao.
+
+Agora vamos utilizar um circuito Stokesiano para determinar as componentes tangenciais \`a superf\'icie dos campos el\'etrico e magn\'etico auxiliar. Considerando desprez\'ivel a altura em rela\c{c}\~ao \`a superf\'icie do circuito retangular, e que seus outros dois lados s\~ao paralelos e t\^em comprimento $\Delta l$, ent\~ao o lado esquerdo da equa\c{c}\~ao \ref{eq.max_meio_3} \'e calculado como
+\begin{equation}\label{eq.amp_meio_1}
+\oint_s\mathbf{H}\cdot d\mathbf{s}=(\mathbf{H}_2-\mathbf{H}_1)\cdot(\mathbf{n}\times\mathbf{t})\Delta l.
+\end{equation}
+As integrais do lado direito da equa\c{c}\~ao \ref{eq.max_meio_3} n\~ao zeram se h\'a uma densidade de corrente superficial circulando na superf\'icie de contato. Nessas circunst\^ancias podemos escrever
+\begin{equation}\label{eq.amp_meio_2}
+\iint_S\mathbf{J}_f\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S\mathbf{D}\cdot\textit{d}\textbf{A}=\mathbf{K}\cdot\mathbf{t}\,\Delta l+0,
+\end{equation}
+onde $\mathbf{K}$ \'e a densidade de corrente superficial, e $\mathbf{t}$ \'e o vetor tangente \`a superf\'icie de contato entre as camadas, e normal \`a \'area do circuito retangular. A segunda parcela \'e zero pois a varia\c{c}\~ao no tempo do campo de densidade de fluxo el\'etrico atrav\'es de uma superf\'icie \'e finita, e a superf\'icie em quest\~ao (circuito retangular) \'e zero quando sua altura tende a zero. Igualando os resultados das equa\c{c}\~oes \ref{eq.amp_meio_1} e \ref{eq.amp_meio_2} e aplicando as regras da an\'alise vetorial temos
+\begin{equation}\label{eq.far_meio_1}
+\mathbf{n}\times(\mathbf{H}_2-\mathbf{H}_1)=\left[\left[\mathbf{H}\right]\right]=\mathbf{K}.
+\end{equation}
+Similarmente ao desenvolvimento para o salto do campo magn\'etico auxiliar, temos o salto do campo el\'etrico deduzido a partir da equa\c{c}\~ao \ref{eq.max_meio_4},
+\begin{equation}\label{eq.far_meio_2}
+\mathbf{n}\times(\mathbf{E}_2-\mathbf{E}_1)=\left[\left[\mathbf{E}\right]\right]=0.
+\end{equation}
+O lado esquerdo da equa\c{c}\~ao acima \'e zero pelo mesmo argumento dado anteriormente. A varia\c{c}\~ao no tempo de um campo magn\'etico finito atrav\'es de uma superf\'icie retangular nula, pois sua altura tende a zero.
+Pela equa\c{c}\~ao \ref{eq.far_meio_1} temos que a densidade de corrente superficial tem somente componentes paralelas \`a superf\'icie de contato entre as camadas, e a componente tangencial do campo magn\'etico auxiliar \'e descontinua por uma quantidade cuja magnitude \'e igual \`a magnitude da densidade de corrente superficial e cuja dire\c{c}\~ao \'e paralela ao vetor $\mathbf{K}\times\mathbf{n}$. Pela equa\c{c}\~ao \ref{eq.far_meio_2} temos que a componente tangencial do capo el\'etrico atrav\'es da interface \'e continua. As deconstinuidades apresentadas nas equa\c{c}\~oes \ref{eq.gau_meio_1} e \ref{eq.far_meio_1} s\~ao prestativas para resolver as equa\c{c}\~oes de Maxwell em diferentes regi\~oes e conectar as solu\c{c}\~oes para obter campos para qualquer lugar do espa\c{c}o.  
 
 
 
