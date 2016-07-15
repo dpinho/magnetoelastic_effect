@@ -507,9 +507,14 @@ Sumarizando as equa\c{c}\~oes de Maxwell em suas formas diferenciais e considera
 
 \subsection{Condi\c{c}\~oes de Contorno entre Meios de Diferentes Composi\c{c}\~oes}
 
-Segundo \cite{jackson_classical_1999}, as equa\c{c}\~oes de Maxwell em suas formas integrais (\ref{eq.max_meio_1} \`a \ref{eq.max_meio_4}) podem ser usadas para dedu\c{c}\~ao de rela\c{c}\~oes envolvendo as componentes tangenciais e normais dos campos el\'etrico e magn\'etico em ambos os lados da superf\'icie de contato entre dois meios com caracter\'isticas eletromagn\'eticas diferentes. Para a utiliza\c{c}\~ao das equa\c{c}\~oes \ref{eq.max_meio_1} e \ref{eq.max_meio_2}, consideramos um cilindro com altura infinitesimal onde cada uma de suas bases circulares pertencem a uma das camadas em quest\~ao. E para estudar as equa\c{c}\~oes \ref{eq.max_meio_3} e \ref{eq.max_meio_4}, utilizamos um circuito retangular tamb\'em de altura infinitesimal com cada um dos lados maiores pertencentes a uma das camadas. O esquema geom\'etrico dessa abordagem pode ser visto na figura tal. 
-
-Como a altura do cilindro tende a zero, a superf\'icie lateral do cilindro n\~ao contribui para o c\'alculo da integral do lado esquerdo da equa\c{c}\~ao \ref{eq.max_meio_1}, onde tal contribui\c{c}\~ao \'e devida somente \`as \'areas das bases que s\~ao paralelas entre si e tangentes a superf\'icie que separa as duas camadas. Nessas condi\c{c}\~oes temos
+Segundo \cite{jackson_classical_1999}, as equa\c{c}\~oes de Maxwell em suas formas integrais (\ref{eq.max_meio_1} \`a \ref{eq.max_meio_4}) podem ser usadas para dedu\c{c}\~ao de rela\c{c}\~oes envolvendo as componentes tangenciais e normais dos campos el\'etrico e magn\'etico em ambos os lados da superf\'icie de contato entre dois meios com caracter\'isticas eletromagn\'eticas diferentes. Para a utiliza\c{c}\~ao das equa\c{c}\~oes \ref{eq.max_meio_1} e \ref{eq.max_meio_2}, consideramos um cilindro com altura infinitesimal onde cada uma de suas bases circulares pertencem a uma das camadas em quest\~ao. E para estudar as equa\c{c}\~oes \ref{eq.max_meio_3} e \ref{eq.max_meio_4}, utilizamos um circuito retangular tamb\'em de altura infinitesimal com cada um dos lados maiores pertencentes a uma das camadas. O esquema geom\'etrico dessa abordagem pode ser visto na figura \ref{fig.cond_contorno}. 
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=1]{interface_camadas}
+\caption{\textit{As densidades de carga e corrente superficiais presentes na interface de contato entre as camadas geram descontinuidades na propaga\c{c}\~ao do campo de densidade de fluxo el\'etrico e campo magn\'etico auxiliar, respectivamente.}}
+\label{fig.cond_contorno}
+\end{figure}
+Como a altura do cilindro tende a zero, a superf\'icie lateral do cilindro n\~ao contribui para o c\'alculo da integral do lado esquerdo da equa\c{c}\~ao \ref{eq.max_meio_1}, ou seja, tal contribui\c{c}\~ao \'e devida somente \`as \'areas das bases que s\~ao paralelas entre si e tangentes a superf\'icie que separa as duas camadas. Nessas condi\c{c}\~oes temos
 \begin{equation*}
 \oiint_S\mathbf{D}\cdot d\mathbf{A} = (\mathbf{D}_2-\mathbf{D}_1)\cdot\mathbf{n}\,\Delta A,
 \end{equation*}
@@ -521,7 +526,7 @@ Assim, a componente normal da diferen\c{c}a entre os campos de densidade de flux
 \begin{equation*}
 (\mathbf{D}_2-\mathbf{D}_1)\cdot\mathbf{n}=\sigma. 
 \end{equation*} 
-Usando a defini\c{c}\~ao de \textit{salto} da componente normal de um campo dada por \cite{erigen_1963} temos
+Usando a defini\c{c}\~ao de \textit{salto} da componente normal de um campo encontrada em \cite{erigen_1963}, temos
 \begin{equation}\label{eq.gau_meio_1}
 (\mathbf{D}_2-\mathbf{D}_1)\cdot\mathbf{n}=\left[\left[\mathbf{D}\right]\right]\cdot\mathbf{n}=\sigma.
 \end{equation}
@@ -532,7 +537,7 @@ Analogamente, podemos determinar o salto da componente normal do campo magn\'eti
 \end{equation*}  
 Ou seja, a componente normal do campo magn\'etico \'e cont\'inua na transi\c{c}\~ao das camadas, e a descontinuidade da componente normal do campo de densidade de fluxo el\'etrico \'e igual a densidade superficial de carga no ponto de transi\c{c}\~ao.
 
-Agora vamos utilizar um circuito Stokesiano para determinar as componentes tangenciais \`a superf\'icie dos campos el\'etrico e magn\'etico auxiliar. Considerando desprez\'ivel a altura em rela\c{c}\~ao \`a superf\'icie do circuito retangular, e que seus outros dois lados s\~ao paralelos e t\^em comprimento $\Delta l$, ent\~ao o lado esquerdo da equa\c{c}\~ao \ref{eq.max_meio_3} \'e calculado como
+Agora vamos utilizar um circuito Stokesiano para determinar as componentes tangenciais \`a superf\'icie dos campos el\'etrico e magn\'etico auxiliar. Considerando desprez\'ivel a altura da superf\'icie formada pelo circuito retangular, e que seus outros dois lados s\~ao paralelos e t\^em comprimento $\Delta l$, ent\~ao o lado esquerdo da equa\c{c}\~ao \ref{eq.max_meio_3} \'e calculado como
 \begin{equation}\label{eq.amp_meio_1}
 \oint_s\mathbf{H}\cdot d\mathbf{s}=(\mathbf{H}_2-\mathbf{H}_1)\cdot(\mathbf{n}\times\mathbf{t})\Delta l.
 \end{equation}
@@ -548,9 +553,8 @@ Similarmente ao desenvolvimento para o salto do campo magn\'etico auxiliar, temo
 \begin{equation}\label{eq.far_meio_2}
 \mathbf{n}\times(\mathbf{E}_2-\mathbf{E}_1)=\left[\left[\mathbf{E}\right]\right]=0.
 \end{equation}
-O lado esquerdo da equa\c{c}\~ao acima \'e zero pelo mesmo argumento dado anteriormente. A varia\c{c}\~ao no tempo de um campo magn\'etico finito atrav\'es de uma superf\'icie retangular nula, pois sua altura tende a zero.
-Pela equa\c{c}\~ao \ref{eq.far_meio_1} temos que a densidade de corrente superficial tem somente componentes paralelas \`a superf\'icie de contato entre as camadas, e a componente tangencial do campo magn\'etico auxiliar \'e descontinua por uma quantidade cuja magnitude \'e igual \`a magnitude da densidade de corrente superficial e cuja dire\c{c}\~ao \'e paralela ao vetor $\mathbf{K}\times\mathbf{n}$. Pela equa\c{c}\~ao \ref{eq.far_meio_2} temos que a componente tangencial do capo el\'etrico atrav\'es da interface \'e continua. As deconstinuidades apresentadas nas equa\c{c}\~oes \ref{eq.gau_meio_1} e \ref{eq.far_meio_1} s\~ao prestativas para resolver as equa\c{c}\~oes de Maxwell em diferentes regi\~oes e conectar as solu\c{c}\~oes para obter campos para qualquer lugar do espa\c{c}o.  
-
+O lado direito da equa\c{c}\~ao acima \'e zero pelo mesmo argumento dado anteriormente. A varia\c{c}\~ao no tempo de um campo magn\'etico finito atrav\'es de uma superf\'icie retangular nula, pois sua altura tende a zero.
+Pela equa\c{c}\~ao \ref{eq.far_meio_1} temos que a densidade de corrente superficial tem somente componentes paralelas \`a superf\'icie de contato entre as camadas, e a componente tangencial do campo magn\'etico auxiliar \'e descontinua por uma quantidade cuja magnitude \'e igual \`a magnitude da densidade de corrente superficial e cuja dire\c{c}\~ao \'e paralela ao vetor $\mathbf{K}\times\mathbf{n}$. Pela equa\c{c}\~ao \ref{eq.far_meio_2} temos que a componente tangencial do campo el\'etrico atrav\'es da interface \'e continua. As deconstinuidades apresentadas nas equa\c{c}\~oes \ref{eq.gau_meio_1} e \ref{eq.far_meio_1} s\~ao prestativas para resolver as equa\c{c}\~oes de Maxwell em diferentes regi\~oes e conectar as solu\c{c}\~oes para obter campos para qualquer lugar do espa\c{c}o.  
 
 
 
