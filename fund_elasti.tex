@@ -78,7 +78,7 @@ Considerando deslocamentos infinitesimais, os componentes desse tensor nos permi
 
 Existem basicamente dois tipos de deforma\c{c}\~oes descritas pelo tensor, uma onde podemos ter mudan\c{c}a de comprimento em alguma dimens\~ao ocasionando mudan\c{c}a de volume, mas sem mudan\c{c}a na forma do corpo estudado. Outra com mudan\c{c}a na forma mas sem mudan\c{c}a de volume. Vamos analisar como cada entrada do tensor \'e respons\'avel por altera\c{c}\~oes geom\'etricas do meio.
 
-\subsubsection{Altera\c{c}\~ao Relativa de Comprimento}
+\subsubsection{Altera\c{c}\~ao Relativa de Comprimento}\label{sec.alte_compri}
 
 Considerando o caso unidimensional, vamos aplicar as deforma\c{c}\~oes $\mathbf{u}$ e $\mathbf{v}$ aos pontos $\mathbf{x}=(x_1,0,0)$ e $\mathbf{y}=(x_1+dx_1,0,0)$, respectivamente,
 \begin{equation*}
@@ -107,8 +107,52 @@ Utilizando um abuso de nota\c{c}\~ao, podemos escrever a express\~ao \ref{eq.def
 \end{equation*}
 e desse jeito podemos perceber que o fator $(1+\epsilon_{11})$ \'e uma mudan\c{c}a relativa (citada na subse\c{c}\~ao \ref{sec.deriva_deforma}) no comprimento ao longo do eixo $x_1$ devido a deforma\c{c}\~ao.
 
+\subsubsection{Altera\c{c}\~ao Relativa de Volume}
 
+Para estudar as altera\c{c}\~oes no volume de um s\'olido el\'astico vamos considerar uma caixa retangular (paralelep\'ipedo) com dimens\~oes $\Delta x_1, \Delta x_2 \text{e} \Delta x_3$ nas dire\c{c}\~oes dos eixos coordenados.  Dessa forma, o volume do paralelep\'ipedo \'e dado por\begin{equation*}
+V=\Delta x_1\,\Delta x_2\,\Delta x_3.
+\end{equation*}
+Conforme subse\c{c}\~ao \ref{sec.alte_compri}, aplicando a mudan\c{c}a relativa de comprimento a cada uma das tr\^es dimans\~oes, temos que ap\'os a deforma\c{c}\~ao, o volume do s\'olido \'e dado por
+\begin{align}\nonumber
+V^*&=(1+\epsilon_{11})\Delta x_1\,(1+\epsilon_{22})\Delta x_2\,(1+\epsilon_{33})\Delta x_3\\\label{eq.altera_volume}
+&=(1+\epsilon_{11})\,(1+\epsilon_{22})\,(1+\epsilon_{33})\,V.
+\end{align}
+Como a deforma\c{c}\~ao aplicada tem tamanho infinitesimal, estamos supondo que as altera\c{c}\~oes relativas de comprimento n\~ao fujam significativamente das dire\c{c}\~oes can\^onicas dos eixos coordenados, assim h\'a altera\c{c}\~ao apenas no volume do s\'olido e n\~ao no seu formato. Ainda por conta do valores infinitesimais de $\epsilon_{ii}$, podemos negligenciar os termos n\~ao lineares resultantes da multiplica\c{c}\~ao na equa\c{c}\~ao \ref{eq.altera_volume} e aproximar o volume ap\'os a deforma\c{c}\~ao para
+\begin{equation}\label{eq.altera_volume_2}
+V^*\approx(1+\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\,V.
+\end{equation}
+Observe que $\epsilon_{11}+\epsilon_{22}+\epsilon_{33}$ \'e o tra\c{c}o do tensor de deforma\c{c}\~ao, pode ser calculado atrav\'es do divergente do vetor de deslocamento e ser\'a denotado por $\varphi$ definindo a \textit{dilata\c{c}\~ao},
+\begin{align*}
+\varphi &=\epsilon_{11}+\epsilon_{22}+\epsilon_{33}\\
+&=\frac{\partial u_1}{\partial x_1}+\frac{\partial u_2}{\partial x_2}+\frac{\partial u_3}{\partial x_3}\\
+&=\left(\frac{\partial}{\partial x_1},\frac{\partial}{\partial x_2},\frac{\partial}{\partial x_3}\right)\cdot(u_1,u_2,u_3)\\
+&=\nabla\cdot \mathbf{u}.
+\end{align*}
+Como o tra\c{c}o de uma matriz \'e um escalar e este n\~ao se altera quando \'e aplicada uma transforma\c{c}\~ao nos eixos coordenados, temos que a dilata\c{c}\~ao e a consequente altera\c{c}\~ao no volume de um s\'olido n\~ao depende do sistema de coordenadas escolhido. Manipulando a equa\c{c}\~ao \ref{eq.altera_volume_2} podemos constatar que a dilata\c{c}\~ao se trata de uma mudan\c{c}a relativa do volume
+\begin{equation*}
+\frac{V^*-V}{V}\approx\epsilon_{11}+\epsilon_{22}+\epsilon_{33}.
+\end{equation*}
 
+\subsubsection{Altera\c{c}\~ao Relativa na Forma}
+
+O tensor de deforma\c{c}\~ao tamb\'em descreve uma mudan\c{c}a no formato do corpo, conforme podemos acompanhar pela figura \ref{fig.deforma_formato}, onde um rat\^angulo \'e transformado num paralelogramo. 
+\begin{figure}
+\centering
+\includegraphics[scale=1.4]{deforma_formato}
+\caption{\textit{Exemplo em duas dimens\~oes de como algumas componentes do tensor de deforma\c{c}\~ao promove a varia\c{c}\~ao no formato do meio.}}
+\label{fig.deforma_formato}
+\end{figure}
+O angulo reto inicialmente formado pelos eixos coordenados $x_1$ e $x_2$ \'e reduzido a um \^angulo $\alpha$ que obedece \`a rela\c{c}\~ao
+\begin{equation}
+\alpha=\frac{\pi}{2}-\beta_1-\beta_2,
+\end{equation}
+onde $\beta_1$ e $\beta_2$ s\~ao os \^angulos formados pelos lados do paralelogramo e os eixos $x_1$ e $x_2$, respectivamente. Como a varia\c{c}\~ao angular \'e bastante pequena, temos que cada \^angulo $\beta_i$ pode ser aproximado por sua respectiva tangente, e considerando deslocamentos infinitesimais, temos
+\begin{align*}
+\beta_1+\beta_2&\approx\tan(\beta_1)+\tan(\beta_2)\\
+&=\frac{\partial u_2}{\partial x_1}+\frac{\partial u_1}{\partial x_2}\\
+&=2\epsilon_{12}=2\epsilon_{21}.
+\end{align*}
+Portanto, temos que o tensor de deforma\c{c}\~ao tamb\'em \'e respons\'avel pela altera\c{c}\~ao na dire\c{c}\~ao dos seguimentos que comp\~oem um corpo, mudando assim seu formato.
 
 \section{Equações de Lamé}
 
