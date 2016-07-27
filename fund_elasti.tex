@@ -109,7 +109,7 @@ e desse jeito podemos perceber que o fator $(1+\epsilon_{11})$ \'e uma mudan\c{c
 
 \subsubsection{Altera\c{c}\~ao Relativa de Volume}
 
-Para estudar as altera\c{c}\~oes no volume de um s\'olido el\'astico vamos considerar uma caixa retangular (paralelep\'ipedo) com dimens\~oes $\Delta x_1, \Delta x_2 \text{e} \Delta x_3$ nas dire\c{c}\~oes dos eixos coordenados.  Dessa forma, o volume do paralelep\'ipedo \'e dado por\begin{equation*}
+Para estudar as altera\c{c}\~oes no volume de um s\'olido el\'astico vamos considerar uma caixa retangular (paralelep\'ipedo) com dimens\~oes $\Delta x_1, \Delta x_2\quad\text{e}\quad\Delta x_3$ nas dire\c{c}\~oes dos eixos coordenados.  Dessa forma, o volume do paralelep\'ipedo \'e dado por\begin{equation*}
 V=\Delta x_1\,\Delta x_2\,\Delta x_3.
 \end{equation*}
 Conforme subse\c{c}\~ao \ref{sec.alte_compri}, aplicando a mudan\c{c}a relativa de comprimento a cada uma das tr\^es dimans\~oes, temos que ap\'os a deforma\c{c}\~ao, o volume do s\'olido \'e dado por
@@ -153,6 +153,39 @@ onde $\beta_1$ e $\beta_2$ s\~ao os \^angulos formados pelos lados do paralelogr
 &=2\epsilon_{12}=2\epsilon_{21}.
 \end{align*}
 Portanto, temos que o tensor de deforma\c{c}\~ao tamb\'em \'e respons\'avel pela altera\c{c}\~ao na dire\c{c}\~ao dos seguimentos que comp\~oem um corpo, mudando assim seu formato.
+
+
+\subsection{Conserva\c{c}\~ao da Massa, Tens\~ao e o Equil\'ibrio do Momento Linear}
+
+O princ\'ipio de conserva\c{c}\~ao da massa \'e fundamental em mec\^anica do cont\'inuo na determina\c{c}\~ao da rela\c{c}\~ao entre o vetor de deslocamento $\mathbf{u}$ e a densidade de massa de um corpo $\rho$. Por defini\c{c}\~ao, a quantidade de massa ocupando um volume $V$  num dado tempo $t$ \'e
+\begin{equation}
+m=\iiint_V\rho\,dV,
+\end{equation}
+onde tanto a massa como a densidade n\~ao dependem apenas do tempo mas tamb\'em da posi\c{c}\~ao $\mathbf{x}$. Fixado um volume $V$, a taxa de varia\c{c}\~ao da massa no tempo \'e dada por
+\begin{equation}\label{eq.massa_1}
+\frac{d}{dt}m=\iiint_V\frac{\partial\rho}{\partial t}dV.
+\end{equation}
+Assumindo que n\~ao h\'a destrui\c{c}\~ao nem produ\c{c}\~ao de massa dentro do volume, a varia\c{c}\~ao da massa se d\'a apenas pelo quantidade de massa que passa pelo volume, ou que passa atrav\'es de uma das superf\'icies que limita esse volume, o que pode ser escrito como
+\begin{equation}\label{eq.massa_2}
+\frac{dm}{dt}=-\iint_S\rho\,\mathbf{v}\cdot d\mathbf{S},
+\end{equation}
+onde $\mathbf{v}$ \'e a velocidade da quantidade de massa que atravessa a superf\'icie $S$. A superf\'icie infinitesimal $dS$ \'e pequena o suficiente para ser considerada plana e tem o mesmo fluxo de massa em todos os seus pontos, e o sinal negativo decorre do fato de que o vetor normal \`a superf\'icie aponta no sentido de sa\'ida do volume. 
+
+Substituindo a equa\c{c}\~ao \ref{eq.massa_2} na equa\c{c}\~ao \ref{eq.massa_1} temos
+\begin{equation}\label{eq.massa_3}
+\iiint_V\frac{\partial\rho}{\partial t}dV=-\iint_S\rho\,\mathbf{v}\cdot d\mathbf{S},
+\end{equation}
+ou seja, a taxa de varia\c{c}\~ao da quantidade de massa num determinado volume \'e proporcional \`a taxa de varia\c{c}\~ao da quantidade de massa que atravessa a superf\'icie que limita esse volume. Pelo teorema do divergente temos que
+\begin{equation}\label{eq.massa_divergente}
+\iint_S\rho\,\mathbf{v}\cdot d\mathbf{S}=\iiint_V\nabla\cdot (\rho\,\mathbf{v})\,dV,
+\end{equation}
+onde substiutindo a equa\c{c}\~ao \ref{eq.massa_divergente} na equa\c{c}\~ao \ref{eq.massa_3} e agrupando os integrandos sob um mesmo volume, temos
+\begin{equation}
+\iiint_V\left[\frac{\partial\rho}{\partial t}+\nabla\cdot (\rho\,\mathbf{v})\right]\,dV=0,
+\end{equation}
+que \'e a equa\c{c}\~ao que descreve a \textit{conserva\c{c}\~ao de massa} num determinado volume $V$.
+
+
 
 \section{Equações de Lamé}
 
