@@ -143,9 +143,9 @@ O tensor de deforma\c{c}\~ao tamb\'em descreve uma mudan\c{c}a no formato do cor
 \label{fig.deforma_formato}
 \end{figure}
 O angulo reto inicialmente formado pelos eixos coordenados $x_1$ e $x_2$ \'e reduzido a um \^angulo $\alpha$ que obedece \`a rela\c{c}\~ao
-\begin{equation}
+\begin{equation*}
 \alpha=\frac{\pi}{2}-\beta_1-\beta_2,
-\end{equation}
+\end{equation*}
 onde $\beta_1$ e $\beta_2$ s\~ao os \^angulos formados pelos lados do paralelogramo e os eixos $x_1$ e $x_2$, respectivamente. Como a varia\c{c}\~ao angular \'e bastante pequena, temos que cada \^angulo $\beta_i$ pode ser aproximado por sua respectiva tangente, e considerando deslocamentos infinitesimais, temos
 \begin{align*}
 \beta_1+\beta_2&\approx\tan(\beta_1)+\tan(\beta_2)\\
@@ -158,9 +158,9 @@ Portanto, temos que o tensor de deforma\c{c}\~ao tamb\'em \'e respons\'avel pela
 \subsection{Conserva\c{c}\~ao da Massa, Tens\~ao e o Equil\'ibrio do Momento Linear}
 
 O princ\'ipio de conserva\c{c}\~ao da massa \'e fundamental em mec\^anica do cont\'inuo na determina\c{c}\~ao da rela\c{c}\~ao entre o vetor de deslocamento $\mathbf{u}$ e a densidade de massa de um corpo $\rho$. Por defini\c{c}\~ao, a quantidade de massa ocupando um volume $V$  num dado tempo $t$ \'e
-\begin{equation}
+\begin{equation*}
 m=\iiint_V\rho\,dV,
-\end{equation}
+\end{equation*}
 onde tanto a massa como a densidade n\~ao dependem apenas do tempo mas tamb\'em da posi\c{c}\~ao $\mathbf{x}$. Fixado um volume $V$, a taxa de varia\c{c}\~ao da massa no tempo \'e dada por
 \begin{equation}\label{eq.massa_1}
 \frac{d}{dt}m=\iiint_V\frac{\partial\rho}{\partial t}dV.
@@ -180,10 +180,135 @@ ou seja, a taxa de varia\c{c}\~ao da quantidade de massa num determinado volume 
 \iint_S\rho\,\mathbf{v}\cdot d\mathbf{S}=\iiint_V\nabla\cdot (\rho\,\mathbf{v})\,dV,
 \end{equation}
 onde substiutindo a equa\c{c}\~ao \ref{eq.massa_divergente} na equa\c{c}\~ao \ref{eq.massa_3} e agrupando os integrandos sob um mesmo volume, temos
-\begin{equation}
+\begin{equation*}
 \iiint_V\left[\frac{\partial\rho}{\partial t}+\nabla\cdot (\rho\,\mathbf{v})\right]\,dV=0,
-\end{equation}
+\end{equation*}
 que \'e a equa\c{c}\~ao que descreve a \textit{conserva\c{c}\~ao de massa} num determinado volume $V$.
+
+Em geral, as for\c{c}as agindo no interior de um meio continuo s\~ao as chamadas \textit{for\c{c}as de superf\'icie}, ou seja, quando um material \'e submetido ao contato de uma carga em sua superf\'ice, forcas internas se propagam no inteiror do material atrav\'es de outras superf\'icies imagin\'arias provocando a deforma\c{c}\~ao desse material. Assim, podemos definir a \textit{tens\~ao} como o conjunto dessas for\c{c}as de superf\'ice, fazendo com que tens\~ao e deforma\c{c}\~ao estejam diretamente relacionadas. Matematicamente, tens\~ao media \'e definida como a for\c{c}a por unidade de \'area
+\begin{equation}\label{eq.tensao_media}
+\mathbf{\overline{T}}=\frac{\Delta\mathbf{F}}{\Delta S},
+\end{equation}
+e segundo o princ\'ipio fundamental da mec\^anica do cont\'inuo estabelecido por Cauchy, existe o limite para o valor da tens\~ao quando $\Delta S\to 0$,
+\begin{equation*}
+\mathbf{T}^{\mathbf{n}}=\lim_{\Delta S\to 0}\frac{\Delta\mathbf{F}}{\Delta S}=\frac{d\mathbf{F}}{dS}.
+\end{equation*}
+O vetor $\mathbf{n}$ \'e normal a superf\'icie de aplica\c{c}\~ao da tens\~ao $\mathbf{T}^{\mathbf{n}}$ e \'e \'util para identificar que determinada tens\~ao se aplica a determinada superf\'icie.
+
+Al\'em das for\c{c}as de superf\'icie temos tamb\'em as for\c{c}as de corpo que agem \`a dist\^ancia como a for\c{c}a gravitacional ou a for\'c{c}a el\'etrica que agem sobre um corpo material ou sobre uma carga el\'etrica, respectivamente. Denotando tal for\c{c}a por $\mathbf{f}(\mathbf{x},t)$ temos que a for\c{c}a total atuando num corpo \'e
+\begin{equation}\label{eq.forca_total}
+\mathbf{F}_T=\iint_S\mathbf{T}\,dS+\iiint_V\mathbf{f}\,dV,
+\end{equation}
+onde $V$ \'e o volume enclausurado pela superf\'icie $S$. Usando a defini\c{c}\~ao de for\'c{c}a dada pela segunda lei de Newton, podemos reescrever a equa\c{c}\~ao \ref{eq.forca_total} como
+\begin{equation}\label{eq.forca_total_2}
+\frac{d}{dt}\iiint_V\rho\frac{d\mathbf{u}}{dt}\,dV=\iint_S\mathbf{T}\,dS+\iiint_V\mathbf{f}\,dV,
+\end{equation}
+onde $\mathbf{u}$ \'e o vetor deslocamento. A equa\c{c}\~ao \ref{eq.forca_total_2} estabelece o equil\'ibrio do \textit{momento linear},ou seja, a taxa de varia\c{c}\~ao do momento linear de uma part\'icula no meio cont\'inuo \'e igual ao somat\'orio de for\'c{c}as externas agindo nessa part\'icula. Discretizando a \'ultima integral da equa\c{c}\~ao acima podemos escrever
+\begin{equation*}
+\frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n(\mathbf{F}_{ji}+\mathbf{F}_{ij}),
+\end{equation*}
+onde $\mathbf{F}_{ji}$ \'e a forca exercida na part\'icula $i$ devida \`a part\'icula $j$. Pela terceira lei de Newton, for\c{c}as entre part\'iculas tem mesma intensidade e dire\c{c}\~ao e sentidos opostos, assim, $\mathbf{F}_{ji}=\mathbf{F}_{ij}$. Mais ainda, uma part\'icula n\~ao exerce uma for\c{c}a em si mesma, ent\~ao $\mathbf{F}_{ij}=0$. Portanto, a equa\c{c}\~ao \ref{eq.forca_total_2} se resume a
+\begin{equation*}
+\frac{d}{dt}\iiint_V\rho\frac{d\mathbf{u}}{dt}\,dV=\iint_S\mathbf{T}\,dS.
+\end{equation*}
+Somente for\c{c}as externas s\~ao respons\'aveis por altera\c{c}\~oes no momento linear.
+
+\subsection{O Tensor de Tens\~oes}
+
+Para deriva\c{c}\~ao do tensor de tens\~oes vamos utilizar o argumento do tetraedro de Cauchy, estudando as for\c{c}as agindo no inteiror de um meio cont\'inuo em rela\c{c}\~ao a um plano imagin\'ario com orienta\c{c}\~ao arbitr\'aria. O tetraedro \'e limitado pelos $O(0,0,0)$, $X(1,0,0)$, $Y(0,1,0)$ e $Z(0,0,1)$, contendo faces ortogonais, $OYZ$, $XOZ$ e $XYO$ e a face obl\'iqua $XYZ$, conforme a figura tal. Utilizando o equil\'ibro do momento linear dado pela equa\c{c}\~ao \ref{eq.forca_total_2}, podemos determinar a for\c{c}a agindo na face obl\'iqua de \'area $\Delta S$, considerando um tetraedro de dimens\~oes finitas.
+\begin{equation}\label{eq.forca_total_3}
+\overline{\rho}\,\Delta V\frac{d\overline{\mathbf{v}}}{dt}=\Delta \mathbf{F}+\Delta\mathbf{F}^{(\mathbf{e}_1)}+\Delta\mathbf{F}^{(\mathbf{e}_2)}+\Delta\mathbf{F}^{(\mathbf{e}_3)}+\overline{f}\Delta V,
+\end{equation} 
+onde $\Delta\mathbf{F}$ \'e a for\c{c}a superficial agindo na face obl\'iqua, $\Delta\mathbf{F}^{(\mathbf{e}_i)}$ \'e a for\c{c}a superficial agindo na face ortogonal cujo a normal \'e o eixo $x_i$, $\overline{f}$ \'e a for\c{c}a de campo agindo no tetraedro de volume $\Delta V$ e densidade $\rho$, e $\frac{d\overline{\mathbf{v}}}{dt}$ \'e a velocidade usada no c\'alculo da taxa de varia\c{c}\~ao do momento linear. As barras acima de cada s\'imbolo significam valores m\'edios para tetraedros de dimens\~oes finitas. Substituindo a equa\c{c}\~ao \ref{eq.tensao_media} na equa\c{c}\~ao \ref{eq.forca_total_3} temos
+\begin{equation}\label{eq.forca_total_4}
+\overline{\rho}\,\Delta V\frac{d\overline{\mathbf{v}}}{dt}=\mathbf{\overline{T}}^{(\mathbf{n})}\,\Delta S-\mathbf{\overline{T}}^{(\mathbf{e}_1)}\,\Delta S_1-\mathbf{\overline{T}}^{(\mathbf{e}_2)}\,\Delta S_2-\mathbf{\overline{T}}^{(\mathbf{e}_3)}\,\Delta S_3+\overline{f}\,\Delta V,
+\end{equation}
+onde $\Delta S_i$ \'e a \'area da face cujo a normal \'e o eixo $x_1$. Note, ainda pela figura tal, que as faces ortogonais tem suas respectivas normais com a mesma dire\c{c}\~ao mas sentido oposto ao respectivo vetor unit\'ario $\mathbf{e}_i$ do eixo correspondente, da\'i o sinal negativo na equa\c{c}\~ao acima por conta da terceira lei de Newton. Para continuarmos nossa deriva\c{c}\~ao precisamos relacionar a \'area da face obl\'iqua com as \'areas das faces ortogonais. Observe que cada componente $n_i$ do vetor $\mathbf{n}$ \'e, por defini\c{c}\~ao,
+\begin{align*}
+n_1&=\mathbf{n}\cdot\mathbf{e}_1=\norm{\mathbf{n}}\,\norm{\mathbf{e}_1}\cos(X\hat{O}N)\\
+n_2&=\mathbf{n}\cdot\mathbf{e}_2=\norm{\mathbf{n}}\,\norm{\mathbf{e}_2}\cos(Y\hat{O}N)\\
+n_3&=\mathbf{n}\cdot\mathbf{e}_3=\norm{\mathbf{n}}\,\norm{\mathbf{e}_3}\cos(Z\hat{O}N)\\
+\end{align*}
+Calculando os cossenos nos tri\^angulos $XON$, $YON$ e $ZON$ temos que
+\begin{equation*}
+h=\overline{XO}\,n_1=\overline{YO}\,n_2=\overline{ZO}\,n_3,
+\end{equation*}
+e calculando o volume do tetraedro em rela\c{c}\~ao a cada uma das faces temos
+\begin{equation}\label{eq.volume_tetraedro}
+\Delta V=\frac{1}{3}h\,\Delta S=\frac{1}{3}\overline{XO}\Delta S_1=\frac{1}{3}\overline{YO}\Delta S_2=\frac{1}{3}\overline{ZO}\Delta S_3,
+\end{equation}
+e da\'i temos a rela\c{c}\~ao entre as \'areas,
+\begin{equation}\label{eq.relacao_areas}
+\Delta S=\Delta S_in_i,\quad\text{onde}\quad i=1,2,3.
+\end{equation}
+Usando as equa\'c{c}\~oes \ref{eq.volume_tetraedro} e \ref{eq.relacao_areas} podemos escrever a equa\c{c}\~ao \ref{eq.forca_total_4} como
+\begin{equation*}
+\overline{\rho}\,\frac{1}{3}h\,\Delta S\frac{d\overline{\mathbf{v}}}{dt}=\mathbf{\overline{T}}^{(\mathbf{n})}\,\Delta S-\mathbf{\overline{T}}^{(\mathbf{e}_1)}\,n_1\,\Delta S-\mathbf{\overline{T}}^{(\mathbf{e}_2)}\,n_2\,\Delta S-\mathbf{\overline{T}}^{(\mathbf{e}_3)}\,n_3\,\Delta S+\overline{f}\,\frac{1}{3}h\,\Delta S.
+\end{equation*}
+Cancelando $\Delta S$, temos
+\begin{equation*}
+\overline{\rho}\,\frac{1}{3}h\frac{d\overline{\mathbf{v}}}{dt}=\mathbf{\overline{T}}^{(\mathbf{n})}-\mathbf{\overline{T}}^{(\mathbf{e}_1)}\,n_1-\mathbf{\overline{T}}^{(\mathbf{e}_2)}\,n_2-\mathbf{\overline{T}}^{(\mathbf{e}_3)}\,n_3+\overline{f}\frac{1}{3}h.
+\end{equation*}
+Reduzindo o tetraedro de dimens\~oes finitas a um tetraedro infinitesimal, fazemos $h\to 0$ mantendo o v\'ertice $O$ centrado na origem e sem alterar a dire\c{c}\~ao de $h$,
+\begin{equation*}
+\mathbf{T}^{(\mathbf{n})}=\mathbf{T}^{(\mathbf{e}_1)}\,n_1+\mathbf{T}^{(\mathbf{e}_2)}\,n_2+\mathbf{T}^{(\mathbf{e}_3)}\,n_3.
+\end{equation*}
+Em termos matriciais, temos
+\begin{align}\nonumber
+\mathbf{T}^{(\mathbf{n})}&=
+\begin{bmatrix}
+T_1^{(\mathbf{e}_1)}\\
+T_2^{(\mathbf{e}_1)}\\
+T_3^{(\mathbf{e}_1)}
+\end{bmatrix}
+n_1+
+\begin{bmatrix}
+T_1^{(\mathbf{e}_2)}\\
+T_2^{(\mathbf{e}_2)}\\
+T_3^{(\mathbf{e}_2)}
+\end{bmatrix}
+n_2+
+\begin{bmatrix}
+T_1^{(\mathbf{e}_3)}\\
+T_2^{(\mathbf{e}_3)}\\
+T_3^{(\mathbf{e}_3)}
+\end{bmatrix}
+n_3\\\label{eq.matriz_tensao}
+&=
+\begin{bmatrix}
+T_1^{(\mathbf{e}_1)}&T_1^{(\mathbf{e}_2)}&T_1^{(\mathbf{e}_3)}\\
+T_2^{(\mathbf{e}_1)}&T_2^{(\mathbf{e}_2)}&T_2^{(\mathbf{e}_3)}\\
+T_3^{(\mathbf{e}_1)}&T_3^{(\mathbf{e}_2)}&T_3^{(\mathbf{e}_3)}
+\end{bmatrix}
+\begin{bmatrix}
+n_1\\
+n_2\\
+n_3
+\end{bmatrix}.
+\end{align}
+Ou seja, se sabemos as tens\~oes em tr\^es planos mutuamente ortogonais com rela\c{c}\~ao a um determinado ponto $P$, podemos determinar a tens\~ao num outro plano qualquer passando por $P$.
+
+Definindo a matrix $\tau$
+\begin{equation*}
+\tau=
+\begin{bmatrix}
+\tau_{11}&\tau_{12}&\tau_{13}\\
+\tau_{21}&\tau_{22}&\tau_{23}\\
+\tau_{31}&\tau_{32}&\tau_{33}
+\end{bmatrix},
+\end{equation*}
+onde cada componente $\tau_{ij}$ representa a j-\'esima componente da for\c{c}a superficial agindo no plano cuja normal tem mesma dire\c{c}\~ao do eixo $x_i$. Assim, comparando a matriz da equa\c{c}\~ao \ref{eq.matriz_tensao} com a matriz $\tau$ e considerando as defini\c{c}\~oes dadas para os \'indices, vemos que
+\begin{equation*}
+\tau_{ij}=T_j^{(\mathbf{e}_i)},
+\end{equation*}
+ou seja, a equa\c{c}\~ao \ref{eq.matriz_tensao} pode ser escrita compactamente como
+\begin{equation*}
+\mathbf{T}^{(\mathbf{n})}=\tau^\top\mathbf{n}.
+\end{equation*}
+A matriz $\tau$ \'e chamada de \textit{tensor de tens\~oes de Cauchy}, o s\'imbolo $\top$ indica transposi\c{c}\~ao e $\mathbf{T}^{(\mathbf{n})}$ \'e a tens\~ao aplicada em um plano qualquer com orienta\c{c}\~ao $\mathbf{n}$.
+
+
+
 
 
 
