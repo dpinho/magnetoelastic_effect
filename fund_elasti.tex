@@ -74,7 +74,7 @@ onde o termo entre par\^enteses \'e definido como o \textit{tensor de deforma\c{
 \end{equation*}
 Considerando deslocamentos infinitesimais, os componentes desse tensor nos permitem descrever as deforma\c{c}\~oes associadas a esses deslocamentos entre os pontos iniciais. Analisando as entradas do tensor vemos que se o vetor de deslocamento \'e constante ent\~ao $\epsilon_{i,j}=0$ para todo o tensor, e n\~ao h\'a deforma\c{c}\~ao, apenas movimento r\'igido como descrito anteriormente. Como se trata de uma matriz sim\'etrica, no espa\c{c}o $\mathbb{R}^3$ temos apenas seis componentes independentes para o tensor.
 
-\subsection{Interpreta\c{c}\~ao Geometrica do Tensor de Deforma\c{c}\~ao}
+\subsection{Interpreta\c{c}\~ao Geom\'etrica do Tensor de Deforma\c{c}\~ao}
 
 Existem basicamente dois tipos de deforma\c{c}\~oes descritas pelo tensor, uma onde podemos ter mudan\c{c}a de comprimento em alguma dimens\~ao ocasionando mudan\c{c}a de volume, mas sem mudan\c{c}a na forma do corpo estudado. Outra com mudan\c{c}a na forma mas sem mudan\c{c}a de volume. Vamos analisar como cada entrada do tensor \'e respons\'avel por altera\c{c}\~oes geom\'etricas do meio.
 
@@ -339,6 +339,8 @@ Para satisfazer essa integral o integrando deve ser nulo, de onde podemos conclu
 \end{equation}
 Essa equa\c{c}\~ao \'e conhecida como a \textit{equa\c{c}\~ao do movimento de Cauchy} ou \textit{primeira lei do movimento de Cauchy}, e relaciona dois tipos de for\c{c}a, superficial e de campo, com a acelera\c{c}\~ao de um corpo num meio cont\'inuo e el\'astico. Ou seja, a acelera\c{c}\~ao de um corpo num meio cont\'inuo e el\'astico resulta da aplica\c{c}\~ao desses dois tipos de for\c{c}a.
 
+  
+\section{Equações de Lamé}
 \subsection{Rela\c{c}\~oes Constitutivas}
 
 As rela\c{c}\~oes contitutivas, ou rela\c{c}\~oes de tens\~ao-deforma\c{c}\~ao, foram estabelecidas experimentalmente e descrevem como as for\c{c}as aplicadas em materiais el\'asticos est\~ao linearmente relacionadas com a deforma\c{c}\~ao observada nesses materiais. As rela\c{c}\~oes consitutivas s\~ao conhecidas tamb\'em como a lei de Hooke, a qual estabelece que cada componente do tensor de tens\~oes est\'a linearmente relacionada com todas as componentes do tensor de deforma\c{c}\~oes. Dessa forma, a lei de Hooke pode ser escrita como
@@ -383,10 +385,67 @@ C_{61}&C_{62}&C_{63}&C_{64}&C_{65}&C_{66}
 2\,\varepsilon_{12}
 \end{bmatrix}.
 \end{equation*}
-Podemos notar que, por conta da simetria dos tensores de tens\~ao e de deforma\c{c}\~ao, basta considerar apenas seis das nove equa\c{c}\~oes iniciais dadas pela rela\c{c}\~ao \ref{eq.lei_hooke}.  
+Podemos notar que, por conta da simetria dos tensores de tens\~ao e de deforma\c{c}\~ao, basta considerar apenas seis das nove equa\c{c}\~oes iniciais dadas pela rela\c{c}\~ao \ref{eq.lei_hooke}.
+
+\subsection{Os Par\^ametros de Lam\'e}
+
+Considere um material com determinadas caracter\'isticas e com posi\c{c}\~ao medida em rela\c{c}\~ao a um determinado sistema de coordenadas. Podemos alterar o sistema de coordenadas sem alterar as caracter\'isticas do material em quest\~ao. Essa invari\^ancia das caracter\'isticas de um corpo em rela\c{c}\~ao a uma mudan\c{c}a no sistema de coordenadas \'e chamada \textit{simetria material}. Num certo sistema de coordenadas, a matriz de elasticidade nos permite reconhecer qual o tipo de simetria que um corpo apresenta (s\~ao oito no total), pois uma altera\c{c}\~ao no sistema de coordenadas gera um efeito nas equa\c{c}\~oes de tens\~ao-deforma\c{c}\~ao.  Ainda mais, sob determinadas condi\c{c}\~oes, a matriz de elasticidade \'e invariante para algumas altera\c{c}\~oes no sistema de coordenadas.
+Estamos interessados em transforma\c{c}\~ao de coordenadas que preservam dist\^ancias entre pontos, ou seja as rota\c{c}\~oes e reflex\~oes, tamb\'em conhecidas como \textit{tansforma\c{c}\~oes ortogonais}. Dado um ponto $\mathbf{x}\in\mathbb{R}^3$, uma transforma\c{c}\~ao ortogonal \'e dada por uma matriz $A_{3\times 3}$ onde 
+\begin{equation*}
+\mathbf{\hat{x}}=A\,\mathbf{x},
+\end{equation*} 
+com $A^\top A=I$, ou $A^\top=A^{-1}$, e $I$ \'e a matriz identidade $3\times 3$.
+O conjunto de todas as transforma\c{c}\~oes ortogonais $A$ que n\~ao alteram as caracter\'isticas el\'asticas de um meio cont\'inuo s\~ao chamadas \textit{grupo de simetria}. Dentre os grupos de simetria, o que nos interessa \'e o caso \textit{isotr\'opico cont\'inuo}, que cont\'em todas as transforma\c{c}\~oes ortogonais usadas nas deriva\c{c}\~oes dos grupos anteriores, fazendo com que qualquer sistema de coordenadas seja efetivo no estudo das caracter\'isticas el\'asticas de um meio n\~ao sendo necess\'aria uma orienta\c{c}\~ao em particular. Assim, atrav\'es dos grupos de simetria anteriores, podemos demonstrar que a matriz de elasticidade para o grupo isotr\'opico cont\'inuo \'e
+\begin{equation}
+C_{iso}=
+\begin{bmatrix}
+\lambda +2\,\mu & \lambda & \lambda &0&0&0\\
+\lambda&\lambda+2\,\mu&\lambda&0&0&0\\
+\lambda&\lambda&\lambda+2\,\mu&0&0&0\\
+0&0&0&\mu&0&0\\
+0&0&0&0&\mu&0\\
+0&0&0&0&0&\mu
+\end{bmatrix},
+\end{equation} 
+onde os par\^ametros $\lambda$ e $\mu$ s\~ao conhecidos como os \textit{par\^ametros de Lam\'e}, e est\~ao estreitamente relacionados aos autovalores da matriz $C_{iso}$. Fisicamente, $\mu$ est\'a relacionado com a rigidez do s\'olido em quest\~ao e $\lambda$ com sua compressibilidade.
+
+\subsection{Condi\c{c}\~oes de Contorno}
+
+Vimos que a matriz de elasticidade para meios isotr\'opicos possui os par\^ametros $\lambda$ e $\mu$ que definem as caracter\'isticas el\'asticas do meio. Uma mudan\c{c}a abrupta nesses par\^ametros indica uma altera\c{c}\~ao na composi\c{c}\~ao do meio de propaga\c{c}\~ao da deforma\c{c}\~ao, indicando que a mesma atravessou uma superf\'icie de contato entre duas camadas de subsuperf\'icie. Vamos analisar como a descontinuidade dos par\^ametros de Lam\'e afetam os tensores de tens\~ao e de deforma\c{c}\~ao.
+ 
+Dados dois meios $M_1$ e $M_2$ com caracter\'isticas el\'asticas distintas contidos no espa\c{c}o $\mathbb{R}^3$, separados por uma superf\'icie de contato $S$ com dire\c{c}\~ao normal $\mathbf{n}$. Sendo $\mathbf{F}$ o campo de for\c{c}as de contato, $\mathbf{p}_0\in S$, $\mathbf{p}_1\in M_1$ e $\mathbf{p}_2\in M_2$, queremos calcular a diferen\c{c}a entre os limites de $\mathbf{F}$ aplicada a $\mathbf{p}_1$ e $\mathbf{p}_2$ quando esses pontos tendem a $\mathbf{p}_0$ atrav\'es dos meios $M_1$ e $M_2$, respectivamente. Ou seja, queremos calcular o salto de $\mathbf{F}$ em $\mathbf{p}_0$ e assumindo que os limites parciais existem, temos
+\begin{equation*}
+\left[\left[\mathbf{F}\right]\right]=\lim_{\mathbf{p}_1\to\mathbf{p}_0}\mathbf{F}(\mathbf{p}_1)-\lim_{\mathbf{p}_2\to\mathbf{p}_0}\mathbf{F}(\mathbf{p}_2).
+\end{equation*}
+Fixado um ponto $\mathbf{p}_0\in S$ qualquer vamos utilizar um cilindro infinitesimal centrado em $\mathbf{p}_0$, com altura $dh$ e \'area das bases $dA$, com orienta\c{c}\~ao normal $\mathbf{n}$ e onde cada metade do cilindro se encontra nos meios $M_1$ e $M_2$ conforme a figura \ref{fig.interface_elastici}. 
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=1]{interface_elastici}
+\caption{\textit{Cilindro de dimens\~oes infinitesimais dividido pela interface separadora dos meios 1 e 2.}}
+\label{fig.interface_elastici}
+\end{figure}
+Considerando ainda que cada um dos pontos $\mathbf{p}_1$ e $\mathbf{p}_2$ s\~ao os centros de cada uma das bases do cilindro, temos que os pontos $\mathbf{p}_0$, $\mathbf{p}_1$ e $\mathbf{p}_2$ est\~ao alinhados. Utilizando novamente a equa\c{c}\~ao \ref{eq.forca_total_3} e desprezando as for\c{c}as aplicadas na parede do cilindro (j\'a que vamos fazer $h\to 0$), temos que o equil\'ibrio de for\c{c}as aplicadas ao cilindro \'e dado por 
+\begin{equation*}
+\mathbf{F}=\mathbf{F}(\mathbf{p}_1)+\mathbf{F}(\mathbf{p}_2)+f
+\end{equation*} 
+onde $f$ \'e uma for\c{c}a de campo. Utilizando a segunda lei de Newton, utilizando a equa\c{c}\~ao \ref{eq.tensao_media} e desprezando as for\c{c}as de campo, temos
+\begin{equation*}
+\rho\,dh\,dA\frac{d\mathbf{v}}{dt}=\mathbf{T}(\mathbf{p}_1,\mathbf{n})dA+\mathbf{T}(\mathbf{p}_2,-\mathbf{n})dA.
+\end{equation*} 
+Fazendo o limite quando $h\to 0$ e mantendo constantes as \'areas das bases do cilindro, temos que os pontos $\mathbf{p}_i$ convergem para $\mathbf{p}_0$, e a equa\c{c}\~ao acima se torna
+\begin{equation*}
+\mathbf{T}(\mathbf{p}_0,\mathbf{n})-\mathbf{T}(\mathbf{p}_0,\mathbf{n})=\mathbf{0}.
+\end{equation*}
+Como o ponto $\mathbf{p}_0$ \'e tomado arbitrariamente, temos que o salto do tensor de tens\~oes ao longo da superf\'icie $S$ \'e nulo
+\begin{equation*}
+\left[\left[\mathbf{T}\right]\right]=\mathbf{0}.
+\end{equation*}
+Considerando um modelo onde uma camada n\~ao vai invadir a outra temos que a componente normal do vetor de deslocamento $\mathbf{u}\in S$ \'e nula. Da mesma forma, considerando que uma camada n\~ao desliza sobre a outra, temos que as componentes tangenciais de $\mathbf{u}$ tamb\'em s\~ao zero, e da\'i assumimos que o salto de $\mathbf{u}$ \'e nulo bem como sua velocidade,
+\begin{equation*}
+\left[\left[\mathbf{u}\right]\right]=\mathbf{0}\quad\text{e}\quad\left[\left[\frac{\partial}{\partial t}\mathbf{u}\right]\right]=\mathbf{0}.
+\end{equation*}
 
 
-\section{Equações de Lamé}
 
 \section{Generalizações da teoria}
 
