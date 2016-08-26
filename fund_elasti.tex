@@ -1,9 +1,9 @@
 \chapter{Fundamentos de Elasticidade}\label{sec.fund_elast}
 
 \section{Introdu\c{c}\~ao}
-A teoria formal da propaga\c{c}\~ao de ondas s\'ismicas repousa nas intera\c{c}\~oes entre as particulas infinitesimais discretas do meio \`a medida que uma deforma\c{c}\~ao se propaga. \'E muito dif\'icil estudar individualmente cada uma dessas intera\c{c}\~oes, mas dados experimentais que foram coletados como resultados dessas intera\c{c}\~oes sugerem que as mesmas podem ser consideradas em conjunto. Assim, o estudo da propaga\c{c}\~ao de ondas s\'ismicas atrav\'es de camadas de subsuperf\'icie num material discretizado pode ser feito considerando o meio como cont\'inuo, e tais estudos s\~ao os objetos da \textit{mec\^anica do cont\'inuo}. 
+A teoria formal da propaga\c{c}\~ao de ondas s\'ismicas repousa nas intera\c{c}\~oes entre as part\'iculas infinitesimais discretas do meio \`a medida que uma deforma\c{c}\~ao se propaga. \'E muito dif\'icil estudar individualmente cada uma dessas intera\c{c}\~oes, mas dados experimentais que foram coletados como resultados dessas intera\c{c}\~oes sugerem que as mesmas podem ser consideradas em conjunto. Assim, o estudo da propaga\c{c}\~ao de ondas s\'ismicas atrav\'es de camadas de subsuperf\'icie num material discretizado pode ser feito considerando o meio como cont\'inuo, e tais estudos s\~ao os objetos da \textit{mec\^anica do cont\'inuo}. 
 
-No desenvolvimento te\'orico da mec\^anica do cont\'inuo nao s\~ao consideradas as caracter\'isticas at\^omicas da mat\'eria bem como as intera\c{c}\~oes entre essas part~\'iculas, ou seja, a mat\'eria n\~ao \'e estudada do ponto de vista microsc\'opico. Segundo \cite{slawinski}, tal abordagem se justifica pelo fato de que a mat\'eria \'e formada por part\'iculas suficientemente pouco espa\c{c}adas e suas caracter\'isticas e comportamento podem ser descritos por fun\c{c}\~oes cont\'inuas e diferenci\'aveis. Assim, \'e assummido que elementos infinitesimais da mat\'eria t\^em as mesmas propriedades observadas em experimentos macrosc\'opicos, pois essa hip\'otese permite a cria\c{c}\~ao de um modelo matem\'atico abstrato \textit{efetivo} na descri\c{c}\~ao da realidade f\'isica. Como exemplo, vamos considerar a cor de um objeto. Pr\'otons e el\'etrons n\~ao possuem cor, mas os meios materiais (que s\~ao formados por pr\'otons e el\'etrons) t\^em a capacidade de absorver ou refletir determinados comprimentos de ondas eletromagn\'eticas as quais determinam a cor de cada meio. Outros conceitos da mec\^anica do cont\'inuo sao elasticidade, viscosidade, fric\c{c}\~ao, rigidez, etc, como veremos mais a frente.
+No desenvolvimento te\'orico da mec\^anica do cont\'inuo n\~ao s\~ao consideradas as caracter\'isticas at\^omicas da mat\'eria bem como as intera\c{c}\~oes entre essas part\'iculas, ou seja, a mat\'eria n\~ao \'e estudada do ponto de vista microsc\'opico. Segundo \cite{slawinski}, tal abordagem se justifica pelo fato de que a mat\'eria \'e formada por part\'iculas suficientemente pouco espa\c{c}adas e suas caracter\'isticas e comportamento podem ser descritos por fun\c{c}\~oes cont\'inuas e diferenci\'aveis. Assim, \'e assummido que elementos infinitesimais da mat\'eria t\^em as mesmas propriedades observadas em experimentos macrosc\'opicos, pois essa hip\'otese permite a cria\c{c}\~ao de um modelo matem\'atico abstrato \textit{efetivo} na descri\c{c}\~ao da realidade f\'isica. Como exemplo, vamos considerar a cor de um objeto. Pr\'otons e el\'etrons n\~ao possuem cor, mas os meios materiais (que s\~ao formados por pr\'otons e el\'etrons) t\^em a capacidade de absorver ou refletir determinados comprimentos de ondas eletromagn\'eticas as quais determinam a cor de cada meio. Outros conceitos da mec\^anica do cont\'inuo s\~ao elasticidade, viscosidade, fric\c{c}\~ao, rigidez, etc, como veremos mais a frente.
 
 
 \section{Fatos experimentais}
@@ -64,7 +64,7 @@ Abrindo cada uma das parcelas quadr\'aticas, temos
 &+(dx_2)^2+2\,dx_2\,\sum_{i=1}^3\frac{\partial u_2}{\partial x_i}\Bigg\vert_{\mathbf{x}}dx_i+\left(\sum_{i=1}^3\frac{\partial u_2}{\partial x_i}\Bigg\vert_{\mathbf{x}}dx_i\right)^2\\\\
 &+(dx_3)^2+2\,dx_3\,\sum_{i=1}^3\frac{\partial u_3}{\partial x_i}\Bigg\vert_{\mathbf{x}}dx_i+\left(\sum_{i=1}^3\frac{\partial u_3}{\partial x_i}\Bigg\vert_{\mathbf{x}}dx_i\right)^2.
 \end{align*}
-Pela equa\c{c}\~ao \ref{eq.dist_antes_defor}, a coluna  da esquerda \'e $\norm{d\mathbf{s}}^2$. Como estamos trabalhando com quantidades infinitesimais, podemos negligenciar a coluna da direita por se tratar do quadrado do gradiente de cada componente do vetor de deslocamento num produto escalar com o vetor que d\'a a dist\^ancia entre os pontos $\mathbf{x}$  e $\mathbf{y}$. A coluna do meio se desdobra em dezoito parcelas que podem ser agrupadas novamente num somat\'orio duplo. Assim,
+Pela equa\c{c}\~ao \ref{eq.dist_antes_defor}, a coluna  da esquerda \'e $\norm{d\mathbf{s}}^2$. Como estamos trabalhando com quantidades infinitesimais, podemos negligenciar a coluna da direita por se tratar do quadrado do gradiente de cada componente do vetor de deslocamento num produto escalar com o vetor que d\'a a dist\^ancia entre os pontos $\mathbf{x}$  e $\mathbf{y}$. A coluna do meio se desdobra em dezoito parcelas que podem ser reagrupadas num somat\'orio duplo. Assim,
 \begin{equation*}
 \norm{d\mathbf{s}^*}^2\approx\norm{d\mathbf{s}}^2+\sum_{i=1}^3\sum_{j=1}^3\left(\frac{\partial u_i}{\partial x_j}\Bigg\vert_{\mathbf{x}}+\frac{\partial u_j}{\partial x_i}\Bigg\vert_{\mathbf{x}}\right)dx_i\,dx_j,
 \end{equation*}
@@ -103,13 +103,13 @@ dx_1^*\approx(1+\epsilon_{11})\,dx_1.
 Assim, vemos que $\epsilon_{11}$ \'e uma contra\c{c}\~ao ou dilata\c{c}\~ao ao longo do eixo $x_1$ e, analogamente, podemos demonstrar que $\epsilon_{22}$ e $\epsilon_{33}$ determinam a distens\~ao ou contra\c{c}\~ao ao longo dos eixos $x_2$ e $x_3$, respectivamente.
 Utilizando um abuso de nota\c{c}\~ao, podemos escrever a express\~ao \ref{eq.defor_unidi} como
 \begin{equation*}
-\frac{dx_1^*}{dx\-1}\approx \frac{\partial x_1+\partial u_1}{\partial x_1},
+\frac{dx_1^*}{dx_1}\approx \frac{\partial x_1+\partial u_1}{\partial x_1},
 \end{equation*}
 e desse jeito podemos perceber que o fator $(1+\epsilon_{11})$ \'e uma mudan\c{c}a relativa (citada na subse\c{c}\~ao \ref{sec.deriva_deforma}) no comprimento ao longo do eixo $x_1$ devido a deforma\c{c}\~ao.
 
 \subsubsection{Altera\c{c}\~ao Relativa de Volume}
 
-Para estudar as altera\c{c}\~oes no volume de um s\'olido el\'astico vamos considerar uma caixa retangular (paralelep\'ipedo) com dimens\~oes $\Delta x_1, \Delta x_2\quad\text{e}\quad\Delta x_3$ nas dire\c{c}\~oes dos eixos coordenados.  Dessa forma, o volume do paralelep\'ipedo \'e dado por\begin{equation*}
+Para estudar as altera\c{c}\~oes no volume de um s\'olido el\'astico vamos considerar uma caixa retangular (paralelep\'ipedo) com dimens\~oes $\Delta x_1, \Delta x_2\,\text{e}\,\Delta x_3$ nas dire\c{c}\~oes dos eixos coordenados.  Dessa forma, o volume do paralelep\'ipedo \'e dado por\begin{equation*}
 V=\Delta x_1\,\Delta x_2\,\Delta x_3.
 \end{equation*}
 Conforme subse\c{c}\~ao \ref{sec.alte_compri}, aplicando a mudan\c{c}a relativa de comprimento a cada uma das tr\^es dimans\~oes, temos que ap\'os a deforma\c{c}\~ao, o volume do s\'olido \'e dado por
@@ -135,7 +135,7 @@ Como o tra\c{c}o de uma matriz \'e um escalar e este n\~ao se altera quando \'e 
 
 \subsubsection{Altera\c{c}\~ao Relativa na Forma}
 
-O tensor de deforma\c{c}\~ao tamb\'em descreve uma mudan\c{c}a no formato do corpo, conforme podemos acompanhar pela figura \ref{fig.deforma_formato}, onde um rat\^angulo \'e transformado num paralelogramo. 
+O tensor de deforma\c{c}\~ao tamb\'em descreve uma mudan\c{c}a no formato do corpo, conforme podemos acompanhar pela figura \ref{fig.deforma_formato}, onde um ret\^angulo \'e transformado num paralelogramo. 
 \begin{figure}
 \centering
 \includegraphics[scale=1.4]{deforma_formato}
@@ -185,7 +185,7 @@ onde substiutindo a equa\c{c}\~ao \ref{eq.massa_divergente} na equa\c{c}\~ao \re
 \end{equation*}
 que \'e a equa\c{c}\~ao que descreve a \textit{conserva\c{c}\~ao de massa} num determinado volume $V$.
 
-Em geral, as for\c{c}as agindo no interior de um meio continuo s\~ao as chamadas \textit{for\c{c}as de superf\'icie}, ou seja, quando um material \'e submetido ao contato de uma carga em sua superf\'ice, forcas internas se propagam no inteiror do material atrav\'es de outras superf\'icies imagin\'arias provocando a deforma\c{c}\~ao desse material. Assim, podemos definir a \textit{tens\~ao} como o conjunto dessas for\c{c}as de superf\'ice, fazendo com que tens\~ao e deforma\c{c}\~ao estejam diretamente relacionadas. Matematicamente, tens\~ao media \'e definida como a for\c{c}a por unidade de \'area
+Em geral, as for\c{c}as agindo no interior de um meio continuo s\~ao as chamadas \textit{for\c{c}as de superf\'icie}, ou seja, quando um material \'e submetido ao contato de uma carga em sua superf\'ice, for\c{c}as internas se propagam no inteiror do material atrav\'es de outras superf\'icies imagin\'arias provocando a deforma\c{c}\~ao desse material. Assim, podemos definir a \textit{tens\~ao} como o conjunto dessas for\c{c}as de superf\'ice, fazendo com que tens\~ao e deforma\c{c}\~ao estejam diretamente relacionadas. Matematicamente, tens\~ao media \'e definida como a for\c{c}a por unidade de \'area
 \begin{equation}\label{eq.tensao_media}
 \mathbf{\overline{T}}=\frac{\Delta\mathbf{F}}{\Delta S},
 \end{equation}
@@ -195,19 +195,19 @@ e segundo o princ\'ipio fundamental da mec\^anica do cont\'inuo estabelecido por
 \end{equation*}
 O vetor $\mathbf{n}$ \'e normal a superf\'icie de aplica\c{c}\~ao da tens\~ao $\mathbf{T}^{\mathbf{n}}$ e \'e \'util para identificar que determinada tens\~ao se aplica a determinada superf\'icie.
 
-Al\'em das for\c{c}as de superf\'icie temos tamb\'em as for\c{c}as de corpo que agem \`a dist\^ancia como a for\c{c}a gravitacional ou a for\'c{c}a el\'etrica que agem sobre um corpo material ou sobre uma carga el\'etrica, respectivamente. Denotando tal for\c{c}a por $\mathbf{f}(\mathbf{x},t)$ temos que a for\c{c}a total atuando num corpo \'e
+Al\'em das for\c{c}as de superf\'icie temos tamb\'em as for\c{c}as de corpo que agem \`a dist\^ancia como a for\c{c}a gravitacional ou a for\c{c}a el\'etrica que agem sobre um corpo material ou sobre uma carga el\'etrica, respectivamente. Denotando tal for\c{c}a por $\mathbf{f}(\mathbf{x},t)$ temos que a for\c{c}a total atuando num corpo \'e
 \begin{equation}\label{eq.forca_total}
 \mathbf{F}_T=\iint_S\mathbf{T}\,dS+\iiint_V\mathbf{f}\,dV,
 \end{equation}
-onde $V$ \'e o volume enclausurado pela superf\'icie $S$. Usando a defini\c{c}\~ao de for\'c{c}a dada pela segunda lei de Newton, podemos reescrever a equa\c{c}\~ao \ref{eq.forca_total} como
+onde $V$ \'e o volume enclausurado pela superf\'icie $S$. Usando a defini\c{c}\~ao de for\c{c}a dada pela segunda lei de Newton, podemos reescrever a equa\c{c}\~ao \ref{eq.forca_total} como
 \begin{equation}\label{eq.forca_total_2}
 \frac{d}{dt}\iiint_V\rho\frac{d\mathbf{u}}{dt}\,dV=\iint_S\mathbf{T}\,dS+\iiint_V\mathbf{f}\,dV,
 \end{equation}
-onde $\mathbf{u}$ \'e o vetor deslocamento. A equa\c{c}\~ao \ref{eq.forca_total_2} estabelece o equil\'ibrio do \textit{momento linear}, ou seja, a taxa de varia\c{c}\~ao do momento linear de uma part\'icula no meio cont\'inuo \'e igual ao somat\'orio de for\'c{c}as externas agindo nessa part\'icula. Discretizando a \'ultima integral da equa\c{c}\~ao acima podemos escrever
+onde $\mathbf{u}$ \'e o vetor deslocamento. A equa\c{c}\~ao \ref{eq.forca_total_2} estabelece o equil\'ibrio do \textit{momento linear}, ou seja, a taxa de varia\c{c}\~ao do momento linear de uma part\'icula no meio cont\'inuo \'e igual ao somat\'orio de for\c{c}as externas agindo nessa part\'icula. Discretizando a \'ultima integral da equa\c{c}\~ao acima podemos escrever
 \begin{equation*}
 \frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n(\mathbf{F}_{ji}+\mathbf{F}_{ij}),
 \end{equation*}
-onde $\mathbf{F}_{ji}$ \'e a forca exercida na part\'icula $i$ devida \`a part\'icula $j$. Pela terceira lei de Newton, for\c{c}as entre part\'iculas tem mesma intensidade e dire\c{c}\~ao e sentidos opostos, assim, $\mathbf{F}_{ji}=\mathbf{F}_{ij}$. Mais ainda, uma part\'icula n\~ao exerce uma for\c{c}a em si mesma, ent\~ao $\mathbf{F}_{ij}=0$. Portanto, a equa\c{c}\~ao \ref{eq.forca_total_2} se resume a
+onde $\mathbf{F}_{ji}$ \'e a for\c{c}a exercida na part\'icula $i$ devida \`a part\'icula $j$. Pela terceira lei de Newton, for\c{c}as entre part\'iculas tem mesma intensidade e dire\c{c}\~ao e sentidos opostos, assim, $\mathbf{F}_{ji}=-\mathbf{F}_{ij}$. Mais ainda, uma part\'icula n\~ao exerce uma for\c{c}a em si mesma, ent\~ao $\mathbf{F}_{ii}=0$. Portanto, a equa\c{c}\~ao \ref{eq.forca_total_2} se resume a
 \begin{equation*}
 \frac{d}{dt}\iiint_V\rho\frac{d\mathbf{u}}{dt}\,dV=\iint_S\mathbf{T}\,dS.
 \end{equation*}
@@ -231,7 +231,7 @@ onde $\Delta\mathbf{F}$ \'e a for\c{c}a superficial agindo na face obl\'iqua, $\
 \begin{equation}\label{eq.forca_total_4}
 \overline{\rho}\,\Delta V\frac{d\overline{\mathbf{v}}}{dt}=\mathbf{\overline{T}}^{(\mathbf{n})}\,\Delta S-\mathbf{\overline{T}}^{(\mathbf{e}_1)}\,\Delta S_1-\mathbf{\overline{T}}^{(\mathbf{e}_2)}\,\Delta S_2-\mathbf{\overline{T}}^{(\mathbf{e}_3)}\,\Delta S_3+\overline{f}\,\Delta V,
 \end{equation}
-onde $\Delta S_i$ \'e a \'area da face cujo a normal \'e o eixo $x_1$. Note, ainda pela figura \ref{fig.tetraedro}, que as faces ortogonais tem suas respectivas normais com a mesma dire\c{c}\~ao mas sentido oposto ao respectivo vetor unit\'ario $\mathbf{e}_i$ do eixo correspondente, da\'i o sinal negativo na equa\c{c}\~ao acima por conta da terceira lei de Newton. Para continuarmos nossa deriva\c{c}\~ao precisamos relacionar a \'area da face obl\'iqua com as \'areas das faces ortogonais. Observe que cada componente $n_i$ do vetor $\mathbf{n}$ \'e, por defini\c{c}\~ao,
+onde $\Delta S_i$ \'e a \'area da face cujo a normal \'e o eixo $x_i$. Note, ainda pela figura \ref{fig.tetraedro}, que as faces ortogonais tem suas respectivas normais com a mesma dire\c{c}\~ao mas sentido oposto ao respectivo vetor unit\'ario $\mathbf{e}_i$ do eixo correspondente, da\'i o sinal negativo na equa\c{c}\~ao acima por conta da terceira lei de Newton. Para continuarmos nossa deriva\c{c}\~ao precisamos relacionar a \'area da face obl\'iqua com as \'areas das faces ortogonais. Observe que cada componente $n_i$ do vetor $\mathbf{n}$ \'e, por defini\c{c}\~ao,
 \begin{align*}
 n_1&=\mathbf{n}\cdot\mathbf{e}_1=\norm{\mathbf{n}}\,\norm{\mathbf{e}_1}\cos(X\hat{O}N)\\
 n_2&=\mathbf{n}\cdot\mathbf{e}_2=\norm{\mathbf{n}}\,\norm{\mathbf{e}_2}\cos(Y\hat{O}N)\\
@@ -249,7 +249,7 @@ e da\'i temos a rela\c{c}\~ao entre as \'areas,
 \begin{equation}\label{eq.relacao_areas}
 \Delta S=\Delta S_in_i,\quad\text{onde}\quad i=1,2,3.
 \end{equation}
-Usando as equa\'c{c}\~oes \ref{eq.volume_tetraedro} e \ref{eq.relacao_areas} podemos escrever a equa\c{c}\~ao \ref{eq.forca_total_4} como
+Usando as equa\c{c}\~oes \ref{eq.volume_tetraedro} e \ref{eq.relacao_areas} podemos escrever a equa\c{c}\~ao \ref{eq.forca_total_4} como
 \begin{equation*}
 \overline{\rho}\,\frac{1}{3}h\,\Delta S\frac{d\overline{\mathbf{v}}}{dt}=\mathbf{\overline{T}}^{(\mathbf{n})}\,\Delta S-\mathbf{\overline{T}}^{(\mathbf{e}_1)}\,n_1\,\Delta S-\mathbf{\overline{T}}^{(\mathbf{e}_2)}\,n_2\,\Delta S-\mathbf{\overline{T}}^{(\mathbf{e}_3)}\,n_3\,\Delta S+\overline{f}\,\frac{1}{3}h\,\Delta S.
 \end{equation*}
@@ -337,7 +337,7 @@ Para satisfazer essa integral o integrando deve ser nulo, de onde podemos conclu
 \begin{equation}
 \sum_{j=1}^3\frac{\partial\tau_{ji}}{\partial x_j}dV+f_i=\rho\frac{d^2u_i}{dt^2},\quad \text{para}\quad i=1,2,3.
 \end{equation}
-Essa equa\c{c}\~ao \'e conhecida como a \textit{equa\c{c}\~ao do movimento de Cauchy} ou \textit{primeira lei do movimento de Cauchy}, e relaciona dois tipos de for\c{c}a, superficial e de campo, com a acelera\c{c}\~ao de um corpo num meio cont\'inuo e el\'astico. Ou seja, a acelera\c{c}\~ao de um corpo num meio cont\'inuo e el\'astico resulta da aplica\c{c}\~ao desses dois tipos de for\c{c}a.
+Essa equa\c{c}\~ao \'e conhecida como a \textit{equa\c{c}\~ao do movimento de Cauchy} ou \textit{primeira lei do movimento de Cauchy}, e relaciona dois tipos de for\c{c}a, superficial e de corpo, com a acelera\c{c}\~ao de um corpo num meio cont\'inuo e el\'astico. Ou seja, a acelera\c{c}\~ao de um corpo num meio cont\'inuo e el\'astico resulta da aplica\c{c}\~ao desses dois tipos de for\c{c}a.
 
   
 \section{Equações de Lamé}
@@ -357,8 +357,8 @@ Ou seja, estamos fazendo a substitui\c{c}\~ao $(i,j)\rightarrow m$ com
 m&=i&\text{se}\quad i=j\\
 m&=9-(i+j)&\text{se}\quad i\neq j.
 \end{empheq}
-Analogamente, podemos fazer a substitui\c{c}\~ao dos \'indices $(k,l)\rightarrow n$ e escrever $c_{ijkl}$ como $C_{mn}$, obtendo a \textit{matriz de elasticidade} $C=C_{mn}$ com $m,n \in {1,2,3,4,5,6}$.
-Dessa forma, as equa\c{c}\~oes de tens\~ao-deforma\c{c}\~ao definida em \ref{eq.lei_hooke} podem ser escritas na forma matricial como
+Analogamente, podemos fazer a substitui\c{c}\~ao dos \'indices $(k,l)\rightarrow n$ e escrever $c_{ijkl}$ como $C_{mn}$, obtendo a \textit{matriz de elasticidade} $C=C_{mn}$ com $m,n \in \left\{1,2,3,4,5,6\right\}$.
+Dessa forma, as equa\c{c}\~oes de tens\~ao-deforma\c{c}\~ao definidas em \ref{eq.lei_hooke} podem ser escritas na forma matricial como
 \begin{equation*}
 \begin{bmatrix}
 \sigma_{11}\\

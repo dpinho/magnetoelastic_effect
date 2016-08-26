@@ -283,7 +283,7 @@ I_m=\frac{\Delta\,Q}{\Delta\,t},
 \end{equation*}
 medida em coulomb por segundo $(C/s)$ no SI. Em termos microscópicos, a quantidade de carga que atravessa uma superfície num determinado tempo é dada em função da \textit{densidade de corrente elétrica} $\mathbf{J}$,
 \begin{equation}\label{eq.densidade_corrente}
-I=\oiint_S\mathbf{J}\cdot\,d\mathbf{A},
+I=\iint_S\mathbf{J}\cdot\,d\mathbf{A},
 \end{equation}
 onde a densidade de corrente elétrica é medida em $(A/m^2)$ no SI. 
 \begin{figure}
@@ -370,7 +370,7 @@ Substituindo a equação \ref{eq.lei_gauss_polarizacao} na equação \ref{eq.pol
 \begin{align*}
 \oiint_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}&=\iiint_{V}\rho_f\,dV+\iiint_{V}\rho_p\,dV\\
 \oiint_S\epsilon_0\,\mathbf{E}\cdot d\mathbf{A}&=\iiint_{V}\rho_f\,dV+\oiint_S\mathbf{P}\cdot d\mathbf{A}\\
-\oiint_S\epsilon_0\,(\mathbf{E}-\mathbf{P})\cdot d\mathbf{A}&=\iiint_{V}\rho_f\,dV,
+\oiint_S(\epsilon_0\,\mathbf{E}-\mathbf{P})\cdot d\mathbf{A}&=\iiint_{V}\rho_f\,dV,
 \end{align*}
 onde a expressão $\mathbf{D}=\epsilon_0\,\mathbf{E}-\mathbf{P}$ é chamada \textit{campo de densidade de fluxo elétrico}, e por fim
 \begin{equation*}
@@ -392,11 +392,11 @@ e assim vemos que, para materiais diel\'etricos lineares, $\mathbf{D}$ tamb\'em 
 
 \subsection{A\c{c}\~ao de campo magn\'etico na mat\'eria}
 
-Vimos na subseç\~ao \ref{sec.lei_ampere} que correntes el\'etricas geram campos magn\'eticos, mas na verdade todos os fen\^omenos magn\'eticos são devidos a cargas el\'etricas em movimento. Se examinarmos um material magn\'etico qualquer em n\'ivel at\^omico, encontraremos pequenas correntes, as do el\'etron orbitando o n\'ucleo do \'atomo e a rota\c{c}\~ao de cada el\'etron em torno de seu pr\'oprio eixo. Em termos macrosc\'opicos essas correntes em la\c{c}os s\~ao t\~ao pequenos que s\~ao tratados como o \textit{momento de dipolo magn\'etico}, $\mathbf{m}$, similar ao que foi feito para o momento de dipolo el\'etrico. Quando um campo magn\'etico externo \'e aplicado ocorre o alinhamento desses dipolos magn\'eticos e o corpo se torna magneticamente polarizado ou \textit{magnetizado}. O estado de polariza\c{c}\~ao magn\'etica de um material \'e medido pelo momento de dipolo magn\'etico por unidade infinitesimal de volume, ou \textit{magnetiza\c{c}\~ao}
+Vimos na subseç\~ao \ref{sec.lei_ampere} que correntes el\'etricas geram campos magn\'eticos, mas na verdade todos os fen\^omenos magn\'eticos são devidos a cargas el\'etricas em movimento. Se examinarmos um material magn\'etico qualquer em n\'ivel at\^omico, encontraremos pequenas correntes, as do el\'etron orbitando o n\'ucleo do \'atomo e a rota\c{c}\~ao de cada el\'etron em torno de seu pr\'oprio eixo. Em termos macrosc\'opicos essas correntes em la\c{c}os s\~ao t\~ao pequenas que s\~ao tratados como o \textit{momento de dipolo magn\'etico}, $\mathbf{m}$, similar ao que foi feito para o momento de dipolo el\'etrico. Quando um campo magn\'etico externo \'e aplicado ocorre o alinhamento desses dipolos magn\'eticos e o corpo se torna magneticamente polarizado ou \textit{magnetizado}. O estado de polariza\c{c}\~ao magn\'etica de um material \'e medido pelo momento de dipolo magn\'etico por unidade infinitesimal de volume, ou \textit{magnetiza\c{c}\~ao}
 \begin{equation*}
 \mathbf{M}=\lim_{\Delta\,V\to 0}\frac{\mathbf{m}}{\Delta\,V}.
 \end{equation*}   
-A densidade de corrente el\'etrica pode ser composta pelas \textit{densidade de correntes livres} $\mathbf{J}_f$, \textit{densidade de correntes de polariza\c{c}\~ao} $\mathbf{J}_p$ e \textit{densidade de correntes de magnetiza\c{c}\~ao} $\mathbf{J}_m$. Quando a magnetiza\c{c}\~ao de um material \'e uniforme, as correntes dos la\c{c}os internos (sem considerar a superf\'icie) se cancelam e n\~ao h\'a a gera\c{c}\~ao de densidade de correntes de magnetiza\c{c}\~ao, e quando a magnetiza\c{c}\~ao \'e n\~ao uniforme a diferen\c{c}a entre as correntes em cada la\c{c}o faz com que $\mathbf{J}_m$ seja diferente de zero. Na figura \ref{fig.magnetizacao} eh apresentado um exemplo com duas amostras infinitesimais de um material juntamente com os vetores que indicam a intensidade e a dire\c{c}\~ao da magnetiza\c{c}\~ao, e os tri\^angulos que indicam o sentido e intensidade da corrente.
+A densidade de corrente el\'etrica pode ser composta pelas \textit{densidade de correntes livres} $\mathbf{J}_f$, \textit{densidade de correntes de polariza\c{c}\~ao} $\mathbf{J}_p$ e \textit{densidade de correntes de magnetiza\c{c}\~ao} $\mathbf{J}_m$. Quando a magnetiza\c{c}\~ao de um material \'e uniforme, as correntes dos la\c{c}os internos (sem considerar a superf\'icie) se cancelam e n\~ao h\'a a gera\c{c}\~ao de densidade de correntes de magnetiza\c{c}\~ao, e quando a magnetiza\c{c}\~ao \'e n\~ao uniforme a diferen\c{c}a entre as correntes em cada la\c{c}o faz com que $\mathbf{J}_m$ seja diferente de zero. Na figura \ref{fig.magnetizacao} \'e apresentado um exemplo com duas amostras infinitesimais de um material juntamente com os vetores que indicam a intensidade e a dire\c{c}\~ao da magnetiza\c{c}\~ao, e os tri\^angulos que indicam o sentido e intensidade da corrente.
 \begin{figure}
 \centering
 \includegraphics[scale=.5]{magnetizacao}
@@ -420,13 +420,13 @@ Mas, pela equa\c{c}\~ao \ref{eq.polarizacao_densidade}, podemos escrever
 \end{equation} 
 Considerando os tr\^es tipos de densidade de correntes, $\mathbf{J}_f$, $\mathbf{J}_p$ e $\mathbf{J}_m$, podemos escrever a lei de Amp\`ere generalizada dada pela equa\c{c}\~ao \ref{eq.maxwell_3} na forma
 \begin{align*}
-\oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\\iint_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}\\\\
+\oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\iint_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}\\\\
 \oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\iint_S\mathbf{J}_f\cdot\,d\mathbf{A}+\iint_S\mathbf{J}_p\cdot\,d\mathbf{A}+\iint_S\mathbf{J}_m\cdot\,d\mathbf{A}.
 \end{align*}
 Substituindo as equa\c{c}\~oes \ref{eq.magnetizacao_densi_corrente} e \ref{eq.polarizacao_densi_corrente}, podemos reescrever a lei de Amp\`ere generalizada como
 \begin{align*}
 \oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}-\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A}&=\iint_S\mathbf{J}_f\cdot\,d\mathbf{A}+\oiint_S\mathbf{P}\cdot d\mathbf{A}+\oint_s \mathbf{M}\cdot d\,\mathbf{s}\\\\
-\oint_s(\frac{\mathbf{B}}{\mu_0}-\mathbf{M})\cdot d\mathbf{s}&=\iint_S\mathbf{J}_f\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S(\epsilon_0\,\textbf{E}+\mathbf{P})\cdot\textit{d}\textbf{A},
+\oint_s\left(\frac{\mathbf{B}}{\mu_0}-\mathbf{M}\right)\cdot d\mathbf{s}&=\iint_S\mathbf{J}_f\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S(\epsilon_0\,\textbf{E}+\mathbf{P})\cdot\textit{d}\textbf{A},
 \end{align*}
 onde $\frac{1}{\mu_0}\mathbf{B}-\mathbf{M}=\mathbf{H}$ \'e definido como o \textit{campo magn\'etico auxiliar}. Em atividades experimentais \'e mais f\'acil medir o campo 
 $\mathbf{E}$ a partir da aplica\c{c}\~ao de uma diferen\c{c}a de potencial num circuito el\'etrico do que medir o campo $\mathbf{D}$ a partir da concentra\c{c}\~ao de cargas el\'etricas. Com o campo $\mathbf{H}$ acontece o contr\'ario, \'e mais f\'acil medi-lo a partir da corrente el\'etrica numa bobina do que medir o campo magn\'etico $\mathbf{B}$, j\'a que este \'ultimo depende do tipo de material usado. Portanto, alguns pesquisadores e autores costumam chamar $\mathbf{H}$ de campo magn\'etico e $\mathbf{B}$ de campo de densidade de fluxo magn\'etico, mas esta \'ultima defini\c{c}\~ao, como vimos, pode se confundir com outro tipo de medida, $\phi_\mathbf{B}$.
@@ -452,7 +452,7 @@ Assim, podemos escrever as equa\c{c}\~oes de Maxwell considerando a a\c{c}\~ao d
 \oint_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{A}.
 \end{align}
 
-\subsection{Forma diferencial das Equa\c{c}oes de Maxwell}
+\subsection{Forma diferencial das Equa\c{c}\~oes de Maxwell}
 
 Experimentalmente tem-se obtido excelentes resultados aplicando as equa\c{c}\~oes de Maxwell em sua forma diferencial, onde s\~ao assumidas algumas hip\'oteses acerca da diferenciabilidade dos campos envolvidos. Utilizando essas hip\'oteses, podemos transcrever as equa\c{c}\~oes da forma integral para a forma diferencial.
 
@@ -507,7 +507,7 @@ Sumarizando as equa\c{c}\~oes de Maxwell em suas formas diferenciais e considera
 
 \subsection{Condi\c{c}\~oes de Contorno entre Meios de Diferentes Composi\c{c}\~oes}
 
-Segundo \cite{jackson_classical_1999}, as equa\c{c}\~oes de Maxwell em suas formas integrais (\ref{eq.max_meio_1} \`a \ref{eq.max_meio_4}) podem ser usadas para dedu\c{c}\~ao de rela\c{c}\~oes envolvendo as componentes tangenciais e normais dos campos el\'etrico e magn\'etico em ambos os lados da superf\'icie de contato entre dois meios com caracter\'isticas eletromagn\'eticas diferentes. Para a utiliza\c{c}\~ao das equa\c{c}\~oes \ref{eq.max_meio_1} e \ref{eq.max_meio_2}, consideramos um cilindro com altura infinitesimal onde cada uma de suas bases circulares pertencem a uma das camadas em quest\~ao. E para estudar as equa\c{c}\~oes \ref{eq.max_meio_3} e \ref{eq.max_meio_4}, utilizamos um circuito retangular tamb\'em de altura infinitesimal com cada um dos lados maiores pertencentes a uma das camadas. O esquema geom\'etrico dessa abordagem pode ser visto na figura \ref{fig.cond_contorno}. 
+Segundo \cite{jackson_classical_1999}, as equa\c{c}\~oes de Maxwell em suas formas integrais (\ref{eq.max_meio_1} a \ref{eq.max_meio_4}) podem ser usadas para dedu\c{c}\~ao de rela\c{c}\~oes envolvendo as componentes tangenciais e normais dos campos el\'etrico e magn\'etico em ambos os lados da superf\'icie de contato entre dois meios com caracter\'isticas eletromagn\'eticas diferentes. Para a utiliza\c{c}\~ao das equa\c{c}\~oes \ref{eq.max_meio_1} e \ref{eq.max_meio_2}, consideramos um cilindro com altura infinitesimal onde cada uma de suas bases circulares pertencem a uma das camadas em quest\~ao. E para estudar as equa\c{c}\~oes \ref{eq.max_meio_3} e \ref{eq.max_meio_4}, utilizamos um circuito retangular tamb\'em de altura infinitesimal com cada um dos lados maiores pertencentes a uma das camadas. O esquema geom\'etrico dessa abordagem pode ser visto na figura \ref{fig.cond_contorno}. 
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=1]{interface_camadas}
@@ -537,7 +537,7 @@ Analogamente, podemos determinar o salto da componente normal do campo magn\'eti
 \end{equation*}  
 Ou seja, a componente normal do campo magn\'etico \'e cont\'inua na transi\c{c}\~ao das camadas, e a descontinuidade da componente normal do campo de densidade de fluxo el\'etrico \'e igual a densidade superficial de carga no ponto de transi\c{c}\~ao.
 
-Agora vamos utilizar um circuito Stokesiano para determinar as componentes tangenciais \`a superf\'icie dos campos el\'etrico e magn\'etico auxiliar. Considerando desprez\'ivel a altura da superf\'icie formada pelo circuito retangular, e que seus outros dois lados s\~ao paralelos e t\^em comprimento $\Delta l$, ent\~ao o lado esquerdo da equa\c{c}\~ao \ref{eq.max_meio_3} \'e calculado como
+Agora vamos utilizar um circuito Stokesiano para determinar as componentes tangenciais \`a superf\'icie dos campos el\'etrico e magn\'etico auxiliar. Considerando desprez\'ivel a altura da superf\'icie formada pelo circuito retangular da figura \ref{fig.cond_contorno}, e que seus outros dois lados s\~ao paralelos e t\^em comprimento $\Delta l$, ent\~ao o lado esquerdo da equa\c{c}\~ao \ref{eq.max_meio_3} \'e calculado como
 \begin{equation}\label{eq.amp_meio_1}
 \oint_s\mathbf{H}\cdot d\mathbf{s}=(\mathbf{H}_2-\mathbf{H}_1)\cdot(\mathbf{n}\times\mathbf{t})\Delta l.
 \end{equation}
@@ -553,8 +553,8 @@ Similarmente ao desenvolvimento para o salto do campo magn\'etico auxiliar, temo
 \begin{equation}\label{eq.far_meio_2}
 \mathbf{n}\times(\mathbf{E}_2-\mathbf{E}_1)=\left[\left[\mathbf{E}\right]\right]=0.
 \end{equation}
-O lado direito da equa\c{c}\~ao acima \'e zero pelo mesmo argumento dado anteriormente. A varia\c{c}\~ao no tempo de um campo magn\'etico finito atrav\'es de uma superf\'icie retangular nula, pois sua altura tende a zero.
-Pela equa\c{c}\~ao \ref{eq.far_meio_1} temos que a densidade de corrente superficial tem somente componentes paralelas \`a superf\'icie de contato entre as camadas, e a componente tangencial do campo magn\'etico auxiliar \'e descontinua por uma quantidade cuja magnitude \'e igual \`a magnitude da densidade de corrente superficial e cuja dire\c{c}\~ao \'e paralela ao vetor $\mathbf{K}\times\mathbf{n}$. Pela equa\c{c}\~ao \ref{eq.far_meio_2} temos que a componente tangencial do campo el\'etrico atrav\'es da interface \'e continua. As deconstinuidades apresentadas nas equa\c{c}\~oes \ref{eq.gau_meio_1} e \ref{eq.far_meio_1} s\~ao prestativas para resolver as equa\c{c}\~oes de Maxwell em diferentes regi\~oes e conectar as solu\c{c}\~oes para obter campos para qualquer lugar do espa\c{c}o.  
+O lado direito da equa\c{c}\~ao acima \'e zero pelo mesmo argumento dado anteriormente, a varia\c{c}\~ao no tempo de um campo magn\'etico finito atrav\'es de uma superf\'icie retangular nula, pois sua altura tende a zero.
+Pela equa\c{c}\~ao \ref{eq.far_meio_1} temos que a densidade de corrente superficial tem somente componentes paralelas \`a superf\'icie de contato entre as camadas, e a componente tangencial do campo magn\'etico auxiliar \'e descontinua por uma quantidade cuja magnitude \'e igual \`a magnitude da densidade de corrente superficial e cuja dire\c{c}\~ao \'e paralela ao vetor $\mathbf{K}\times\mathbf{n}$. Pela equa\c{c}\~ao \ref{eq.far_meio_2} temos que a componente tangencial do campo el\'etrico atrav\'es da interface \'e continua. As descontinuidades apresentadas nas equa\c{c}\~oes \ref{eq.gau_meio_1} e \ref{eq.far_meio_1} s\~ao prestativas para resolver as equa\c{c}\~oes de Maxwell em diferentes regi\~oes e conectar as solu\c{c}\~oes para obter campos para qualquer lugar do espa\c{c}o.  
 
 
 
