@@ -7,13 +7,13 @@
 \subsection{Lei de Gauss para os fluxos elétrico e magnético}\label{sec.lei_gauss}
 De acordo com \cite{jackson_classical_1999} e \cite{sommerfeld_52} , os conceitos, definições e resultados em eletromagnetismo clássico partem das experiências de Cavendish e Coulomb no final do Séc. $XVIII$. A partir desses experimentos foi estabelecida a Lei de Coulomb
 \begin{equation}\label{eq.forc_elet}
-\textbf{F}=k\,\frac{q_1\,q_2}{||\textbf{x}_1-\textbf{x}_2||^2}\frac{\textbf{x}_1-\textbf{x}_2}{||\textbf{x}_1-\textbf{x}_2||},
+\textbf{F}_e=k\,\frac{q_1\,q_2}{||\textbf{x}_1-\textbf{x}_2||^2}\frac{\textbf{x}_1-\textbf{x}_2}{||\textbf{x}_1-\textbf{x}_2||},
 \end{equation}
 onde $q_i$ são as cargas elétricas (campos escalares) presentes nos pontos $\textbf{x}_i$, respectivamente, $k$ (campo escalar) é uma constante de proporcionalidade cujo valor depende do sistema de unidades de medida adotado, $||\textbf{x}_1-\textbf{x}_2||^2$ é a distância Euclidiana entre as cargas e $\textbf{F}$ é a força elétrica exercida pela carga $q_1$ sobre a carga $q_2$. As notações em negrito representam campos vetorias pertencentes ao espaço $\mathbb{R}^3$, e o vetor normal que fornece a direção de interação entre as cargas é dado por $(\textbf{x}_1-\textbf{x}_2)/||\textbf{x}_1-\textbf{x}_2||$.
 
 O campo elétrico $\textbf{E}$ é definido como sendo a força elétrica por unidade de carga em um determinado ponto que contém a carga de prova $q_2$, portanto é uma função vetorial que depende da posição da carga de prova em relação à carga fonte $q_1$, ou seja,
 \begin{equation}\label{eq.camp_elet}
-\textbf{E}=\lim_{q_2\to 0}\frac{\textbf{F}}{q_2}.
+\textbf{E}=\lim_{q_2\to 0}\frac{\textbf{F}_e}{q_2}.
 \end{equation}
 A carga de prova foi tomada infinitesimalmente pequena para que o campo gerado por ela não perturbe a carga fonte. Experimentalmente, tanto a direção da força como a razão entre a força e a quantidade de carga vão se tornando constantes à medida que a quantidade de carga se torna cada vez menor, definindo a magnitude e a direção do campo elétrico. No SI, a unidade de medida de carga é o \textit{coulomb} $(C)$, o campo elétrico é o \textit{newton/coulomb} $(N/C)$ ou o \textit{volt/metro} $(V/m)$, e a constante $k=(4\pi\,\epsilon_0)^{-1}$ onde $\epsilon_0\simeq8.854\times10^{-12}$ é a \textit{permissividade elétrica no vácuo} medida em \textit{farad/m} $(F/m)$.
 
@@ -41,13 +41,13 @@ Num sistema com mais de uma carga fonte produzindo campos elétricos, foi observ
 \begin{equation*}
 \textbf{E}=k\,\sum_{i=1}^{n}q_i\,\frac{\textbf{x}_i-\textbf{x}}{||\textbf{x}_i-\textbf{x}||^3}.
 \end{equation*} 
-O campo elétrico devido a um pequeno número de cargas pode ser calculado a partir do princípio da superposição linear. Mas se temos uma quantidade muito grande de cargas num determinado volume $V$, devemos calcular a \textit{densidade volumétrica de carga elétrica} $\rho$ num volume infinitesimal situado em $\textbf{x}_0$ e em seguida integrar sobre o volume $V$ para obter a quantidade total de carga $Q$. A densidade de carga é definida por
+O campo elétrico devido a um pequeno número de cargas pode ser calculado a partir do princípio da superposição linear. Mas se temos uma quantidade muito grande de cargas num determinado volume $V$, devemos calcular a \textit{densidade volumétrica de carga elétrica} $\rho_e$ num volume infinitesimal situado em $\textbf{x}_0$ e em seguida integrar sobre o volume $V$ para obter a quantidade total de carga $Q$. A densidade de carga é definida por
 \begin{equation*}
-\rho(\textbf{x}_0)=\lim_{\Delta V_i \to 0}\frac{\Delta q_i}{\Delta V_i}=\frac{d\,q}{d\,V},
+\rho_e(\textbf{x}_0)=\lim_{\Delta V_i \to 0}\frac{\Delta q_i}{\Delta V_i}=\frac{d\,q}{d\,V},
 \end{equation*}
 medida, no SI, em $C/m^3$. A quantidade total de carga $Q=\sum_i \Delta\,q_i$ no volume $V$ é
 \begin{equation}\label{eq.densidade_carga}
-Q=\iiint_{V}\rho(\textbf{x}_0)\,dV.
+Q=\iiint_{V}\rho_e(\textbf{x}_0)\,dV.
 \end{equation}
 
 O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétrico que atravessam uma superfície qualquer, e é dado pela equação
@@ -109,21 +109,33 @@ Uma carga elétrica produz um campo elétrico, e de maneira similar uma barra ma
 \end{figure}
 Como não existem monopolos magnéticos, o campo magnético deve ser definido de forma diferente do campo elétrico, e experimentalmente foram observadas algumas características relacionadas ao movimento de uma carga elétrica $q$ com velocidade $\textbf{v}$ num campo magnético $\textbf{B}$:
 \begin{itemize}
-\item a magnitude da força magnética $\textbf{F}_B$ é proporcional à $v$, $B$ e $q$, onde $v$ e $B$ são as magnitudes da velocidade e do campo magnético respectivamente,
-\item a direção de $\textbf{F}_B$ é perpendicular ao plano formado por $\textbf{v}$ e $\textbf{B}$,
-\item $\textbf{F}_B$ é proporcional ao $\sin\theta$, o ângulo formado por $\textbf{v}$ e $\textbf{B}$. Se $\textbf{v}$ e $\textbf{B}$ são paralelos então $\textbf{F}_B=0$, e
-\item o sentido de $\textbf{F}_B$ depende do sinal da carga $q$.
+\item a magnitude da força magnética $\textbf{F}_m$ é proporcional à $v$, $B$ e $q$, onde $v$ e $B$ são as magnitudes da velocidade e do campo magnético respectivamente,
+\item a direção de $\textbf{F}_m$ é perpendicular ao plano formado por $\textbf{v}$ e $\textbf{B}$,
+\item $\textbf{F}_m$ é proporcional ao $\sin\theta$, o ângulo formado por $\textbf{v}$ e $\textbf{B}$. Se $\textbf{v}$ e $\textbf{B}$ são paralelos então $\textbf{F}_m=0$, e
+\item o sentido de $\textbf{F}_m$ depende do sinal da carga $q$.
 \end{itemize}
 Essas observações são ilustradas na figura \ref{fig.froca_mag_veloc} e a força magnética é definida como
-\begin{equation*}
-\textbf{F}_B=q\,\textbf{v}\times\textbf{B}.
-\end{equation*}
+\begin{equation}\label{eq.forca_mag}
+\textbf{F}_m=q\,\textbf{v}\times\textbf{B}.
+\end{equation}
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=.4]{forca_camp_mag_veloc}
 \caption{\textit{Força magnética agindo numa carga elétrica que se desloca num campo magnético.}}
 \label{fig.froca_mag_veloc}
 \end{figure}
+A equa\c{c}\~ao \ref{eq.forca_mag} \'e conhecida tamb\'em como a \textit{for\c{c}a de Lorentz} e na presen\c{c}a tamb\'em de um campo el\'etrico, dado pela equa\c{c}\~ao \ref{eq.camp_elet}, podemos somar as duas for\c{c}as e definir mais geralmente a for\c{c}a de Lorentz como
+\begin{equation}\label{eq.forca_lorentz}
+\textbf{F}_L=q\,(\mathbf{E}+\textbf{v}\times\textbf{B}),
+\end{equation} 
+a qual \'e um dos axiomas fundamentais da teoria eletromagn\'etica. Uma caracter\'istica muito importante da for\c{c}a magn\'etica \'e que a mesma n\~ao produz \textit{trabalho}, pois quando a carga de prova $q$ se desloca uma quantidade infinitesimal $d\mathbf{l}=\mathbf{v}\,dt$ num campo magn\'etico $\mathbf{B}$, temos 
+\begin{align}\label{eq.trabalho_froca_mag}\nonumber
+dW_m&=\mathbf{F}_m\cdot d\mathbf{l}\\\nonumber
+&=(q\,\textbf{v}\times\textbf{B})\cdot(\mathbf{v}\,dt)\\
+&=0.
+\end{align}
+A \'ultima igualdade se deve ao fato de os vetores $\mathbf{v}\times\mathbf{B}$ e $\mathbf{v}$ serem ortogonais. Assim, o campo magn\'etico altera a dire\c{c}\~ao de deslocamento da part\'icula $q$, mas n\~ao acelera nem retarda seu movimento.
+
 Teoricamente, poderíamos tentar determinar a lei de Gauss para o fluxo magnético com o mesmo procedimento aplicado ao fluxo elétrico e obter
 \begin{equation*}
 \Phi_\textbf{B}=\oiint_S\textbf{B}\cdot\textit{d}\textbf{A}=\frac{q_m}{\mu_0},
@@ -209,13 +221,13 @@ Note que quando consideramos a superfície $S_1$, $I_d=0$ já que o fluxo elétr
 
 
 \subsection{A Lei de Faraday}
-Analogamente ao caso da força gravitacional, o \textit{trabalho} $W$ realizado por uma força elétrica $\textbf{F}_e$ para levar uma carga elétrica $q$ de um ponto $A$ até um ponto $B$ é definido como
+Analogamente ao caso da força gravitacional, o \textit{trabalho} $W_e$ realizado por uma força elétrica $\textbf{F}_e$ para levar uma carga elétrica $q$ de um ponto $A$ até um ponto $B$ é definido como
 \begin{equation}\label{eq.trabalho}
-W=\int_{A}^{B}\textbf{F}_e\cdot d\textbf{s}.
+W_e=\int_{A}^{B}\textbf{F}_e\cdot d\textbf{s}.
 \end{equation}
 A diferença entre a \textit{energia potencial} $U$ em cada um dos pontos $A$ e $B$ é o que ocasiona o deslocamento da carga, assim a variação da energia potencial tem definição
 \begin{equation}\label{eq.energia_potencial}
-\Delta U=U_b-U_a=-\int_{A}^{B}\textbf{F}_e\cdot d\textbf{s}=-W.
+\Delta U=U_b-U_a=-\int_{A}^{B}\textbf{F}_e\cdot d\textbf{s}=-W_e.
 \end{equation}
 A \textit{diferença de potencial elétrico}, $\Delta V$, também chamada \textit{ddp}, é a variação da energia potencial por unidade de carga elétrica $q$. Utilizando a equação \ref{eq.camp_elet}, que relaciona força elétrica e campo elétrico, podemos definir a ddp como
 \begin{equation}\label{eq.ddp}
@@ -225,7 +237,7 @@ A ddp representa a quantidade de trabalho por unidade de carga para mover a carg
 
 Agora, num circuito elétrico fechado, as cargas percorrem um determinado caminho a partir de uma fonte de energia elétrica. Essa fonte é chamada de \textit{força eletromotriz}, representada por $\varepsilon$, e que pode ser pensada como uma ``bomba" de cargas que as impulsiona de um potencial menor para um potencial maior. A força eletromotriz é definida como o trabalho realizado para mover uma carga unitária na direção de maior potencial, matematicamente,
 \begin{equation*}
-\varepsilon=\frac{dW}{dq}, 
+\varepsilon=\frac{dW_e}{dq}, 
 \end{equation*}
 também medida em volt. Como o campo magnético não produz trabalho, o trabalho realizado sobre o movimento das cargas deve ser devido a um campo elétrico e para escrever a força eletromotriz em termos do campo elétrico de forma análoga ao que foi feito nas equações \ref{eq.trabalho}, \ref{eq.energia_potencial} e \ref{eq.ddp}, devemos utilizar uma integral de linha, pois nesse caso a corrente percorre um determinado caminho. Como o campo elétrico é não-conservativo (senão não haveria corrente) o valor da integral na equação \ref{eq.ddp} é diferente de zero. Assim,
 \begin{equation}\label{eq.emf_E_nc}
@@ -265,8 +277,8 @@ Vimos pela equação \ref{eq.fluxo_eletrico}, que o fluxo elétrico através de 
 \begin{align*}
 \oiint_S\textbf{E}\cdot\textit{d}\textbf{A}&=\frac{q}{\epsilon_0}\\
 &=\frac{Q}{\epsilon_0}\\
-&=\frac{1}{\epsilon_0}\iiint_{V}\rho\,dV\\
-\oiint_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\iiint_{V}\rho\,dV.
+&=\frac{1}{\epsilon_0}\iiint_{V}\rho_e\,dV\\
+\oiint_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\iiint_{V}\rho_e\,dV.
 \end{align*}
 A equação acima é conhecida como a primeira equação de Maxwell para o eletromagnetismo escrita na forma integral. 
 
@@ -313,9 +325,9 @@ A quarta e última equação de Maxwell é obtida substituindo a equação do fl
 \oint_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{A}.
 \end{align*}
 
-Todos os fenômenos eletromagnéticos são governados por essas quatro equações de Maxwell  e os últimos duzentos anos acumularam evidências suficientes para tal fato. Como vimos, todas as equações têm princípios experimentais, são deduzidas formalmente em termos de cálculo diferencial e integral, e são satisfeitas pelas variáveis físicas $\rho$ e $\mathbf{J}$ que são as fontes dos campos elétrico e magnético respectivamente. As equações são sumarizadas a seguir:
+Todos os fenômenos eletromagnéticos são governados por essas quatro equações de Maxwell  e os últimos duzentos anos acumularam evidências suficientes para tal fato. Como vimos, todas as equações têm princípios experimentais, são deduzidas formalmente em termos de cálculo diferencial e integral, e são satisfeitas pelas variáveis físicas $\rho_e$ e $\mathbf{J}$ que são as fontes dos campos elétrico e magnético respectivamente. As equações são sumarizadas a seguir:
 \begin{align}\label{eq.maxwell_1}
-\oiint_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\iiint_{V}\rho\,dV,\\\nonumber\\\label{eq.maxwell_2}
+\oiint_S\epsilon_0\textbf{E}\cdot\textit{d}\textbf{A}&=\iiint_{V}\rho_e\,dV,\\\nonumber\\\label{eq.maxwell_2}
 \oiint_S\textbf{B}\cdot\textit{d}\textbf{A}&=0,\\\nonumber\\\label{eq.maxwell_3}
 \oint_s\frac{\mathbf{B}}{\mu_0}\cdot d\mathbf{s}&=\iint_S\mathbf{J}\cdot\,d\mathbf{A}+\frac{d}{dt}\oiint_S\epsilon_0\,\textbf{E}\cdot\textit{d}\textbf{A},\\\nonumber\\\label{eq.maxwell_4}
 \oint_s\mathbf{E}\cdot d\mathbf{s}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{A}.
@@ -325,7 +337,7 @@ Todos os fenômenos eletromagnéticos são governados por essas quatro equaçõe
 
 \subsection{Ação do campo elétrico na matéria}
 
-Nosso intuito é utilizar as equações de Maxwell para ajudar a determinar a composição de uma determinada região da subsuperfície. As informaçãoes sobre as propriedades eletromagnéticas de um material que compõe uma região dependem dos parâmetros $\rho$ e $\mathbf{J}$ de cada região, e esses parâmetros são usados para definir e inserir nas equações de Maxwell dois campos vetoriais, $\mathbf{D}$ e $\mathbf{H}$, que estão diretamente ligados às características do meio como veremos a seguir.
+Nosso intuito é utilizar as equações de Maxwell para ajudar a determinar a composição de uma determinada região da subsuperfície. As informaçãoes sobre as propriedades eletromagnéticas de um material que compõe uma região dependem dos parâmetros $\rho_e$ e $\mathbf{J}$ de cada região, e esses parâmetros são usados para definir e inserir nas equações de Maxwell dois campos vetoriais, $\mathbf{D}$ e $\mathbf{H}$, que estão diretamente ligados às características do meio como veremos a seguir.
 
 De acordo com \cite{griffiths}, um átomo eletricamente neutro também tem algumas de suas características alteradas quando expostos a campo elétrico $\mathbf{E}$, pois as cargas positivas (no núcleo) são empurradas numa direção e as cargas negativas (elétrons) são empurradas num sentido oposto. Na verdade, se o campo elétrico é muito forte, pode ser criada uma alteração permanente ``ionizando" o átomo. A aplicação de campo elétrico não tão extremo faz com que um equilíbrio seja rapidamente estabilizado criando um centro de cargas positivas e outro de cargas negativas deixando o átomo \textit{polarizado}, o qual agora passa a ter um pequeno \textit{momento de dipolo elétrico}, $\mathbf{p}$, que tem a mesma direção do campo elétrico e é proporcional ao mesmo.
 \begin{equation*}
@@ -360,7 +372,7 @@ Q=Q_f+Q_p,
 \end{equation*} 
 e usando a equação \ref{eq.densidade_carga}, temos que a densidade de carga do meio é
 \begin{equation}\label{eq.densi_carga_f_p}
-\iiint_{V}\rho\,dV=\iiint_{V}\rho_f\,dV+\iiint_{V}\rho_p\,dV.
+\iiint_{V}\rho_e\,dV=\iiint_{V}\rho_f\,dV+\iiint_{V}\rho_p\,dV.
 \end{equation}
 Substituindo a equação \ref{eq.densi_carga_f_p} na equação \ref{eq.maxwell_1}, a lei de Gauss para o fluxo elétrico se torna
 \begin{equation}\label{eq.lei_gauss_polarizacao}
@@ -382,12 +394,12 @@ Para muitas subst\^ancias, a polariza\c{c}\~ao \'e proporcional ao campo el\'etr
 \mathbf{P}=\epsilon_0\chi_e\mathbf{E},
 \end{equation*}
 onde $\chi_e$ \'e a \textit{susceptibilidade el\'etrica} do meio e depende das caracter\'isticas deste, os quais s\~ao chamados \textit{diel\'etricos lineares}. Substituindo essa rela\c{c}\~ao na equa\c{c}\~ao do campo de desnidade de fluxo el\'etrico temos
-\begin{align*}
-\mathbf{D}&=\epsilon_0\mathbf{E}-\mathbf{P}\\
-&=\epsilon_0\mathbf{E}-\epsilon_0\chi_e\mathbf{E}\\
+\begin{align}\label{eq.D_funcao_E}\nonumber
+\mathbf{D}&=\epsilon_0\mathbf{E}-\mathbf{P}\\\nonumber
+&=\epsilon_0\mathbf{E}-\epsilon_0\chi_e\mathbf{E}\\\nonumber
 &=\epsilon_0(1-\chi_e)\mathbf{E}\\
 &=\epsilon\,\mathbf{E},
-\end{align*}
+\end{align}
 e assim vemos que, para materiais diel\'etricos lineares, $\mathbf{D}$ tamb\'em \'e proporcional a $\mathbf{E}$, onde $\epsilon$ \'e chamado \textit{permissividade el\'etrica do meio}.
 
 \subsection{A\c{c}\~ao de campo magn\'etico na mat\'eria}
@@ -436,12 +448,12 @@ Para algumas subst\^ancias, a magnetiza\c{c}\~ao \'e proporcional ao campo magn\
 \mathbf{M}=\chi_m\mathbf{H},
 \end{equation*}
 onde $\chi_m$ \'e a \textit{susceptilidade magn\'etica do meio} e depende das caracter\'isticas deste. Substituindo essa \'ultima equa\c{c}\~ao na equa\c{c}\~ao do campo magn\'etico auxiliar temos
-\begin{align*}
-\mathbf{B}&=\mu_0\,(\mathbf{H}+\mathbf{M})\\
-&=\mu_0\,(\mathbf{H}+\chi_m\mathbf{H})\\
+\begin{align}\label{eq.B_funcao_H}\nonumber
+\mathbf{B}&=\mu_0\,(\mathbf{H}+\mathbf{M})\\\nonumber
+&=\mu_0\,(\mathbf{H}+\chi_m\mathbf{H})\\\nonumber
 &=\mu_0\,(1+\chi_m)\,\mathbf{H}\\
 &=\mu\,\mathbf{H},
-\end{align*}
+\end{align}
 onde $\mu$ \'e a \textit{permeabilidade magn\'etica do meio}.
 
 Assim, podemos escrever as equa\c{c}\~oes de Maxwell considerando a a\c{c}\~ao dos campos el\'etrico e magn\'etico na mat\'eria como
