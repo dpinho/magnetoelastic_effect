@@ -67,6 +67,56 @@ Para o campo de densidade de corrente el\'etrica, temos
 \end{equation}
 As equa\c{c}\~oes \ref{eq.constitutiva_1}, \ref{eq.constitutiva_2} e \ref{eq.constitutiva_3} s\~ao as equa\c{c}\~oes constitutivas do meio em termos dos campos definidos em laborat\'orio. 
 
+\section{Interface entre Camadas de Materiais Diferentes}
+
+Vamos escrever as equa\c{c}\~oes de Maxwell dadas forma diferencial pelas equa\c{c}\~oes \ref{eq.dif_max_1} a \ref{eq.dif_max_2} numa forma mais conveniente para a aplica\c{c}\~ao das rela\c{c}\~oes constitutivas. As equa\c{c}\~oes \ref{eq.dif_max_1} e \ref{eq.dif_max_2} se mat\^em inalteradas,
+\begin{equation}\label{eq.div_D_div_B}
+\nabla\cdot\mathbf{D}=\rho_f\quad\text{e}\quad\nabla\cdot\mathbf{B}=0.
+\end{equation}
+Para equa\c{c}\~ao \ref{eq.dif_max_3}
+\begin{align}\label{eq.interface_1}\nonumber
+\nabla\times\mathbf{H}&=\mathbf{J}_f+\frac{\partial}{\partial t}\,\mathbf{D}\qquad\Leftrightarrow\\\nonumber\\
+\nabla\times\mathbf{H}-\nabla\times(\mathbf{v}\times\mathbf{D})&=\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})+\mathbf{J}_f-\rho_f\mathbf{v}\qquad\Leftrightarrow\\\nonumber\\
+\nabla\times(\mathbf{H}-\mathbf{v}\times\mathbf{D})&=\left[\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]+\mathbf{J}_f-\rho_f\mathbf{v}
+\end{align}
+Para equa\c{c}\~ao \ref{eq.dif_max_4}
+\begin{align}\label{eq.interface_2}\nonumber
+\nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{B}\qquad\Leftrightarrow\\\nonumber\\
+\nabla\times\mathbf{E}+\nabla\times(\mathbf{v}\times\mathbf{B})&=-\frac{\partial}{\partial t}\mathbf{B}-\mathbf{v}(\nabla\cdot\mathbf{B})+\nabla\times(\mathbf{v}\times\mathbf{B})\qquad\Leftrightarrow\\\nonumber\\
+\nabla\times(\mathbf{E}+\mathbf{v}\times\mathbf{B})&=-\left[\frac{\partial}{\partial t}\mathbf{B}+\mathbf{v}(\nabla\cdot\mathbf{B})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]
+\end{align}
+Integrando as equa\c{c}\~oes \ref{eq.div_D_div_B} sobre uma superf\'icie $S'$ enclusurada por uma curva $C$, e integrando as equa\c{c}\~oes \ref{eq.interface_1} e \ref{eq.interface_2} sobre um volume $V$ enclusurado por uma superf\'icie $S$, temos
+\begin{align*}
+\iiint_V\nabla\cdot\mathbf{D}\,dV&=\iiint_V\rho_f\\\\
+\iiint_V\nabla\cdot\mathbf{B}\,dV&=0\\\\
+\iint_S\nabla\times(\mathbf{H}-\mathbf{v}\times\mathbf{D})\cdot d\mathbf{S}&=\iint_S\left[\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]\cdot d\mathbf{S}+\iint_S\left[\mathbf{J}_f-\rho_f\mathbf{v}\right]\cdot d\mathbf{S}\\\\
+\iint_S\nabla\times(\mathbf{E}+\mathbf{v}\times\mathbf{B})\cdot d\mathbf{S}&=-\iint_S\left[\frac{\partial}{\partial t}\mathbf{B}+\mathbf{v}(\nabla\cdot\mathbf{B})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]\cdot d\mathbf{S}
+\end{align*}
+Aplicando o teorema do Divergente nas duas primeiras equa\c{c}\~oes, e aplicando o teorema de Stokes nas duas \'ultimas equa\c{c}\~oes, temos
+\begin{align}\label{eq.interface_3}
+\oiint_S\mathbf{D}\cdot d\mathbf{S}&=\iiint_V\rho_f\\\nonumber\\\label{eq.interface_4}
+\oiint_S\mathbf{B}\cdot d\mathbf{S}&=0\\\nonumber\\\label{eq.interface_5}
+\oint_C(\mathbf{H}-\mathbf{v}\times\mathbf{D})\cdot d\mathbf{C}&=\frac{d}{dt}\iint_S\mathbf{D}\cdot d\mathbf{S}+\iint_S\left[\mathbf{J}_f-\rho_f\mathbf{v}\right]\cdot d\mathbf{S}\\\nonumber\\\label{eq.interface_6}
+\oint_C(\mathbf{E}+\mathbf{v}\times\mathbf{B})\cdot d\mathbf{C}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{S},
+\end{align} 
+onde nas duas \'ultimas equa\c{c}\~oes usamos a rela\c{c}\~ao abaixo, sendo $\mathbf{A}$ um vetor qualquer,
+\begin{equation*}
+\frac{d}{dt}\iint_S\mathbf{A}\cdot d\mathbf{S}=\iint_S\left[\frac{\partial}{\partial t}\mathbf{A}+\mathbf{v}(\nabla\cdot\mathbf{A})-\nabla\times(\mathbf{v}\times\mathbf{A})\right]\cdot d\mathbf{S}.
+\end{equation*}
+Acompanhando pela figura \ref{fig.cond_contorno} juntamente com a argumenta\c{c}\~ao apresentada na subse\c{c}\~ao \ref{sec.condicoes_contorno_geral}, temos que o salto da componente normal de cada um dos campos, magn\'etico e densidade de fluxo el\'etrico, deduzidos a partir das equa\c{c}\~oes \ref{eq.interface_3} e \ref{eq.interface_4}, s\~ao
+\begin{equation}
+\left[\left[\mathbf{D}\right]\right]_n=\sigma_f\qquad\text{e}\qquad\left[\left[\mathbf{B}\right]\right]_n=0.
+\end{equation}  
+Analogamente, temos o salto das componentes tangenciais dos campos el\'etrico e magn\'etico auxiliar, deduzidos a partir das equa\c{c}\~oes \ref{eq.interface_5} e \ref{eq.interface_6},
+\begin{equation}
+\left[\left[\mathbf{H}-\mathbf{v}\times\mathbf{D}\right]\right]_m=K_t-\sigma_t\qquad\text{e}\qquad\left[\left[\mathbf{E}+\mathbf{v}\times\mathbf{B}\right]\right]_m=0,
+\end{equation}
+onde $K$ \'e a magnitude da densidade superficial de corrente e $\sigma$ \'e a magnitude da densidade superficial de carga.
+
+A conserva\c{c}\~ao da carga aplicada \`a uma regi\~ao $V$ nos d\'a a condi\c{c}\~ao de contorno normal
+\begin{equation}
+\left[\left[\mathbf{E}+\mathbf{v}\times\mathbf{B}\right]\right]_n=-\frac{\partial}{\partial t}\sigma_t=\left[\left[\frac{\partial}{\partial t}\mathbf{D}\right]\right]_n.
+\end{equation}
 
 \section{Modelo de Dunkin e Erigen}
 
