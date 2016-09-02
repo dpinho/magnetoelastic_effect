@@ -87,14 +87,14 @@ Para equa\c{c}\~ao \ref{eq.dif_max_4}
 \end{align}
 Integrando as equa\c{c}\~oes \ref{eq.div_D_div_B} sobre uma superf\'icie $S'$ enclusurada por uma curva $C$, e integrando as equa\c{c}\~oes \ref{eq.interface_1} e \ref{eq.interface_2} sobre um volume $V$ enclusurado por uma superf\'icie $S$, temos
 \begin{align*}
-\iiint_V\nabla\cdot\mathbf{D}\,dV&=\iiint_V\rho_f\\\\
+\iiint_V\nabla\cdot\mathbf{D}\,dV&=\iiint_V\rho_f\,dV\\\\
 \iiint_V\nabla\cdot\mathbf{B}\,dV&=0\\\\
 \iint_S\nabla\times(\mathbf{H}-\mathbf{v}\times\mathbf{D})\cdot d\mathbf{S}&=\iint_S\left[\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]\cdot d\mathbf{S}+\iint_S\left[\mathbf{J}_f-\rho_f\mathbf{v}\right]\cdot d\mathbf{S}\\\\
 \iint_S\nabla\times(\mathbf{E}+\mathbf{v}\times\mathbf{B})\cdot d\mathbf{S}&=-\iint_S\left[\frac{\partial}{\partial t}\mathbf{B}+\mathbf{v}(\nabla\cdot\mathbf{B})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]\cdot d\mathbf{S}
 \end{align*}
 Aplicando o teorema do Divergente nas duas primeiras equa\c{c}\~oes, e aplicando o teorema de Stokes nas duas \'ultimas equa\c{c}\~oes, temos
 \begin{align}\label{eq.interface_3}
-\oiint_S\mathbf{D}\cdot d\mathbf{S}&=\iiint_V\rho_f\\\nonumber\\\label{eq.interface_4}
+\oiint_S\mathbf{D}\cdot d\mathbf{S}&=\iiint_V\rho_f\,dV\\\nonumber\\\label{eq.interface_4}
 \oiint_S\mathbf{B}\cdot d\mathbf{S}&=0\\\nonumber\\\label{eq.interface_5}
 \oint_C(\mathbf{H}-\mathbf{v}\times\mathbf{D})\cdot d\mathbf{C}&=\frac{d}{dt}\iint_S\mathbf{D}\cdot d\mathbf{S}+\iint_S\left[\mathbf{J}_f-\rho_f\mathbf{v}\right]\cdot d\mathbf{S}\\\nonumber\\\label{eq.interface_6}
 \oint_C(\mathbf{E}+\mathbf{v}\times\mathbf{B})\cdot d\mathbf{C}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{S},
@@ -113,16 +113,27 @@ Analogamente, temos o salto das componentes tangenciais dos campos el\'etrico e 
 \end{equation}
 onde $K$ \'e a magnitude da densidade superficial de corrente e $\sigma$ \'e a magnitude da densidade superficial de carga.
 
-A conserva\c{c}\~ao da carga aplicada \`a uma regi\~ao $V$ nos d\'a a condi\c{c}\~ao de contorno normal
-\begin{equation}
-\left[\left[\mathbf{E}+\mathbf{v}\times\mathbf{B}\right]\right]_n=-\frac{\partial}{\partial t}\sigma_t=\left[\left[\frac{\partial}{\partial t}\mathbf{D}\right]\right]_n.
+A \'ultima equa\c{c}\~ao no estudo das condi\c{c}\~oes de fronteira entre camadas segue do princ\'ipio de conserva\c{c}\~ao de cargas el\'etricas. A quantidade total de cargas concentradas num determinado volume \'e dada pela equa\c{c}\~ao \ref{eq.densidade_carga}, e qualquer varia\c{c}\~ao na quantidade de carga desse volume \'e devida a uma corrente el\'etrica, dada pela equa\c{c}\~ao \ref{eq.densidade_corrente}, que atravessa a superf\'icie que est\'a enclausurando o volume. Assim,  o princ\'ipio de conserva\c{c}\~ao de cargas estabelece que
+\begin{equation}\label{eq.conservacao_carga_1}
+\frac{d}{dt}\iiint_V\rho_e\,dV=-\oiint_S\mathbf{J}\cdot d\mathbf{S}.
 \end{equation}
+Reescrevendo o lado esquerdo da equa\c{c}\~ao acima e aplicando o teorema do Divergente ao lado direito temos que
+\begin{equation*}
+\iiint_V\frac{\partial}{\partial t}\rho_e\,dV=-\iiint_V\nabla\cdot\mathbf{J}\,dV,
+\end{equation*}
+e como a equa\c{c}\~ao se mant\'em para qualquer tipo de volume, temos
+\begin{equation*}
+\frac{\partial\rho_e}{\partial t}=-\nabla\cdot\mathbf{J}.
+\end{equation*}
+Esta \'e a \textit{equa\c{c}\~ao da continuidade} ou equa\c{c}\~ao da \textit{conserva\c{c}\~ao local de carga}, e pode ser derivada a partir das equa\c{c}\~oes de Maxwell por ser uma consequ\^encia das leis da eletrodin\^amica. 
+
+Usando a conserva\c{c}\~ao da carga na forma dada pela equa\c{c}\~ao \ref{eq.conservacao_carga_1}, e aplicando ao volume $V$ analogamente ao que foi feito com a equa\c{c}\~ao \ref{eq.interface_3}, e substituindo a express\~ao para $\mathbf{J}$ dada na equa\c{c}\~ao \ref{eq.constitutiva_3}, temos a \'ultima equa\c{c}\~ao para condi\c{c}\~ao de contorno
+\begin{equation*}
+\left[\left[\sigma(\mathbf{E}+\mathbf{v}\times\mathbf{B})\right]\right]_n=-\frac{\partial}{\partial t}\sigma_e=\left[\left[\frac{\partial}{\partial t}\mathbf{D}\right]\right]_n.
+\end{equation*}
 
 \section{Modelo de Dunkin e Erigen}
 
 
 
-
-
-
-\section{Conclusões}
+\section{Conclus\~oes}
