@@ -293,7 +293,7 @@ A \textit{corrente elétrica média} é definida como a taxa com que uma quantid
 \begin{equation*}
 I_m=\frac{\Delta\,Q}{\Delta\,t},
 \end{equation*}
-medida em coulomb por segundo $(C/s)$ no SI. Em termos microscópicos, a quantidade de carga que atravessa uma superfície num determinado tempo é dada em função da \textit{densidade de corrente elétrica} $\mathbf{J}$,
+medida em coulomb por segundo $(C/s)$ no SI. Em termos microscópicos, a quantidade de carga que atravessa uma superfície infinitesimal num determinado tempo é dada em função da \textit{densidade de corrente elétrica} $\mathbf{J}$,
 \begin{equation}\label{eq.densidade_corrente}
 I=\iint_S\mathbf{J}\cdot\,d\mathbf{A},
 \end{equation}
@@ -301,7 +301,7 @@ onde a densidade de corrente elétrica é medida em $(A/m^2)$ no SI.
 \begin{figure}
 \centering
 \includegraphics[scale=.3]{corrente_condutor}
-\caption{\textit{Cargas elétrica fluindo no intervalo $\Delta\,x$ de um condutor com área de seção transversal $A$.}}
+\caption{\textit{Cargas elétricas fluindo no intervalo $\Delta\,x$ de um condutor com área de seção transversal $A$.}}
 \label{fig.corre_condu}
 \end{figure}
 Observando a figura \ref{fig.corre_condu} que mostra uma corrente fluindo num condutor, onde $q$ é a carga elétrica de cada partícula, $n$ é quantidade de partículas num determinado volume do condutor e $\Delta\,x$ é o comprimento do mesmo, temos que a quantidade de carga nesse volume é $\Delta\,Q=n\,q\,(A\,\Delta\,x)$. Se as partículas se movem com velocidade $v$, então a posição a cada intervalo de tempo é dada por $\Delta\,x=v\,\Delta\,t$, e a corrente elétrica média nesse intervalo do condutor é
@@ -309,9 +309,9 @@ Observando a figura \ref{fig.corre_condu} que mostra uma corrente fluindo num co
 I_m=\frac{\Delta\,Q}{\Delta\,t}=n\,q\,A\,v.
 \end{equation*}
 Como a densidade de corrente é a corrente média por área, temos que a mesma pode ser escrita como 
-\begin{equation*}
+\begin{equation}\label{eq.densidade_corrente}
 \mathbf{J}=n\,q\,\mathbf{v}.
-\end{equation*}
+\end{equation}
 
 A terceira equação de Maxwell em sua forma integral pode ser obtida substituindo as equações \ref{eq.densidade_corrente} e \ref{eq.fluxo_eletrico} na equação \ref{eq.ampere_generalizada},
 \begin{align*}
