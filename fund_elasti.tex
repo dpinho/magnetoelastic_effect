@@ -112,7 +112,7 @@ e desse jeito podemos perceber que o fator $(1+\epsilon_{11})$ \'e uma mudan\c{c
 Para estudar as altera\c{c}\~oes no volume de um s\'olido el\'astico vamos considerar uma caixa retangular (paralelep\'ipedo) com dimens\~oes $\Delta x_1, \Delta x_2\,\text{e}\,\Delta x_3$ nas dire\c{c}\~oes dos eixos coordenados.  Dessa forma, o volume do paralelep\'ipedo \'e dado por\begin{equation*}
 V=\Delta x_1\,\Delta x_2\,\Delta x_3.
 \end{equation*}
-Conforme subse\c{c}\~ao \ref{sec.alte_compri}, aplicando a mudan\c{c}a relativa de comprimento a cada uma das tr\^es dimans\~oes, temos que ap\'os a deforma\c{c}\~ao, o volume do s\'olido \'e dado por
+Conforme subse\c{c}\~ao \ref{sec.alte_compri}, aplicando a mudan\c{c}a relativa de comprimento a cada uma das tr\^es dimens\~oes, temos que ap\'os a deforma\c{c}\~ao, o volume do s\'olido \'e dado por
 \begin{align}\nonumber
 V^*&=(1+\epsilon_{11})\Delta x_1\,(1+\epsilon_{22})\Delta x_2\,(1+\epsilon_{33})\Delta x_3\\\label{eq.altera_volume}
 &=(1+\epsilon_{11})\,(1+\epsilon_{22})\,(1+\epsilon_{33})\,V.
@@ -185,7 +185,7 @@ onde substiutindo a equa\c{c}\~ao \ref{eq.massa_divergente} na equa\c{c}\~ao \re
 \end{equation*}
 que \'e a equa\c{c}\~ao que descreve a \textit{conserva\c{c}\~ao de massa} num determinado volume $V$.
 
-Em geral, as for\c{c}as agindo no interior de um meio continuo s\~ao as chamadas \textit{for\c{c}as de superf\'icie}, ou seja, quando um material \'e submetido ao contato de uma carga em sua superf\'ice, for\c{c}as internas se propagam no inteiror do material atrav\'es de outras superf\'icies internas e imagin\'arias provocando a deforma\c{c}\~ao desse material. Assim, podemos definir a \textit{tens\~ao} como o conjunto dessas for\c{c}as de superf\'ice, fazendo com que tens\~ao e deforma\c{c}\~ao estejam diretamente relacionadas. Matematicamente, tens\~ao media \'e definida como a for\c{c}a por unidade de \'area
+Em geral, as for\c{c}as agindo no interior de um meio continuo s\~ao as chamadas \textit{for\c{c}as de superf\'icie}, ou seja, quando um material \'e submetido ao contato de uma carga em sua superf\'ice, for\c{c}as internas se propagam no inteiror do material atrav\'es de outras superf\'icies internas e imagin\'arias provocando a deforma\c{c}\~ao desse material. Assim, podemos definir a \textit{tens\~ao} como o conjunto dessas for\c{c}as de superf\'ice, fazendo com que tens\~ao e deforma\c{c}\~ao estejam diretamente relacionadas. Matematicamente, tens\~ao m\'edia \'e definida como a for\c{c}a por unidade de \'area
 \begin{equation}\label{eq.tensao_media}
 \mathbf{\overline{T}}=\frac{\Delta\mathbf{F}}{\Delta S},
 \end{equation}
@@ -215,7 +215,7 @@ Somente for\c{c}as externas s\~ao respons\'aveis por altera\c{c}\~oes no momento
 
 \subsection{O Tensor de Tens\~oes}\label{sec.tensor_tensoes}
 
-Para deriva\c{c}\~ao do tensor de tens\~oes vamos utilizar o argumento do tetraedro de Cauchy, estudando as for\c{c}as agindo no inteiror de um meio cont\'inuo em rela\c{c}\~ao a um plano imagin\'ario com orienta\c{c}\~ao arbitr\'aria. O tetraedro \'e limitado pelos $O(0,0,0)$, $X(x,0,0)$, $Y(0,y,0)$ e $Z(0,0,z)$, contendo faces ortogonais, $OYZ$, $XOZ$ e $XYO$ e a face obl\'iqua $XYZ$, conforme a figura \ref{fig.tetraedro}.
+Para deriva\c{c}\~ao do tensor de tens\~oes vamos utilizar o argumento do tetraedro de Cauchy, estudando as for\c{c}as agindo no inteiror de um meio cont\'inuo em rela\c{c}\~ao a um plano imagin\'ario com orienta\c{c}\~ao arbitr\'aria. O tetraedro \'e limitado pelos pontos $O(0,0,0)$, $X(x,0,0)$, $Y(0,y,0)$ e $Z(0,0,z)$, contendo faces ortogonais, $OYZ$, $XOZ$ e $XYO$ e a face obl\'iqua $XYZ$, conforme a figura \ref{fig.tetraedro}.
 \begin{figure}
 \centering
 \includegraphics[scale=1]{tetraedro_cauchy}
@@ -320,7 +320,7 @@ A matriz $\tau$ \'e chamada de \textit{tensor de tens\~oes de Cauchy}, o s\'imbo
 
 \subsection{Equa\c{c}\~ao do Movimento de um Corpo El\'astico e Cont\'inuo}
 
-Para deduzir a equa\c{c}\~ao do movimento vamos fazer uso do conceito de equil\'ibrio do momento linear estabelecido na subse\c{c}\~ao \ref{sec.massa_tensao_momen_lin} e da defini\c{c}\~ao do tensor de tens\~oes estabelacido na subse\c{c}\~ao \ref{sec.tensor_tensoes}. Assim, substituindo a equa\c{c}\~ao \ref{eq.somatorio_tensor_tau} na equa\c{c}\~ao \ref{eq.forca_total_2} temos
+Para deduzir a equa\c{c}\~ao do movimento vamos fazer uso do conceito de equil\'ibrio do momento linear estabelecido na subse\c{c}\~ao \ref{sec.massa_tensao_momen_lin} e da defini\c{c}\~ao do tensor de tens\~oes estabelecido na subse\c{c}\~ao \ref{sec.tensor_tensoes}. Assim, substituindo a equa\c{c}\~ao \ref{eq.somatorio_tensor_tau} na equa\c{c}\~ao \ref{eq.forca_total_2} temos
 \begin{align*}
 \iiint_V\rho\frac{d^2\mathbf{u}}{dt^2}\,dV&=\iint_S\mathbf{T}\,dS+\iiint_V\mathbf{f}\,dV\\
 \iiint_V\rho\frac{d^2u_i}{dt^2}\,dV&=\iint_S\sum_{j=1}^3\tau_{ji}n_jdS+\iiint_Vf_i\,dV,\quad \text{para}\quad i=1,2,3.
@@ -341,9 +341,9 @@ Essa equa\c{c}\~ao \'e conhecida como a \textit{equa\c{c}\~ao do movimento de Ca
 
   
 \section{Equações de Lamé}
-\subsection{Rela\c{c}\~oes Constitutivas}
+\subsection{Rela\c{c}\~oes Constitutivas}\label{sec.rela-const-hooke}
 
-As rela\c{c}\~oes contitutivas, ou rela\c{c}\~oes de tens\~ao-deforma\c{c}\~ao, foram estabelecidas experimentalmente e descrevem como as for\c{c}as aplicadas em materiais el\'asticos est\~ao linearmente relacionadas com a deforma\c{c}\~ao observada nesses materiais. As rela\c{c}\~oes consitutivas s\~ao conhecidas tamb\'em como a lei de Hooke, a qual estabelece que cada componente do tensor de tens\~oes est\'a linearmente relacionada com todas as componentes do tensor de deforma\c{c}\~oes. Dessa forma, a lei de Hooke pode ser escrita como
+As rela\c{c}\~oes constitutivas, ou rela\c{c}\~oes de tens\~ao-deforma\c{c}\~ao, foram estabelecidas experimentalmente e descrevem como as for\c{c}as aplicadas em materiais el\'asticos est\~ao linearmente relacionadas com a deforma\c{c}\~ao observada nesses materiais. As rela\c{c}\~oes constitutivas s\~ao conhecidas tamb\'em como a lei de Hooke, a qual estabelece que cada componente do tensor de tens\~oes est\'a linearmente relacionada com todas as componentes do tensor de deforma\c{c}\~oes. Dessa forma, a lei de Hooke pode ser escrita como
 \begin{equation}\label{eq.lei_hooke}
 \sigma_{ij}=\sum_{k=1}^3\sum_{l=1}^3c_{ijkl}\,\varepsilon_{kl}
 \end{equation}
@@ -445,8 +445,3 @@ Considerando um modelo onde uma camada n\~ao vai invadir a outra temos que a com
 \left[\left[\mathbf{u}\right]\right]=\mathbf{0}\quad\text{e}\quad\left[\left[\frac{\partial}{\partial t}\mathbf{u}\right]\right]=\mathbf{0}.
 \end{equation*}
 
-
-
-\section{Generalizações da teoria}
-
-\section{Conclusões}
