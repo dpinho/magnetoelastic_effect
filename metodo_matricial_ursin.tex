@@ -33,7 +33,7 @@ A_2&0
 A equação \ref{eq.matricial} tem as seguintes caracter\'isticas:
 \begin{itemize}
 \item $A_{2\,n\times2\,n}$ \'e uma matriz que pode ser particionada em quatro submatrizes $n\times n$, com submatrizes de zeros na diagonal principal e submatrizes sim\'etricas $A_1$ e $A_2$ na diagonal secund\'aria. As componentes de $A_1$ e $A_2$ s\~ao fun\c{c}\~oes dos par\^ametros das EDP's \ref{eq.faraday_ampere} e \ref{eq.cauchy_hooke}, s\~ao fun\c{c}\~oes de $x_3$ e tamb\'em do vetor real de retardamento $\mathbf{p}=\frac{\mathbf{k}}{\omega}$. Para meios de baixa atenua\c{c}\~ao das ondas, as matrizes $A_1$ e $A_2$ s\~ao reais; 
-\item O vetor de onda $\mathbf{B}$ tem dimens\~ao $2n\times1$ e \'e particionado em dois vetores $n\times1$ $\mathbf{B}_1$ e $\mathbf{B}_2$. As componentes do vetor de onda s\~ao escolhidas de forma que $\mathbf{B}$ seja cont\'inuo atrav\'es das fronteiras entre duas camadas;
+\item O vetor de onda $\mathbf{B}$ tem dimens\~ao $2n\times1$ e \'e particionado em dois vetores $\mathbf{B}_1$ e $\mathbf{B}_2$ com dimens\~ao $n\times1$ . As componentes do vetor de onda s\~ao escolhidas de forma que $\mathbf{B}$ seja cont\'inuo atrav\'es das fronteiras entre duas camadas;
 \item  Para ondas el\'asticas, metade das componentes de $\mathbf{B}$ s\~ao zeros na superf\'icie livre, ou seja, existe uma matriz de permuta\c{c}\~ao $T_{2n\times2n}$ onde $T^{-1}=T^\top$ e tal que
 \begin{equation}
 \begin{bmatrix}
@@ -42,7 +42,7 @@ A equação \ref{eq.matricial} tem as seguintes caracter\'isticas:
 \end{bmatrix}
 =T\,\mathbf{B}\quad\text{quando}\quad x_3 = 0\,;
 \end{equation}
-\item As componentes do vetor de onda $\mathbf{B}$ s\~ao escolhidos de forma que o fluxo de energia na dire\c{c}\~ao $x_3$ seja dado por
+\item As componentes do vetor de onda $\mathbf{B}$ s\~ao escolhidas de forma que o fluxo de energia na dire\c{c}\~ao $x_3$ seja dado por
 \begin{equation}
 J=-\frac{1}{4}(\mathbf{B}_1^H\mathbf{B}_2+\mathbf{B}_2^H\mathbf{B}_1)=-\frac{1}{4}\mathbf{B}^H\,M\, \mathbf{B}\,,
 \end{equation}
@@ -57,10 +57,14 @@ I&0_{n\times n}
 e $I$ \'e uma matriz identidade $n\times n$.
 \end{itemize}
 
+Os metodos a seguir sao aplicados em equacoes escritas no formato matricial \ref{eq.matricial}, com ondas se propagando numa pilha de camadas nao homogeneas e assumimos que os parametros das equacoes sao funcoes continuas no interior de cada camada que dependem apenas da profunidade $z$. O modelo inclui pilha de camadas homogeneas com parametros constantes por camada e consideramos o eixo $z$ como sendo positivo no sentido descendente.   
 
+\section{Decomposicao em Ondas Ascendentes e Descentes}
 
-
-
+Para realizar a decommposicao do vetor $\mathbf{B}$ em ondas ascendentes e descendentes aplicamos uma diagonalizacao em autovalores na matriz $A$ na forma
+\begin{equation}
+A=L\,A_1L^{-1}
+\end{equation}
 
 
 
