@@ -3,12 +3,12 @@ Este cap\'itulo trata da utiliza\c{c}\~ao de um m\'etodo matricial para estudar 
 
 \section{Escrevendo as Equa\c{c}\~oes na Forma Matricial}
 
-Sendo $\mathbf{x}=(x_1,x_2,x_3)^{\top}$ o espa\c{c}o $\mathbb{R}^3$ e aplicando as tranformadas de Fourier direta e inversa na forma
+Sendo $\mathbf{x}=(x,y,z)^{\top}$ o espa\c{c}o $\mathbb{R}^3$ e aplicando as tranformadas de Fourier direta e inversa na forma
 \begin{align*}
-F(\omega,k_1,k_2,x_3) &= \iiint_{-\infty}^{\infty}f(t,x_1,x_2,x_3)\,e^{i\omega t-ik_1x_1-ik_2x_2}dt\,dx_1dx_2\\\\
-f(t,x_1,x_2,x_3) &= \left(\frac{1}{2\,\pi}\right)^3\,\iiint_{-\infty}^{\infty}F(\omega,k_1,k_2,x_3)\,e^{-i\omega t+ik_1x_1+ik_2x_2}d\omega\,dk_1dk_2\,,
+F(\omega,k_1,k_2,z) &= \iiint_{-\infty}^{\infty}f(t,x,y,z)\,e^{i\omega t-ik_1x-ik_2y}dt\,dxdy\\\\
+f(t,x,y,z) &= \left(\frac{1}{2\,\pi}\right)^3\,\iiint_{-\infty}^{\infty}F(\omega,k_1,k_2,z)\,e^{-i\omega t+ik_1x+ik_2y}d\omega\,dk_1dk_2\,,
 \end{align*}
-podemos escrever um conjunto de EDP's que descevem a propaga\c{c}\~ao de ondas sismomagn\'eticas em camadas horizontais da subsuperf\'icie terrestre somente em fun\c{c}\~ao da profundidade $x_3$. 
+podemos escrever um conjunto de EDP's que descevem a propaga\c{c}\~ao de ondas sismomagn\'eticas em camadas horizontais da subsuperf\'icie terrestre somente em fun\c{c}\~ao da profundidade $z$. 
 
 A t\'itulo de exemplo, tanto as EDP's de Maxwell para o eletromagnetismo
 \begin{align}\label{eq.faraday_ampere}\nonumber
@@ -36,7 +36,7 @@ onde o vetor $\mathbf{B}$ representa uma onda qualquer e n\~ao o campo magn\'eti
 
 A equação \ref{eq.matricial} tem as seguintes caracter\'isticas:
 \begin{itemize}
-\item $A_{2\,n\times2\,n}$ \'e uma matriz que pode ser particionada em quatro submatrizes $n\times n$, com submatrizes de zeros na diagonal principal e submatrizes sim\'etricas $A_1$ e $A_2$ na diagonal secund\'aria. As componentes de $A_1$ e $A_2$ s\~ao fun\c{c}\~oes dos par\^ametros das EDP's \ref{eq.faraday_ampere} e \ref{eq.cauchy_hooke}, s\~ao fun\c{c}\~oes de $x_3$ e tamb\'em do vetor real de retardamento $\mathbf{p}=\frac{\mathbf{k}}{\omega}$. Para meios de baixa atenua\c{c}\~ao das ondas, as matrizes $A_1$ e $A_2$ s\~ao reais; 
+\item $A_{2\,n\times2\,n}$ \'e uma matriz que pode ser particionada em quatro submatrizes $n\times n$, com submatrizes de zeros na diagonal principal e submatrizes sim\'etricas $A_1$ e $A_2$ na diagonal secund\'aria. As componentes de $A_1$ e $A_2$ s\~ao fun\c{c}\~oes dos par\^ametros das EDP's \ref{eq.faraday_ampere} e \ref{eq.cauchy_hooke}, s\~ao fun\c{c}\~oes de $z$ e tamb\'em do vetor real de retardamento $\mathbf{p}=\frac{\mathbf{k}}{\omega}$. Para meios de baixa atenua\c{c}\~ao das ondas, as matrizes $A_1$ e $A_2$ s\~ao reais; 
 \item O vetor de onda $\mathbf{B}$ tem dimens\~ao $2n\times1$ e \'e particionado em dois vetores $\mathbf{B}_1$ e $\mathbf{B}_2$ com dimens\~ao $n\times1$ . As componentes do vetor de onda s\~ao escolhidas de forma que $\mathbf{B}$ seja cont\'inuo atrav\'es das fronteiras entre duas camadas;
 \item  Para ondas el\'asticas, metade das componentes de $\mathbf{B}$ s\~ao zeros na superf\'icie livre, ou seja, existe uma matriz de permuta\c{c}\~ao $T_{2n\times2n}$ onde $T^{-1}=T^\top$ e tal que
 \begin{equation*}
@@ -44,9 +44,9 @@ A equação \ref{eq.matricial} tem as seguintes caracter\'isticas:
 \mathbf{V}_1(\mathbf{0})\\
 \mathbf{0}
 \end{bmatrix}
-=T\,\mathbf{B}\quad\text{quando}\quad x_3 = 0\,;
+=T\,\mathbf{B}\quad\text{quando}\quad z = 0\,;
 \end{equation*}
-\item As componentes do vetor de onda $\mathbf{B}$ s\~ao escolhidas de forma que o fluxo de energia na dire\c{c}\~ao $x_3$ seja dado por
+\item As componentes do vetor de onda $\mathbf{B}$ s\~ao escolhidas de forma que o fluxo de energia na dire\c{c}\~ao $z$ seja dado por
 \begin{equation*}
 J=-\frac{1}{4}(\mathbf{B}_1^H\mathbf{B}_2+\mathbf{B}_2^H\mathbf{B}_1)=-\frac{1}{4}\mathbf{B}^H\,M\, \mathbf{B}\,,
 \end{equation*}
@@ -61,7 +61,7 @@ I&0_{n\times n}
 e $I$ \'e uma matriz identidade $n\times n$.
 \end{itemize}
 
-Os m\'etodos a seguir s\~ao aplicados em equa\c{c}\~oes escritas no formato matricial \ref{eq.matricial}, com ondas se propagando numa pilha de camadas n\~ao homog\^eneas e assumimos que os par\^ametros das equa\c{c}\~oes s\~ao fun\c{c}\~oes cont\'inuas no interior de cada camada que dependem apenas da profundidade $x_3$. O modelo inclui pilha de camadas homog\^eneas com par\^ametros constantes por camada e consideramos o eixo $z$ como sendo positivo no sentido descendente.   
+Os m\'etodos a seguir s\~ao aplicados em equa\c{c}\~oes escritas no formato matricial \ref{eq.matricial}, com ondas se propagando numa pilha de camadas n\~ao homog\^eneas e assumimos que os par\^ametros das equa\c{c}\~oes s\~ao fun\c{c}\~oes cont\'inuas no interior de cada camada que dependem apenas da profundidade $z$. O modelo inclui pilha de camadas homog\^eneas com par\^ametros constantes por camada e consideramos o eixo $z$ como sendo positivo no sentido descendente.   
 
 \section{Decomposi\c{c}\~ao em Ondas Ascendentes e Descentes}
 
@@ -168,7 +168,7 @@ L_1=L_2^{-\top}\,.
 \end{equation*}
 Substituindo a \'ultima igualdade na defini\c{c}\~ao \ref{eq.definicao_A1_A2} temos
 \begin{equation*}
-A_i=L_i\Lambda\,L_i^{\top}\qquad\text{para}\qquad i=1,2\,,
+A_i=L_i\Lambda\,L_i^{\top}\qquad\text{para}\qquad i=1\,\text{e}\,2\,,
 \end{equation*}
 e substituindo em \ref{eq.L_inversa}, temos
 \begin{equation}\label{eq.L_inversa_2}
@@ -180,16 +180,16 @@ L_2^{\top}&-L_1^{\top}
 \end{equation}
 
 Escrevendo o vetor de ondas na forma
-\begin{equation*}
-\mathbf{B}=\mathbf{L}\,\mathbf{W}\,,
-\end{equation*}
-aplicando a derivada parcial em rela\c{c}\~ao a $x_3$, e substituindo as equa\c{c}\~oes \ref{eq.matricial} e \ref{eq.diagonalizacao}, obtemos
+\begin{equation}\label{eq.transformacao_B}
+\mathbf{B}=L\,\mathbf{W}\,,
+\end{equation}
+aplicando a derivada parcial em rela\c{c}\~ao a $z$, e substituindo as equa\c{c}\~oes \ref{eq.matricial} e \ref{eq.diagonalizacao}, obtemos
 \begin{equation}\label{eq.derivada_W}
-\frac{\partial\mathbf{W}}{\partial\,x_3}=\left[\pm i\omega\,\Lambda_1-L^{-1}\frac{\partial\,L}{\partial\,x_3}\right]\,\mathbf{W}\,.
+\frac{\partial\mathbf{W}}{\partial\,z}=\left[\pm i\omega\,\Lambda_1-L^{-1}\frac{\partial\,L}{\partial\,z}\right]\,\mathbf{W}\,.
 \end{equation}
 Para a propaga\c{c}\~ao de ondas em camadas homog\^eneas, os coeficientes das EDP's originais s\~ao constantes por camada e esses coeficientes comp\~oem a matriz $A$ diagonalizada pela matriz $L$. Assim, para meios homog\^eneos, a \'ultima equa\c{c}\~ao pode ser reduzida a
 \begin{equation*}
-\frac{\partial\mathbf{W}}{\partial\,x_3}=\pm i\omega\,\Lambda_1\mathbf{W}\,.
+\frac{\partial\mathbf{W}}{\partial\,z}=\pm i\omega\,\Lambda_1\mathbf{W}\,.
 \end{equation*}
 Representamos o vetor $\mathbf{W}$ como
 \begin{equation*}
@@ -203,13 +203,13 @@ onde $\mathbf{U}$ e $\mathbf{D}$ s\~ao vetores que representam ondas ascendentes
 
 Substiutindo as equa\c{c}\~oes \ref{eq.L} e \ref{eq.L_inversa_2} na equa\c{c}\~ao \ref{eq.derivada_W} e efetuando as multiplica\c{c}\~oes matriciais obtemos
 \begin{align}\label{eq.Up_Down}\nonumber
-\frac{\partial\mathbf{U}}{\partial x_3}&=\pm i\omega\,\Lambda\,\mathbf{U}+F\,\mathbf{U}+G\,\mathbf{D}\\\quad\\\nonumber
-\frac{\partial\mathbf{D}}{\partial x_3}&=\pm i\omega\,\Lambda\,\mathbf{D}+F\,\mathbf{D}+G\,\mathbf{U}
+\frac{\partial\mathbf{U}}{\partial z}&=\pm i\omega\,\Lambda\,\mathbf{U}+F\,\mathbf{U}+G\,\mathbf{D}\\\quad\\\nonumber
+\frac{\partial\mathbf{D}}{\partial z}&=\pm i\omega\,\Lambda\,\mathbf{D}+F\,\mathbf{D}+G\,\mathbf{U}
 \end{align}
 onde as matrizes $F$ e $G$ s\~ao, respectivamente,
 \begin{align*}
-F&=-\frac{1}{2}\left[L_2^\top\frac{\partial L_1}{\partial x_3}+L_1^\top\frac{\partial L_2}{\partial x_3}\right]\\\quad\\
-G&=-\frac{1}{2}\left[L_2^\top\frac{\partial L_1}{\partial x_3}-L_1^\top\frac{\partial L_2}{\partial x_3}\right]\,.
+F&=-\frac{1}{2}\left[L_2^\top\frac{\partial L_1}{\partial z}+L_1^\top\frac{\partial L_2}{\partial z}\right]\\\quad\\
+G&=-\frac{1}{2}\left[L_2^\top\frac{\partial L_1}{\partial z}-L_1^\top\frac{\partial L_2}{\partial z}\right]\,.
 \end{align*}
 Substituindo $F$ e $G$ nas rela\c{c}\~oes
 \begin{equation*}
@@ -221,9 +221,157 @@ F=-F^\top\quad\text{e}\quad G=G^\top\,.
 \end{equation*}
 Negligenciando a \'ultima parcela das equa\c{c}\~oes \ref{eq.Up_Down}, temos a express\~ao final para ondas ascendentes e descendentes, respectivamente,
 \begin{align}\label{eq.Up_Down_2}\nonumber
-\frac{\partial\mathbf{U}}{\partial x_3}&=\pm i\omega\,\Lambda\,\mathbf{U}+F\,\mathbf{U}\\\quad\\\nonumber
-\frac{\partial\mathbf{D}}{\partial x_3}&=\pm i\omega\,\Lambda\,\mathbf{D}+F\,\mathbf{D}\,.
+\frac{\partial\mathbf{U}}{\partial z}&=\pm i\omega\,\Lambda\,\mathbf{U}+F\,\mathbf{U}\\\quad\\\nonumber
+\frac{\partial\mathbf{D}}{\partial z}&=\pm i\omega\,\Lambda\,\mathbf{D}+F\,\mathbf{D}\,.
 \end{align}
 
+\section{Matriz de Propaga\c{c}\~ao}
 
+Podemos utilizar a equa\c{c}\~ao \ref{eq.matricial} para calcular o valor do vetor de ondas numa profundidade qualquer $\mathbf{B}_z$, desde que saibamos o valor do vetor na superf\'icie $\mathbf{B}_0$ e mantendo a frequ\^encia e o vetor de retardamento constantes. Para ondas descendentes, a \textit{matriz de propaga\c{c}\~ao} \'e dada pela solu\c{c}\~ao da equa\c{c}\~ao 
+\begin{equation}\label{eq.matriz_propagacao}
+\frac{\partial P(z,z_0)}{\partial z}=\pm i\omega\,A(z)\,P(z,z_0)\,,
+\end{equation}
+onde $P(z_0,z_0)=I$. Para ondas ascendentes, a matriz de propaga\c{c}\~ao \'e dada por
+\begin{equation*}
+\frac{\partial P(\zeta,z_N)}{\partial \zeta}=\pm i\omega A(\zeta)\,P(\zeta,z_N)\,,
+\end{equation*}
+onde $P(z_N,z_N)=I$.
 
+Sabendo o valor de $\mathbf{B}(z_0)$, a solu\c{c}\~ao da equa\c{c}\~ao \ref{eq.matricial} \'e dada por
+\begin{equation}
+\mathbf{B}(z)=P(z,z_0)\,\mathbf{B}(z_0)\,,
+\end{equation}
+e podemos notar que 
+\begin{equation}
+P^{-1}(z_N,z_0)=P(z_0,z_N)\,.
+\end{equation}
+As condi\c{c}\~oes de fronteiras preconizam que o vetor de ondas \'e cont\'inuo atrav\'es das interfaces, o que implica que a matriz de propaga\c{c}\~ao tamb\'em se mant\'em cont\'inua na interface entre duas camadas homog\^eneas ou n\~ao.
+
+Considerando uma pilha de camadas homog\^eneas com a espessura de uma camada $k$ dada por $\Delta z_k=z_k-z_{k-1}$, onde $z_k$ \'e a profundidade da interface entre a camada $k$ e a camada $k+1$. Nesta condi\c{c}\~ao e usando a equa\c{c}\~ao \ref{eq.diagonalizacao}, a equa\c{c}\~ao da matriz de propaga\c{c}\~ao \ref{eq.matriz_propagacao} pode ser integrada diretamente  
+\begin{align*}
+P(z,z_0)&=\exp{\pm i\omega\,A(z-z_0)}\\
+&=L\,\left[\exp{\pm i\omega\,\Lambda_1(z-z_0)}\right]\,L^{-1}\,.
+\end{align*}
+
+\section{Propriedades Invariantes da Propaga\c{c}\~ao}
+As propriedades da matriz $A$ determinam as caracter\'isticas de propaga\c{c}\~ao do vetor de ondas $\mathbf{B}$. Como as matrizes $A_1$ e $A_2$ s\~ao sim\'etricas, podemos verificar que a fun\c{c}\~ao $G$ dada por
+\begin{equation}
+G(\mathbf{B},\mathbf{C})=-(\mathbf{B}_1^\top\mathbf{C_2-\mathbf{B}_2^\top\mathbf{C}_1})\,,
+\end{equation}
+ou por
+\begin{equation}
+G(\mathbf{B},\mathbf{C})=-\mathbf{B}^\top N\,\mathbf{C}\qquad\text{com}\qquad N=
+\begin{bmatrix}
+0_{n\times n}&I\\
+-I&0_{n\times n}
+\end{bmatrix}\,,
+\end{equation}
+\'e constante para vetores de onda $\mathbf{B}$ e $\mathbf{C}$ que satisfazem a equa\c{c}\~ao \ref{eq.matricial}. Usando as matrizes de autovalores das equa\c{c}\~oes \ref{eq.L} e \ref{eq.L_inversa_2}, podemos verificar que
+\begin{equation}\label{eq.diagonalizacao_N}
+-L^\top N\,L=N\,.
+\end{equation}
+Empregando a transforma\c{c}\~ao dada pela equa\c{c}\~ao \ref{eq.transformacao_B} e a transforma\c{c}\~ao
+\begin{equation}
+\mathbf{C}=L\,\mathbf{V}
+\end{equation}
+podemos deduzir que 
+\begin{equation}\label{eq.G(V,W)}
+G(\mathbf{W},\mathbf{V})=\mathbf{W}^\top N\,\mathbf{V}
+\end{equation}
+tamb\'em \'e constante para os vetores transformados $\mathbf{W}$ e $\mathbf{V}$.
+Aplicando o determinante na equa\c{c}\~ao \ref{eq.diagonalizacao_N} e sabendo que $det(N)=det(-N)$ conclu\'imos que
+\begin{equation}
+det^2(N)=1\,.
+\end{equation}
+
+\section{Matrizes de Transmiss\~ao e Reflex\~ao}
+Temos dois tipos de ondas refletidas e dois tipos de ondas transmitidas ao atravessarem as fronteiras entre camadas, conforme a propaga\c{c}\~ao \'e ascendente ou descendente. No caso de propaga\c{c}\~ao descendente de for\c{c}a $I$, as ondas refletidas e transmitidas s\~ao dadas respectivamente por $R_d$ e $T_d$. No caso ascendente, tamb\'em de for\c{c}a $I$, temos $R_u$ e $T_u$, onde todas as cinco matrizes s\~ao de dimens\~ao $n\times n$. A propaga\c{c}\~ao das ondas ocorre como mostrado na figura \ref{fig.ondas_ascen_descen}.
+\begin{figure}
+\centering
+\includegraphics[scale=1.6]{ondas_ascen_descen}
+\caption{\textit{Dire\c{c}\~ao e sentido de propaga\c{c}\~ao de ondas ascendentes e descendentes em camadas homog\^eneas.}}
+\label{fig.ondas_ascen_descen}
+\end{figure}
+Vamos usar a const\^ancia da fun\c{c}\~ao dada na equa\c{c}\~ao \ref{eq.G(V,W)} para igualar seus valores calculados no topo e no fundo da pilha de camadas. Mas aqui, vamos tomar as ondas $V$ e $W$ com for\c{c}a $I$ em sentido descendente e ascendente, respectivamente.  
+\begin{equation}
+\begin{bmatrix}
+R_d^\top&I
+\end{bmatrix}
+\begin{bmatrix}
+0&I\\
+-I&0
+\end{bmatrix}
+\begin{bmatrix}
+T_u\\
+0
+\end{bmatrix}
+=
+\begin{bmatrix}
+0&T_d^\top
+\end{bmatrix}
+\begin{bmatrix}
+0&I\\
+-I&0
+\end{bmatrix}
+\begin{bmatrix}
+I\\
+R_u
+\end{bmatrix}\,,
+\end{equation}
+de onde conclu\'imos que
+\begin{equation}\label{eq.T}
+T_u=T_d^\top\,.
+\end{equation}
+Podemos ainda calcular o valor da fun\c{c}ao usando somente ondas descendentes $G(V,V)$. Igualando seus valores para o topo e a base da pilha de camadas, temos
+\begin{equation}
+\begin{bmatrix}
+R_d^\top&I
+\end{bmatrix}
+\begin{bmatrix}
+0&I\\
+-I&0
+\end{bmatrix}
+\begin{bmatrix}
+R_d\\
+0
+\end{bmatrix}
+=
+\begin{bmatrix}
+0&R_d^\top
+\end{bmatrix}
+\begin{bmatrix}
+0&I\\
+-I&0
+\end{bmatrix}
+\begin{bmatrix}
+I\\
+R_d
+\end{bmatrix}\,,
+\end{equation}
+de onde conclu\'imos que 
+\begin{equation}\label{eq.R_d}
+R_d=R_d^\top\,.
+\end{equation}
+Analogamente, para ondas ascendentes $G(W,W)$, temos \begin{equation}\label{eq.R_u}
+R_u=R_u^\top\,.
+\end{equation}
+Utilizando as equa\c{c}\~oes \ref{eq.T}, \ref{eq.R_d} e \ref{eq.R_u}, podemos definir uma matriz $R$ onde as componentes representam todas as ondas refletidas e transmitidas,
+\begin{equation}
+R=
+\begin{bmatrix}
+R_d&T_u\\
+T_d&R_u
+\end{bmatrix}\,,
+\end{equation}
+e verificar que 
+\begin{equation}
+R=R^\top\,.
+\end{equation}
+A matriz $R$ est\'a relacionada \`a matriz $S$ usada em \textit{Teoria de Dispers\~ao} de ondas,
+\begin{equation}
+S=
+\begin{bmatrix}
+T_d&R_u\\
+R_d&T_u
+\end{bmatrix}\,.
+\end{equation}
