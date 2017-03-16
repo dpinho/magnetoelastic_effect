@@ -20,7 +20,7 @@ como as EDP's el\'asticas
 \rho\frac{\partial^2 \mathbf{U}}{\partial t^2}&=\nabla\cdot\tau+\mathbf{F}\\\\\nonumber
 \tau&=\lambda\nabla\cdot \mathbf{U}\cdot I + \mu(\nabla \mathbf{U}+\nabla \mathbf{U}^*)\,,
 \end{align}
-podem ser escritas no formato matricial apresentado por Ursin. Cada um desses sistemas, isoladamente, pode ser escrito no formato 
+podem ser escritas no formato matricial apresentado por Ursin, ou seja, cada um desses sistemas, isoladamente, pode ser escrito na forma 
 \begin{align}\label{eq.matricial}
 \frac{\partial\,\mathbf{B}}{\partial\,z} &= \pm\,i\,\omega\,A\,\mathbf{B} = \pm\,i\,\omega\,
 \begin{bmatrix}
@@ -36,7 +36,7 @@ onde o vetor $\mathbf{B}$ representa uma onda qualquer e n\~ao o campo magn\'eti
 
 A equação \ref{eq.matricial} tem as seguintes caracter\'isticas:
 \begin{itemize}
-\item $A_{2\,n\times2\,n}$ \'e uma matriz que pode ser particionada em quatro submatrizes $n\times n$, com submatrizes de zeros na diagonal principal e submatrizes sim\'etricas $A_1$ e $A_2$ na diagonal secund\'aria. As componentes de $A_1$ e $A_2$ s\~ao fun\c{c}\~oes dos par\^ametros das EDP's \ref{eq.faraday_ampere} e \ref{eq.cauchy_hooke}, s\~ao fun\c{c}\~oes de $z$ e tamb\'em do vetor real de retardamento $\mathbf{p}=\frac{\mathbf{k}}{\omega}$. Para meios de baixa atenua\c{c}\~ao das ondas, as matrizes $A_1$ e $A_2$ s\~ao reais; 
+\item $A_{2\,n\times2\,n}$ \'e uma matriz que pode ser particionada em quatro submatrizes $n\times n$, com submatrizes de zeros na diagonal principal e submatrizes sim\'etricas $A_1$ e $A_2$ na diagonal secund\'aria. As componentes de $A_1$ e $A_2$ s\~ao fun\c{c}\~oes dos par\^ametros das EDP's \ref{eq.faraday_ampere} e \ref{eq.cauchy_hooke}, s\~ao fun\c{c}\~oes tamb\'em de $z$ e do vetor real de retardamento $\mathbf{p}=\frac{\mathbf{k}}{\omega}$. Para meios de baixa dissipa\c{c}\~ao das ondas, as matrizes $A_1$ e $A_2$ s\~ao reais; 
 \item O vetor de onda $\mathbf{B}$ tem dimens\~ao $2n\times1$ e \'e particionado em dois vetores $\mathbf{B}_1$ e $\mathbf{B}_2$ com dimens\~ao $n\times1$ . As componentes do vetor de onda s\~ao escolhidas de forma que $\mathbf{B}$ seja cont\'inuo atrav\'es das fronteiras entre duas camadas;
 \item  Para ondas el\'asticas, metade das componentes de $\mathbf{B}$ s\~ao zeros na superf\'icie livre, ou seja, existe uma matriz de permuta\c{c}\~ao $T_{2n\times2n}$ onde $T^{-1}=T^\top$ e tal que
 \begin{equation*}
@@ -61,7 +61,7 @@ I&0_{n\times n}
 e $I$ \'e uma matriz identidade $n\times n$.
 \end{itemize}
 
-Os m\'etodos a seguir s\~ao aplicados em equa\c{c}\~oes escritas no formato matricial \ref{eq.matricial}, com ondas se propagando numa pilha de camadas n\~ao homog\^eneas e assumimos que os par\^ametros das equa\c{c}\~oes s\~ao fun\c{c}\~oes cont\'inuas no interior de cada camada que dependem apenas da profundidade $z$. O modelo inclui pilha de camadas homog\^eneas com par\^ametros constantes por camada e consideramos o eixo $z$ como sendo positivo no sentido descendente.   
+Os m\'etodos a seguir s\~ao aplicados em equa\c{c}\~oes escritas no formato matricial \ref{eq.matricial}, com ondas se propagando numa pilha de camadas homog\^eneas e assumimos que os par\^ametros das equa\c{c}\~oes s\~ao fun\c{c}\~oes cont\'inuas no interior de cada camada que dependem apenas da profundidade $z$. O modelo inclui pilha de camadas homog\^eneas com par\^ametros constantes por camada e consideramos o eixo $z$ como sendo positivo no sentido descendente.   
 
 \section{Decomposi\c{c}\~ao em Ondas Ascendentes e Descentes}
 
@@ -146,7 +146,7 @@ L_1^{-1}&L_2^{-1}\\
 L_1^{-1}&-L_2^{-1}
 \end{bmatrix}\,,
 \end{equation}
-podemos substitui-las na equa\c{c}\~ao \ref{eq.diagonalizacao} e verificar que 
+podemos substitu\'i-las na equa\c{c}\~ao \ref{eq.diagonalizacao} e verificar que 
 \begin{align}\label{eq.definicao_A1_A2}\nonumber
 A_1&=L_1\Lambda\,L_2^{-1}\\\quad\\\nonumber
 A_2&=L_2\Lambda\,L_1^{-1}\,,
@@ -211,11 +211,11 @@ onde as matrizes $F$ e $G$ s\~ao, respectivamente,
 F&=-\frac{1}{2}\left[L_2^\top\frac{\partial L_1}{\partial z}+L_1^\top\frac{\partial L_2}{\partial z}\right]\\\quad\\
 G&=-\frac{1}{2}\left[L_2^\top\frac{\partial L_1}{\partial z}-L_1^\top\frac{\partial L_2}{\partial z}\right]\,.
 \end{align*}
-Substituindo $F$ e $G$ nas rela\c{c}\~oes
+Substituindo $F$ e $G$ nas express\~oes
 \begin{equation*}
 -2(F+F^\top)\quad\text{e}\quad-2(G-G^\top)\,,
 \end{equation*}
-verificamos que ambas s\~ao nulas e, consequentemente,
+verificamos que ambas as express\~oes s\~ao nulas e, consequentemente,
 \begin{equation*}
 F=-F^\top\quad\text{e}\quad G=G^\top\,.
 \end{equation*}
@@ -238,14 +238,36 @@ onde $P(z_0,z_0)=I$. Para ondas ascendentes, a matriz de propaga\c{c}\~ao \'e da
 onde $P(z_N,z_N)=I$.
 
 Sabendo o valor de $\mathbf{B}(z_0)$, a solu\c{c}\~ao da equa\c{c}\~ao \ref{eq.matricial} \'e dada por
-\begin{equation}
+\begin{equation*}
 \mathbf{B}(z)=P(z,z_0)\,\mathbf{B}(z_0)\,,
-\end{equation}
+\end{equation*}
 e podemos notar que 
-\begin{equation}
+\begin{equation*}
 P^{-1}(z_N,z_0)=P(z_0,z_N)\,.
-\end{equation}
+\end{equation*}
 As condi\c{c}\~oes de fronteiras preconizam que o vetor de ondas \'e cont\'inuo atrav\'es das interfaces, o que implica que a matriz de propaga\c{c}\~ao tamb\'em se mant\'em cont\'inua na interface entre duas camadas homog\^eneas ou n\~ao.
+
+Considerando a transforma\c{c}\~ao dada pela equa\c{c}\~ao \ref{eq.transformacao_B}, a matriz de propaga\c{c}\~ao para ondas descendentes $Q(z,z_0)$ associada ao vetor $\mathbf{W}$ \'e a solu\c{c}\~ao da equa\c{c}\~ao
+\begin{equation}\label{eq.Q_nao_homogenea}
+\frac{\partial\,Q(z,z_0)}{\partial z}=
+\begin{bmatrix}
+\pm i\omega\,\Lambda+F&G\\
+G&\pm i\omega\,\Lambda+F
+\end{bmatrix}
+Q(z,z_0)\,,
+\end{equation}
+onde $Q(z_0,z_0)=I$.
+
+E, para ondas ascendentes, temos
+\begin{equation*}
+\frac{\partial\,Q(\zeta,z_N)}{\partial \zeta}=-
+\begin{bmatrix}
+\pm i\omega\,\Lambda+F&G\\
+G&\pm i\omega\,\Lambda+F
+\end{bmatrix}
+Q(\zeta,z_N)\,,
+\end{equation*}
+com $Q(z_N,z_N)=I$.
 
 Considerando uma pilha de camadas homog\^eneas com a espessura de uma camada $k$ dada por $\Delta z_k=z_k-z_{k-1}$, onde $z_k$ \'e a profundidade da interface entre a camada $k$ e a camada $k+1$. Nesta condi\c{c}\~ao e usando a equa\c{c}\~ao \ref{eq.diagonalizacao}, a equa\c{c}\~ao da matriz de propaga\c{c}\~ao \ref{eq.matriz_propagacao} pode ser integrada diretamente  
 \begin{align*}
@@ -253,36 +275,45 @@ P(z,z_0)&=\exp{\pm i\omega\,A(z-z_0)}\\
 &=L\,\left[\exp{\pm i\omega\,\Lambda_1(z-z_0)}\right]\,L^{-1}\,.
 \end{align*}
 
+A partir da equa\c{c}\~ao \ref{eq.Q_nao_homogenea}, a matriz de propaga\c{c}\~ao $Q$ para o caso homog\^eneo fica
+\begin{equation}\label{eq.Q(z,z_0)}
+Q(z,z_0)=
+\begin{bmatrix}
+\exp{\pm i\omega\,\Lambda(z-z_0)}&0\\
+0&\exp{\pm i\omega\,\Lambda(z-z_0)}
+\end{bmatrix}\,.
+\end{equation}
+
 \section{Propriedades Invariantes da Propaga\c{c}\~ao}
 As propriedades da matriz $A$ determinam as caracter\'isticas de propaga\c{c}\~ao do vetor de ondas $\mathbf{B}$. Como as matrizes $A_1$ e $A_2$ s\~ao sim\'etricas, podemos verificar que a fun\c{c}\~ao $G$ dada por
-\begin{equation}
+\begin{equation*}
 G(\mathbf{B},\mathbf{C})=-(\mathbf{B}_1^\top\mathbf{C_2-\mathbf{B}_2^\top\mathbf{C}_1})\,,
-\end{equation}
+\end{equation*}
 ou por
-\begin{equation}
+\begin{equation*}
 G(\mathbf{B},\mathbf{C})=-\mathbf{B}^\top N\,\mathbf{C}\qquad\text{com}\qquad N=
 \begin{bmatrix}
 0_{n\times n}&I\\
 -I&0_{n\times n}
 \end{bmatrix}\,,
-\end{equation}
+\end{equation*}
 \'e constante para vetores de onda $\mathbf{B}$ e $\mathbf{C}$ que satisfazem a equa\c{c}\~ao \ref{eq.matricial}. Usando as matrizes de autovalores das equa\c{c}\~oes \ref{eq.L} e \ref{eq.L_inversa_2}, podemos verificar que
 \begin{equation}\label{eq.diagonalizacao_N}
 -L^\top N\,L=N\,.
 \end{equation}
 Empregando a transforma\c{c}\~ao dada pela equa\c{c}\~ao \ref{eq.transformacao_B} e a transforma\c{c}\~ao
-\begin{equation}
+\begin{equation*}
 \mathbf{C}=L\,\mathbf{V}
-\end{equation}
+\end{equation*}
 podemos deduzir que 
 \begin{equation}\label{eq.G(V,W)}
 G(\mathbf{W},\mathbf{V})=\mathbf{W}^\top N\,\mathbf{V}
 \end{equation}
 tamb\'em \'e constante para os vetores transformados $\mathbf{W}$ e $\mathbf{V}$.
-Aplicando o determinante na equa\c{c}\~ao \ref{eq.diagonalizacao_N} e sabendo que $det(N)=det(-N)$ conclu\'imos que
-\begin{equation}
-det^2(N)=1\,.
-\end{equation}
+Aplicando o determinante na equa\c{c}\~ao \ref{eq.diagonalizacao_N} e sabendo que $\det(N)=\det(-N)$ conclu\'imos que
+\begin{equation*}
+{\det}^2(N)=1\,.
+\end{equation*}
 
 \section{Matrizes de Transmiss\~ao e Reflex\~ao}
 Temos dois tipos de ondas refletidas e dois tipos de ondas transmitidas ao atravessarem as fronteiras entre camadas, conforme a propaga\c{c}\~ao \'e ascendente ou descendente. No caso de propaga\c{c}\~ao descendente de for\c{c}a $I$, as ondas refletidas e transmitidas s\~ao dadas respectivamente por $R_d$ e $T_d$. No caso ascendente, tamb\'em de for\c{c}a $I$, temos $R_u$ e $T_u$, onde todas as cinco matrizes s\~ao de dimens\~ao $n\times n$. A propaga\c{c}\~ao das ondas ocorre como mostrado na figura \ref{fig.ondas_ascen_descen}.
@@ -293,7 +324,7 @@ Temos dois tipos de ondas refletidas e dois tipos de ondas transmitidas ao atrav
 \label{fig.ondas_ascen_descen}
 \end{figure}
 Vamos usar a const\^ancia da fun\c{c}\~ao dada na equa\c{c}\~ao \ref{eq.G(V,W)} para igualar seus valores calculados no topo e no fundo da pilha de camadas. Mas aqui, vamos tomar as ondas $V$ e $W$ com for\c{c}a $I$ em sentido descendente e ascendente, respectivamente.  
-\begin{equation}
+\begin{equation*}
 \begin{bmatrix}
 R_d^\top&I
 \end{bmatrix}
@@ -317,13 +348,13 @@ T_u\\
 I\\
 R_u
 \end{bmatrix}\,,
-\end{equation}
+\end{equation*}
 de onde conclu\'imos que
 \begin{equation}\label{eq.T}
 T_u=T_d^\top\,.
 \end{equation}
-Podemos ainda calcular o valor da fun\c{c}ao usando somente ondas descendentes $G(V,V)$. Igualando seus valores para o topo e a base da pilha de camadas, temos
-\begin{equation}
+Podemos ainda calcular o valor da fun\c{c}\~ao usando somente ondas descendentes $G(V,V)$. Igualando seus valores para o topo e a base da pilha de camadas, temos
+\begin{equation*}
 \begin{bmatrix}
 R_d^\top&I
 \end{bmatrix}
@@ -347,7 +378,7 @@ R_d\\
 I\\
 R_d
 \end{bmatrix}\,,
-\end{equation}
+\end{equation*}
 de onde conclu\'imos que 
 \begin{equation}\label{eq.R_d}
 R_d=R_d^\top\,.
@@ -356,22 +387,71 @@ Analogamente, para ondas ascendentes $G(W,W)$, temos \begin{equation}\label{eq.R
 R_u=R_u^\top\,.
 \end{equation}
 Utilizando as equa\c{c}\~oes \ref{eq.T}, \ref{eq.R_d} e \ref{eq.R_u}, podemos definir uma matriz $R$ onde as componentes representam todas as ondas refletidas e transmitidas,
-\begin{equation}
+\begin{equation*}
 R=
 \begin{bmatrix}
 R_d&T_u\\
 T_d&R_u
 \end{bmatrix}\,,
-\end{equation}
+\end{equation*}
 e verificar que 
-\begin{equation}
+\begin{equation*}
 R=R^\top\,.
-\end{equation}
+\end{equation*}
 A matriz $R$ est\'a relacionada \`a matriz $S$ usada em \textit{Teoria de Dispers\~ao} de ondas,
-\begin{equation}
+\begin{equation*}
 S=
 \begin{bmatrix}
 T_d&R_u\\
 R_d&T_u
 \end{bmatrix}\,.
-\end{equation}
+\end{equation*}
+
+\subsection{Rela\c{c}\~ao das Matrizes de Transmiss\~ao e Reflex\~ao com a matriz de Propaga\c{c}\~ao}
+
+As matrizes de reflex\~ao e transmiss\~ao podem ser escritas em termos das submatrizes da matriz de propaga\c{c}\~ao, da seguinte forma:
+\begin{align}\nonumber
+T_u(z_0,z_N)&=Q_{11}^{-1}(z_N,z_0)\,,\\\nonumber
+R_u(z_0,z_N)&=Q_{21}(z_N,z_0)\,Q_{11}^{-1}(z_N,z_0)\,,\\\label{eq.relacao_Q_R_T}
+R_d(z_0,z_N)&=-Q_{11}^{-1}(z_N,z_0)\,Q_{12}(z_N,z_0)\,,\\\nonumber
+T_d(z_0,z_N)&=Q_{22}(z_N,z_0)-Q_{21}(z_N,z_0)\,Q_{11}^{-1}(z_N,z_0)\,Q_{12}(z_N,z_0)\,,
+\end{align}
+e a matriz de transmiss\~ao \'e dada em fun\c{c}\~ao das matrizes de reflex\~ao e transmiss\~ao por
+\begin{equation*}
+Q(z_0,z_N)=
+\begin{bmatrix}
+T_u^{-1}&-T_u^{-1}R_d\\
+R_uT_u^{-1}&T_d-R_uT_u^{-1}R_d
+\end{bmatrix}\,.
+\end{equation*}
+
+\subsection{Considerando Camadas Homog\^eneas}
+
+Usando as equa\c{c}\~oes \ref{eq.Q(z,z_0)} e \ref{eq.relacao_Q_R_T}, podemos deduzir que, para matrizes de transmiss\~ao,
+\begin{equation*}
+T_d(z_0,z)=T_u(z_0,z)=\exp\left[\pm i\omega\,\Lambda(z-z_0)\right]\,,
+\end{equation*}
+e para matrizes de reflex\~ao
+\begin{equation*}
+R_d(z_0,z)=R_u(z_0,z)=0\,.
+\end{equation*}
+
+Vamos definir $E_{k+1}(-\pm i\omega)=\exp\left[-\pm i\omega\,\Lambda(z_{k+1}-z_k)\right]$. Assim, a matriz $S$ para uma camada homog\^enea e para interface para a pr\'oxima camada \'e dada pelo \textit{produto estrela} 
+\begin{align*}
+S(z_{k+},z_{k+1+})&=S(z_{k+},z_{k+1-})*S(z_{k+1-},z_{k+1+})\\\\
+&=
+\begin{bmatrix}
+E_{k+1}(-\pm i\omega)&0\\
+0&E_{k+1}(-\pm i\omega)
+\end{bmatrix}
+*
+\begin{bmatrix}
+T_{d,k+1}&R_{u,k+1}\\
+R_{d,k+1}&T_{u,k+1}
+\end{bmatrix}\\\\
+&=
+\begin{bmatrix}
+T_{d,k+1}E_{k+1}(-\pm i\omega)&R_{u,k+1}\\
+E_{k+1}(-\pm i\omega)R_{d,k+1}E_{k+1}(-\pm i\omega)&E_{k+1}(-\pm i\omega)T_{u,k+1}
+\end{bmatrix}\,.
+\end{align*}
