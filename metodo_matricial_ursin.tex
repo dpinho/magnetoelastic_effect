@@ -1,5 +1,11 @@
 \chapter{M\'etodo Matricial de Ursin para Solu\c{c}\~ao de EDP's}
-Este cap\'itulo trata da utiliza\c{c}\~ao de um m\'etodo matricial para estudar a propaga\c{c}\~ao de ondas em subsuperf\'icie terrestre, conforme estruturado em \cite{Ursin-1983}. O m\'etodo utiliza um conjunto de transformadas para escrever um sistema de EDP's em dois sistemas de EDO's em forma matricial, de modo que se possa separar o campo de ondas em ascendentes e descendentes atrav\'es de uma decomposi\c{c}\~ao em autovetores. \'E poss\'ivel computar a matriz de propaga\c{c}\~ao das ondas e as matrizes de transmiss\~ao e reflex\~ao de ondas nas fronteiras entre camadas atrav\'es de propriedades de simetrias.
+
+\section{Introdu\c{c}\~ao}
+Este cap\'itulo trata da utiliza\c{c}\~ao de um m\'etodo matricial para estudar a propaga\c{c}\~ao de ondas em subsuperf\'icie terrestre, conforme estruturado em \cite{Ursin-1983}. Gra\c{c}as a similaridade matem\'atica entre sistemas de EDP's eletromagn\'eticas e sistemas de EDP's el\'asticas, podemos dar um desenvolvimento unificado para esses sistemas. Utilizamos um conjunto de transformadas (Fourier, Laplace e Bessel) para escrever cada um desses sistemas de EDP's numa forma matricial, em fun\c{c}\~ao apenas da profundidade, composta por $2n$ equa\c{c}\~oes diferenciais ordin\'arias. Os coeficientes desse sistema de EDO's podem ser reunidos numa matriz $A$ de dimens\~ao $2n\times 2n$, a qual pode ser particionada em quatro submatrizes de dimens\~ao $n\times n$, e \'e usada como o ponto de partida para o estudo da propaga\c{c}\~ao de ondas em subsuperf\'icie.  
+
+As propriedades de simetria da matriz $A$ nos permitem separar o campo de ondas em ascendentes e descendentes atrav\'es de uma decomposi\c{c}\~ao em autovetores. Essas propriedades nos permitem tamb\'em deduzir caracter\'isticas invariantes da propaga\c{c}\~ao, onde uma dessas caracter\'isticas \'e v\'alida apenas para meios de baixa dissipa\c{c}\~ao de ondas e correspondem \`a conserva\c{c}\~ao de energia. A matriz de propaga\c{c}\~ao de ondas pode ser computada para camadas homog\^eneas ou n\~ao, atrav\'es de um m\'etodo relativamente simples. Dado o vetor de ondas na camada superficial, podemos calcular seu valor para qualquer camada usando a matriz de propaga\c{c}\~ao.
+
+A propaga\c{c}\~ao de ondas em meios estratificados produz fen\^omenos de transmiss\~ao e reflex\~ao de ondas. Dadas as defini\c{c}\~oes das matrizes de transmiss\~ao e reflex\~ao, podemos relacion\'a-las com a matriz de propaga\c{c}\~ao, bem como deduzir propriedades de simetrias para essas matrizes atrav\'es das caracter\'isticas invariantes da propaga\c{c}\~ao. Podemos ainda deduzir as matrizes de transmiss\~ao e reflex\~ao modificadas para pilha de camadas limitadas superiormente por uma superf\'icie livre.
 
 \section{Escrevendo as Equa\c{c}\~oes na Forma Matricial}
 
@@ -120,7 +126,7 @@ podemos separar o sitema \ref{eq.sist_autovalores} de dimens\~ao $2n$ em dois si
 A_1A_2\mathbf{L_1}&=\lambda^2\mathbf{L_1}\\
 A_2A_1\mathbf{L_2}&=\lambda^2\mathbf{L_2}\,,
 \end{align*}
-onde $\mathbf{L}_i$ s\~ao os autovetores que comp\~oem $L$.
+onde $\mathbf{L}_i$ s\~ao os vetores que, concatenados dois a dois, formam os autovetores que comp\~oem $L$.
 Assim, podemos dividir a diagonaliza\c{c}\~ao dada em \ref{eq.diagonalizacao} em duas diagonaliza\c{c}\~oes de dimens\~ao $n$
 \begin{align}\label{eq.subdiagonalizacao}\nonumber
 A_1A_2&=L_1\Lambda^2L_1^{-1}\\\quad\\\nonumber
@@ -416,7 +422,7 @@ R_u(z_0,z_N)&=Q_{21}(z_N,z_0)\,Q_{11}^{-1}(z_N,z_0)\,,\\\label{eq.relacao_Q_R_T}
 R_d(z_0,z_N)&=-Q_{11}^{-1}(z_N,z_0)\,Q_{12}(z_N,z_0)\,,\\\nonumber
 T_d(z_0,z_N)&=Q_{22}(z_N,z_0)-Q_{21}(z_N,z_0)\,Q_{11}^{-1}(z_N,z_0)\,Q_{12}(z_N,z_0)\,,
 \end{align}
-e a matriz de transmiss\~ao \'e dada em fun\c{c}\~ao das matrizes de reflex\~ao e transmiss\~ao por
+e a matriz de propaga\c{c}\~ao \'e dada em fun\c{c}\~ao das matrizes de reflex\~ao e transmiss\~ao por
 \begin{equation*}
 Q(z_0,z_N)=
 \begin{bmatrix}
@@ -436,7 +442,7 @@ e para matrizes de reflex\~ao
 R_d(z_0,z)=R_u(z_0,z)=0\,.
 \end{equation*}
 
-Vamos definir $E_{k+1}(-\pm i\omega)=\exp\left[-\pm i\omega\,\Lambda(z_{k+1}-z_k)\right]$. Assim, a matriz $S$ para uma camada homog\^enea e para interface para a pr\'oxima camada \'e dada pelo \textit{produto estrela} 
+Vamos definir $E_{k+1}(-\pm i\omega)=\exp\left[-\pm i\omega\,\Lambda(z_{k+1}-z_k)\right]$. Assim, a matriz $S$ para uma camada homog\^enea e para interface para a pr\'oxima camada \'e dada pelo \textit{produto estrela},
 \begin{align*}
 S(z_{k+},z_{k+1+})&=S(z_{k+},z_{k+1-})*S(z_{k+1-},z_{k+1+})\\\\
 &=
