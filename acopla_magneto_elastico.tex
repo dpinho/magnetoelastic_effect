@@ -136,11 +136,11 @@ Usando a conserva\c{c}\~ao da carga na forma dada pela equa\c{c}\~ao \ref{eq.con
 
 \subsection{Equa\c{c}\~oes El\'asticas}
 
-As equa\c{c}\~oes de campo para movimento de corpos el\' asticos e cont\'inuos s\~ao derivadas a partir da equa\c{c}\~ao de equil\'ibrio do momento linear aplicada a um volume de material $V$ que \'e enclausurado por uma superf\'icie fechada $S$, como podemos constatar na equa\c{c}\~ao \ref{eq.forca_total_2}. Estamos assumindo que o \'unico efeito mec\^anico de for\c{c}as eletromagn\'eticas \'e dado pela adi\c{c}\~ao da \textit{for\c{c}a de corpo de Lorentz}, dada pela equa\c{c}\~ao \ref{eq.forca_lorentz}. Substituindo a equa\c{c}\~ao \ref{eq.densidade_corrente} na equa\c{c}\~ao \ref{eq.forca_lorentz}, escrevemos a for\c{c}a de Lorentz como
+As equa\c{c}\~oes de campo para movimento de corpos el\' asticos e cont\'inuos s\~ao deduzidas a partir da equa\c{c}\~ao de equil\'ibrio do momento linear aplicada a um volume de material $V$ que \'e enclausurado por uma superf\'icie fechada $S$, como podemos constatar na equa\c{c}\~ao \ref{eq.forca_total_2}. Estamos assumindo que o \'unico efeito mec\^anico de for\c{c}as eletromagn\'eticas \'e dado pela adi\c{c}\~ao da \textit{for\c{c}a de corpo de Lorentz}, dada pela equa\c{c}\~ao \ref{eq.forca_lorentz}. Substituindo a equa\c{c}\~ao \ref{eq.densidade_corrente} na equa\c{c}\~ao \ref{eq.forca_lorentz}, escrevemos a for\c{c}a de Lorentz como
 \begin{equation}
 \textbf{F}_L=q\,\mathbf{E}+\textbf{J}\times\textbf{B}.
 \end{equation}
-Integrando a for\c{c}a de Lorentz sobre o volume $V$ e adicionando a equa\c{c}\~ao de equil\'ibrio do momento linear, temos
+Integrando a for\c{c}a de Lorentz sobre o volume $V$ e adicionando-a \`a equa\c{c}\~ao de equil\'ibrio do momento linear, temos
 \begin{equation}
 \frac{d}{dt}\iiint_V\rho\frac{d\mathbf{u}}{dt}\,dV=\iint_S\mathbf{T}\,dS+\iiint_V\mathbf{f}\,dV+\iiint_V\textbf{F}_L\,dV.
 \end{equation}
@@ -202,21 +202,21 @@ Podemos resumir o acoplamento magneto-el\'astico proposto por \cite{erigen_1963}
 
 \subsection{Equa\c{c}\~oes de campo}
 
-\begin{align*}
-\nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{B}\\\\
-\nabla\times\mathbf{H}&=\mathbf{J}+\frac{\partial}{\partial t}\mathbf{D}\\\\
-\nabla\cdot\mathbf{D}&=\rho_e\\\\
-\nabla\cdot\mathbf{B}&=0\\\\
+\begin{align}\label{eq.campo_dunkin_1}
+\nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{B}\\\nonumber\\\label{eq.campo_dunkin_2}
+\nabla\times\mathbf{H}&=\mathbf{J}+\frac{\partial}{\partial t}\mathbf{D}\\\nonumber\\\label{eq.campo_dunkin_3}
+\nabla\cdot\mathbf{D}&=\rho_e\\\nonumber\\
+\nabla\cdot\mathbf{B}&=0\\\nonumber\\
 \rho\frac{\partial^2 u_i}{\partial t^2}&=\frac{\partial}{\partial x_j}\tau_{ij}+\rho_e\,E_i+(\mathbf{J}\times\mathbf{B})_i+f_i.
-\end{align*}
+\end{align}
 
-\subsection{Equa\c{c}\~oes Constitutivas}
+\subsection{Equa\c{c}\~oes Constitutivas}\label{sec.constitutivas_dunkin}
 
 \begin{align*}
 \mathbf{D}&=\epsilon\,\mathbf{E}+\alpha\,\mathbf{v}\times\mathbf{H}\\\\
 \mathbf{B}&=\mu\,\mathbf{H}-\alpha\mathbf{v}\times\mathbf{E}\\\\
 \mathbf{J}-\rho_e\,\mathbf{v}&=\sigma\,(\mathbf{E}+\mathbf{v}\times\mathbf{B})\\\\
-\tau{ij}&=\lambda\frac{\partial u_k}{\partial x_k}\delta_{ij}+\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right).
+\tau_{ij}&=\lambda\frac{\partial u_k}{\partial x_k}\delta_{ij}+\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right).
 \end{align*}
 
 \subsection{Condi\c{c}\~oes de Fronteira}
