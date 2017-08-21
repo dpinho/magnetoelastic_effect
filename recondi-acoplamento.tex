@@ -1,0 +1,24 @@
+\chapter{Recondicionamento do Modelo de Dunkin e Erigen}
+Uma das contribuicoes dessa monografia eh a utilizacao de hipoteses simplificadoras de ordem fisica e experimental, disponiveis na literatura, para reeescrever o modelo do acoplamento magneto-elastico de forma que o mesmo possa receber um tratamento matematico e computacional, no sentido de solução de um problema direto.
+
+Para muitos materiais, podemos considerar sua permeabilidade magnetica tendo valor muito proximo da permeabilidade magnetica no vacuo, assim $\mu=\mu_0$. Analogamente, vamos considerar a permissividade eletrica do material com valor muito proximo da permissividade eletrica do vacuo, assim $\epsilon=\epsilon_0$. Com isso, temos que o escalar $\alpha$ definido em \ref{eq.constitutiva_1} tem o valor nulo, e as expressoes para o campo de densidade de fluxo eletrico e o campo magnetico da subsecao \ref{sec.constitutivas_dunkin} se tornam
+\begin{align}\label{eq.constitutiva_alpha_1}
+\mathbf{D}&=\epsilon\,\mathbf{E}\\\nonumber\\\label{eq.constitutiva_alpha_2}
+\mathbf{B}&=\mu\,\mathbf{H}.
+\end{align}
+Substituindo a equacao \ref{eq.constitutiva_alpha_1} na equacao \ref{eq.campo_dunkin_1} e aplicando a transformada de Fourier, temos a relacao entre o campo elétrico e o campo magnético auxiliar dada por
+\begin{equation}
+\nabla\times\mathbf{\overline{E}}=i\,\omega\,\mu_0\mathbf{\overline{H}},
+\end{equation}
+onde $i$ eh um numero complexo, $\omega$ eh a frequencia temporal e barra sobrescrita denotam a funcao vetorial no espaco de Fourier.
+Segundo FULANO, a variacao no tempo do campo de densidade de fluxo elétrico $\frac{\partial\,\mathbf{D}}{\partial\,t}$ é pequena se comparada ao campo de densidade de corrente elétrica $\mathbf{J}$, e por isso pode ser desprezada, o que implica (pela equacao \ref{eq.campo_dunkin_3}) que $\rho_e=0$. Assim, utilizando tambem a equacao \ref{eq.constitutiva_alpha_2}, o campo de densidade de corrente eletrica dado pela subsecao \ref{sec.constitutivas_dunkin} poder ser reescrito como
+\begin{equation}
+\mathbf{J}=\sigma\,\mathbf{E}+\mathbf{v}\times\sigma\,\mu_0\mathbf{H}.
+\end{equation}
+Substituindo esta ultima relacao juntamente com a equacao \ref{eq.constitutiva_alpha_1} na equacao \ref{eq.campo_dunkin_2}, e aplicando a transformada de Fourier, temos
+\begin{equation}
+\nabla\times\mathbf{\overline{H}}=(\sigma-i\,\epsilon\,\omega)\,\mathbf{\overline{E}}+\mathbf{v}\times\mathbf{H}^0,
+\end{equation}
+onde consideramos $\sigma\,\mu_0\mathbf{\overline{H}}=\mathbf{H}^0$ eh o campo geomagnetico e $\mathbf{v}=-i\,\omega\mathbf{\overline{u}}$ eh a velocidade de deslocamento do meio.
+
+De acordo com Knopof (1955), a alteracao em 
