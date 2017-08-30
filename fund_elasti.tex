@@ -325,17 +325,17 @@ Para deduzir a equa\c{c}\~ao do movimento vamos fazer uso do conceito de equil\'
 \iiint_V\rho\frac{d^2\mathbf{u}}{dt^2}\,dV&=\iint_S\mathbf{T}\,dS+\iiint_V\mathbf{f}\,dV\\
 \iiint_V\rho\frac{d^2u_i}{dt^2}\,dV&=\iint_S\sum_{j=1}^3\tau_{ji}n_jdS+\iiint_Vf_i\,dV,\quad \text{para}\quad i=1,2,3.
 \end{align*}
-Para escrever todas as integrais como integral de volume vamos usar o teorema do divergente,
+Para escrever todas as integrais como integral sobre volume vamos usar o teorema do divergente,
 \begin{equation}\label{eq.movi_cauchy_integral}
 \iiint_V\rho\frac{d^2u_i}{dt^2}\,dV=\iiint_V\sum_{j=1}^3\frac{\partial\tau_{ji}}{\partial x_j}dV+\iiint_Vf_i\,dV,\quad \text{para}\quad i=1,2,3
 \end{equation}
 e como os volumes s\~ao os mesmos em cada integral, podemos usar a linearidade da integra\c{c}\~ao e escrever
 \begin{equation}
-\iiint_V\left(\sum_{j=1}^3\frac{\partial\tau_{ji}}{\partial x_j}dV+f_i-\rho\frac{d^2u_i}{dt^2}\right)dV=0,\quad \text{para}\quad i=1,2,3.
+\iiint_V\left(\sum_{j=1}^3\frac{\partial\tau_{ji}}{\partial x_j}+f_i-\rho\frac{d^2u_i}{dt^2}\right)dV=0,\quad \text{para}\quad i=1,2,3.
 \end{equation}
 Para satisfazer essa integral o integrando deve ser nulo, de onde podemos concluir que
 \begin{equation}
-\sum_{j=1}^3\frac{\partial\tau_{ji}}{\partial x_j}dV+f_i=\rho\frac{d^2u_i}{dt^2},\quad \text{para}\quad i=1,2,3.
+\sum_{j=1}^3\frac{\partial\tau_{ji}}{\partial x_j}+f_i=\rho\frac{d^2u_i}{dt^2},\quad \text{para}\quad i=1,2,3.
 \end{equation}
 Essa equa\c{c}\~ao \'e conhecida como a \textit{equa\c{c}\~ao do movimento de Cauchy} ou \textit{primeira lei do movimento de Cauchy}, e relaciona dois tipos de for\c{c}a, superficial e de corpo, com a acelera\c{c}\~ao de um corpo num meio cont\'inuo e el\'astico. Ou seja, a acelera\c{c}\~ao de um corpo num meio cont\'inuo e el\'astico resulta da aplica\c{c}\~ao desses dois tipos de for\c{c}a.
 
@@ -345,7 +345,7 @@ Essa equa\c{c}\~ao \'e conhecida como a \textit{equa\c{c}\~ao do movimento de Ca
 
 As rela\c{c}\~oes constitutivas, ou rela\c{c}\~oes de tens\~ao-deforma\c{c}\~ao, foram estabelecidas experimentalmente e descrevem como as for\c{c}as aplicadas em materiais el\'asticos est\~ao linearmente relacionadas com a deforma\c{c}\~ao observada nesses materiais. As rela\c{c}\~oes constitutivas s\~ao conhecidas tamb\'em como a lei de Hooke, a qual estabelece que cada componente do tensor de tens\~oes est\'a linearmente relacionada com todas as componentes do tensor de deforma\c{c}\~oes. Dessa forma, a lei de Hooke pode ser escrita como
 \begin{equation}\label{eq.lei_hooke}
-\sigma_{ij}=\sum_{k=1}^3\sum_{l=1}^3c_{ijkl}\,\varepsilon_{kl}
+\tau_{ij}=\sum_{k=1}^3\sum_{l=1}^3c_{ijkl}\,\varepsilon_{kl}
 \end{equation}
 onde $i,j = 1,2,3$ e $c$ \'e constante.
 Dadas as simetrias de ambos os tensores, a lei de Hooke pode ser escrita na forma matricial contendo seis equa\c{c}\~oes independentes. Para isso, vamos realizar uma mudan\c{c}a de \'indices criando uma lista ordenada com os pares ordenados $(i,j)$ onde $i\le j$, e considerando o n\'umero $m = 1,2,3,4,5,6$ que d\'a a posi\c{c}\~ao de cada par nessa lista. Assim, temos que os poss\'iveis pares ordenados s\~ao substituidos pelos seguintes valores de $m$
@@ -361,12 +361,12 @@ Analogamente, podemos fazer a substitui\c{c}\~ao dos \'indices $(k,l)\rightarrow
 Dessa forma, as equa\c{c}\~oes de tens\~ao-deforma\c{c}\~ao definidas em \ref{eq.lei_hooke} podem ser escritas na forma matricial como
 \begin{equation*}
 \begin{bmatrix}
-\sigma_{11}\\
-\sigma_{22}\\
-\sigma_{33}\\
-\sigma_{23}\\
-\sigma_{13}\\
-\sigma_{12}
+\tau_{11}\\
+\tau_{22}\\
+\tau_{33}\\
+\tau_{23}\\
+\tau_{13}\\
+\tau_{12}
 \end{bmatrix}=
 \begin{bmatrix}
 C_{11}&C_{12}&C_{13}&C_{14}&C_{15}&C_{16}\\
