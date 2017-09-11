@@ -1,0 +1,54 @@
+\chapter{Recondicionamento do Modelo de Dunkin e Erigen}
+Uma das contribui\c{c}\~oes dessa monografia \'e a utiliza\c{c}\~ao de hip\'oteses simplificadoras de ordem f\'isica e experimental, dispon\'iveis na literatura, para reeescrever o modelo do acoplamento magneto-el\'astico de forma que o mesmo possa receber um tratamento matem\'atico e computacional, no sentido de solu\c{c}\~ao de um problema direto.
+
+Como vimos na subse\c{c}\~ao \ref{sec.magnetizacao_polarizacao}, a polariza\c{c}\~ao e magnetiza\c{c}\~ao de um determinado material depende das caracter\'isticas de cada material. De acordo com \cite{jackson_classical_1999} e \cite{griffiths}, as equa\c{c}\~oes constitutivas apresentadas na subse\c{c}\~ao \ref{sec.constitutivas_dunkin} podem n\~ao ser simples pois existe uma diversidade enorme de propriedades el\'etricas e magn\'eticas dos materias, especialmente em s\'olidos cristal\'inicos  e materias ferroel\'etricos e ferromagn\'eticos que t\^em polariza\c{c}\~ao e magnetiza\c{c}\~ao n\~ao nulos mesmo na absten\c{c}\~ao de aplica\c{c}\~ao de campos eletromagn\'eticos. Com excess\~ao desses tipos de materias, a aplica\c{c}\~ao de campos eletromagn\'eticos produzem polariza\c{c}\~ao e magnatiza\c{c}\~ao proporcional aos campos aplicados, e a rela\c{c}\~ao do campo de densidade de fluxo el\'etrico com o campo el\'etrico bem como a rela\c{c}\~ao do campo magn\'etico auxiliar com o campo magn\'etico s\~ao consideradas lineares, pois a contribui\c{c}\~ao das parcelas n\~ao-lineares tornam-se desprez\'iveis. Podemos ainda considerar a permeabilidade magn\'etica de muitos materiais tendo valor muito pr\'oximo da permeabilidade magn\'etica no v\'acuo, assim $\mu=\mu_0$. Com isso, temos que o escalar $\alpha$ definido em \ref{eq.constitutiva_1} tem seu valor considerado nulo, e as express\~oes para o campo de densidade de fluxo el\'etrico e o campo magn\'etico da subse\c{c}\~ao \ref{sec.constitutivas_dunkin} se tornam
+\begin{align}\label{eq.constitutiva_alpha_1}
+\mathbf{D}&=\epsilon\,\mathbf{E}\\\nonumber\\\label{eq.constitutiva_alpha_2}
+\mathbf{B}&=\mu\,\mathbf{H}.
+\end{align}
+Substituindo a equa\c{c}\~ao \ref{eq.constitutiva_alpha_1} na equa\c{c}\~ao \ref{eq.campo_dunkin_1} e aplicando a transformada de Fourier, temos a rela\c{c}\~ao entre o campo el\'etrico e o campo magn\'etico auxiliar dada por
+\begin{equation}
+\nabla\times\mathbf{\widehat{E}}=i\,\omega\,\mu_0\mathbf{\widehat{H}},
+\end{equation}
+onde $i$ \'e um n\'umero complexo, $\omega$ \'e a frequ\^encia temporal e a nota\c{c}\~ao $\widehat{\,.\,}$ significa que a fun\c{c}\~ao vetorial est\'a no dom\'inio da frequ\^encia temporal.
+
+Ondas eletromagn\'eticas se propagam com velocidade da luz que \'e limitada. Segundo \cite{jackson_classical_1999}, num sistema onde as dimens\~oes s\~ao pequenas comparadas ao comprimento de onda eletromagn\'etica e comparadas \`a escala de tempo dominante, podemos tratar a velocidade da luz como instant\^anea num regime denominado \textit{quasi-estacion\'ario}. Como consequ\^encia dessa premissa, em meios condutivos a contribui\c{c}\~ao do campo de densidade de fluxo el\'etrico \'e muito pequena quando comparada \`a contribui\c{c}\~ao da densidade de corrente el\'etrica na produ\c{c}\~ao de campos magn\'eticos. Assim, podemos desprezar a parcela referente a corrente deslocada introduzida por Maxwell na lei de Amper\`e, o que implica (pela equa\c{c}\~ao \ref{eq.campo_dunkin_3}) em $\rho_e=0$. 
+Vamos supor ainda que o campo magn\'etico auxiliar medido durante o efeito magnetoel\'astico seja uma combina\c{c}\~ao do campo magn\'etico gerado $\mathbf{H}$ mais o campo magn\'etico natural da Terra $\mathbf{H}^0$, e para manter a nota\c{c}\~ao vamos usar a substitui\c{c}\~ao 
+\begin{equation}
+\mathbf{H}\longrightarrow\mathbf{H}+\mathbf{H}^0.
+\end{equation}
+Utilizando a equa\c{c}\~ao \ref{eq.constitutiva_alpha_2}, o campo de densidade de corrente el\'etrica dado pela subse\c{c}\~ao \ref{sec.constitutivas_dunkin} poder ser reescrito como
+\begin{equation}
+\mathbf{J}=\sigma\,\mathbf{E}+\mathbf{v}\times\sigma\,\mu_0\mathbf{H}.
+\end{equation}
+Substituindo esta \'ultima rela\c{c}\~ao juntamente com a equa\c{c}\~ao \ref{eq.constitutiva_alpha_1} na equa\c{c}\~ao \ref{eq.campo_dunkin_2}, e aplicando a transformada de Fourier, temos
+\begin{equation}
+\nabla\times\mathbf{\widehat{H}}=(\sigma-i\,\epsilon\,\omega)\,\mathbf{\widehat{E}}+\mathbf{\widehat{v}}\times\sigma\mu_0\mathbf{H}^0,
+\end{equation}
+onde $\mathbf{\widehat{v}}=-i\,\omega\mathbf{\widehat{u}}$ \'e a velocidade de deslocamento do meio. Na dedu\c{c}\~ao da equa\c{c}\~ao acima, estamos considerando que a contribui\c{c}\~ao da parcela $\mathbf{\widehat{v}}\times\sigma\mu_0\mathbf{\widehat{H}}$ \'e desprez\'ivel se comparada \`a contribui\c{c}\~ao do campo geomagn\'etico, ainda como uma consequ\^encia do regime quasi-estacion\'ario.
+
+De acordo com \cite{Knopoff_1955}, a altera\c{c}\~ao que o campos eletromagn\'eticos aplicam em ondas el\'asticas \'e desprez\'ivel, e assim podemos excluir a for\c{c}a de Lorentz e reescrever a equa\c{c}\~ao \ref{eq.campo_dunkin_5} no dom\'inio da frequ\^encia na forma matricial como 
+\begin{equation}
+-i\,\omega\rho\,\mathbf{\widehat{v}}=\nabla\cdot\widehat{\tau} + \mathbf{\widehat{F}}.
+\end{equation}
+A lei de Hooke dada na subse\c{c}\~ao \ref{sec.constitutivas_dunkin} pode ser reescrita no dom\'inio da frequ\^encia e em sua forma matricial como
+\begin{equation}
+\widehat{\tau}=\lambda\,\nabla\cdot\mathbf{\widehat{u}}\cdot\,I + \mu\,(\nabla\,\mathbf{\widehat{u}}+\nabla\mathbf{\widehat{u}}^\top),
+\end{equation}
+onde $I$ \'e a matriz identidade e $\nabla\mathbf{\widehat{u}}=(\nabla u_1,\nabla u_2,\nabla u_3)$ \'e o gradiente do campo vetorial que d\'a o deslocamento do meio de propaga\c{c}\~ao das ondas.
+
+Substituindo a equa\c{c}\~ao \ref{eq.constitutiva_alpha_2} na equa\c{c}\~ao \ref{eq.campo_dunkin_4} e aplicando a transformada de Fourier, temos
+\begin{equation}
+\nabla\cdot\mathbf{\widehat{H}}=0.
+\end{equation}
+
+Assumindo as hip\'oteses simplificadoras acima, com a depend\^encia do tempo dada por $\exp(-i\,\omega\,t)$, as equa\c{c}\~oes diferenciais parciais linearizadas de magnetoelasticidade s\~ao
+\begin{align*}
+\nabla\times\mathbf{\widehat{E}}&=i\,\omega\,\mu_0\mathbf{\widehat{H}}\\\\
+\nabla\times\mathbf{\widehat{H}}&=(\sigma-i\,\epsilon\,\omega)\,\mathbf{\widehat{E}}+\mathbf{\widehat{v}}\times\sigma\mu_0\mathbf{H}^0\\\\
+-i\,\omega\rho\,\mathbf{\widehat{v}}&=\nabla\cdot\widehat{\tau} + \mathbf{\widehat{F}}\\\\
+\widehat{\tau}&=\lambda\,\nabla\cdot\mathbf{\widehat{u}}\cdot\,I + \mu\,(\nabla\,\mathbf{\widehat{u}}+\nabla\mathbf{\widehat{u}}^\top)\\\\
+\nabla\cdot\mathbf{\widehat{H}}&=0
+\end{align*}
+
+Vamos definir $\sigma^*=(\sigma-i\,\epsilon\,\omega)$. No subsolo, por conta do regime quasi-estacion\'ario, $(\sigma>>\epsilon\,\omega)$  e  temos $\sigma^*=\sigma$. No ar, a condutividade \'e zero e a permeabilidade el\'etrica \'e pr\'oxima a do v\'acuo, assim temos $\sigma^*=-i\,\epsilon_0\omega$.

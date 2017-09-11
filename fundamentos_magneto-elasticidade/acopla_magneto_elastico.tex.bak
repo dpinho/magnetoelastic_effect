@@ -1,0 +1,230 @@
+\chapter{Acoplamento Magneto-el\'astico}
+
+\section{Introdu\c{c}\~ao}
+
+Como vimos na subse\c{c}\~ao \ref{sec.fund_eletr}, quando uma estrutura condutiva se movimenta num campo magn\'etico, uma corrente el\'etrica e um campo magn\'etico vari\'avel s\~ao gerados nessa estrutura. Segundo \cite{Mikhailenko_1997}, a passagem de uma onda s\'ismica pela subsuperf\'icie terrestre gera o movimento do material que comp\~oe essa subsuperf\'icie. Considerando que esse material \'e cont\'inuo e el\'astico, cont\'em uma certa distribui\c{c}\~ao de cargas el\'etricas e que o planeta Terra possui um campo geomagn\'etico natural, temos que o movimento relativo entre o material e o campo geomagn\'etico vai gerar varia\c{c}\~oes geomagn\'eticas locais associadas \`as ondas s\'ismicas que provocaram o movimento do material. Mais ainda, segundo \cite{Anisimov_1985} e \cite{Sadovsky_1980}, a onda eletromagn\'etica induzida \'e ``congelada'' \`a onda s\'ismica e se propaga n\~ao com a velocidade da luz, mas com a velocidade da onda $P$ ou da onda $S$, dependendo do tipo de onda s\'ismica, e podemos registrar e estudar essa varia\c{c}\~ao geomagn\'etica.
+Um corpo nessas condi\c{c}\~oes \'e chamado de s\'olido eletromagn\'etico-el\'astico, essas varia\c{c}\~oes no campo geomagn\'etico s\~ao chamadas de \textit{ondas sismomagn\'eticas} e esse efeito recebeu o nome de \textit{efeito sismomagn\'etico} ou \textit{efeito magnetoel\'astico}.
+
+Segundo \cite{erigen_1963}, \'e poss\'ivel investigar algumas intera\c{c}\~oes din\^amicas que podem ocorrer entre campos eletromagn\'eticos e campos el\'asticos em s\'olidos homog\^eneos e isotr\'opicos. Assim, esses autores desenvolveram um modelo matem\'atico de combina\c{c}\~ao entre a teoria de elasticidade infinitesimal e a teoria eletromagn\'etica linearizada, o qual ser\'a apresentado a seguir. A intera\c{c}\~ao se deve principalmente \`a for\c{c}a de corpo de Lorentz, \`a modifica\c{c}\~ao das equa\c{c}\~oes constitutivas e das condi\c{c}\~oes de contorno provocada pela velocidade do material, e \`as for\c{c}as superficiais introduzidas pelos campos.
+
+
+\section{Equa\c{c}\~oes Constitutivas do Meio}
+
+Seguindo a nota\c{c}\~ao apresentada em \cite{erigen_1963}, temos que os vetores que representam os campos eletromagn\'eticos no meio (propriamente dito) de propaga\c{c}\~ao das ondas, s\~ao representados por $\mathbf{E}^0$, $\mathbf{D}^0$, $\mathbf{B}^0$, $\mathbf{H}^0$ e
+$\mathbf{J}^0$. Essas mesmas quantidades, quando se referirem \`as medidas observadas em laborat\'orio s\~ao denotadas apenas retirando-se o sobre-escrito $^0$. Transferindo essa nota\c{c}\~ao para as equa\c{c}\~oes \ref{eq.D_funcao_E} e \ref{eq.B_funcao_H} temos
+\begin{equation}\label{eq.constitutivas_parciais}
+\mathbf{D}^0=\epsilon\,\mathbf{E}^0\quad\text{e}\quad\mathbf{B}^0=\mu\,\mathbf{H}^0.
+\end{equation}
+
+Em muitos materiais, a densidade de corrente el\'etrica \'e linearmente dependente de um campo el\'etrico externo, e tal rela\c{c}\~ao, conhecida como a \textit{lei de Ohm}, pode ser escrita usando a nota\c{c}\~ao apresentada acima como
+\begin{equation}\label{eq.lei_ohm}
+\mathbf{J}^0=\sigma\,\mathbf{E}^0,
+\end{equation}
+onde $\sigma$ \'e a \textit{condutividade} do meio. As equa\c{c}\~oes \ref{eq.constitutivas_parciais} juntamente com a equa\c{c}\~ao \ref{eq.lei_ohm} s\~ao denominadas \textit{equa\c{c}\~oes eletromagn\'eticas contitutivas do meio}, quando o mesmo \'e isotr\'opico, homog\^eneo e se encontra em repouso. As mesmas equa\c{c}\~oes se mant\^em quando o meio se move por ocasi\~ao da passagem de uma onda s\'ismica. 
+
+Experimentalmente, para pequenas velocidades, os campos eletromagn\'eticos do meio pr\'oprio se relacionam com aqueles medidos em laborat\'orio atrav\'es das rela\c{c}\~oes dadas por \cite{eringen_1963}
+\begin{equation}\label{eq.vet_elet_lab}
+\begin{aligned}
+\mathbf{E}^0&=\mathbf{E}+\mathbf{v}\times\mathbf{B}\\
+\mathbf{H}^0&=\mathbf{H}-\mathbf{v}\times\mathbf{D}\\
+\mathbf{J}^0&=\mathbf{J}-\rho_e\,\mathbf{v}
+\end{aligned}
+\qquad
+\begin{aligned}
+\mathbf{D}^0&=\mathbf{D}+\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{H}\\
+\mathbf{B}^0&=\mathbf{B}-\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{E}\\
+\rho_e^0&=\rho_e
+\end{aligned},
+\end{equation}
+onde $\mu_0$ \'e a permeabilidade magn\'etica do v\'acuo e $\epsilon_0$ \'e a permissividade el\'etrica do v\'acuo. Substituindo as equa\c{c}\~oes \ref{eq.vet_elet_lab} nas equa\c{c}\~oes \ref{eq.constitutivas_parciais} e \ref{eq.lei_ohm}, e desprezando os termos de ordem maior ou igual a $v^2/c^2$, temos que o campo de densidade de fluxo el\'etrico \'e dado por
+\begin{align*}
+\mathbf{D}^0&=\epsilon\,\mathbf{E}^0\\
+\mathbf{D}+\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{H}&=\epsilon\,(\mathbf{E}+\mathbf{v}\times\mathbf{B})\\
+\mathbf{D}&=\epsilon\,\mathbf{E}+\epsilon\,\mathbf{v}\times\mathbf{B}-\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{H}.
+\end{align*}
+Usando a equa\c{c}\~ao \ref{eq.B_funcao_H}, temos
+\begin{align}\label{eq.constitutiva_1}\nonumber
+\mathbf{D}&=\epsilon\,\mathbf{E}+\epsilon\,\mathbf{v}\times\mu\,\mathbf{H}-\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{H}\\
+\mathbf{D}&=\epsilon\,\mathbf{E}+\alpha\,\mathbf{v}\times\mathbf{H},
+\end{align}
+onde $\alpha=\epsilon\,\mu-\epsilon_0\mu_0$.
+
+Analogamente, para o campo magn\'etico temos
+\begin{align*}
+\mathbf{B}^0&=\mu\,\mathbf{H}\\
+\mathbf{B}-\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{E}&=\mu\,(\mathbf{H}-\mathbf{v}\times\mathbf{D})\\
+\mathbf{B}&=\mu\,\mathbf{H}-\mu\,\mathbf{v}\times\mathbf{D}+\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{E}.
+\end{align*}
+Usando a equa\c{c}\~ao \ref{eq.D_funcao_E}, temos
+\begin{align}\label{eq.constitutiva_2}\nonumber
+\mathbf{B}&=\mu\,\mathbf{H}-\mu\,\mathbf{v}\times\epsilon\,\mathbf{E}+\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{E}\\
+\mathbf{B}&=\mu\,\mathbf{H}-\alpha\mathbf{v}\times\mathbf{E}.
+\end{align}
+
+Para o campo de densidade de corrente el\'etrica, temos
+\begin{equation}\label{eq.constitutiva_3}
+\mathbf{J}-\rho_e\,\mathbf{v}=\sigma\,(\mathbf{E}+\mathbf{v}\times\mathbf{B}).
+\end{equation}
+As equa\c{c}\~oes \ref{eq.constitutiva_1}, \ref{eq.constitutiva_2} e \ref{eq.constitutiva_3} s\~ao as equa\c{c}\~oes constitutivas do meio em termos dos campos definidos em laborat\'orio. 
+
+\section{Interface entre Camadas de Materiais Diferentes}
+
+\subsection{Equa\c{c}\~oes Eletromagn\'eticas}
+
+Vamos escrever as equa\c{c}\~oes de Maxwell dadas na forma diferencial pelas equa\c{c}\~oes \ref{eq.dif_max_1} a \ref{eq.dif_max_2} numa forma mais conveniente para a aplica\c{c}\~ao das rela\c{c}\~oes constitutivas. As equa\c{c}\~oes \ref{eq.dif_max_1} e \ref{eq.dif_max_2} se mat\^em inalteradas,
+\begin{equation}\label{eq.div_D_div_B}
+\nabla\cdot\mathbf{D}=\rho_f\quad\text{e}\quad\nabla\cdot\mathbf{B}=0.
+\end{equation}
+Para equa\c{c}\~ao \ref{eq.dif_max_3}
+\begin{align}\label{eq.interface_1}\nonumber
+\nabla\times\mathbf{H}&=\mathbf{J}_f+\frac{\partial}{\partial t}\,\mathbf{D}\qquad\Leftrightarrow\\\nonumber\\
+\nabla\times\mathbf{H}-\nabla\times(\mathbf{v}\times\mathbf{D})&=\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})+\mathbf{J}_f-\rho_f\mathbf{v}\qquad\Leftrightarrow\\\nonumber\\
+\nabla\times(\mathbf{H}-\mathbf{v}\times\mathbf{D})&=\left[\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]+\mathbf{J}_f-\rho_f\mathbf{v}
+\end{align}
+Para equa\c{c}\~ao \ref{eq.dif_max_4}
+\begin{align}\label{eq.interface_2}\nonumber
+\nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{B}\qquad\Leftrightarrow\\\nonumber\\
+\nabla\times\mathbf{E}+\nabla\times(\mathbf{v}\times\mathbf{B})&=-\frac{\partial}{\partial t}\mathbf{B}-\mathbf{v}(\nabla\cdot\mathbf{B})+\nabla\times(\mathbf{v}\times\mathbf{B})\qquad\Leftrightarrow\\\nonumber\\
+\nabla\times(\mathbf{E}+\mathbf{v}\times\mathbf{B})&=-\left[\frac{\partial}{\partial t}\mathbf{B}+\mathbf{v}(\nabla\cdot\mathbf{B})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]
+\end{align}
+Integrando as equa\c{c}\~oes \ref{eq.div_D_div_B} sobre uma superf\'icie $S'$ enclusurada por uma curva $C$, e integrando as equa\c{c}\~oes \ref{eq.interface_1} e \ref{eq.interface_2} sobre um volume $V$ enclusurado por uma superf\'icie $S$, temos
+\begin{align*}
+\iiint_V\nabla\cdot\mathbf{D}\,dV&=\iiint_V\rho_f\,dV\\\\
+\iiint_V\nabla\cdot\mathbf{B}\,dV&=0\\\\
+\iint_S\nabla\times(\mathbf{H}-\mathbf{v}\times\mathbf{D})\cdot d\mathbf{S}&=\iint_S\left[\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]\cdot d\mathbf{S}+\iint_S\left[\mathbf{J}_f-\rho_f\mathbf{v}\right]\cdot d\mathbf{S}\\\\
+\iint_S\nabla\times(\mathbf{E}+\mathbf{v}\times\mathbf{B})\cdot d\mathbf{S}&=-\iint_S\left[\frac{\partial}{\partial t}\mathbf{B}+\mathbf{v}(\nabla\cdot\mathbf{B})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]\cdot d\mathbf{S}
+\end{align*}
+Aplicando o teorema do Divergente nas duas primeiras equa\c{c}\~oes, e aplicando o teorema de Stokes nas duas \'ultimas equa\c{c}\~oes, temos
+\begin{align}\label{eq.interface_3}
+\oiint_S\mathbf{D}\cdot d\mathbf{S}&=\iiint_V\rho_f\,dV\\\nonumber\\\label{eq.interface_4}
+\oiint_S\mathbf{B}\cdot d\mathbf{S}&=0\\\nonumber\\\label{eq.interface_5}
+\oint_C(\mathbf{H}-\mathbf{v}\times\mathbf{D})\cdot d\mathbf{C}&=\frac{d}{dt}\iint_S\mathbf{D}\cdot d\mathbf{S}+\iint_S\left[\mathbf{J}_f-\rho_f\mathbf{v}\right]\cdot d\mathbf{S}\\\nonumber\\\label{eq.interface_6}
+\oint_C(\mathbf{E}+\mathbf{v}\times\mathbf{B})\cdot d\mathbf{C}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{S},
+\end{align} 
+onde nas duas \'ultimas equa\c{c}\~oes usamos a rela\c{c}\~ao abaixo, sendo $\mathbf{A}$ um vetor qualquer,
+\begin{equation*}
+\frac{d}{dt}\iint_S\mathbf{A}\cdot d\mathbf{S}=\iint_S\left[\frac{\partial}{\partial t}\mathbf{A}+\mathbf{v}(\nabla\cdot\mathbf{A})-\nabla\times(\mathbf{v}\times\mathbf{A})\right]\cdot d\mathbf{S}.
+\end{equation*}
+Acompanhando pela figura \ref{fig.cond_contorno} juntamente com a argumenta\c{c}\~ao apresentada na subse\c{c}\~ao \ref{sec.condicoes_contorno_geral}, temos que o salto da componente normal de cada um dos campos, magn\'etico e densidade de fluxo el\'etrico, deduzidos a partir das equa\c{c}\~oes \ref{eq.interface_3} e \ref{eq.interface_4}, s\~ao
+\begin{equation}
+\left[\left[\mathbf{D}\right]\right]_n=\sigma_f\qquad\text{e}\qquad\left[\left[\mathbf{B}\right]\right]_n=0.
+\end{equation}  
+Analogamente, temos o salto das componentes tangenciais dos campos el\'etrico e magn\'etico auxiliar, deduzidos a partir das equa\c{c}\~oes \ref{eq.interface_5} e \ref{eq.interface_6},
+\begin{equation}
+\left[\left[\mathbf{H}-\mathbf{v}\times\mathbf{D}\right]\right]_m=K_t-\sigma_t\qquad\text{e}\qquad\left[\left[\mathbf{E}+\mathbf{v}\times\mathbf{B}\right]\right]_m=0,
+\end{equation}
+onde $K$ \'e a magnitude da densidade superficial de corrente e $\sigma$ \'e a magnitude da densidade superficial de carga.
+
+A \'ultima equa\c{c}\~ao no estudo das condi\c{c}\~oes de fronteira entre camadas segue do princ\'ipio de conserva\c{c}\~ao de cargas el\'etricas. A quantidade total de cargas concentradas num determinado volume \'e dada pela equa\c{c}\~ao \ref{eq.densidade_carga}, e qualquer varia\c{c}\~ao na quantidade de carga desse volume \'e devida a uma corrente el\'etrica, dada pela equa\c{c}\~ao \ref{eq.densidade_corrente}, que atravessa a superf\'icie que est\'a enclausurando o volume. Assim,  o princ\'ipio de conserva\c{c}\~ao de cargas estabelece que
+\begin{equation}\label{eq.conservacao_carga_1}
+\frac{d}{dt}\iiint_V\rho_e\,dV=-\oiint_S\mathbf{J}\cdot d\mathbf{S}.
+\end{equation}
+Reescrevendo o lado esquerdo da equa\c{c}\~ao acima e aplicando o teorema do Divergente ao lado direito temos que
+\begin{equation*}
+\iiint_V\frac{\partial}{\partial t}\rho_e\,dV=-\iiint_V\nabla\cdot\mathbf{J}\,dV,
+\end{equation*}
+e como a equa\c{c}\~ao se mant\'em para qualquer tipo de volume, temos
+\begin{equation*}
+\frac{\partial\rho_e}{\partial t}=-\nabla\cdot\mathbf{J}.
+\end{equation*}
+Esta \'e a \textit{equa\c{c}\~ao da continuidade} ou equa\c{c}\~ao da \textit{conserva\c{c}\~ao local de carga}, e pode ser derivada a partir das equa\c{c}\~oes de Maxwell por ser uma consequ\^encia das leis da eletrodin\^amica. 
+
+Usando a conserva\c{c}\~ao da carga na forma dada pela equa\c{c}\~ao \ref{eq.conservacao_carga_1}, e aplicando ao volume $V$ analogamente ao que foi feito com a equa\c{c}\~ao \ref{eq.interface_3}, e substituindo a express\~ao para $\mathbf{J}$ dada na equa\c{c}\~ao \ref{eq.constitutiva_3}, temos a \'ultima equa\c{c}\~ao para condi\c{c}\~ao de contorno
+\begin{equation*}
+\left[\left[\sigma(\mathbf{E}+\mathbf{v}\times\mathbf{B})\right]\right]_n=-\frac{\partial}{\partial t}\sigma_e=\left[\left[\frac{\partial}{\partial t}\mathbf{D}\right]\right]_n.
+\end{equation*}
+
+\subsection{Equa\c{c}\~oes El\'asticas}
+
+As equa\c{c}\~oes de campo para movimento de corpos el\' asticos e cont\'inuos s\~ao deduzidas a partir da equa\c{c}\~ao de equil\'ibrio do momento linear aplicada a um volume de material $V$ que \'e enclausurado por uma superf\'icie fechada $S$, como podemos constatar na equa\c{c}\~ao \ref{eq.forca_total_2}. Estamos assumindo que o \'unico efeito mec\^anico de for\c{c}as eletromagn\'eticas \'e dado pela adi\c{c}\~ao da \textit{for\c{c}a de corpo de Lorentz}, dada pela equa\c{c}\~ao \ref{eq.forca_lorentz}. Substituindo a equa\c{c}\~ao \ref{eq.densidade_corrente} na equa\c{c}\~ao \ref{eq.forca_lorentz}, escrevemos a for\c{c}a de Lorentz como
+\begin{equation}
+\textbf{F}_L=q\,\mathbf{E}+\textbf{J}\times\textbf{B}.
+\end{equation}
+Integrando a for\c{c}a de Lorentz sobre o volume $V$ e adicionando-a \`a equa\c{c}\~ao de equil\'ibrio do momento linear, temos
+\begin{equation}
+\frac{d}{dt}\iiint_V\rho\frac{d\mathbf{u}}{dt}\,dV=\iint_S\mathbf{T}\,dS+\iiint_V\mathbf{f}\,dV+\iiint_V\textbf{F}_L\,dV.
+\end{equation}
+Substituindo a equa\c{c}\~ao \ref{eq.somatorio_tensor_tau} e aplicando o teorema do Divergente na integral da superf\'icie $S$, temos que a equa\c{c}\~ao acima se torna similar \`a equa\c{c}\~ao \ref{eq.movi_cauchy_integral},
+\begin{equation*}
+\iiint_V\rho\frac{d^2u_i}{dt^2}\,dV=\iiint_V\sum_{j=1}^3\frac{\partial\tau_{ji}}{\partial x_j}dV+\iiint_Vf_i\,dV+\iiint_V F_{Li}\,dV\quad \text{para}\quad i=1,2,3.
+\end{equation*}
+Como estamos assumindo deforma\c{c}\~oes infinitesimais e o volume \'e o mesmo para cada integral, temos que
+\begin{equation*}
+\rho\frac{d^2u_i}{dt^2}=\sum_{j=1}^3\frac{\partial\tau_{ji}}{\partial x_j}+f_i+F_{Li}\quad \text{para}\quad i=1,2,3
+\end{equation*}
+s\~ao as equa\c{c}\~oes do movimento de Cauchy como o acoplamento da for\c{c}a de Lorentz.
+
+Para derivar as condi\c{c}\~oes de fronteira, vamos primeiramente escrever a for\c{c}a de Lorentz em fun\c{c}\~ao do tensor de tens\~oes eletromagn\'eticas de Maxwell $\tau_{ij}^e$, e em fun\c{c}\~ao do momento eletromagn\'etico $g_i$,
+\begin{equation}
+F_{Li}=\frac{\partial}{\partial x_i}\tau_{ij}^e-\frac{\partial}{\partial t}g_i.
+\end{equation}
+onde $\tau_{ij}^e$ e $g_i$ sao dados por
+\begin{align*}
+\tau_{ij}^e&=E_i\,D_j+H_i\,B_j-\frac{1}{2}(E_\lambda\,D_\lambda\,+H_\lambda\,B_\lambda)\delta_{ij}\\
+\mathbf{g}&=\mathbf{D}\times\mathbf{B}.
+\end{align*}
+Podemos somar e subtrair a express\~ao abaixo na for\c{c}a de Lorentz,
+\begin{equation}
+F_{Li}=\frac{\partial}{\partial x_i}\tau_{ij}^e+\frac{\partial}{\partial x_j}(g_i^e\,v_j)-\frac{\partial}{\partial t}g_i-\frac{\partial}{\partial x_j}(g_i^e\,v_j),
+\end{equation}
+integrar sobre o volume $V$ e aplicar o teorema do Divergente para escrever o tensor de Maxwell e momento eletromagn\'etico numa integral de superf\'icie chegando a 
+\begin{equation}
+\iiint_VF_{Li}\,dV=\iint_S(\tau_{ij}^e+g_i^e\,v_j)\,n_i\,dS-\iiint_V\left(\frac{\partial}{\partial t}g_i+\frac{\partial}{\partial x_j}(g_i^e\,v_j)\right)\,dV.
+\end{equation}
+De acordo com \cite{Eringen_1962}, \'e v\'alida a express\~ao
+\begin{equation}
+\frac{d}{dt}\iiint_V\rho\frac{d}{dt}u_i\,dV=\iiint_V\left[\rho\frac{\partial^2}{\partial t^2}u_i+\frac{\partial}{\partial x_j}\left(\rho\frac{d}{dt}u_i\,v_i\right)\right]\,dV.
+\end{equation}
+Usando a express\~ao acima e o equil\'ibrio do momento linear dado pela equa\c{c}\~ao \ref{eq.forca_total_2}, temos
+\begin{equation}
+\iint_S\left(\tau_{ij}+\tau_{ij}^e+g_i\,v_j\right)\,n_j\,dS+\iiint_Vf_i\,dV=\frac{d}{dt}\iiint_V\left(\rho\frac{d}{dt}u_i+g_i\right)\,dV,
+\end{equation}
+a qual est\'a na forma ideal para aplicarmos as condi\c{c}\~oes de fronteira para tens\~oes aplicadas na interface que separa duas camadas de subsuperf\'icie. Considerando $S$ e $V$ como a superf\'icie e o volume de um cilindro infinitesimal  com bases paralelas \`a superf\'icie que separa as duas camadas, conforme a figura \ref{fig.interface_elastici}, vamos tomar o limite quando a altura do cilindro tende a zero e obter o salto
+\begin{equation}
+\left[\left[\tau_{ij}+\tau^e_{ij}+g_iv_j\right]\right]\,n_j=0.
+\end{equation}
+No caso de uma camada de contato com o ar temos que $\tau_{ij}=0$ na parte externa do corpo, e a express\~ao acima se torna 
+\begin{equation}
+\tau_{ij}\,n_j=\left[\left[\tau^e_{ij}+g_iv_j\right]\right]\,n_j,
+\end{equation} 
+onde agora o colchete duplo deve ser interpretado como a quantidade de fora do corpo menos a quantidade no interior.
+
+As equa\c{c}\~oes constitutivas s\~ao dadas pela lei de Hook apresentada na subse\c{c}\~ao \ref{sec.rela-const-hooke}, mas que tamb\'em pode ser escrita como
+\begin{equation}
+\tau{ij}=\lambda\frac{\partial u_k}{\partial x_k}\delta_{ij}+\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right),
+\end{equation}
+onde consideramos que a tens\~ao e a deforma\c{c}\~ao para  este sistema tem os mesmos valores tanto medidos propriamente nas camadas como em medi\c{c}\~oes de laborat\'orio. Assumimos tamb\'em que a lei de Hook para corpos puramente el\'asticos n\~ao \'e afetada pela presen\c{c}a de campos eletromagn\'eticos. 
+
+
+\section{Modelo de Dunkin e Erigen}
+
+Podemos resumir o acoplamento magneto-el\'astico proposto por \cite{erigen_1963} destacando as equa\c{c}\~oes b\'asicas de campo e as condi\c{c}\~oes de contorno a serem aplicadas em s\'olidos eletromagn\'eticos e el\'asticos.
+
+\subsection{Equa\c{c}\~oes de campo}
+
+\begin{align}\label{eq.campo_dunkin_1}
+\nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{B}\\\nonumber\\\label{eq.campo_dunkin_2}
+\nabla\times\mathbf{H}&=\mathbf{J}+\frac{\partial}{\partial t}\mathbf{D}\\\nonumber\\\label{eq.campo_dunkin_3}
+\nabla\cdot\mathbf{D}&=\rho_e\\\nonumber\\\label{eq.campo_dunkin_4}
+\nabla\cdot\mathbf{B}&=0\\\nonumber\\\label{eq.campo_dunkin_5}
+\rho\frac{\partial^2 u_i}{\partial t^2}&=\frac{\partial}{\partial x_j}\tau_{ij}+\rho_e\,E_i+(\mathbf{J}\times\mathbf{B})_i+f_i.
+\end{align}
+
+\subsection{Equa\c{c}\~oes Constitutivas}\label{sec.constitutivas_dunkin}
+
+\begin{align*}
+\mathbf{D}&=\epsilon\,\mathbf{E}+\alpha\,\mathbf{v}\times\mathbf{H}\\\\
+\mathbf{B}&=\mu\,\mathbf{H}-\alpha\mathbf{v}\times\mathbf{E}\\\\
+\mathbf{J}-\rho_e\,\mathbf{v}&=\sigma\,(\mathbf{E}+\mathbf{v}\times\mathbf{B})\\\\
+\tau_{ij}&=\lambda\frac{\partial u_k}{\partial x_k}\delta_{ij}+\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right).
+\end{align*}
+
+\subsection{Condi\c{c}\~oes de Fronteira}
+
+\begin{align*}
+\left[\left[\mathbf{E}+\mathbf{v}\times\mathbf{B}\right]\right]_m&=0\\\\
+\left[\left[\mathbf{B}\right]\right]_n&=0\\\\
+\left[\left[\sigma(\mathbf{E}+\mathbf{v}\times\mathbf{B})\right]\right]_n&=-\frac{\partial}{\partial t}\sigma_e\\\\
+\left[\left[\mathbf{D}\right]\right]_n&=\sigma_f\\\\
+\left[\left[\tau_{ij}+\tau^e_{ij}+g_iv_j\right]\right]\,n_j&=0.
+\end{align*}

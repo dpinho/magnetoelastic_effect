@@ -1,0 +1,95 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Azeredo(2013)]{Azeredo_2013}
+M.~M. Azeredo.
+\newblock \emph{Modelagem Matem\'atica e Computacional da Propaga\c{c}\~ao de
+  Ondas S\'ismicas em Meios Poroel\'asticos Estratificados}.
+\newblock UENF, 2013.
+
+\bibitem[Dahlem and Tromp(1998)]{dahlem}
+F.~A. Dahlem and J.~Tromp.
+\newblock \emph{Theoretical Global Seismology}.
+\newblock Princeton University Press, 1998.
+
+\bibitem[Dunkin and Eringen(1963)]{eringen_1963}
+J.W. Dunkin and A.C. Eringen.
+\newblock On the propagation of waves in an electromagnetic elastic solid.
+\newblock \emph{International Journal of Engineering Science}, 1, 1963.
+\newblock \doi{10.1016/0020-7225(63)90004-1}.
+\newblock URL
+  \url{http://gen.lib.rus.ec/scimag/index.php?s=10.1016/0020-7225(63)90004-1}.
+
+\bibitem[Eringen(1962)]{Eringen_1962}
+A.~C. Eringen.
+\newblock \emph{Nonlinear Theory of Continuous Media}.
+\newblock McGraw-Hill New York, 1962.
+
+\bibitem[Griffiths(1999)]{griffiths}
+D.~J. Griffiths.
+\newblock \emph{Introduction to Electrodynamics}.
+\newblock Prentice-Hall, 1999.
+
+\bibitem[Jackson(1999)]{jackson_classical_1999}
+J.~D. Jackson.
+\newblock \emph{Classical electrodynamics}.
+\newblock Wiley, New York, {NY}, 3rd ed. edition, 1999.
+\newblock ISBN 9780471309321.
+\newblock URL \url{http://cdsweb.cern.ch/record/490457}.
+
+\bibitem[Liu(2002)]{liu}
+I.~S. Liu.
+\newblock \emph{Continuum Mechanics}.
+\newblock Spring-Verlag, Berlim-Heidelberg, 2002.
+
+\bibitem[Mikhailenko and Soboleva(1997)]{Mikhailenko_1997}
+B.~G. Mikhailenko and O.~N. Soboleva.
+\newblock Mathematical modeling of seismomagnetic efects arising in the seismic
+  wave motion in the earth's constant magnetic field.
+\newblock \emph{Applied Mathematics Lettures}, 10\penalty0 (3):\penalty0
+  47--51, 1997.
+
+\bibitem[Sadovsky(1980)]{Sadovsky_1980}
+M.A. Sadovsky.
+\newblock Electro magnetic precursors of earthquakes.
+\newblock \emph{Dokl. Acad. Nauka}, 1980.
+
+\bibitem[Slawinski(2007)]{slawinski}
+M.~A. Slawinski.
+\newblock \emph{Waves And rays in elastic continua}.
+\newblock World Scientific Publishing Company, 2 edition, 2007.
+\newblock ISBN 9789814289009,9814289000.
+\newblock URL
+  \url{http://gen.lib.rus.ec/book/index.php?md5=4B1483CD09E5DE0051F6053338032FE6}.
+
+\bibitem[Sommerfeld(1952)]{sommerfeld_52}
+A.~Sommerfeld.
+\newblock Electrodynamics.
+\newblock \emph{Academic Press}, 1952.
+
+\bibitem[S.V.~Anisimov and Goncharov(1985)]{Anisimov_1985}
+E.A. Ivanov M.V. Pedanov N.N.Rusakov V.A.~Troizhkya S.V.~Anisimov,
+  M.B.~Gokhberg and V.E. Goncharov.
+\newblock Short period oscillations of electromagnetic field of the earth after
+  explosion.
+\newblock \emph{Dokl. Acad. Nauka}, 281\penalty0 (3):\penalty0 556--559, 1985.
+
+\bibitem[Ursin(1983)]{Ursin-1983}
+B.~Ursin.
+\newblock Review of elastic and electromagnetic wave propagation in
+  horizontally layered media.
+\newblock \emph{The Leading Edge}, 48, 08 1983.
+\newblock \doi{10.1190/1.1441529}.
+\newblock URL \url{http://gen.lib.rus.ec/scimag/index.php?s=10.1190/1.1441529}.
+
+\bibitem[White and Zhou(2006)]{White_Zhou_2006}
+B.S. White and M.~Zhou.
+\newblock Eletroseismic prospecting in layered media.
+\newblock \emph{Society for Industrial and Applied Mathematics}, 67\penalty0
+  (1):\penalty0 69--98, 2006.
+
+\end{thebibliography}

@@ -1,0 +1,16 @@
+\changetocdepth {4}
+\select@language {brazil}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{Sum\'ario}{1}{section*.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\c {c}\~ao}}{3}{chapter.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {M\'etodo Matricial de Ursin para Solu\c {c}\~ao de EDP's}}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introdu\c {c}\~ao}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Sistema de EDP's do Efeito Magnetoel\'astico}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Escrevendo as Equa\c {c}\~oes na Forma Matricial}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}Decomposi\c {c}\~ao em Ondas Ascendentes e Descentes}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Matriz de Propaga\c {c}\~ao}{11}{section.2.5}
+\contentsline {section}{\numberline {2.6}Propriedades Invariantes da Propaga\c {c}\~ao}{12}{section.2.6}
+\contentsline {section}{\numberline {2.7}Matrizes de Transmiss\~ao e Reflex\~ao}{13}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Rela\c {c}\~ao das Matrizes de Transmiss\~ao e Reflex\~ao com a matriz de Propaga\c {c}\~ao}{14}{subsection.2.7.1}
