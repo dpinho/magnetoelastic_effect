@@ -11,22 +11,22 @@ A propaga\c{c}\~ao de ondas em meios estratificados produz fen\^omenos de transm
 
 Segundo \cite{eringen_1963}, o acoplamento entre ondas eletromagn\'eticas e el\'asticas se propagando no subsolo caracteriza o efeito magnetoel\'astico, e esse acoplamento pode ser modelado matematicamente atrav\'es de um sistema de equa\c{c}\~oes diferencias parciais. Conforme minha monografia, podemos aplicar uma s\'erie de hip\'oteses que visam simplificar e linearizar essas EDP's de forma que as mesmas possam receber um tratamento matem\'atico adequado no sentido de se obter numericamente os valores dos campos eletromagn\'eticos e el\'asticos envolvidos no sistema. Desta forma, vamos utilizar o m\'etodo matricial encontrado em \cite{Ursin-1983} na solu\c{c}\~ao do seguinte sistema de EDP's da magnetoelasticidade
 \begin{align*}
-\nabla\times\mathbf{\widehat{E}}&=i\,\omega\,\mu_0\mathbf{\widehat{H}}\\\\
-\nabla\times\mathbf{\widehat{H}}&=(\sigma-i\,\epsilon\,\omega)\,\mathbf{\widehat{E}}+\mathbf{\widehat{v}}\times\sigma\mu_0\mathbf{H}^0\\\\
--i\,\omega\rho\,\mathbf{\widehat{v}}&=\nabla\cdot\widehat{\tau} + \mathbf{\widehat{F}}\\\\
-\widehat{\tau}&=\lambda\,\nabla\cdot\mathbf{\widehat{u}}\cdot\,I + \mu\,(\nabla\,\mathbf{\widehat{u}}+\nabla\mathbf{\widehat{u}}^\top)\\\\
-\nabla\cdot\mathbf{\widehat{H}}&=0.
+\nabla\times\mathbf{{E}}&=i\,\omega\,\mu_0\mathbf{{H}}\\\\
+\nabla\times\mathbf{{H}}&=(\sigma-i\,\epsilon\,\omega)\,\mathbf{{E}}+\mathbf{{v}}\times\sigma\mu_0\mathbf{H}^0\\\\
+-i\,\omega\rho\,\mathbf{{v}}&=\nabla\cdot{\tau} + \mathbf{{F}}\\\\
+{\tau}&=\lambda\,\nabla\cdot\mathbf{{u}}\cdot\,I + \mu\,(\nabla\,\mathbf{{u}}+\nabla\mathbf{{u}}^\top)\\\\
+\nabla\cdot\mathbf{{H}}&=0.
 \end{align*}
-Onde, o dom\'inio da frequ\^encia \'e indicado pelo nota\c{c}\~ao $\widehat{\,.\,}$, e 
+Estas equa\c{c}\~oes est\~ao no dom\'inio da frequ\^encia $\omega$, a depend\^ecia do tempo \'e dada por $\exp{-i\,\omega\,t}$ e 
 \begin{itemize}
-\item $\mathbf{\widehat{E}}$ \'e o campo el\'etrico,
-\item $\mathbf{\widehat{B}}$ \'e o campo magn\'etico,
-\item $\mathbf{\widehat{D}}$ \'e o campo de densidade de fluxo el\'etrico,
-\item $\mathbf{\widehat{H}}$ \'e o campo magn\'etico auxiliar,
+\item $\mathbf{{E}}$ \'e o campo el\'etrico,
+\item $\mathbf{{B}}$ \'e o campo magn\'etico,
+\item $\mathbf{{D}}$ \'e o campo de densidade de fluxo el\'etrico,
+\item $\mathbf{{H}}$ \'e o campo magn\'etico auxiliar,
 \item $\tau$ \'e o tensor de tens\~oes,
-\item $\mathbf{\widehat{u}}$ \'e o deslocamento do meio,
-\item $\mathbf{\widehat{v}}$ \'e a velocidade de deslocamento do meio,
-\item $\mathbf{\widehat{F}}$ \'e uma for\c{c}a aplicada ao meio,
+\item $\mathbf{{u}}$ \'e o deslocamento do meio,
+\item $\mathbf{{v}}$ \'e a velocidade de deslocamento do meio,
+\item $\mathbf{{F}}$ \'e uma for\c{c}a aplicada ao meio,
 \item $\mathbf{H}^0$ \'e campo geomagn\'etico,
 \item $i$ \'e um n\'umero complexo,
 \item $\omega$ \'e a frequ\^encia temporal,
@@ -40,24 +40,25 @@ Vamos definir $\sigma^*=(\sigma-i\,\epsilon\,\omega)$. No subsolo, por conta do 
 
 \section{Escrevendo as Equa\c{c}\~oes na Forma Matricial}
 
-Sendo $\mathbf{x}=(x,y,z)^{\top}$ o espa\c{c}o $\mathbb{R}^3$ e aplicando as tranformadas de Fourier direta e inversa na forma
-\begin{align*}
-F(\omega,k_1,k_2,z) &= \iiint_{-\infty}^{\infty}f(t,x,y,z)\,e^{i\omega t-ik_1x-ik_2y}dt\,dxdy\\\\
-f(t,x,y,z) &= \left(\frac{1}{2\,\pi}\right)^3\,\iiint_{-\infty}^{\infty}F(\omega,k_1,k_2,z)\,e^{-i\omega t+ik_1x+ik_2y}d\omega\,dk_1dk_2\,,
-\end{align*}
-podemos escrever um conjunto de EDP's que descevem a propaga\c{c}\~ao de ondas sismomagn\'eticas em camadas horizontais da subsuperf\'icie terrestre somente em fun\c{c}\~ao da profundidade $z$. 
-
-A t\'itulo de exemplo, tanto as EDP's de Maxwell para o eletromagnetismo
-\begin{align}\label{eq.faraday_ampere}\nonumber
-\nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{B}\\\\\nonumber
-\nabla\times\mathbf{H}&=\sigma\mathbf{E}+\frac{\partial}{\partial t}\mathbf{D}+\mathbf{G}\,,
-\end{align}
-como as EDP's el\'asticas
-\begin{align}\label{eq.cauchy_hooke}\nonumber
-\rho\frac{\partial^2 \mathbf{U}}{\partial t^2}&=\nabla\cdot\tau+\mathbf{F}\\\\\nonumber
-\tau&=\lambda\nabla\cdot \mathbf{U}\cdot I + \mu(\nabla \mathbf{U}+\nabla \mathbf{U}^*)\,,
-\end{align}
-podem ser escritas no formato matricial apresentado por Ursin, ou seja, cada um desses sistemas, isoladamente, pode ser escrito na forma 
+%Sendo $\mathbf{x}=(x,y,z)^{\top}$ o espa\c{c}o $\mathbb{R}^3$ e aplicando as tranformadas de Fourier direta e inversa na forma
+%\begin{align*}
+%F(\omega,k_1,k_2,z) &= \iiint_{-\infty}^{\infty}f(t,x,y,z)\,e^{i\omega t-ik_1x-ik_2y}dt\,dxdy\\\\
+%f(t,x,y,z) &= \left(\frac{1}{2\,\pi}\right)^3\,\iiint_{-\infty}^{\infty}F(\omega,k_1,k_2,z)\,e^{-i\omega t+ik_1x+ik_2y}d\omega\,dk_1dk_2\,,
+%\end{align*}
+%podemos escrever um conjunto de EDP's que descevem a propaga\c{c}\~ao de ondas sismomagn\'eticas em camadas horizontais da subsuperf\'icie terrestre somente em fun\c{c}\~ao da profundidade $z$. 
+%
+%A t\'itulo de exemplo, tanto as EDP's de Maxwell para o eletromagnetismo
+%\begin{align}\label{eq.faraday_ampere}\nonumber
+%\nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{B}\\\\\nonumber
+%\nabla\times\mathbf{H}&=\sigma\mathbf{E}+\frac{\partial}{\partial t}\mathbf{D}+\mathbf{G}\,,
+%\end{align}
+%como as EDP's el\'asticas
+%\begin{align}\label{eq.cauchy_hooke}\nonumber
+%\rho\frac{\partial^2 \mathbf{U}}{\partial t^2}&=\nabla\cdot\tau+\mathbf{F}\\\\\nonumber
+%\tau&=\lambda\nabla\cdot \mathbf{U}\cdot I + \mu(\nabla \mathbf{U}+\nabla \mathbf{U}^*)\,,
+%\end{align}
+%podem ser escritas no formato matricial apresentado por Ursin, ou seja, 
+cada um desses sistemas, isoladamente, pode ser escrito na forma 
 \begin{align}\label{eq.matricial}
 \frac{\partial\,\mathbf{B}}{\partial\,z} &= \pm\,i\,\omega\,A\,\mathbf{B} = \pm\,i\,\omega\,
 \begin{bmatrix}
