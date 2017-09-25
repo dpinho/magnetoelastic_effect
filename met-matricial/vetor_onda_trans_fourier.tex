@@ -1,0 +1,45 @@
+\chapter{Vetor de Onda e Transformada de Fourier}
+Segundo Farlow, a EDP de uma onda 
+\begin{equation}\label{eq.edp_geral}
+\frac{\partial^2\mathbf{f}(\mathbf{x},t)}{\partial\,t^2}=\norm{\mathbf{v}}^2\nabla^2\mathbf{f}(\mathbf{x},t)
+\end{equation}
+possui a solu\c{c}\~ao de D'Alembert
+\begin{equation}
+\mathbf{f}(\mathbf{x},t)=\mathbf{g}_1(\mathbf{x}-\mathbf{v}\,t)+\mathbf{g}_2(\mathbf{x}+\mathbf{v}\,t),
+\end{equation}
+onde $\mathbf{x}=(x,y,z)^\top$ representa o espa\c{c}o $\mathbb{R}^3$, $\mathbf{v}$ \'e a \textit{velocidade} de propaga\c{c}\~ao da onda, $(\mathbf{x}\pm\mathbf{v}\,t)$ \'e a \textit{fase} da onda, $\mathbf{g}_1$ \'e a propaga\c{c}\~ao da onda no semiespa\c{c}o positivo de $x$ e $\mathbf{g}_2$ \'e a propaga\c{c}\~ao da onda no semiespa\c{c}o negativo de $x$.
+
+De acordo com FULANO, ondas tridimensionais se propagam em formato esferoidal mas localmente podem ser tratadas como ondas planas, DEFINIR ONDAS PLANAS principalmente para raios distantes da fonte, e assim a solu\c{c}\~ao de uma onda pode ser dada pela superposi\c{c}\~ao dessas ondas planas.
+
+No $\mathbb{R}^3$ o \textit{vetor de onda} $\mathbf{k}=(k_x,k_y,k_z)$ \'e aquele que aponta na dire\c{c}\~ao de propaga\c{c}\~ao da onda e sua magnitude, denominda \textit{n\'umero de onda}, \'e definida como 
+\begin{equation}
+\norm{\mathbf{k}}=k=\frac{\omega}{\norm{\mathbf{v}}},
+\end{equation}
+onde $\omega$ \'e a frequ\^encia temporal. Desta forma, a fase da onda pode ser escrita em termos do vetor de onda e da frequ\^encia como $(\mathbf{k}\cdot\mathbf{x}-\omega\,t)$, e a solu\c{c}\~ao da equa\c{c}\~ao \ref{eq.edp_geral} pode ser reescrita como uma superposi\c{c}\~ao de ondas planas
+\begin{equation}
+\mathbf{f}(\mathbf{x},t)=\mathbf{A}\,\sum_{\mathbf{k},\omega}{e^{i\,(\mathbf{k}\cdot\mathbf{x}-\omega\,t)}},
+\end{equation}
+onde $\mathbf{A}$ \'e a \textit{amplitude} da onda.
+
+Segundo \cite{White_Zhou_2006}, para o caso $\mathbb{R}^2$ o \textit{vetor de onda horizontal} \'e definido como $\mathbf{k}=(k_x,k_y)^\top$, o \textit{n\'umero de onda horizontal} e a \textit{vagarosidade horizontal} s\~ao, respectivamente,
+\begin{equation}
+k=\sqrt{k_x^2+k_y^2}\qquad\text{e}\qquad\gamma=\frac{k}{\omega}.
+\end{equation}
+A vagarosidade vertical \'e definida como
+\begin{equation}
+\eta=\frac{1}{v_z},
+\end{equation}
+onde $v_z$ \'e a componente vertical da velocidade. Denotando o \textit{n\'umero de onda vertical} por $k_z$, temos que a \textit{vagarosidade vertical} pode ser escrita como
+\begin{equation}
+\eta=\frac{k_z}{\omega}.
+\end{equation}
+Combinando as vagarosidades horizontal e vertical, temos
+\begin{equation}
+\gamma^2+\eta^2=\frac{1}{\norm{\mathbf{v}}^2}\qquad\text{ou}\qquad\eta=\sqrt{\frac{1}{\norm{\mathbf{v}}^2}-\gamma^2}.
+\end{equation}
+Podemos definir as transformadas de Fourier direta e inversa entre o espa\c{c}o bidimensional e o vetor de onda horizontal, como
+\begin{align*}
+\mathbf{\widehat{f}}(k_1,k_2,z) &= \iint_{\mathbb{R}^2}\mathbf{f}(x,y,z)\,e^{-i(k_1x+k_2y)}dx\,dy\\\\
+\mathbf{f}(x,y,z) &= \left(\frac{1}{2\,\pi}\right)^2\iint_{\mathbb{R}^2}\mathbf{\widehat{f}}(k_1,k_2,z)\,e^{i(k_1x+k_2y)}dk_1dk_2.
+\end{align*}
+O s\'imbolo $\,\widehat{.}\,$ denota a fun\c{c}\~ao no espa\c{c}o da transformada lateral de Fourier.
