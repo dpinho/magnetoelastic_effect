@@ -1,0 +1,116 @@
+\chapter{Escrevendo as EDP's como um Sistema de EDO's}
+Neste capitulo vamos aplicar algumas tecnicas como rotacao do sistema de coordenadas e Transformadas Laterais de Fourier em EDP's para que as mesmas possam ser escritas como um sistema de EDO's.
+
+\section{Sistema de EDP's do Efeito Magnetoel\'astico}
+
+Segundo \cite{eringen_1963}, o acoplamento entre ondas eletromagn\'eticas e el\'asticas se propagando no subsolo caracteriza o efeito magnetoel\'astico, e esse acoplamento pode ser modelado matematicamente atrav\'es de um sistema de equa\c{c}\~oes diferencias parciais. Conforme minha monografia, podemos aplicar uma s\'erie de hip\'oteses que visam simplificar e linearizar essas EDP's de forma que as mesmas possam receber um tratamento matem\'atico adequado no sentido de se obter numericamente os valores dos campos eletromagn\'eticos e el\'asticos envolvidos no sistema. Desta forma, vamos utilizar o m\'etodo matricial encontrado em \cite{Ursin-1983} na solu\c{c}\~ao do seguinte sistema de EDP's da magnetoelasticidade
+\begin{align}\label{eq.mag_ela_1}
+\nabla\times\mathbf{{E}}&=i\,\omega\,\mu_0\mathbf{{H}}\\\nonumber\\\label{eq.mag_ela_2}
+\nabla\times\mathbf{{H}}&=(\sigma-i\,\epsilon\,\omega)\,\mathbf{{E}}+\mathbf{{v}}\times\sigma\mu_0\mathbf{H}^0\\\nonumber\\\label{eq.mag_ela_3}
+-i\,\omega\rho\,\mathbf{{v}}&=\nabla\cdot{\tau} + \mathbf{{F}}\\\nonumber\\\label{eq.mag_ela_4}
+{\tau}&=\lambda\,\nabla\cdot\mathbf{{u}}\cdot\,I + G\,(\nabla\,\mathbf{{u}}+\nabla\mathbf{{u}}^\top)\\\nonumber\\\label{eq.mag_ela_5}
+\nabla\cdot\mathbf{{H}}&=0.
+\end{align}
+Estas equa\c{c}\~oes est\~ao no dom\'inio da frequ\^encia $\omega$, a depend\^encia do tempo \'e dada por $\exp{-i\,\omega\,t}$ e 
+\begin{itemize}
+\item $\mathbf{{E}}$ \'e o campo el\'etrico,
+\item $\mathbf{{B}}$ \'e o campo magn\'etico,
+\item $\mathbf{{D}}$ \'e o campo de densidade de fluxo el\'etrico,
+\item $\mathbf{{H}}$ \'e o campo magn\'etico auxiliar,
+\item $\tau$ \'e o tensor de tens\~oes,
+\item $\mathbf{{u}}$ \'e o deslocamento do meio,
+\item $\mathbf{{v}}$ \'e a velocidade de deslocamento do meio,
+\item $\mathbf{{F}}$ \'e uma for\c{c}a aplicada ao meio,
+\item $\mathbf{H}^0$ \'e campo geomagn\'etico,
+\item $i$ \'e um n\'umero complexo,
+\item $\omega$ \'e a frequ\^encia temporal,
+\item $\mu_0$ \'e a permeabilidade magn\'etica no v\'acuo,
+\item $\sigma$ \'e a condutividade do meio,
+\item $\epsilon$ \'e a permissividade el\'etrica do meio,
+\item $\rho$ \'e a densidade do meio,
+\item $\lambda$ e $G$ s\~ao par\^ametros de Lam\`e.
+\end{itemize}
+Vamos definir $\sigma^*=(\sigma-i\,\epsilon\,\omega)$. No subsolo, por conta do regime quasi-estacion\'ario, $(\sigma>>\epsilon\,\omega)$  e  temos $\sigma^*=\sigma$. No ar, a condutividade \'e zero e a permeabilidade el\'etrica \'e pr\'oxima a do v\'acuo $\epsilon_0$, assim temos $\sigma^*=-i\,\epsilon_0\omega$.
+
+No formato matricial, a equacao \ref{eq.mag_ela_1} pode ser escrita como
+\begin{equation*}
+\begin{pmatrix}
+\frac{\partial\,E_3}{\partial\,y}-\frac{\partial\,E_2}{\partial\,z}\\
+\frac{\partial\,E_1}{\partial\,z}-\frac{\partial\,E_3}{\partial\,x}\\
+\frac{\partial\,E_2}{\partial\,x}-\frac{\partial\,E_1}{\partial\,y}
+\end{pmatrix}
+=
+i\,\omega\,\mu_0\,
+\begin{pmatrix}
+H_1\\
+H_2\\
+H_3
+\end{pmatrix}.
+\end{equation*}
+Aplicando as transformadas laterais de Fourier, dada em \ref{eq.trans_fourier_1}, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+-i\,k_y\widehat{E}_3-\frac{\partial\,\widehat{E}_2}{\partial\,z}&=i\,\omega\,\mu_0\widehat{H}_1\\
+\frac{\partial\,\widehat{E}_1}{\partial\,z}+i\,k_x\widehat{E}_3&=i\,\omega\,\mu_0\widehat{H}_2\\
+-i\,k_x\widehat{E}_2+i\,k_y\widehat{E}_1&=i\,\omega\,\mu_0\widehat{H}_3.
+\end{empheq} 
+Rotacionando o sistema de forma que a primeira coordenada esteja orientada no sentido do vetor de onda horizontal, usando o operador dado pela equacao \ref{eq.operador_rotacao}, e fazendo as simplificacoes, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+\frac{\partial\,\tilde{E}_2}{\partial\,z}&=-i\,\omega\,\mu_0\tilde{H}_1\\
+\frac{\partial\,\tilde{E}_1}{\partial\,z}&=i\,\omega\,\mu_0\tilde{H}_2-i\,k\tilde{E}_3\\
+\tilde{E}_2&=-\frac{\omega\,\mu_0}{k}\tilde{H}_3.
+\end{empheq}
+
+Observando que $\mathbf{v}=-i\,\omega\mathbf{u}$ depois de aplicada a transformada de Fourier no tempo, a equacao \ref{eq.mag_ela_2} pode ser escrita como
+\begin{equation*}
+\begin{pmatrix}
+\frac{\partial\,H_3}{\partial\,y}-\frac{\partial\,H_2}{\partial\,z}\\
+\frac{\partial\,H_1}{\partial\,z}-\frac{\partial\,H_3}{\partial\,x}\\
+\frac{\partial\,H_2}{\partial\,x}-\frac{\partial\,H_1}{\partial\,y}
+\end{pmatrix}
+=
+(\sigma-i\,\epsilon\,\omega)\,
+\begin{pmatrix}
+E_1\\
+E_2\\
+E_3
+\end{pmatrix}
+-i\,\omega\,
+\begin{pmatrix}
+u_2H_3^0-u_3H_2^0\\
+u_3H_1^0-u_1H_3^0\\
+u_1H_2^0-u_2H_1^0
+\end{pmatrix}.
+\end{equation*}
+Aplicando as transformadas laterais de Fourier conforme a equacao \ref{eq.trans_fourier_1}, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+-i\,k_y\widehat{H}_3-\frac{\partial\,\widehat{H}_2}{\partial\,z}&=(\sigma-i\,\epsilon\,\omega)\,\widehat{E}_1-i\,\omega(u_2H_3^0-u_3H_2^0)\\
+\frac{\partial\,\widehat{H}_1}{\partial\,z}+i\,k_x\widehat{H}_3&=(\sigma-i\,\epsilon\,\omega)\,\widehat{E}_2-i\,\omega(u_3H_1^0-u_1H_3)\\
+-i\,k_x\widehat{H}_2+i\,k_y\widehat{H}_1&=(\sigma-i\,\epsilon\,\omega)\,\widehat{E}_3-i\,\omega(u_1H_2^0-u_2H_1^0).
+\end{empheq}
+Rotacionando o sistema usando o operador dado pela equacao \ref{eq.operador_rotacao}, e fazendo as simplificacoes, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+\frac{\partial\,\tilde{H}_2}{\partial\,z}&=-(\sigma-i\,\epsilon\,\omega)\,\tilde{E}_1+i\,\omega\,\tilde{H}_3^0\tilde{u}_2-i\,\omega\,\tilde{H}_2^0\tilde{u}_3\\
+\frac{\partial\,\tilde{H}_1}{\partial\,z}&=(\sigma-i\,\epsilon\,\omega)\,\tilde{E}_2-i\,\omega\,k\,\tilde{H}_3-i\,\omega\,\tilde{H}_1^0\tilde{u}_3+i\,\omega\,\tilde{H}_3^0\tilde{u}_1\\
+\tilde{H}_2&=-\frac{(\sigma-i\,\epsilon\,\omega)}{i\,k}\tilde{E}_3+\frac{\omega}{k}  \tilde{H}_2^0\tilde{u}_1-\frac{\omega}{k}\tilde{H}_1^0\tilde{u}_2.
+\end{empheq}
+
+A equacao \ref{eq.mag_ela_3} pode ser reescrita como
+
+\begin{empheq}[left=\empheqlbrace]{align*}
+-\omega^2\rho\,u_1&=\frac{\partial \tau_{11}}{\partial\,x}+\frac{\partial \tau_{12}}{\partial\,y}+\frac{\partial \tau_{13}}{\partial\,z}+F_1\\
+-\omega^2\rho\,u_2&=\frac{\partial \tau_{21}}{\partial\,x}+\frac{\partial \tau_{22}}{\partial\,y}+\frac{\partial \tau_{23}}{\partial\,z}+F_2\\
+-\omega^2\rho\,u_3&=\frac{\partial \tau_{31}}{\partial\,x}+\frac{\partial \tau_{32}}{\partial\,y}+\frac{\partial \tau_{33}}{\partial\,z}+F_3
+\end{empheq}
+Aplicando as transformadas laterais de Fourier, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+-\omega^2\rho\,\widehat{u}_1&=-i\,k_x\widehat{\tau}_{11}-i\,k_y\widehat{\tau}_{12}+\frac{\partial\widehat{\tau}_{13}}{\partial\,z}+\widehat{F}_1\\
+-\omega^2\rho\,\widehat{u}_2&=-i\,k_x\widehat{\tau}_{21}-i\,k_y\widehat{\tau}_{22}+\frac{\partial\widehat{\tau}_{23}}{\partial\,z}+\widehat{F}_2\\
+-\omega^2\rho\,\widehat{u}_3&=-i\,k_x\widehat{\tau}_{31}-i\,k_y\widehat{\tau}_{32}+\frac{\partial\widehat{\tau}_{33}}{\partial\,z}+\widehat{F}_3.
+\end{empheq}
+Aplicando a rotacao e simplificando as equacoes, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+-\omega^2\rho\,\tilde{u}_1&=-i\,k\tilde{\tau}_{11}+\frac{\partial\tilde{\tau}_{13}}{\partial\,z}+\tilde{F}_1\\
+-\omega^2\rho\,\tilde{u}_2&=-i\,k\tilde{\tau}_{12}+\frac{\partial\tilde{\tau}_{23}}{\partial\,z}+\tilde{F}_2\\
+-\omega^2\rho\,\tilde{u}_3&=-i\,k\tilde{\tau}_{13}+\frac{\partial\tilde{\tau}_{33}}{\partial\,z}+\tilde{F}_3.
+\end{empheq}
+

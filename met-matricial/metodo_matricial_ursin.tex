@@ -7,36 +7,7 @@ As propriedades de simetria da matriz $A$ nos permitem separar o campo de ondas 
 
 A propaga\c{c}\~ao de ondas em meios estratificados produz fen\^omenos de transmiss\~ao e reflex\~ao de ondas. Dadas as defini\c{c}\~oes das matrizes de transmiss\~ao e reflex\~ao, podemos relacion\'a-las com a matriz de propaga\c{c}\~ao, bem como deduzir propriedades de simetrias para essas matrizes atrav\'es das caracter\'isticas invariantes da propaga\c{c}\~ao. Podemos ainda deduzir as matrizes de transmiss\~ao e reflex\~ao modificadas para pilha de camadas limitadas superiormente por uma superf\'icie livre.
 
-\section{Sistema de EDP's do Efeito Magnetoel\'astico}
 
-Segundo \cite{eringen_1963}, o acoplamento entre ondas eletromagn\'eticas e el\'asticas se propagando no subsolo caracteriza o efeito magnetoel\'astico, e esse acoplamento pode ser modelado matematicamente atrav\'es de um sistema de equa\c{c}\~oes diferencias parciais. Conforme minha monografia, podemos aplicar uma s\'erie de hip\'oteses que visam simplificar e linearizar essas EDP's de forma que as mesmas possam receber um tratamento matem\'atico adequado no sentido de se obter numericamente os valores dos campos eletromagn\'eticos e el\'asticos envolvidos no sistema. Desta forma, vamos utilizar o m\'etodo matricial encontrado em \cite{Ursin-1983} na solu\c{c}\~ao do seguinte sistema de EDP's da magnetoelasticidade
-\begin{align*}
-\nabla\times\mathbf{{E}}&=i\,\omega\,\mu_0\mathbf{{H}}\\\\
-\nabla\times\mathbf{{H}}&=(\sigma-i\,\epsilon\,\omega)\,\mathbf{{E}}+\mathbf{{v}}\times\sigma\mu_0\mathbf{H}^0\\\\
--i\,\omega\rho\,\mathbf{{v}}&=\nabla\cdot{\tau} + \mathbf{{F}}\\\\
-{\tau}&=\lambda\,\nabla\cdot\mathbf{{u}}\cdot\,I + \mu\,(\nabla\,\mathbf{{u}}+\nabla\mathbf{{u}}^\top)\\\\
-\nabla\cdot\mathbf{{H}}&=0.
-\end{align*}
-Estas equa\c{c}\~oes est\~ao no dom\'inio da frequ\^encia $\omega$, a depend\^ecia do tempo \'e dada por $\exp{-i\,\omega\,t}$ e 
-\begin{itemize}
-\item $\mathbf{{E}}$ \'e o campo el\'etrico,
-\item $\mathbf{{B}}$ \'e o campo magn\'etico,
-\item $\mathbf{{D}}$ \'e o campo de densidade de fluxo el\'etrico,
-\item $\mathbf{{H}}$ \'e o campo magn\'etico auxiliar,
-\item $\tau$ \'e o tensor de tens\~oes,
-\item $\mathbf{{u}}$ \'e o deslocamento do meio,
-\item $\mathbf{{v}}$ \'e a velocidade de deslocamento do meio,
-\item $\mathbf{{F}}$ \'e uma for\c{c}a aplicada ao meio,
-\item $\mathbf{H}^0$ \'e campo geomagn\'etico,
-\item $i$ \'e um n\'umero complexo,
-\item $\omega$ \'e a frequ\^encia temporal,
-\item $\mu_0$ \'e a permeabilidade magn\'etica no v\'acuo,
-\item $\sigma$ \'e a condutividade do meio,
-\item $\epsilon$ \'e a permissividade el\'etrica do meio,
-\item $\rho$ \'e a densidade do meio,
-\item $\lambda$ e $\mu$ s\~ao par\^ametros de Lam\`e.
-\end{itemize}
-Vamos definir $\sigma^*=(\sigma-i\,\epsilon\,\omega)$. No subsolo, por conta do regime quasi-estacion\'ario, $(\sigma>>\epsilon\,\omega)$  e  temos $\sigma^*=\sigma$. No ar, a condutividade \'e zero e a permeabilidade el\'etrica \'e pr\'oxima a do v\'acuo $\epsilon_0$, assim temos $\sigma^*=-i\,\epsilon_0\omega$.
 
 \section{Escrevendo as Equa\c{c}\~oes na Forma Matricial}
 

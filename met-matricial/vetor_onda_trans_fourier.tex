@@ -7,11 +7,11 @@ possui a solu\c{c}\~ao de D'Alembert
 \begin{equation}
 \mathbf{f}(\mathbf{x},t)=\mathbf{g}_1(\mathbf{x}-\mathbf{v}\,t)+\mathbf{g}_2(\mathbf{x}+\mathbf{v}\,t),
 \end{equation}
-onde $\mathbf{x}=(x,y,z)^\top$ representa o espa\c{c}o $\mathbb{R}^3$, $\mathbf{v}$ \'e a \textit{velocidade} de propaga\c{c}\~ao da onda, $(\mathbf{x}\pm\mathbf{v}\,t)$ \'e a \textit{fase} da onda, $\mathbf{g}_1$ \'e a propaga\c{c}\~ao da onda no semiespa\c{c}o positivo de $x$ e $\mathbf{g}_2$ \'e a propaga\c{c}\~ao da onda no semiespa\c{c}o negativo de $x$.
+onde $\mathbf{x}=(x,y,z)^\top$ representa o espa\c{c}o $\mathbb{R}^3$, $\mathbf{v}$ \'e a \textit{velocidade} de propaga\c{c}\~ao da onda, $(\mathbf{x}\pm\mathbf{v}\,t)$ \'e a \textit{fase} da onda, $\mathbf{g}_1$ \'e a propaga\c{c}\~ao da onda no semiespa\c{c}o positivo do eixo $x$ e $\mathbf{g}_2$ \'e a propaga\c{c}\~ao da onda no semiespa\c{c}o negativo do eixo $x$.
 
 De acordo com FULANO, ondas tridimensionais se propagam em formato esferoidal mas localmente podem ser tratadas como ondas planas, DEFINIR ONDAS PLANAS principalmente para raios distantes da fonte, e assim a solu\c{c}\~ao de uma onda pode ser dada pela superposi\c{c}\~ao dessas ondas planas.
 
-No $\mathbb{R}^3$ o \textit{vetor de onda} $\mathbf{k}=(k_x,k_y,k_z)$ \'e aquele que aponta na dire\c{c}\~ao de propaga\c{c}\~ao da onda e sua magnitude, denominda \textit{n\'umero de onda}, \'e definida como 
+No $\mathbb{R}^3$ o \textit{vetor de onda} $\mathbf{k}=(k_x,k_y,k_z)$ \'e aquele que aponta na dire\c{c}\~ao de propaga\c{c}\~ao da onda e sua magnitude, denominada \textit{n\'umero de onda}, \'e definida como 
 \begin{equation}
 \norm{\mathbf{k}}=k=\frac{\omega}{\norm{\mathbf{v}}},
 \end{equation}
@@ -38,8 +38,34 @@ Combinando as vagarosidades horizontal e vertical, temos
 \gamma^2+\eta^2=\frac{1}{\norm{\mathbf{v}}^2}\qquad\text{ou}\qquad\eta=\sqrt{\frac{1}{\norm{\mathbf{v}}^2}-\gamma^2}.
 \end{equation}
 Podemos definir as transformadas de Fourier direta e inversa entre o espa\c{c}o bidimensional e o vetor de onda horizontal, como
-\begin{align*}
-\mathbf{\widehat{f}}(k_1,k_2,z) &= \iint_{\mathbb{R}^2}\mathbf{f}(x,y,z)\,e^{-i(k_1x+k_2y)}dx\,dy\\\\
-\mathbf{f}(x,y,z) &= \left(\frac{1}{2\,\pi}\right)^2\iint_{\mathbb{R}^2}\mathbf{\widehat{f}}(k_1,k_2,z)\,e^{i(k_1x+k_2y)}dk_1dk_2.
-\end{align*}
+\begin{align}\label{eq.trans_fourier_1}
+\mathbf{\widehat{f}}(k_x,k_y,z) &= \iint_{\mathbb{R}^2}\mathbf{f}(x,y,z)\,e^{-i(k_xx+k_yy)}dx\,dy\\\nonumber\\\label{eq.trans_fourier_2}
+\mathbf{f}(x,y,z) &= \left(\frac{1}{2\,\pi}\right)^2\iint_{\mathbb{R}^2}\mathbf{\widehat{f}}(k_x,k_y,z)\,e^{i(k_xx+k_yy)}dk_xdk_y.
+\end{align}
 O s\'imbolo $\,\widehat{.}\,$ denota a fun\c{c}\~ao no espa\c{c}o da transformada lateral de Fourier.
+INCLUIR HIPOTESE DE CAMPOS TENDENDO A ZERO NO INFINITO
+Segundo \cite{lang_1986}, podemos produzir uma rota\c{c}\~ao antihor\'aria em torno do eixo $z$ aplicando o operador linear
+\begin{equation*}
+\begin{pmatrix}
+\cos\theta&-\sin\theta&0\\
+\sin\theta&\cos\theta&0\\
+0&0&1
+\end{pmatrix},
+\end{equation*}
+onde $\theta$ \'e o \^angulo que um vetor est\'a sendo rotacionado. Como a geometria do nosso problema considera ondas se propagando na parte negativa do eixo $z$, para produzirmos uma rota\c{c}\~ao antihor\'aria devemos considerar o \^angulo $-\theta$, e com isso nossa matriz de rota\c{c}\~ao se torna
+\begin{equation*}
+\begin{pmatrix}
+\cos\theta&\sin\theta&0\\
+-\sin\theta&\cos\theta&0\\
+0&0&1
+\end{pmatrix},
+\end{equation*}
+lembrando a paridade das fun\c{c}\~oes seno e cosseno. Para promovermos uma rota\c{c}\~ao orientando a primeira coordenada  no sentido de propaga\c{c}\~ao das ondas horizontais, temos que $\theta$ ser\'a o \^angulo entre $(x,0,0)^\top$ e $(k_x,k_y,0)^\top$, e a matriz de rota\c{c}\~ao se torna
+\begin{equation}\label{eq.operador_rotacao}
+\Omega=
+\begin{pmatrix}
+\frac{k_x}{k}&\frac{k_y}{k}&0\\
+-\frac{k_y}{k}&\frac{k_x}{k}&0\\
+0&0&1
+\end{pmatrix}.
+\end{equation}
