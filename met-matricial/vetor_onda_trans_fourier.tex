@@ -22,25 +22,26 @@ onde $\omega$ \'e a frequ\^encia temporal. Desta forma, a fase da onda pode ser 
 onde $\mathbf{A}$ \'e a \textit{amplitude} da onda.
 
 Segundo \cite{White_Zhou_2006}, para o caso $\mathbb{R}^2$ o \textit{vetor de onda horizontal} \'e definido como $\mathbf{k}=(k_x,k_y)^\top$, o \textit{n\'umero de onda horizontal} e a \textit{vagarosidade horizontal} s\~ao, respectivamente,
-\begin{equation}
+\begin{equation}\label{eq.numero_onda_vagarozidade_horizontal}
 k=\sqrt{k_x^2+k_y^2}\qquad\text{e}\qquad\gamma=\frac{k}{\omega}.
 \end{equation}
 A vagarosidade vertical \'e definida como
 \begin{equation}
-\eta=\frac{1}{v_z},
+q_0=\frac{1}{v_z},
 \end{equation}
 onde $v_z$ \'e a componente vertical da velocidade. Denotando o \textit{n\'umero de onda vertical} por $k_z$, temos que a \textit{vagarosidade vertical} pode ser escrita como
 \begin{equation}
-\eta=\frac{k_z}{\omega}.
+q_0=\frac{k_z}{\omega}.
 \end{equation}
 Combinando as vagarosidades horizontal e vertical, temos
-\begin{equation}
-\gamma^2+\eta^2=\frac{1}{\norm{\mathbf{v}}^2}\qquad\text{ou}\qquad\eta=\sqrt{\frac{1}{\norm{\mathbf{v}}^2}-\gamma^2}.
+\begin{equation}\label{eq.vagarosidade_vertical}
+\gamma^2+q_0^2=\frac{1}{\norm{\mathbf{v}}^2}\qquad\text{ou}\qquad q_0=\sqrt{\epsilon_0\mu_0-\gamma^2},
 \end{equation}
+j\'a que $\epsilon_0\mu_0=\frac{1}{\norm{\mathbf{v}}^2}$.
 Podemos definir as transformadas de Fourier direta e inversa entre o espa\c{c}o bidimensional e o vetor de onda horizontal, como
 \begin{align}\label{eq.trans_fourier_1}
-\mathbf{\widehat{f}}(k_x,k_y,z) &= \iint_{\mathbb{R}^2}\mathbf{f}(x,y,z)\,e^{-i(k_xx+k_yy)}dx\,dy\\\nonumber\\\label{eq.trans_fourier_2}
-\mathbf{f}(x,y,z) &= \left(\frac{1}{2\,\pi}\right)^2\iint_{\mathbb{R}^2}\mathbf{\widehat{f}}(k_x,k_y,z)\,e^{i(k_xx+k_yy)}dk_xdk_y.
+\mathbf{\widehat{F}}(k_x,k_y,z) &= \iint_{\mathbb{R}^2}\mathbf{F}(x,y,z)\,e^{-i(k_xx+k_yy)}dx\,dy\\\nonumber\\\label{eq.trans_fourier_2}
+\mathbf{F}(x,y,z) &= \left(\frac{1}{2\,\pi}\right)^2\iint_{\mathbb{R}^2}\mathbf{\widehat{F}}(k_x,k_y,z)\,e^{i(k_xx+k_yy)}dk_xdk_y.
 \end{align}
 O s\'imbolo $\,\widehat{.}\,$ denota a fun\c{c}\~ao no espa\c{c}o da transformada lateral de Fourier.
 INCLUIR HIPOTESE DE CAMPOS TENDENDO A ZERO NO INFINITO
