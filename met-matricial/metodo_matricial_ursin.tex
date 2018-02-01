@@ -1,13 +1,13 @@
-\chapter{M\'etodo Matricial de Ursin para Solu\c{c}\~ao de EDP's}
+\chapter{M\'etodo de Diagonaliza\c{c}\~ao de Ursin}\label{sec.diagonalizacao_ursin}
 
-\section{Introdu\c{c}\~ao}
+%\section{Introdu\c{c}\~ao}
 Este cap\'itulo trata da utiliza\c{c}\~ao de um m\'etodo matricial para estudar a propaga\c{c}\~ao de ondas em subsuperf\'icie terrestre, conforme estruturado em \cite{Ursin-1983}. Gra\c{c}as a similaridade matem\'atica entre sistemas de EDP's eletromagn\'eticas e sistemas de EDP's el\'asticas, podemos dar um desenvolvimento unificado para esses sistemas. Utilizamos um conjunto de transformadas (Fourier, Laplace e Bessel) para escrever cada um desses sistemas de EDP's numa forma matricial, em fun\c{c}\~ao apenas da profundidade, composta por $2n$ equa\c{c}\~oes diferenciais ordin\'arias. Os coeficientes desse sistema de EDO's podem ser reunidos numa matriz $A$ de dimens\~ao $2n\times 2n$, a qual pode ser particionada em quatro submatrizes de dimens\~ao $n\times n$, e \'e usada como o ponto de partida para o estudo da propaga\c{c}\~ao de ondas em subsuperf\'icie.  
 
 As propriedades de simetria da matriz $A$ nos permitem separar o campo de ondas em ascendentes e descendentes atrav\'es de uma decomposi\c{c}\~ao em autovetores. Essas propriedades nos permitem tamb\'em deduzir caracter\'isticas invariantes da propaga\c{c}\~ao, onde uma dessas caracter\'isticas \'e v\'alida apenas para meios de baixa dissipa\c{c}\~ao de ondas e correspondem \`a conserva\c{c}\~ao de energia. A matriz de propaga\c{c}\~ao de ondas pode ser computada para camadas homog\^eneas ou n\~ao, atrav\'es de um m\'etodo relativamente simples. Dado o vetor de ondas na camada superficial, podemos calcular seu valor para qualquer camada usando a matriz de propaga\c{c}\~ao.
 
 A propaga\c{c}\~ao de ondas em meios estratificados produz fen\^omenos de transmiss\~ao e reflex\~ao de ondas. Dadas as defini\c{c}\~oes das matrizes de transmiss\~ao e reflex\~ao, podemos relacion\'a-las com a matriz de propaga\c{c}\~ao, bem como deduzir propriedades de simetrias para essas matrizes atrav\'es das caracter\'isticas invariantes da propaga\c{c}\~ao. Podemos ainda deduzir as matrizes de transmiss\~ao e reflex\~ao modificadas para pilha de camadas limitadas superiormente por uma superf\'icie livre.
 
-\section{Caracter\'isticas da Equa\c{c}\~oes na Forma Matricial de Ursin}
+\section{Caracter\'isticas das Equa\c{c}\~oes na Forma Matricial de Ursin}
 
 %Sendo $\mathbf{x}=(x,y,z)^{\top}$ o espa\c{c}o $\mathbb{R}^3$ e aplicando as tranformadas de Fourier direta e inversa na forma
 %\begin{align*}
@@ -29,7 +29,7 @@ A propaga\c{c}\~ao de ondas em meios estratificados produz fen\^omenos de transm
 %podem ser escritas no formato matricial apresentado por Ursin, ou seja, 
 Observe que as equa\c{c}\~oes matriciais \ref{eq.matricial_1}-\ref{eq.matricial_4} est\~ao escritas no formato preconizado por \cite{Ursin-1983}, 
 \begin{align}\label{eq.matricial}
-\frac{\partial\,\mathbf{\Phi}^{(m)}}{\partial\,z} &= \pm\,i\,\omega\,M^{(m)}\,\mathbf{\Phi}^{(m)}+\mathbf{S}^{(m)},\quad\text{com}\quad m=1,2,3,4,
+\frac{\partial\,\mathbf{\Phi}^{(m)}}{\partial\,z} &= -\,i\,\omega\,M^{(m)}\,\mathbf{\Phi}^{(m)}+\mathbf{S}^{(m)},\quad\text{com}\quad m=1,2,3,4,
 \end{align}
 %\begin{bmatrix}
 %\mathbf{\Phi_1}\\

@@ -1,0 +1,53 @@
+\chapter{Solu\c{c}\~ao das Equa\c{c}\~oes \ref{eq.matricial_1}-\ref{eq.matricial_2} na Aus\^encia de Fonte}
+
+Vamos determinar inicialmente a solu\c{c}\~ao das equa\c{c}\~oes \ref{eq.matricial_1}-\ref{eq.matricial_2} considerando o meio homog\^eneo e livre de fonte. Assim, temos que $\mathbf{S}^{(m)}=0$ para $m=1,2,3,4\,$ e a matriz $\mathbf{M}^{(m)}$ \'e constante onde as submatrizes na diagonal principal s\~ao nulas e as submatrizes na diagonal secund\'aria s\~ao sim\'etricas. 
+
+\section{Ondas Ascendentes e Ondas Descendentes}
+
+Vamos redefinir o vetor de ondas como
+\begin{equation}\label{eq.Phi}
+\mathbf{\Phi}=L\,\mathbf{\Psi}.
+\end{equation}
+Substituindo a equa\c{c}\~ao \ref{eq.Phi} na equa\c{c}\~ao \ref{eq.matricial}, temos
+\begin{equation}\label{eq.matricial_sem_fonte}
+\frac{\partial\,\mathbf{\Psi}}{\partial\,z} =-\,i\,\omega\,L^{-1}M\,L\,\mathbf{\Psi},
+\end{equation}
+onde o sobrescrito $m$ est\'a sendo omitido por quest\~ao de simplicidade.
+De acordo com a subse\c{c}\~ao \ref{sec.diagonalizacao_ursin}, temos que as matrizes $M$ e $\tilde{\Lambda}$ s\~ao semelhantes, assim
+\begin{equation*}
+\tilde{\Lambda}=L^{-1}M\,L.
+\end{equation*}
+Substituindo $\tilde{\Lambda}$ na equa\c{c}\~ao \ref{eq.matricial_sem_fonte}, temos
+\begin{equation}\label{eq.matricial_sem_fonte_2}
+\frac{\partial\,\mathbf{\Psi}}{\partial\,z} =-\,i\,\omega\,\tilde{\Lambda}\,\mathbf{\Psi}.
+\end{equation}
+Ainda de acordo com a subse\c{c}\~ao \ref{sec.diagonalizacao_ursin}, podemos escrever
+\begin{equation}
+\tilde{\Lambda}=
+\begin{pmatrix}
+\Lambda&0\\
+0&-\Lambda
+\end{pmatrix},
+\end{equation}
+onde $\Lambda$ \'e uma submatriz diagonal contendo os autovalores $q_i$.
+Definindo
+\begin{equation}
+\mathbf{\Psi}=
+\begin{pmatrix}
+\mathbf{U}\\
+\mathbf{D}
+\end{pmatrix}
+\end{equation}
+e usando o fato de que $\tilde{\Lambda}$ \'e uma matriz diagonal, podemos resolver a equa\c{c}\~ao diferencial \ref{eq.matricial_sem_fonte_2} e expressar a solu\c{c}\~ao na forma
+\begin{align*}
+\Psi(z)&=e^{-i\,\omega\,\tilde{\Lambda}(z-z_0)}\Psi(z_0)\\
+&=\begin{pmatrix}
+e^{-i\,\omega\,\Lambda(z-z_0)}\,\mathbf{U}(z_0)\\
+e^{i\,\omega\,\Lambda(z-z_0)}\,\,\,\mathbf{D}(z_0)
+\end{pmatrix}.
+\end{align*}
+Desta maneira, $\mathbf{U}$ representa ondas ascendentes e $\mathbf{D}$ representa ondas descendentes, $z_0$ \'e um ponto fixo na mesma regi\~ao livre de fonte de $z$ e $e^{\pm i\,\omega\,\Lambda(z-z_0)}$ \'e uma matriz diagonal onde o $i$-ésimo elemento da diagonal principal \'e dado por $e^{\pm i\,\omega\,q_i(z-z_0)}$. 
+
+\section{Matriz de Salto para Camadas Estratificadas}
+
+A profundidade onde encontra-se uma interface entre duas camadas estratificadas ser\'a denotada por $\overline{z}$, onde as quantidades avaliadas exatamente abaixo da interface ser\'a denotada por $\overline{z}^+$ e as quantidades avaliadas exatamente acima da interface ser\'a denotada por $\overline{z}^-$.
