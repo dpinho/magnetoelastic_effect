@@ -1,4 +1,5 @@
-\documentclass[12pt,a4paper]{abntex2}
+\documentclass[12pt,a4paper,openany]{abntex2}
+% openany - para eliminar paginas em branco, que surgem pois os capitulos so comecam em paginas impares no modo frente e verso
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{esint}
@@ -11,18 +12,150 @@
 \usepackage{empheq}
 \usepackage{lscape}
 
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}
+%instalar abntcite.sty
 
 \begin{document}
 
 \tableofcontents
 
 \input{intro_met_matricial}
-\input{vetor_onda_trans_fourier}
+\input{revisao_bibliografica}
+\input{Elementos_da_Fisica_Matematica}
+\input{Metodo_Matricial_para_Solucao_de_EDOs}
+%\input{solucao_ausencia_fonte}mesclado
+%\input{solucao_presenca_fonte}mesclado
 \input{trans_edp_para_edo}
-\input{metodo_matricial_ursin}
-\input{solucao_ausencia_fonte}
+\input{Condicoes_Contorno_EDOs}
+\input{aplicando_matricial_ursin}
+\input{conclusoes_trab_fut}
 
 \bibliographystyle{plainnat}
-\bibliography{referencias}
+%\bibliography{referencias}
+
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Azeredo(2013)]{Azeredo_2013}
+M.~M. Azeredo.
+\newblock \emph{Modelagem Matem\'atica e Computacional da Propaga\c{c}\~ao de
+  Ondas S\'ismicas em Meios Poroel\'asticos Estratificados}.
+\newblock PhD thesis, Universidade Estadual do Norte Fluminense, 2013.
+
+\bibitem[Baruch(2013)]{baruch_2013}
+E.~M. Baruch.
+\newblock The classical hankel transform in the kirillov model of discrete
+  series.
+\newblock \emph{Integral Transforms and Special Functions}, 24, 2013.
+%\newblock \doi{10.1080/10652469.2012.691097}.
+
+\bibitem[Bueno(2015)]{bueno_2015}
+A.~D. Bueno.
+\newblock \emph{Programa\c{c}\~ao Orientada a Objeto com C++}.
+\newblock Novatec, 2015.
+
+\bibitem[Butkov(1988)]{butkov_88}
+E.~Butkov.
+\newblock \emph{F\'isica Matem\'atica}.
+\newblock LTC, 1988.
+
+\bibitem[Chew(1995)]{chew}
+W.~C. Chew.
+\newblock \emph{Waves and Fields in Inhomogeneous Media}.
+\newblock IEEE PRESS, 1995.
+
+\bibitem[Dunkin and Eringen(1963)]{eringen_1963}
+J.W. Dunkin and A.C. Eringen.
+\newblock On the propagation of waves in an electromagnetic elastic solid.
+\newblock \emph{International Journal of Engineering Science}, 1, 1963.
+
+\bibitem[Savit(1988)]{dobrin_88}
+M.~B.~Dobrin e~C.~H.~Savit.
+\newblock \emph{Introduction to Geophysical Prospecting}.
+\newblock McGraw-Hill, 1988.
+
+\bibitem[Farlow(1993)]{farlow_93}
+S.~J. Farlow.
+\newblock \emph{Partial Differential Equations for Scientists and Engineers}.
+\newblock Dover, 1993.
+
+\bibitem[Fatianov and Mikhailenko(1989)]{Mikhailenko_89}
+A.G. Fatianov and B.G. Mikhailenko.
+\newblock Numerically-analytical method for calculation of theoretical
+  seismograms in layered-inhomogeneous anelastic media.
+\newblock \emph{In Proceedings of the 7 th International Mathematical
+  Geophysics Seminar held at the Free University of Berlin}, 1989.
+
+\bibitem[Griffiths(1999)]{griffiths}
+D.~J. Griffiths.
+\newblock \emph{Introduction to Electrodynamics}.
+\newblock Prentice-Hall, 1999.
+
+\bibitem[Lang(1986)]{lang_1986}
+S.~Lang.
+\newblock \emph{Introduction to Linear Algebra}.
+\newblock Springer, 1986.
+
+\bibitem[Lebedev and Cloud(2003)]{lebedev_2003}
+L.~P. Lebedev and M.~J. Cloud.
+\newblock \emph{Tensor Analysis}.
+\newblock World Scientific Publishing, 2003.
+
+\bibitem[Mikhailenko and Soboleva(1997)]{mikhailenko_97}
+B.~G. Mikhailenko and O.~N. Soboleva.
+\newblock Mathematical modeling of seismomagnetic efects arising in the seismic
+  wave motion in the earth's constant magnetic field.
+\newblock \emph{Appl. Math. Lett.}, 10\penalty0 (3):\penalty0 47--51, 1997.
+
+\bibitem[Miranda(2016)]{miranda_2016}
+M.~R. S.~T. Miranda.
+\newblock \emph{M\'etodo Matricial em Modelagem Poroel\'astica: Modelo de
+  Biot-JKD}.
+\newblock UENF, 2016.
+
+\bibitem[Novacki(1983)]{Novacki_83}
+W.~Novacki.
+\newblock Electromagnetic efects in solid bodies.
+\newblock \emph{In Panstwowe Wydawnictwo Naukowe}, 10, 1983.
+
+\bibitem[Oliveira(2018)]{oliveira_2018}
+I.~B. Oliveira.
+\newblock \emph{Modelagem de Propaga\c{c}\~ao das Ondas El\'asticas em Meios
+  Porosos 1D: Modelo de Biot vs. Biot-JKD}.
+\newblock UENF, 2018.
+
+\bibitem[Pinho(2018)]{pinho_2018}
+D.~C. Pinho.
+\newblock \emph{Fundamentos de Magneto-Elasticidade}.
+\newblock UENF, 2018.
+
+\bibitem[Pride(1994)]{pride_94}
+S.~Pride.
+\newblock Governing equations for the coupled electromagnetics and acustics of
+  porous media.
+\newblock \emph{Physical Review B}, 1994.
+
+\bibitem[Ursin(1983)]{Ursin-1983}
+B.~Ursin.
+\newblock Review of elastic and electromagnetic wave propagation in
+  horizontally layered media.
+\newblock \emph{The Leading Edge}, 48, 08 1983.
+
+\bibitem[Weyl(1919)]{weyl_19}
+H.~Weyl.
+\newblock Ausbreitung elektromagnetischen wellen ueber einem ebenen leiter.
+\newblock \emph{Annalen der Physik}, 1919.
+
+\bibitem[White and Zhou(2006)]{White_Zhou_2006}
+B.S. White and M.~Zhou.
+\newblock Eletroseismic prospecting in layered media.
+\newblock \emph{Society for Industrial and Applied Mathematics}, 67\penalty0
+  (1):\penalty0 69--98, 2006.
+
+\end{thebibliography}
 
 \end{document}

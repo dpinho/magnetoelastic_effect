@@ -1,6 +1,8 @@
 \chapter{Fundamentos de eletromagnetismo}\label{sec.fund_eletr}
 
 \section{Introdução}
+Neste cap\'itulo \'e apresentado conceitos fundamentais sobre eletromagnetismo considerados importantes para o entendimento do efeito magneto-el\'astico. Partimos de fatos que foram observados primeiramente de forma experimental, como as leis de Gauss para o fluxo el\'etrico e fluxo magn\'etico, a lei de Faraday e a lei de Amp\`ere. O conhecimento dessas leis \'e a base para o desenvolvimento matem\'atico (realizado por Maxwell) dos fen\^omenos eletromagn\'eticos, o que gerou um sistema de EDP's conhecidas como equa\c{c}\~oes de Maxwell.    
+
 
 \section{Fatos experimentais}
 
@@ -9,7 +11,7 @@ De acordo com \cite{jackson_classical_1999} e \cite{sommerfeld_52} , os conceito
 \begin{equation}\label{eq.forc_elet}
 \textbf{F}_e=k\,\frac{q_1\,q_2}{||\textbf{x}_1-\textbf{x}_2||^2}\frac{\textbf{x}_1-\textbf{x}_2}{||\textbf{x}_1-\textbf{x}_2||},
 \end{equation}
-onde $q_i$ são as cargas elétricas (campos escalares) presentes nos pontos $\textbf{x}_i$, respectivamente, $k$ (campo escalar) é uma constante de proporcionalidade cujo valor depende do sistema de unidades de medida adotado, $||\textbf{x}_1-\textbf{x}_2||^2$ é a distância Euclidiana entre as cargas e $\textbf{F}$ é a força elétrica exercida pela carga $q_1$ sobre a carga $q_2$. As notações em negrito representam campos vetorias pertencentes ao espaço $\mathbb{R}^3$, e o vetor normal que fornece a direção de interação entre as cargas é dado por $(\textbf{x}_1-\textbf{x}_2)/||\textbf{x}_1-\textbf{x}_2||$.
+onde $q_i$ são as cargas elétricas (campos escalares) presentes nos pontos $\textbf{x}_i$, respectivamente, $k$ (campo escalar) é uma constante de proporcionalidade cujo valor depende do sistema de unidades de medida adotado, $||\textbf{x}_1-\textbf{x}_2||^2$ é o quadrado da distância Euclidiana entre as cargas e $\textbf{F}$ é a força elétrica exercida pela carga $q_1$ sobre a carga $q_2$. As notações em negrito representam campos vetorias pertencentes ao espaço $\mathbb{R}^3$, e o vetor normal que fornece a direção de interação entre as cargas é dado por $(\textbf{x}_1-\textbf{x}_2)/||\textbf{x}_1-\textbf{x}_2||$.
 
 O campo elétrico $\textbf{E}$ é definido como sendo a força elétrica por unidade de carga em um determinado ponto que contém a carga de prova $q_2$, portanto é uma função vetorial que depende da posição da carga de prova em relação à carga fonte $q_1$, ou seja,
 \begin{equation}\label{eq.camp_elet}
@@ -37,7 +39,7 @@ como podemos observar na figura \ref{fig.camp_eletr} simulando um sistema de coo
 %\label{fig.mossul}
 %\end{figure}
 
-Num sistema com mais de uma carga fonte produzindo campos elétricos, foi observado experimentalmente que o campo elétrico total atuando num ponto $\textbf{x}$ é simplesmente o somatório dos campos produzidos por cada carga, o que ficou conhecido como a \textit{Superposição Linear} e pode ser expressada na forma
+Num sistema com mais de uma carga fonte produzindo campos elétricos, foi observado experimentalmente que o campo elétrico total atuando num ponto $\textbf{x}$ é simplesmente o somatório dos campos produzidos por cada carga, o que ficou conhecido como a \textit{Superposição Linear} e pode ser expressa na forma
 \begin{equation*}
 \textbf{E}=k\,\sum_{i=1}^{n}q_i\,\frac{\textbf{x}_i-\textbf{x}}{||\textbf{x}_i-\textbf{x}||^3}.
 \end{equation*} 
@@ -80,7 +82,7 @@ Considere uma carga pontual positiva $q$ localizada no centro de uma esfera imag
 \begin{equation*}
 E=\frac{q}{4\pi\epsilon_0\,r^2},
 \end{equation*}
-assim o fluxo elétrico é calculado usando a equação \ref{eq.fluxo_eletr}.
+onde $\epsilon_0$ \'e a \textit{permissividade el\'etrica do meio} e assim o fluxo elétrico é calculado usando a equação \ref{eq.fluxo_eletr}.
 \begin{align*}
 \Phi_\textbf{E}&=\oiint_S\textbf{E}\cdot\textit{d}\textbf{A}\\
 &=\oiint_S\textbf{E}\cdot\textbf{n}\,\textit{d}A\\
@@ -153,7 +155,7 @@ Conforme podemos ver na figura \ref{fig.flux_elet_magn}, a equação \ref{eq.gau
 \end{figure}
 
 \subsection{A Lei de Ampère}\label{sec.lei_ampere}
-Correntes elétricas podem ser produzidas por cargas elétricas que se movem num fio condutor. Essas correntes elétricas são fontes de campos magnéticos $d\,\textbf{B}$, num determinado ponto $\mathbf{x}$, e que podem ser calculados em função da corrente $I$ num intervalo infinitesimal $d\,\textbf{l}$ do fio. Visualização na figura \ref{fig.corrente_fio}. A fonte de corrente infinitesimal é dada por $I\,d\,\textbf{l}$ e $r$ é a distância entre o ponto de aplicação do campo magnético e a fonte de corrente infinitesimal. O vetor $\textbf{n}$ é o vetor normal que aponta na direção de $\mathbf{x}$ e o vetor $d\,\textbf{l}$ aponta na direção e sentido da corrente $I$. Repare ainda que o campo magnético depende do ângulo $\theta$ entre $\mathbf{n}$ e $d\mathbf{l}$.
+Correntes elétricas podem ser produzidas por cargas elétricas que se movem num fio condutor. Essas correntes elétricas são fontes de campos magnéticos $d\,\textbf{B}$, num determinado ponto $\mathbf{x}$, e que podem ser calculadas em função da corrente $I$ num intervalo infinitesimal $d\,\textbf{l}$ do fio. Visualização na figura \ref{fig.corrente_fio}. A fonte de corrente infinitesimal é dada por $I\,d\,\textbf{l}$ e $r$ é a distância entre o ponto de aplicação do campo magnético e a fonte de corrente infinitesimal. O vetor $\textbf{n}$ é o vetor normal que aponta na direção de $\mathbf{x}$ e o vetor $d\,\textbf{l}$ aponta na direção e sentido da corrente $I$. Repare ainda que o campo magnético depende do ângulo $\theta$ entre $\mathbf{n}$ e $d\mathbf{l}$.
 \begin{figure}
 \centering
 \includegraphics[scale=1.1]{corrente_fio}
@@ -254,7 +256,7 @@ onde o vetor área é $\textbf{A}=A\textbf{n}$, $\textbf{n}$ é o vetor normal �
 \end{equation}
 medido em \textit{Weber}, $T/m^2$. 
 
-Em 1831, Faraday descobriu que se pode criar um campo elétrico variando um campo magnético em função do tempo num fenômeno que foi batizado de \textit{indução eletromagnética}. Um dos experimentos de Faraday (figura \ref{fig.exper_faraday}) consiste em movimentar um ímã dentro de uma bobina feita de fio condutor onde se pode observar a geração de uma corrente elétrica, como se a bobina estivesse conectada a fonte de força eletromotriz. O experimento mostra que a força eletromotriz induzida é proporcional à taxa (negativa) de variação do fluxo magnético através da bobina, a \textit{lei de Faraday} é
+Em 1831, Faraday descobriu que se pode criar um campo elétrico variando um campo magnético em função do tempo num fenômeno que foi batizado de \textit{indução eletromagnética}. Um dos experimentos de Faraday (simbolizado pela figura \ref{fig.exper_faraday}) consiste em movimentar um ímã dentro de uma bobina feita de fio condutor onde se pode observar a geração de uma corrente elétrica, como se a bobina estivesse conectada \`a fonte de força eletromotriz. O experimento mostra que a força eletromotriz induzida é proporcional à taxa (negativa) de variação do fluxo magnético através da bobina, a \textit{lei de Faraday} é
 \begin{equation*}
 \varepsilon=-\frac{d\phi_\mathbf{B}}{dt}.
 \end{equation*}

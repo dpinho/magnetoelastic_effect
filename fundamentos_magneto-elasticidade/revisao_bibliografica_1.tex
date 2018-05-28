@@ -1,0 +1,81 @@
+\chapter{Revis\~ao Bibliogr\'afica}
+
+Em modelagem matem\'atica e computacional podemos realizar simula\c{c}\~oes num\'ericas e obter resultados te\'oricos os quais, muitas vezes, podem ser confrontados com os experimentos reais para auxiliar o estabelecimento da teoria que est\'a sendo desenvolvida. Desta forma, podemos verificar em \cite{surkov_97} a observa\c{c}\~ao de uma s\'erie de respostas eletromagn\'eticas e el\'asticas em meios geof\'isicos devidas a explos\~oes e terremotos:
+\begin{enumerate}
+\item anomalias locais no campo magn\'etico da Terra ap\'os explos\~ao;
+\item efeitos de indu\c{c}\~ao devidos a ondas s\'ismicas (emitida por explos\~ao ou terremoto), onde os dist\'urbios geomagn\'eticos podem se propagar com a onda s\'ismica por longas dist\^ancias;
+\item sondagem das caracter\'isticas mecano-el\'etricas da crosta utilizando ondas s\'ismicas (explos\~oes ou terremotos distantes);
+\item estudo de dist\'urbios magn\'eticos de frequ\^encia muito baixa (ULF - Ultra Low Frequency) em regi\~oes sismicamente ativas.
+\end{enumerate}
+Podemos verificar tamb\'em a dedu\c{c}\~ao de f\'ormulas emp\'iricas que simulam numericamente as respostas observadas nesses experimentos. Os itens (1) e (2) s\~ao de maior import\^ancia para esta monografia e est\~ao detalhados a seguir.
+
+\section{Efeito Sismo-Magn\'etico}
+
+De acordo com \cite{stacey_64}, o campo magn\'etico residual observado pr\'oximo a uma explos\~ao no solo pode ser atribu\'ido ao efeito s\'ismico-magn\'etico, o qual consiste na magnetiza\c{c}\~ao ou desmagnetiza\c{c}\~ao de rochas compostas por elementos ferromagn\'eticos. O meio \'e magnetizado quando oscila durante a passagem de uma onda s\'ismica gerada por uma explos\~ao.
+
+Para zona el\'astica, fora da zona de destrui\c{c}\~ao do meio perto da explos\~ao, existe uma rela\c{c}\~ao emp\'irica entre o incremento da magnetiza\c{c}\~ao $\Delta\,\mathbf{J}$ e a amplitude radial da tens\~ao $\tau_r$,
+\begin{equation}\label{eq.momen_mag}
+\Delta\,\mathbf{J}=\frac{\mathbf{J}\,\tau_r}{A},
+\end{equation}
+onde $\mathbf{J}$ \'e a magnetiza\c{c}\~ao inicial do meio e $A$ \'e um par\^ametro emp\'irico. O valor da tens\~ao $\tau_r$ diminui com a dist\^ancia $r$ a partir do ponto de explos\~ao de acordo com a rela\c{c}\~ao
+\begin{equation}
+\tau_r=\tau_*\frac{a_0}{r},
+\end{equation}
+onde $a_0$ \'e o raio da zona n\~ao el\'astica e $\tau_*$ \'e o limite de ruptura da rocha. Segundo \cite{surkov_89a}, podemos encontrar a solu\c{c}\~ao para a EDO \ref{eq.momen_mag} considerando que a tens\~ao depende do raio e obter as seguintes equa\c{c}\~oes para o campo magn\'etico residual,
+\begin{align}\label{eq.camp_mag_empirico}
+\mathbf{B}&=\frac{\mu_0\tau_*a_0}{2\,A\,r}\left(1-\frac{a_0^2}{r^2}\right)\left(\frac{3\,(\mathbf{J}\cdot \mathbf{r})\,\mathbf{r}}{r^2}-\mathbf{J}\right),\quad\text{se}\quad a_0\leq r\leq a,\\\nonumber\\
+\mathbf{B}&=\frac{\mu_0\tau_*a_0(a^2-a_0^2)}{2\,A\,r^3}-\left(\frac{3\,(\mathbf{J}\cdot \mathbf{r})\,\mathbf{r}}{r^2}-\mathbf{J}\right),\quad\text{se}\quad r>a.
+\end{align}
+Onde $\mu_0$ \'e a permeabilidade magn\'etica no v\'acuo e $a$ \'e o raio da frente da onda el\'astica. Na figura \ref{fig.decai_camp_mag} podemos ver um gr\'afico cont\'inuo mostrando o decaimento do campo magn\'etico $\mathbf{B}(r)$ obtido num experimento de explos\~ao denominado \textit{MASSA}, utilizando TNT. Os detalhes desse experimento podem ser encontrados em \cite{yerzhanov_85}. Ainda na figura \ref{fig.decai_camp_mag}, podemos observar um gr\'afico tracejado mostrando o decaimento do campo magn\'etico atrav\'es de simula\c{c}\~oes num\'ericas, utilizando a equa\c{c}\~ao \ref{eq.camp_mag_empirico} com os seguintes par\^ametros: $\tau_*=0.1\,GPa$, $A=1\,GPa$, $a_0=100\,m$ e $J=0.12\frac{A}{m}$. A diferen\c{c}a entre as curvas em $r<0.5\,Km$ pode ser causada por outros mecanismos tamb\'em discutidos em \cite{surkov_97}.
+\begin{figure}
+\centering
+\includegraphics[scale=.7]{grafico_campo_magnetico}
+\caption{\textit{Decaimento do campo magn\'etico residual em fun\c{c}ao do raio. O gr\'afico cont\'inuo representa a decaimento medido ap\'os a explos\~ao MASSA e o gr\'afico tracejado \'e o resultado obtido atrav\'es de simula\c{c}\~oes num\'ericas.}}
+\label{fig.decai_camp_mag}
+\end{figure}
+
+\section{Efeitos de Indu\c{c}\~ao devidos a Ondas S\'ismicas}
+
+Altera\c{c}\~oes no campo geomagn\'etico podem ser geradas  pela passagem de uma onda s\'ismica emitida por terremoto ou explos\~ao, conforme preconizado por v\'arios autores como \cite{knopoff_55}, \cite{eringen_1963}, \cite{guglielmi_86a} e \cite{guglielmi_86b}. Essas altera\c{c}\~oes no campo geomagn\'etico podem viajar junto com a onda s\'ismica atrav\'es longas dist\^ancias, e s\~ao geradas por correntes de indu\c{c}\~ao j\'a que a onda el\'astica faz o meio condutivo oscilar na presen\c{c}a do campo geomagn\'etico. As equa\c{c}\~oes quasi-estacion\'arias de Maxwell descrevem esse efeito de indu\c{c}\~ao, onde a perturba\c{c}\~ao externa do campo geomagn\'etico acontece na vizinhanca da frente de onda s\'ismica e \'e dada por $\nabla\times(\mathbf{v}\times\mathbf{H}_0)$, onde $\mathbf{v}$ \'e a velocidade de deslocamento do meio e $\mathbf{H}_0$ \'e o campo geomagn\'etico. 
+
+Segundo \cite{surkov_89b}, existem duas diferentes fases de espalhamento de correntes de indu\c{c}\~ao geradas por ondas s\'ismicas longitudinais se propagando em meios condutivos. A primeira fase se refere \`a perturba\c{c}\~ao geomagn\'etica que se espalha de acordo com leis da difusividade, ou seja, s\~ao mais r\'apidas que a frente de onda s\'ismica. A segunda fase come\c{c}a depois de determinado tempo, quando a onda s\'ismica longitudinal passa a se propagar junto com efeito de difus\~ao. Assim, a perturba\c{c}\~ao geomagn\'etica passa a se localizar na vizinhanca da frente de onda s\'ismica, com a velocidade desta. A perturba\c{c}\~ao geomagn\'etica se propaga um pouco \`a frente da onda s\'ismica, e \'e tratada como um esp\'ecie de precurssora. Na figura \ref{fig.onda_magnetoelastica} podemos observar uma perturba\c{c}\~ao na componente vertical do campo geomagn\'etico medida a uma dist\^ancia de $5\,Km$ da fonte, que neste exemplo \'e uma onda longitudinal emitida por explos\~ao no subsolo. A flecha indica a chegada da onda s\'ismica. \`A esquerda da flecha podemos observar a chegada de um precurssor magn\'etico, gerado pela difus\~ao da corrente de indu\c{c}\~ao excitada \`a frente da onda el\'astica. A amplitude desse precurssor decresce \`a medida que se afasta da frente de onda s\'ismica, a qual funciona como uma fonte din\^amica de perturba\c{c}\~ao geomagn\'etica.
+\begin{figure}
+\centering
+\includegraphics[scale=1]{onda_magnetoelastica}
+\caption{\textit{Perturba\c{c}\~ao da componente vertical do campo geomagn\'etico causada por uma onda s\'ismica longitudinal.}}
+\label{fig.onda_magnetoelastica}
+\end{figure}
+Contudo, a detec\c{c}\~ao experimental de efeitos sismo-magn\'eticos n\~ao \'e uma tarefa f\'acil, de acordo com \cite{surkov_97}, porque o sinal de indu\c{c}\~ao seria camuflado pelo efeito sismogr\'afico, ou seja, a vibra\c{c}\~ao dos sensores magn\'eticos sob a\c{c}\~ao das ondas s\'ismicas. Assim, durante o tratamento das respostas, o sinal sismo-magn\'etico deve ser isoldado de ru\'idos e perturba\c{c}\~oes externas.
+
+\section{Efeito Sismo-Magn\'etico e Terremotos}
+
+As investiga\c{c}\~oes sismo-magn\'eticas desempenham um papel importante nas manifesta\c{c}\~oes de terremotos. Segundo \cite{Cukavac_2008}, levantamentos sismo-magn\'eticos repetitivos podem revelar varia\c{c}\~oes temporais nas propriedades das rochas devidas ao ac\'umulo de tens\~ao, e possivelmente, podemos observar altera\c{c}\~oes no campo geomagn\'etico em locais suscet\'iveis a terremotos. A distribui\c{c}\~ao dessas varia\c{c}\~oes, atrav\'es de medi\c{c}\~oes sucessivas, exibem padr\~oes de caracter\'isticas que podem estar relacionadas com a sismicidade do local durante um periodo de tempo. No entanto, se o levantamento dessas altera\c{c}\~oes pode ser considerado como o precurssor de um tereemoto, \'e ainda um tema controverso.
+
+Uma possibilidade de investiga\c{c}\~ao \'e a compara\c{c}\~ao de dados sismo-magn\'eticos com dados geod\'esicos com o objetivo de investigar de forma eficaz a sismicidade de uma regi\~ao:
+\begin{center}
+For\c{c}as tect\^onicas. $\Rightarrow$\\
+Deforma\c{c}\~ao de rochas. $\Rightarrow$\\
+Aumento da deforma\c{c}\~ao. $\Rightarrow$\\
+Altera\c{c}\~ao da magnetiza\c{c}\~ao das rochas (efeito piezo-magn\'etico). $\Rightarrow$\\
+Altera\c{c}\~oes locais no campo geomagn\'etico.
+\end{center}
+Decadas de observa\c{c}\~oes de determinadas regi\~oes associadas \`as considera\c{c}\~oes teoricas tem rendido uma boa metodologia nos estudos tect\^onicos-magn\'eticos. \'E comumente aceito que uma rede de esta\c{c}\~oes de medi\c{c}~oes \'e necess\'aria para grava\c{c}\~ao dos fen\^omenos precursores de terremotos.
+
+Uma dessas regi\~oes de investiga\c{c}\~ao \'e a Montanha Kopaonik, na S\'ervia, que \'e sismicamente ativa e foi alvo de levantamentos sismo-magn\'eticos por mais de vinte anos com magnetr\^onomos de $\pm\,0.2 nT$ de acur\'acia. Dentre os resultados encontrados podemos observar medi\c{c}\~oes realizadas no per\'iodo entre abril de 1983 e abril de 1984, com a ocorr\^encia de dois terremotos em setembro de 1983 com magnitudes 4.9 e 5.3. Na figura \ref{fig.camp_mag_ant_apo}, podemos observar algumas altera\c{c}\~oes no campo geomagn\'etico imediatamente antes e ap\'os esses dois terremotos. De acordo com \cite{Rikitake_80}, geralmente o padr\~ao das medi\c{c}\~oes seguem a regra de que a distribui\c{c}\~ao espacial do campo geomagn\'etico se altera em intervalos sucessivos de tempo, e as anomalias tendem a exibir sinais reversos enquanto o mapeamento espacial permanece mais ou menos o mesmo. Este fen\^omeno est\'a de acordo com os processos de acumula\c{c}\~ao de tens\~ao e relaxamento que ocorrem antes e ap\'os um terremoto e suporta a possibilidade de que a varia\c{c}\~ao observada no campo geomagn\'etico \'e de origem tect\^onica-magn\'etica.
+\begin{figure}
+\centering
+\includegraphics[scale=.68]{camp_mag_antes_apos}
+\caption{\textit{Altera\c{c}\~ao da intensidade do campo geomagn\'etico local antes e ap\'os dois terremotos.}}
+\label{fig.camp_mag_ant_apo}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+

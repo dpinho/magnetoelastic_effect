@@ -11,7 +11,7 @@ Segundo \cite{erigen_1963}, \'e poss\'ivel investigar algumas intera\c{c}\~oes d
 \section{Equa\c{c}\~oes Constitutivas do Meio}
 
 Seguindo a nota\c{c}\~ao apresentada em \cite{erigen_1963}, temos que os vetores que representam os campos eletromagn\'eticos no meio (propriamente dito) de propaga\c{c}\~ao das ondas, s\~ao representados por $\mathbf{E}^0$, $\mathbf{D}^0$, $\mathbf{B}^0$, $\mathbf{H}^0$ e
-$\mathbf{J}^0$. Essas mesmas quantidades, quando se referirem \`as medidas observadas em laborat\'orio s\~ao denotadas apenas retirando-se o sobre-escrito $^0$. Transferindo essa nota\c{c}\~ao para as equa\c{c}\~oes \ref{eq.D_funcao_E} e \ref{eq.B_funcao_H} temos
+$\mathbf{J}^0$. Essas mesmas quantidades, quando se referirem \`as medidas observadas em laborat\'orio s\~ao denotadas apenas retirando-se o sobrescrito $^0$. Transferindo essa nota\c{c}\~ao para as equa\c{c}\~oes \ref{eq.D_funcao_E} e \ref{eq.B_funcao_H} temos
 \begin{equation}\label{eq.constitutivas_parciais}
 \mathbf{D}^0=\epsilon\,\mathbf{E}^0\quad\text{e}\quad\mathbf{B}^0=\mu\,\mathbf{H}^0.
 \end{equation}
@@ -22,7 +22,7 @@ Em muitos materiais, a densidade de corrente el\'etrica \'e linearmente dependen
 \end{equation}
 onde $\sigma$ \'e a \textit{condutividade} do meio. As equa\c{c}\~oes \ref{eq.constitutivas_parciais} juntamente com a equa\c{c}\~ao \ref{eq.lei_ohm} s\~ao denominadas \textit{equa\c{c}\~oes eletromagn\'eticas contitutivas do meio}, quando o mesmo \'e isotr\'opico, homog\^eneo e se encontra em repouso. As mesmas equa\c{c}\~oes se mant\^em quando o meio se move por ocasi\~ao da passagem de uma onda s\'ismica. 
 
-Experimentalmente, para pequenas velocidades, os campos eletromagn\'eticos do meio pr\'oprio se relacionam com aqueles medidos em laborat\'orio atrav\'es das rela\c{c}\~oes dadas por \cite{eringen_1963}
+Experimentalmente, para pequenas velocidades, os campos eletromagn\'eticos do meio se relacionam com aqueles medidos em laborat\'orio atrav\'es das rela\c{c}\~oes dadas por \cite{eringen_1963}
 \begin{equation}\label{eq.vet_elet_lab}
 \begin{aligned}
 \mathbf{E}^0&=\mathbf{E}+\mathbf{v}\times\mathbf{B}\\
@@ -101,19 +101,19 @@ Aplicando o teorema do Divergente nas duas primeiras equa\c{c}\~oes, e aplicando
 \oint_C(\mathbf{H}-\mathbf{v}\times\mathbf{D})\cdot d\mathbf{C}&=\frac{d}{dt}\iint_S\mathbf{D}\cdot d\mathbf{S}+\iint_S\left[\mathbf{J}_f-\rho_f\mathbf{v}\right]\cdot d\mathbf{S}\\\nonumber\\\label{eq.interface_6}
 \oint_C(\mathbf{E}+\mathbf{v}\times\mathbf{B})\cdot d\mathbf{C}&=-\frac{d}{dt}\iint_S\mathbf{B}\cdot d\mathbf{S},
 \end{align} 
-onde nas duas \'ultimas equa\c{c}\~oes usamos a rela\c{c}\~ao abaixo, sendo $\mathbf{A}$ um vetor qualquer,
+onde nas duas \'ultimas equa\c{c}\~oes usamos a rela\c{c}\~ao abaixo, sendo $\mathbf{A}$ um campo eletromagn\'etico,
 \begin{equation*}
 \frac{d}{dt}\iint_S\mathbf{A}\cdot d\mathbf{S}=\iint_S\left[\frac{\partial}{\partial t}\mathbf{A}+\mathbf{v}(\nabla\cdot\mathbf{A})-\nabla\times(\mathbf{v}\times\mathbf{A})\right]\cdot d\mathbf{S}.
 \end{equation*}
 Acompanhando pela figura \ref{fig.cond_contorno} juntamente com a argumenta\c{c}\~ao apresentada na subse\c{c}\~ao \ref{sec.condicoes_contorno_geral}, temos que o salto da componente normal de cada um dos campos, magn\'etico e densidade de fluxo el\'etrico, deduzidos a partir das equa\c{c}\~oes \ref{eq.interface_3} e \ref{eq.interface_4}, s\~ao
 \begin{equation}
-\left[\left[\mathbf{D}\right]\right]_n=\sigma_f\qquad\text{e}\qquad\left[\left[\mathbf{B}\right]\right]_n=0.
+\left[\left[\mathbf{D}\right]\right]_n=\varsigma_f\qquad\text{e}\qquad\left[\left[\mathbf{B}\right]\right]_n=0.
 \end{equation}  
 Analogamente, temos o salto das componentes tangenciais dos campos el\'etrico e magn\'etico auxiliar, deduzidos a partir das equa\c{c}\~oes \ref{eq.interface_5} e \ref{eq.interface_6},
 \begin{equation}
-\left[\left[\mathbf{H}-\mathbf{v}\times\mathbf{D}\right]\right]_m=K_t-\sigma_t\qquad\text{e}\qquad\left[\left[\mathbf{E}+\mathbf{v}\times\mathbf{B}\right]\right]_m=0,
+\left[\left[\mathbf{H}-\mathbf{v}\times\mathbf{D}\right]\right]_m=K_t-\varsigma_t\qquad\text{e}\qquad\left[\left[\mathbf{E}+\mathbf{v}\times\mathbf{B}\right]\right]_m=0,
 \end{equation}
-onde $K$ \'e a magnitude da densidade superficial de corrente e $\sigma$ \'e a magnitude da densidade superficial de carga.
+onde $K$ \'e a magnitude da densidade superficial de corrente e $\varsigma$ \'e a magnitude da densidade superficial de carga.
 
 A \'ultima equa\c{c}\~ao no estudo das condi\c{c}\~oes de fronteira entre camadas segue do princ\'ipio de conserva\c{c}\~ao de cargas el\'etricas. A quantidade total de cargas concentradas num determinado volume \'e dada pela equa\c{c}\~ao \ref{eq.densidade_carga}, e qualquer varia\c{c}\~ao na quantidade de carga desse volume \'e devida a uma corrente el\'etrica, dada pela equa\c{c}\~ao \ref{eq.densidade_corrente}, que atravessa a superf\'icie que est\'a enclausurando o volume. Assim,  o princ\'ipio de conserva\c{c}\~ao de cargas estabelece que
 \begin{equation}\label{eq.conservacao_carga_1}
@@ -127,7 +127,7 @@ e como a equa\c{c}\~ao se mant\'em para qualquer tipo de volume, temos
 \begin{equation*}
 \frac{\partial\rho_e}{\partial t}=-\nabla\cdot\mathbf{J}.
 \end{equation*}
-Esta \'e a \textit{equa\c{c}\~ao da continuidade} ou equa\c{c}\~ao da \textit{conserva\c{c}\~ao local de carga}, e pode ser derivada a partir das equa\c{c}\~oes de Maxwell por ser uma consequ\^encia das leis da eletrodin\^amica. 
+Esta \'e a \textit{equa\c{c}\~ao da continuidade} ou equa\c{c}\~ao da \textit{conserva\c{c}\~ao local de carga}, e pode ser deduzida a partir das equa\c{c}\~oes de Maxwell por ser uma consequ\^encia das leis da eletrodin\^amica. 
 
 Usando a conserva\c{c}\~ao da carga na forma dada pela equa\c{c}\~ao \ref{eq.conservacao_carga_1}, e aplicando ao volume $V$ analogamente ao que foi feito com a equa\c{c}\~ao \ref{eq.interface_3}, e substituindo a express\~ao para $\mathbf{J}$ dada na equa\c{c}\~ao \ref{eq.constitutiva_3}, temos a \'ultima equa\c{c}\~ao para condi\c{c}\~ao de contorno
 \begin{equation*}
@@ -152,18 +152,18 @@ Como estamos assumindo deforma\c{c}\~oes infinitesimais e o volume \'e o mesmo p
 \begin{equation*}
 \rho\frac{d^2u_i}{dt^2}=\sum_{j=1}^3\frac{\partial\tau_{ji}}{\partial x_j}+f_i+F_{Li}\quad \text{para}\quad i=1,2,3
 \end{equation*}
-s\~ao as equa\c{c}\~oes do movimento de Cauchy como o acoplamento da for\c{c}a de Lorentz.
+s\~ao as equa\c{c}\~oes do movimento de Cauchy com o acoplamento da for\c{c}a de Lorentz.
 
-Para derivar as condi\c{c}\~oes de fronteira, vamos primeiramente escrever a for\c{c}a de Lorentz em fun\c{c}\~ao do tensor de tens\~oes eletromagn\'eticas de Maxwell $\tau_{ij}^e$, e em fun\c{c}\~ao do momento eletromagn\'etico $g_i$,
+Para deduzir as condi\c{c}\~oes de fronteira, vamos primeiramente escrever a for\c{c}a de Lorentz em fun\c{c}\~ao do tensor de tens\~oes eletromagn\'eticas de Maxwell $\tau_{ij}^e$, e em fun\c{c}\~ao do momento eletromagn\'etico $g_i$,
 \begin{equation}
 F_{Li}=\frac{\partial}{\partial x_i}\tau_{ij}^e-\frac{\partial}{\partial t}g_i.
 \end{equation}
-onde $\tau_{ij}^e$ e $g_i$ sao dados por
+onde $\tau_{ij}^e$ e $g_i$ s\~ao dados por
 \begin{align*}
 \tau_{ij}^e&=E_i\,D_j+H_i\,B_j-\frac{1}{2}(E_\lambda\,D_\lambda\,+H_\lambda\,B_\lambda)\delta_{ij}\\
 \mathbf{g}&=\mathbf{D}\times\mathbf{B}.
 \end{align*}
-Podemos somar e subtrair a express\~ao abaixo na for\c{c}a de Lorentz,
+Podemos usar soma e subtra\c{c}\~ao para reescrever a for\c{c}a de Lorentz como
 \begin{equation}
 F_{Li}=\frac{\partial}{\partial x_i}\tau_{ij}^e+\frac{\partial}{\partial x_j}(g_i^e\,v_j)-\frac{\partial}{\partial t}g_i-\frac{\partial}{\partial x_j}(g_i^e\,v_j),
 \end{equation}
@@ -200,7 +200,7 @@ onde consideramos que a tens\~ao e a deforma\c{c}\~ao para  este sistema tem os 
 
 Podemos resumir o acoplamento magneto-el\'astico proposto por \cite{erigen_1963} destacando as equa\c{c}\~oes b\'asicas de campo e as condi\c{c}\~oes de contorno a serem aplicadas em s\'olidos eletromagn\'eticos e el\'asticos.
 
-\subsection{Equa\c{c}\~oes de campo}
+\subsection{Equa\c{c}\~oes de Campo}
 
 \begin{align}\label{eq.campo_dunkin_1}
 \nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{B}\\\nonumber\\\label{eq.campo_dunkin_2}

@@ -1,0 +1,259 @@
+\chapter{Condi\c{c}\~oes de Contorno do Efeito Magneto-El\'astico e o Espa\c{c}o Original}
+
+Como estamos assumindo que as propriedades materiais n\~ao se alteram no interior de cada camada da subsuperf\'icie, temos que a matriz $M^{(m)}$ \'e constante para cada camada. Essas propriedades materiais se alteram descontinuamente conforme $z$ varia de uma camada para outra atrav\'es da interface de contato entre as camadas. Nessas interfaces vamos aplicar as condi\c{c}\~oes de interface encontradas em \cite{pride_94}, onde o vetor $\mathbf{u}$, as componentes normais de $\tau$ e as componentes  tangenciais de $\mathbf{E}$ e $\mathbf{H}$ s\~ao cont\'inuas. Assim, constatamos que os vetores $\mathbf{\Phi}^{(m)}$ s\~ao cont\'inuos atrav\'es das interfaces entre as camadas.
+
+\section{Condi\c{c}\~oes de Contorno}
+Resta estabelecer condi\c{c}\~oes de contorno para os sistemas \ref{eq.matricial_1}-\ref{eq.matricial_4} no contato ar/superf\'icie, ou seja, em $z=0$. Aplicando ainda as condi\c{c}\~oes de interface encontradas em \cite{pride_94}, temos que a condi\c{c}\~ao de contorno para o sistema \ref{eq.matricial_1} \'e
+\begin{equation}\label{eq.cond_fron_1}
+\tilde{H}_2=-\frac{\epsilon_0}{q_0}\tilde{E}_1,
+\end{equation}
+onde $q_0$ \'e a vagarosidade vertical dada por \ref{eq.vagarosidade_vertical}. Esta \'e a rela\c{c}\~ao para uma onda eletromagn\'etica ascendente, e foi deduzida do fato de que n\~ao h\'a ondas eletromagn\'eticas descendentes no ar, pois todas a fontes est\~ao na subsuperf\'icie.
+Para o sistema \ref{eq.matricial_2}, a condi\c{c}\~ao de contorno \'e
+\begin{equation}\label{eq.cond_fron_2}
+\tilde{H}_1=\frac{q_0}{\mu_0}\tilde{E}_2,
+\end{equation}
+onde esta rela\c{c}\~ao tamb\'em foi deduzida do fato de que h\'a apenas ondas eletromagn\'eticas ascendentes no ar.
+Para o sistema \ref{eq.matricial_3}, as condi\c{c}\~oes de contorno s\~ao
+\begin{equation}\label{eq.cond_fron_3}
+\tilde{\tau}_{13}=\tilde{\tau}_{33}=0.
+\end{equation}
+E para o sistema \ref{eq.matricial_4}, a condi\c{c}\~ao de contorno \'e
+\begin{equation}\label{eq.cond_fron_4}
+\tilde{\tau}_{23}=0.
+\end{equation}
+Observe que para cada um dos sistemas, precisaremos de condi\c{c}\~oes de contorno adicionais para especificar uma solu\c{c}\~ao. Essas condi\c{c}\~oes surgir\~ao, por ocasi\~ao da aplica\c{c}\~ao nas equa\c{c}\~oes da magneto-elasticidade, do fato de que n\~ao h\'a ondas ascendentes em $z\rightarrow\infty$, como pudemos observar na subse\c{c}\~ao \ref{sec.ausencia_fonte} e na figura \ref{fig.ondas_em_zn}.
+
+Essas condi\c{c}\~oes de contorno s\~ao utilizadas nas equa\c{c}\~oes da magneto-elasticidade mas podem desde j\'a serem inseridas na solu\c{c}\~ao gen\'erica apresentada na subse\c{c}\~ao \ref{sec.presenca_fonte}, como foi desenvolvido por v\'arios autores como \cite{White_Zhou_2006}, \cite{Azeredo_2013}, \cite{miranda_2016} e \cite{oliveira_2018}. Tal abordagem \'e interessante por facilitar an\'alises futuras, assim, vamos escrever a solu\c{c}\~ao na superf\'icie como
+\begin{equation}\label{eq.Phi_G_AB}
+\mathbf{\Phi}(0^+)=
+\begin{pmatrix}
+G_A\mathbf{\Phi}_g\\
+G_B\mathbf{\Phi}_g
+\end{pmatrix},
+\end{equation}
+onde as matrizes $G_A$ $G_B$ s\~ao de dimens\~ao $n\times n$ e $\mathbf{\Phi}_g$ \'e um vetor de dimens\~ao $n$ formado por inc\'ognitas em $z=0$.
+Considerando o sistema \ref{eq.matricial_1}, temos
+\begin{equation*}
+\mathbf{\Phi}^{(1)}=
+\begin{pmatrix}
+\tilde{E}_1\\
+\tilde{H}_2
+\end{pmatrix}
+\end{equation*}
+e sua condi\c{c}\~ao de fronteira, quando $z=0$ \'e dada pela equa\c{c}\~ao \ref{eq.cond_fron_1}, 
+\begin{equation*}
+\tilde{H}_2=-\frac{\epsilon_0}{q_0}\tilde{E}_1.
+\end{equation*}
+Substituindo esta condi\c{c}\~ao em $\mathbf{\Phi}^{(1)}$, temos
+\begin{equation*}
+\mathbf{\Phi}^{(1)}=
+\begin{pmatrix}
+\tilde{E}_1\\\\
+-\frac{\epsilon_0}{q_0}\tilde{E}_1
+\end{pmatrix}_{z=0^+}.
+\end{equation*}
+Colocando a equa\c{c}\~ao acima no formato da equa\c{c}\~ao \ref{eq.Phi_G_AB}, temos que
+\begin{equation*}
+\mathbf{\Phi}_g^{(1)}=\tilde{E}_1,
+\end{equation*}
+\begin{equation*}
+G_A^{(1)}=1\qquad\text{e}\qquad G_B^{(1)}=-\frac{\epsilon_0}{q_0}.
+\end{equation*}
+De maneira an\'aloga, vamos escrever as solu\c{c}\~oes dos tr\^es sistemas restantes na forma dada pela equa\c{c}\~ao \ref{eq.Phi_G_AB}. Substituindo a condi\c{c}\~ao de contorno \ref{eq.cond_fron_2} no sistema \ref{eq.matricial_2}, $\mathbf{\Phi}^{(2)}$ \'e dado por
+\begin{equation*}
+\mathbf{\Phi}^{(2)}=
+\begin{pmatrix}
+\tilde{E}_2\\\\
+-\frac{q_0}{\mu_0}\tilde{E}_2
+\end{pmatrix}_{z=0^+}
+\end{equation*}
+e temos
+\begin{equation*}
+\mathbf{\Phi}_g^{(2)}=\tilde{E}_2,
+\end{equation*}
+\begin{equation*}
+G_A^{(2)}=1\qquad\text{e}\qquad G_B^{(2)}=-\frac{q_0}{\mu_0}.
+\end{equation*}
+Substituindo a condi\c{c}\~ao de contorno \ref{eq.cond_fron_3} no sistema \ref{eq.matricial_3}, $\mathbf{\Phi}^{(3)}$ \'e dado por
+\begin{equation*}
+\mathbf{\Phi}^{(3)}=
+\begin{pmatrix}
+\dot{\tilde{u}}_3\\
+0\\
+0\\
+\dot{\tilde{u}}_1
+\end{pmatrix}_{z=0^+}
+\end{equation*}
+e temos,
+\begin{equation*}
+\mathbf{\Phi}_g^{(3)}=
+\begin{pmatrix}
+\dot{\tilde{u}}_3\\
+\dot{\tilde{u}}_1
+\end{pmatrix},
+\end{equation*}
+\begin{equation*}
+G_A^{(3)}=
+\begin{pmatrix}
+1&0\\
+0&0
+\end{pmatrix}
+\qquad\text{e}\qquad G_B^{(3)}=
+\begin{pmatrix}
+0&0\\
+0&1
+\end{pmatrix}.
+\end{equation*}
+
+Substituindo a condi\c{c}\~ao de contorno \ref{eq.cond_fron_4} no sistema \ref{eq.matricial_4}, $\mathbf{\Phi}^{(4)}$ \'e dado por
+\begin{equation*}
+\mathbf{\Phi}^{(4)}=
+\begin{pmatrix}
+\dot{\tilde{u}}_2\\
+0
+\end{pmatrix}_{z=0^+}
+\end{equation*}
+e temos,
+\begin{equation*}
+\mathbf{\Phi}_g^{(4)}=\dot{\tilde{u}}_2,
+\end{equation*}
+\begin{equation*}
+G_A^{(4)}=1\qquad\text{e}\qquad G_B^{(4)}=0.
+\end{equation*}
+
+De acordo com a equa\c{c}\~ao \ref{eq.Phi}, podemos escrever
+\begin{equation*}
+\mathbf{\Phi}(0^+)=L\,\mathbf{\Psi}(0^+),
+\end{equation*}
+e substituindo as equa\c{c}\~oes \ref{eq.Psi_zero+}, \ref{eq.Phi_G_AB} e \ref{eq.matriz_L} na equa\c{c}\~ao acima, temos
+\begin{align}\label{eq.GA_Phi}
+G_A\mathbf{\Phi}_g&=\frac{1}{\sqrt{2}}\,(L_1e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s+L_1e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s)\\\nonumber
+&+\frac{1}{2}\,\left[L_1e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)+L_1e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)\right]
+\end{align}
+e
+\begin{align}\label{eq.GB_Phi}
+G_B\mathbf{\Phi}_g&=\frac{1}{\sqrt{2}}\,(L_2e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s-L_2e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s)\\\nonumber
+&+\frac{1}{2}\,\left[L_2e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)-L_2e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)\right].
+\end{align}
+Utilizando novamente as equa\c{c}\~oes \ref{eq.l1l2} e \ref{eq.l2l1}, podemos multiplicar pela esquerda a equa\c{c}\~ao \ref{eq.GA_Phi} por $L_2^\top$ e multiplicar pela esquerda a equa\c{c}\~ao \ref{eq.GB_Phi} por $L_1^\top$, deduzindo que
+\begin{align}\label{eq.LGA_Phi}
+L_2^{\top}G_A\mathbf{\Phi}_g&=\frac{1}{\sqrt{2}}\,(e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s+e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s)\\\nonumber
+&+\frac{1}{2}\,\left[e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)+e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)\right]
+\end{align}
+e
+\begin{align}\label{eq.LGB_Phi}
+L_1^\top G_B\mathbf{\Phi}_g&=\frac{1}{\sqrt{2}}\,(e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s-e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s)\\\nonumber
+&+\frac{1}{2}\,\left[e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)-e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)\right].
+\end{align}
+Subtraindo a equa\c{c}\~ao \ref{eq.LGB_Phi} da equa\c{c}\~ao \ref{eq.LGA_Phi}, temos
+\begin{equation}\label{eq.pre_phi_g}
+(L_2^{\top}G_A-L_1^\top G_B)\mathbf{\Phi}_g=\frac{2}{\sqrt{2}}\,e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s+e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B),
+\end{equation}
+E isolando $\mathbf{D}_s$ obtemos
+\begin{equation*}
+\mathbf{D}_s=\frac{1}{\sqrt{2}}\,e^{i\,\omega\,\Lambda\,z_s}(L_2^{\top}G_A-L_1^\top G_B)\,\mathbf{\Phi}_g-\frac{1}{\sqrt{2}}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B).
+\end{equation*}
+Ao multiplicar pela esquerda a equa\c{c}\~ao \ref{eq.pre_phi_g} por $e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_se^{i\,\omega\,\Lambda\,z_s}$, temos
+\begin{equation}\label{eq.pre_phi_g2}
+e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_se^{i\,\omega\,\Lambda\,z_s}(L_2^{\top}G_A-L_1^\top G_B)\mathbf{\Phi}_g=\frac{2}{\sqrt{2}}\,e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_s\mathbf{D}_s+e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_s(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B),
+\end{equation}
+e somando as equa\c{c}\~oes \ref{eq.LGA_Phi} e \ref{eq.LGB_Phi}, temos
+\begin{equation}\label{eq.pre_phi_g+}
+(L_2^{\top}G_A+L_1^\top G_B)\mathbf{\Phi}_g=\frac{2}{\sqrt{2}}\,e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s+e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B).
+\end{equation}
+Subtraindo a equa\c{c}\~ao \ref{eq.pre_phi_g+} da equa\c{c}\~ao \ref{eq.pre_phi_g2}, obtemos uma rela\c{c}\~ao para $\mathbf{\Phi}_g$, dada por 
+\begin{align*}
+\mathbf{\Phi}_g&=\left[e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_se^{i\,\omega\,\Lambda\,z_s}(L_2^{\top}G_A-L_1^\top G_B)-(L_2^{\top}G_A+L_1^\top G_B)\right]^{-1}\\
+&\,\,\cdot\,\,e^{i\,\omega\,\Lambda\,z_s}\left[\Gamma_s (L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)-(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)\right].
+\end{align*}
+Em particular, quando a fonte est\'a imediatamente abaixo da superf\'icie livre, $z_s\approx0$, temos
+\begin{equation*}
+\mathbf{\Phi}_g=\left[(\Gamma_s-I)L_2^{\top}G_A-(\Gamma_s+I)L_1^\top G_B\right]^{-1}\left[(\Gamma_s-I)L_2^\top\mathbf{S}_A-(\Gamma_s+I)L_1^\top\mathbf{S}_B\right].
+\end{equation*} 
+Ap\'os obtermos $\mathbf{\Phi}_g$, \'e poss\'ivel determinarmos todas as condi\c{c}\~oes iniciais em $z=0$, $\mathbf{D}_s$ e $\mathbf{U}_s=\Gamma\,\mathbf{D}_s$. Em seguida, podemos obter a solu\c{c}\~ao imediatamente abaixo da fonte conforme a rela\c{c}\~ao \ref{eq.Psi_descendente}. Teoricamente, a partir de agora, a solu\c{c}\~ao pode ser computada em qualquer outra profundidade utilizando a propaga\c{c}\~ao atrav\'es das camadas de acordo com a rela\c{c}\~ao \ref{eq.solucao_psi} e o salto atrav\'es das camadas usando a rela\c{c}\~ao \ref{eq.psi_matriz_salto}. No entanto, segundo \cite{White_Zhou_2006}, a propaga\c{c}\~ao de uma onda ascendente cont\'inua no sentido descendente \'e numericamente inst\'avel usando a equa\c{c}\~ao \ref{eq.solucao_psi}, pois as exponenciais complexas crescem ao inv\'es de diminuirem com a dist\^ancia. Assim, devemos obter $\mathbf{U}$ a partir de $\mathbf{D}$ usando $\Gamma_m$, ou fazer uso das matrizes de transmiss\~ao $T_m$.
+
+\section{Solu\c{c}\~ao no Espa\c{c}o Original}
+
+No processo de estabelecimento das EDP's do efeito magneto-el\'astico encontrado em \cite{pinho_2018}, a transformada de Fourier foi aplicada \`as equa\c{c}\~oes para que as mesmas fossem escritas no dom\'inio da frequ\^encia temporal. Aqui nesta monografia, aplicamos as transformadas laterais de Fourier deixando somente as derivadas em rela\c{c}\~ao \`a profundidade, para em seguida aplicar uma mudan\c{c}a de eixos coordenados, atrav\'es de uma rota\c{c}\~ao, facilitando a manipula\c{c}\~ao alg\'ebrica das equa\c{c}\~oes. Para obtermos as solu\c{c}\~oes no espa\c{c}o original, \'e necess\'ario aplicarmos os procedimentos que invertem esses procedimentos aplicados anteriormente.
+
+\subsection{Rota\c{c}\~ao Inversa}
+No cap\'itulo \ref{sec.trans_edp_2_edo}, os campos vetoriais foram rotacionados utilizando a rela\c{c}\~ao \ref{operador_rotacao}, assim vamos obter os campos no sistema de coordenadas anterior aplicando a rela\c{c}\~ao \ref{eq.rotacao_inversa}. 
+
+
+Para o campo el\'etrico, temos
+\begin{equation*}
+\dot{\hat{E}}_1=\frac{k_x}{k}\dot{\tilde{E}}_1-\frac{k_y}{k}\dot{\tilde{E}}_2\qquad
+\dot{\hat{E}}_2=\frac{k_y}{k}\dot{\tilde{E}}_1+\frac{k_x}{k}\dot{\tilde{E}}_2\qquad
+\dot{\hat{E}}_3=\dot{\tilde{E}}_3.
+\end{equation*}
+
+
+Para o campo magn\'etico auxiliar,
+\begin{equation*}
+\dot{\hat{H}}_1=\frac{k_x}{k}\dot{\tilde{H}}_1-\frac{k_y}{k}\dot{\tilde{H}}_2\qquad
+\dot{\hat{H}}_2=\frac{k_y}{k}\dot{\tilde{H}}_1+\frac{k_x}{k}\dot{\tilde{H}}_2\qquad
+\dot{\hat{H}}_3=\dot{\tilde{H}}_3.
+\end{equation*}
+
+
+Para velocidade de deslocamento do meio temos
+\begin{equation*}
+\dot{\hat{u}}_1=\frac{k_x}{k}\dot{\tilde{u}}_1-\frac{k_y}{k}\dot{\tilde{u}}_2\qquad
+\dot{\hat{u}}_2=\frac{k_y}{k}\dot{\tilde{u}}_1+\frac{k_x}{k}\dot{\tilde{u}}_2\qquad
+\dot{\hat{u}}_3=\dot{\tilde{u}}_3.
+\end{equation*}
+
+Para o tensor vamor aplicar a rota\c{c}\~ao inversa dada pela equa\c{c}\~ao \ref{eq.rot_inver_tensor},\\
+\begin{minipage}{.5\textwidth}
+\begin{align*}
+\hat{\tau}_{11}&=\frac{k_x^2}{k^2}\tilde{\tau}_{11}-2\frac{k_xk_y}{k^2}\tilde{\tau}_{12}+\frac{k_y^2}{k^2}\tilde{\tau}_{22}\\\\
+\hat{\tau}_{12}&=\frac{k_xk_y}{k^2}(\tilde{\tau}_{11}-\tilde{\tau}_{22})+\left(\frac{k_x^2-k_y^2}{k^2}\tilde{\tau}_{12}\right)\\\\
+\hat{\tau}_{22}&=\frac{k_y^2}{k^2}\tilde{\tau}_{11}+2\frac{k_xk_y}{k^2}\tilde{\tau}_{12}+\frac{k_x^2}{k^2}\tilde{\tau}_{22}
+\end{align*}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{align*}
+\hat{\tau}_{13}&=\frac{k_x}{k}\tilde{\tau}_{13}-\frac{k_y}{k}\tilde{\tau}_{23}\\\\
+\hat{\tau}_{23}&=\frac{k_y}{k}\tilde{\tau}_{13}+\frac{k_x}{k}\tilde{\tau}_{23}\\\\
+\hat{\tau}_{33}&=\tilde{\tau}_{33}.
+\end{align*}
+\end{minipage}\\
+
+
+As rela\c{c}\~oes acima podem ser simplificadas dependendo do tipo de fonte de onda s\'ismica utilizada.
+
+
+\subsection{Transformada de Hankel e Transformada Lateral de Fourier}
+
+Agora devemos inverter a transformada lateral de Fourier usando a rela\c{c}\~ao \ref{eq.trans_fourier_2} para obtermos as solu\c{c}\~oes no espa\c{c}o real. Observe que as matrizes das equa\c{c}\~oes \ref{eq.matricial_1} a \ref{eq.matricial_4} dependem somente da vagarosidade $\gamma$, ou da magnitude $k$ do vetor $(k_x,k_y)^\top$ e n\~ao da dire\c{c}\~ao desse vetor. No entanto, fatores contendo $k_x$ e $k_y$ foram introduzidos pela transformada dada pela rela\c{c}\~ao \ref{eq.trans_fourier_1}. Assim, para aplicar a transformada lateral inversa de Fourier de forma pr\'atica, vamos utilizar a seguinte rela\c{c}\~ao onde $\hat{g}(k)$ \'e uma fun\c{c}\~ao qualquer e $m_1$ e $m_2$ s\~ao inteiros positivos, 
+\begin{equation}\label{eq.transf_auxiliar}
+\Theta_{m_1,m_2}[k_x^{m_1}\,k_y^{m_2}\,\hat{g}(k)]=(-i)^{m_1+m_2}\left(\frac{\partial}{\partial\,x}\right)^{m_1}\left(\frac{\partial}{\partial\,y}\right)^{m_2}\frac{1}{2\,\pi}\int_{\mathbb{R}}\hat{g}(k)\,e^{i\,k}\,dk.
+\end{equation}
+Escrevendo as coordenadas cartesianas como coordenadas cil\'indricas, temos
+\begin{equation}
+x_1=r\,\cos\theta\qquad x_2=r\,\text{sen}\theta\qquad x_3=z,
+\end{equation}
+e podemos calcular a transformada dada pela equa\c{c}\~ao \ref{eq.transf_auxiliar} atrav\'es da transformada inversa de Hankel, descrita na subse\c{c}\~ao \ref{sec.trans_hankel}. Considere
+\begin{equation}\label{eq.trans_hankel_adapt}
+\mathcal{B}[\hat{g}(k)]=\frac{1}{2\,\pi}\int_0^\infty k^{m_1}J_{m_2}(k\,r)\hat{g}(k)\,dk,
+\end{equation}
+onde $J_{m_2}$ \'e uma fun\c{c}\~ao de Bessel dada pela equa\c{c}\~ao \ref{eq.funcao_bessel_2}, e para os casos particulares onde $m_1,m_2\,\in[0,3]$, temos\\
+\begin{minipage}{.5\textwidth}
+\begin{align*}
+\Theta_{0,0}&=\mathcal{B}_{1,0}\\
+\Theta_{2,0}&=\cos^2\theta\mathcal{B}_{3,0}-\frac{\cos^2\theta-\text{sen}^2\theta}{r}\mathcal{B}_{2,1}\\
+\Theta_{0,1}&=i\,\text{sen}\theta\mathcal{B}_{2,1}
+\end{align*}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{align*}
+\Theta_{1,1}&=\text{sen}\theta\,\cos\theta\left[\mathcal{B}_{3,0}-\frac{2}{r}\mathcal{B}_{2,1}\right]\\
+\Theta_{1,0}&=i\,\cos\theta\mathcal{B}_{2,1}\\
+\Theta_{0,2}&=\text{sen}^2\theta\mathcal{B}_{3,0}+\frac{\cos^2\theta-\text{sen}^2\theta}{r}\mathcal{B}_{2,1}
+\end{align*}
+\end{minipage}
+
+
+
+
+

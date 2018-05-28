@@ -1,9 +1,9 @@
-\chapter{Escrevendo as EDP's como um Sistema de EDO's}
-Neste cap\'itulo vamos aplicar algumas t\'ecnicas como rota\c{c}\~ao do sistema de coordenadas e Transformadas Laterais de Fourier em EDP's para que as mesmas possam ser escritas como um sistema de EDO's.
+\chapter{Sistema de EDO's do Efeito Magneto-El\'astico}\label{sec.trans_edp_2_edo}
+Neste cap\'itulo vamos aplicar algumas t\'ecnicas como rota\c{c}\~ao do sistema de coordenadas e Transformadas Laterais de Fourier em EDP's da magneto-elasticidade para que as mesmas possam ser escritas como um sistema de EDO's.
 
-\section{Sistema de EDP's do Efeito Magnetoel\'astico}
+\section{Transformando EDP's em EDO's}
 
-Segundo \cite{eringen_1963}, o acoplamento entre ondas eletromagn\'eticas e el\'asticas se propagando no subsolo caracteriza o efeito magnetoel\'astico, e esse acoplamento pode ser modelado matematicamente atrav\'es de um sistema de equa\c{c}\~oes diferencias parciais. Conforme minha monografia, podemos aplicar uma s\'erie de hip\'oteses que visam simplificar e linearizar essas EDP's de forma que as mesmas possam receber um tratamento matem\'atico adequado no sentido de se obter numericamente os valores dos campos eletromagn\'eticos e el\'asticos envolvidos no sistema. Desta forma, vamos utilizar o m\'etodo matricial encontrado em \cite{Ursin-1983} na solu\c{c}\~ao do seguinte sistema de EDP's da magnetoelasticidade
+Segundo \cite{eringen_1963}, o acoplamento entre ondas eletromagn\'eticas e el\'asticas se propagando no subsolo caracteriza o efeito magneto-el\'astico, e esse acoplamento pode ser modelado matematicamente atrav\'es de um sistema de equa\c{c}\~oes diferencias parciais. Conforme \cite{pinho_2018}, podemos aplicar uma s\'erie de hip\'oteses oriundas das caracter\'isticas f\'isicas do efeito magneto-el\'astico, as quais visam simplificar e linearizar essas EDP's de forma que as mesmas possam receber um tratamento matem\'atico anal\'itico adequado, para em seguida se obter numericamente os valores dos campos eletromagn\'eticos e el\'asticos envolvidos no sistema. 
 \begin{align}\label{eq.mag_ela_1}
 \nabla\times\mathbf{{E}}&=i\,\omega\,\mu_0\mathbf{{H}}\\\nonumber\\\label{eq.mag_ela_2}
 \nabla\times\mathbf{{H}}&=(\sigma-i\,\epsilon\,\omega)\,\mathbf{{E}}+\mathbf{{v}}\times\sigma\mu_0\mathbf{H}^0+\mathbf{j}\\\nonumber\\\label{eq.mag_ela_3}
@@ -11,7 +11,7 @@ Segundo \cite{eringen_1963}, o acoplamento entre ondas eletromagn\'eticas e el\'
 {\tau}&=\lambda\,\nabla\cdot\mathbf{{u}}\cdot\,I + G\,(\nabla\,\mathbf{{u}}+\nabla\mathbf{{u}}^\top)\\\nonumber\\\label{eq.mag_ela_5}
 \nabla\cdot\mathbf{{H}}&=0.
 \end{align}
-Estas equa\c{c}\~oes est\~ao no dom\'inio da frequ\^encia $\omega$, a depend\^encia do tempo \'e dada por $\exp{-i\,\omega\,t}$ e 
+Estas equa\c{c}\~oes est\~ao no dom\'inio da frequ\^encia $\omega$, a depend\^encia do tempo \'e dada por $e^{-i\,\omega\,t}$ e 
 \begin{itemize}
 \item $\mathbf{{E}}$ \'e o campo el\'etrico,
 \item $\mathbf{{B}}$ \'e o campo magn\'etico,
@@ -154,7 +154,7 @@ Aplicando as transformadas laterais de Fourier no sistema acima, temos
 \widehat{\tau}_{23}&=G\,\left(\frac{\partial\,\widehat{u}_2}{\partial\,z}-i\,k_y\widehat{u}_3\right)\\
 \widehat{\tau}_{33}&=\lambda\,\left(-i\,k_x\widehat{u}_1-i\,k_y\widehat{u}_2+\frac{\partial\,\widehat{u}_3}{\partial\,z}\right)+2\,G\,\frac{\partial\,\widehat{u}_3}{\partial\,z}.
 \end{empheq}
-E aplicando a rota\c{c}\~ao $\Omega$, fazendo as simplifica\c{c}\~oes, finalmente a lei de Hooke se torna
+E aplicando a rota\c{c}\~ao $\Omega$ na forma dada pela equa\c{c}\~ao \ref{eq.rotacao_tensor}, fazendo as simplifica\c{c}\~oes, finalmente a lei de Hooke se torna
 \begin{empheq}[left=\empheqlbrace]{align*}
 \tilde{\tau}_{11}&=i\,k(\lambda+2\,G)\,\tilde{u}_1+\lambda\,\frac{\partial\,\tilde{u}_3}{\partial\,z}\\
 \tilde{\tau}_{12}&=i\,G\,k\,\tilde{u}_2\\
@@ -407,24 +407,4 @@ Uma vez que as dez vari\'aveis das equa\c{c}\~oes matricias acima tenham sido de
 \tilde{\tau}_{22}&=\gamma\,\lambda\,\frac{\lambda-(\lambda+2\,G)}{\lambda+2\,G}\dot{\tilde{u}}_1+\frac{\lambda}{\lambda+2\,G}\,\tilde{\tau}_{33}\\
 \tilde{\tau}_{12}&=-\gamma\,G\,\dot{\tilde{u}}_2.
 \end{empheq}
-Como estamos assumindo que as propriedades materiais n\~ao se alteram no interior de cada camada da subsuperf\'icie, temos que a matriz $M^{(m)}$ \'e constante para cada camada. Essas propriedades materiais se alteram descontinuamente conforme $z$ varia de uma camada para outra atrav\'es da interface de contato entre as camadas. Nessas interfaces vamos aplicar as condi\c{c}\~oes de interface encontradas em \cite{pride_94}, onde o vetor $\mathbf{u}$, as componentes normais de $\tau$ e as componentes  tangenciais de $\mathbf{E}$ e $\mathbf{H}$ s\~ao cont\'inuas. Assim, constatamos que os vetores $\mathbf{\Phi}^{(m)}$ s\~ao cont\'inuos atrav\'es das interfaces entre as camadas.
-Resta estabelecer condi\c{c}\~oes de contorno para os sistemas \ref{eq.matricial_1}-\ref{eq.matricial_4} no contato ar/superf\'icie, ou seja, em $z=0$. Aplicando ainda as condi\c{c}\~oes de interface encontradas em \cite{pride_94}, temos que a condi\c{c}\~ao de contorno para o sistema \ref{eq.matricial_1} \'e
-\begin{equation}
-\tilde{H}_2=-\frac{\epsilon_0}{q_0}\tilde{E}_1,
-\end{equation}
-onde $q_0$ \'e a vagarosidade vertical dada por \ref{eq.vagarosidade_vertical}. Esta \'e a rela\c{c}\~ao para uma onda eletromagn\'etica ascendente, e foi deduzida do fato de que n\~ao h\'a ondas eletromagn\'eticas descendentes no ar, pois todas a fontes est\~ao na subsuperf\'icie.
-Para o sistema \ref{eq.matricial_2}, a condi\c{c}\~ao de contorno \'e
-\begin{equation}
-\tilde{H}_1=\frac{q_0}{\mu_0}\tilde{E}_2,
-\end{equation}
-onde esta rela\c{c}\~ao tamb\'em foi deduzida do fato de que h\'a apenas ondas eletromagn\'eticas ascendentes no ar.
-Para o sistema \ref{eq.matricial_3}, as condi\c{c}\~oes de contorno s\~ao
-\begin{equation}
-\tilde{\tau}_{13}=\tilde{\tau}_{33}=0.
-\end{equation}
-E para o sistema \ref{eq.matricial_4}, a condi\c{c}\~ao de contorno \'e
-\begin{equation}
-\tilde{\tau}_{23}=0.
-\end{equation}
-Observe que para cada um dos sistema precisaremos de condi\c{c}\~oes de contorno adicionais para especificar uma solu\c{c}\~ao. Essas condi\c{c}\~oes surgir\~ao do fato de que n\~ao h\'a ondas ascendentes em $z\rightarrow\infty$, como veremos na subse\c{c}\~ao TAL.
 
