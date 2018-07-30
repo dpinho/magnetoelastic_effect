@@ -3,7 +3,8 @@
 \section{Introdu\c{c}\~ao}
 A teoria formal da propaga\c{c}\~ao de ondas s\'ismicas repousa nas intera\c{c}\~oes entre as part\'iculas infinitesimais discretas do meio \`a medida que uma deforma\c{c}\~ao se propaga. \'E muito dif\'icil estudar individualmente cada uma dessas intera\c{c}\~oes, mas dados experimentais que foram coletados como resultados dessas intera\c{c}\~oes sugerem que as mesmas podem ser consideradas em conjunto. Assim, o estudo da propaga\c{c}\~ao de ondas s\'ismicas atrav\'es de camadas de subsuperf\'icie num material discretizado pode ser feito considerando o meio como cont\'inuo, e tais estudos s\~ao os objetos da \textit{mec\^anica do cont\'inuo}. 
 
-No desenvolvimento te\'orico da mec\^anica do cont\'inuo n\~ao s\~ao consideradas as caracter\'isticas at\^omicas da mat\'eria bem como as intera\c{c}\~oes entre essas part\'iculas, ou seja, a mat\'eria n\~ao \'e estudada do ponto de vista microsc\'opico. Segundo \cite{slawinski}, tal abordagem se justifica pelo fato de que a mat\'eria \'e formada por part\'iculas suficientemente pouco espa\c{c}adas e suas caracter\'isticas e comportamento podem ser descritos por fun\c{c}\~oes cont\'inuas e diferenci\'aveis. Assim, \'e assummido que elementos infinitesimais da mat\'eria t\^em as mesmas propriedades observadas em experimentos macrosc\'opicos, pois essa hip\'otese permite a cria\c{c}\~ao de um modelo matem\'atico abstrato \textit{efetivo} na descri\c{c}\~ao da realidade f\'isica. Como exemplo, vamos considerar a cor de um objeto. 
+No desenvolvimento te\'orico da mec\^anica do cont\'inuo n\~ao s\~ao consideradas as caracter\'isticas at\^omicas da mat\'eria bem como as intera\c{c}\~oes entre essas part\'iculas, ou seja, a mat\'eria n\~ao \'e estudada do ponto de vista microsc\'opico. Segundo \cite{slawinski}, tal abordagem se justifica pelo fato de que a mat\'eria \'e formada por part\'iculas suficientemente pouco espa\c{c}adas e suas caracter\'isticas e comportamento podem ser descritos por fun\c{c}\~oes cont\'inuas e diferenci\'aveis. Assim, \'e assummido que elementos infinitesimais da mat\'eria t\^em as mesmas propriedades observadas em experimentos macrosc\'opicos, pois essa hip\'otese permite a cria\c{c}\~ao de um modelo matem\'atico abstrato \textit{efetivo} na descri\c{c}\~ao da realidade f\'isica. 
+%Como exemplo, vamos considerar a cor de um objeto. 
 %Pr\'otons e el\'etrons n\~ao possuem cor, mas os meios materiais (que s\~ao formados por pr\'otons e el\'etrons) t\^em a capacidade de absorver ou refletir determinados comprimentos de ondas eletromagn\'eticas as quais determinam a cor de cada meio. %Outros conceitos da mec\^anica do cont\'inuo s\~ao elasticidade, viscosidade, fric\c{c}\~ao, rigidez, etc, como veremos mais a frente.
 Neste cap\'itulo podemos verificar o desenvolvimento te\'orico da mec\^anica do cont\'inuo necess\'ario ao entendimento do efeito magneto-el\'astico.
 
@@ -167,7 +168,7 @@ onde tanto a massa como a densidade n\~ao dependem apenas do tempo mas tamb\'em 
 \begin{equation}\label{eq.massa_1}
 \frac{d}{dt}m=\iiint_V\frac{\partial\rho}{\partial t}dV.
 \end{equation}
-Assumindo que n\~ao h\'a destrui\c{c}\~ao nem produ\c{c}\~ao de massa dentro do volume, a varia\c{c}\~ao da massa se d\'a apenas pelo quantidade de massa que passa pela volume, ou que passa atrav\'es de uma das superf\'icies que limita esse volume, o que pode ser escrito como
+Assumindo que n\~ao h\'a destrui\c{c}\~ao nem produ\c{c}\~ao de massa dentro do volume, a varia\c{c}\~ao da massa se d\'a apenas pela quantidade de massa que passa pelo volume, ou que passa atrav\'es de uma das superf\'icies que limita esse volume, o que pode ser escrito como
 \begin{equation}\label{eq.massa_2}
 \frac{dm}{dt}=-\iint_S\rho\,\mathbf{v}\cdot d\mathbf{S},
 \end{equation}
@@ -229,7 +230,7 @@ Para dedu\c{c}\~ao do tensor de tens\~oes vamos utilizar o argumento do tetraedr
 \begin{equation}\label{eq.forca_total_3}
 \overline{\rho}\,\Delta V\frac{d\overline{\mathbf{v}}}{dt}=\Delta \mathbf{F}+\Delta\mathbf{F}^{(\mathbf{e}_1)}+\Delta\mathbf{F}^{(\mathbf{e}_2)}+\Delta\mathbf{F}^{(\mathbf{e}_3)}+\overline{f}\Delta V,
 \end{equation} 
-onde $\Delta\mathbf{F}$ \'e a for\c{c}a superficial agindo na face obl\'iqua, $\Delta\mathbf{F}^{(\mathbf{e}_i)}$ \'e a for\c{c}a superficial agindo na face ortogonal cujo a normal \'e o eixo $x_i$, $\overline{f}$ \'e a for\c{c}a de campo agindo no tetraedro de volume $\Delta V$ e densidade $\rho$, e $\frac{d\overline{\mathbf{v}}}{dt}$ \'e a velocidade usada no c\'alculo da taxa de varia\c{c}\~ao do momento linear. As barras acima de cada s\'imbolo significam valores m\'edios para tetraedros de dimens\~oes finitas. Substituindo a equa\c{c}\~ao \ref{eq.tensao_media} na equa\c{c}\~ao \ref{eq.forca_total_3} temos
+onde $\Delta\mathbf{F}$ \'e a for\c{c}a superficial agindo na face obl\'iqua, $\Delta\mathbf{F}^{(\mathbf{e}_i)}$ \'e a for\c{c}a superficial agindo na face ortogonal cujo a normal \'e o eixo $x_i$, $\overline{f}$ \'e a for\c{c}a de corpo agindo no tetraedro de volume $\Delta V$ e densidade $\rho$, e $\frac{d\overline{\mathbf{v}}}{dt}$ \'e a acelera\c{c}\~ao usada no c\'alculo da taxa de varia\c{c}\~ao do momento linear. As barras acima de cada s\'imbolo significam valores m\'edios para tetraedros de dimens\~oes finitas. Substituindo a equa\c{c}\~ao \ref{eq.tensao_media} na equa\c{c}\~ao \ref{eq.forca_total_3} temos
 \begin{equation}\label{eq.forca_total_4}
 \overline{\rho}\,\Delta V\frac{d\overline{\mathbf{v}}}{dt}=\mathbf{\overline{T}}^{(\mathbf{n})}\,\Delta S-\mathbf{\overline{T}}^{(\mathbf{e}_1)}\,\Delta S_1-\mathbf{\overline{T}}^{(\mathbf{e}_2)}\,\Delta S_2-\mathbf{\overline{T}}^{(\mathbf{e}_3)}\,\Delta S_3+\overline{f}\,\Delta V,
 \end{equation}
@@ -430,7 +431,7 @@ Considerando ainda que cada um dos pontos $\mathbf{p}_1$ e $\mathbf{p}_2$ s\~ao 
 \begin{equation*}
 \mathbf{F}=\mathbf{F}(\mathbf{p}_1)+\mathbf{F}(\mathbf{p}_2)+f
 \end{equation*} 
-onde $f$ \'e uma for\c{c}a de campo. Utilizando a segunda lei de Newton, utilizando a equa\c{c}\~ao \ref{eq.tensao_media} e desprezando as for\c{c}as de campo, temos
+onde $f$ \'e uma for\c{c}a de corpo. Utilizando a segunda lei de Newton, utilizando a equa\c{c}\~ao \ref{eq.tensao_media} e desprezando as for\c{c}as de campo, temos
 \begin{equation*}
 \rho\,dh\,dA\frac{d\mathbf{v}}{dt}=\mathbf{T}(\mathbf{p}_1,\mathbf{n})dA+\mathbf{T}(\mathbf{p}_2,-\mathbf{n})dA.
 \end{equation*} 

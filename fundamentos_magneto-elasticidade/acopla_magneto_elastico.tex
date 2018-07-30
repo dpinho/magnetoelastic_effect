@@ -5,12 +5,12 @@
 Como vimos na subse\c{c}\~ao \ref{sec.fund_eletr}, quando uma estrutura condutiva se movimenta num campo magn\'etico, uma corrente el\'etrica e um campo magn\'etico vari\'avel s\~ao gerados nessa estrutura. Segundo \cite{Mikhailenko_1997}, a passagem de uma onda s\'ismica pela subsuperf\'icie terrestre gera o movimento do material que comp\~oe essa subsuperf\'icie. Considerando que esse material \'e cont\'inuo e el\'astico, cont\'em uma certa distribui\c{c}\~ao de cargas el\'etricas e que o planeta Terra possui um campo geomagn\'etico natural, temos que o movimento relativo entre o material e o campo geomagn\'etico vai gerar varia\c{c}\~oes geomagn\'eticas locais associadas \`as ondas s\'ismicas que provocaram o movimento do material. Mais ainda, segundo \cite{Anisimov_1985} e \cite{Sadovsky_1980}, a onda eletromagn\'etica induzida \'e ``congelada'' \`a onda s\'ismica e se propaga n\~ao com a velocidade da luz, mas com a velocidade da onda $P$ ou da onda $S$, dependendo do tipo de onda s\'ismica, e podemos registrar e estudar essa varia\c{c}\~ao geomagn\'etica.
 Um corpo nessas condi\c{c}\~oes \'e chamado de s\'olido eletromagn\'etico-el\'astico, essas varia\c{c}\~oes no campo geomagn\'etico s\~ao chamadas de \textit{ondas sismomagn\'eticas} e esse efeito recebeu o nome de \textit{efeito sismomagn\'etico} ou \textit{efeito magnetoel\'astico}.
 
-Segundo \cite{erigen_1963}, \'e poss\'ivel investigar algumas intera\c{c}\~oes din\^amicas que podem ocorrer entre campos eletromagn\'eticos e campos el\'asticos em s\'olidos homog\^eneos e isotr\'opicos. Assim, esses autores desenvolveram um modelo matem\'atico de combina\c{c}\~ao entre a teoria de elasticidade infinitesimal e a teoria eletromagn\'etica linearizada, o qual ser\'a apresentado a seguir. A intera\c{c}\~ao se deve principalmente \`a for\c{c}a de corpo de Lorentz, \`a modifica\c{c}\~ao das equa\c{c}\~oes constitutivas e das condi\c{c}\~oes de contorno provocada pela velocidade do material, e \`as for\c{c}as superficiais introduzidas pelos campos.
+Segundo \cite{eringen_1963}, \'e poss\'ivel investigar algumas intera\c{c}\~oes din\^amicas que podem ocorrer entre campos eletromagn\'eticos e campos el\'asticos em s\'olidos homog\^eneos e isotr\'opicos. Assim, esses autores desenvolveram um modelo matem\'atico de combina\c{c}\~ao entre a teoria de elasticidade infinitesimal e a teoria eletromagn\'etica linearizada, o qual ser\'a apresentado a seguir. A intera\c{c}\~ao se deve principalmente \`a for\c{c}a de corpo de Lorentz, \`a modifica\c{c}\~ao das equa\c{c}\~oes constitutivas e das condi\c{c}\~oes de contorno provocada pela velocidade do material, e \`as for\c{c}as superficiais introduzidas pelos campos.
 
 
 \section{Equa\c{c}\~oes Constitutivas do Meio}
 
-Seguindo a nota\c{c}\~ao apresentada em \cite{erigen_1963}, temos que os vetores que representam os campos eletromagn\'eticos no meio (propriamente dito) de propaga\c{c}\~ao das ondas, s\~ao representados por $\mathbf{E}^0$, $\mathbf{D}^0$, $\mathbf{B}^0$, $\mathbf{H}^0$ e
+Seguindo a nota\c{c}\~ao apresentada em \cite{eringen_1963}, temos que os vetores que representam os campos eletromagn\'eticos no meio (propriamente dito) de propaga\c{c}\~ao das ondas, s\~ao representados por $\mathbf{E}^0$, $\mathbf{D}^0$, $\mathbf{B}^0$, $\mathbf{H}^0$ e
 $\mathbf{J}^0$. Essas mesmas quantidades, quando se referirem \`as medidas observadas em laborat\'orio s\~ao denotadas apenas retirando-se o sobrescrito $^0$. Transferindo essa nota\c{c}\~ao para as equa\c{c}\~oes \ref{eq.D_funcao_E} e \ref{eq.B_funcao_H} temos
 \begin{equation}\label{eq.constitutivas_parciais}
 \mathbf{D}^0=\epsilon\,\mathbf{E}^0\quad\text{e}\quad\mathbf{B}^0=\mu\,\mathbf{H}^0.
@@ -34,7 +34,7 @@ Experimentalmente, para pequenas velocidades, os campos eletromagn\'eticos do me
 \mathbf{D}^0&=\mathbf{D}+\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{H}\\
 \mathbf{B}^0&=\mathbf{B}-\epsilon_0\,\mu_0\,\mathbf{v}\times\mathbf{E}\\
 \rho_e^0&=\rho_e
-\end{aligned},
+\end{aligned}
 \end{equation}
 onde $\mu_0$ \'e a permeabilidade magn\'etica do v\'acuo e $\epsilon_0$ \'e a permissividade el\'etrica do v\'acuo. Substituindo as equa\c{c}\~oes \ref{eq.vet_elet_lab} nas equa\c{c}\~oes \ref{eq.constitutivas_parciais} e \ref{eq.lei_ohm}, e desprezando os termos de ordem maior ou igual a $v^2/c^2$, temos que o campo de densidade de fluxo el\'etrico \'e dado por
 \begin{align*}
@@ -78,8 +78,8 @@ Vamos escrever as equa\c{c}\~oes de Maxwell dadas na forma diferencial pelas equ
 Para equa\c{c}\~ao \ref{eq.dif_max_3}
 \begin{align}\label{eq.interface_1}\nonumber
 \nabla\times\mathbf{H}&=\mathbf{J}_f+\frac{\partial}{\partial t}\,\mathbf{D}\qquad\Leftrightarrow\\\nonumber\\
-\nabla\times\mathbf{H}-\nabla\times(\mathbf{v}\times\mathbf{D})&=\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})+\mathbf{J}_f-\rho_f\mathbf{v}\qquad\Leftrightarrow\\\nonumber\\
-\nabla\times(\mathbf{H}-\mathbf{v}\times\mathbf{D})&=\left[\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]+\mathbf{J}_f-\rho_f\mathbf{v}
+\nabla\times\mathbf{H}-\nabla\times(\mathbf{v}\times\mathbf{D})&=\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{D})+\mathbf{J}_f-\rho_f\mathbf{v}\qquad\Leftrightarrow\\\nonumber\\
+\nabla\times(\mathbf{H}-\mathbf{v}\times\mathbf{D})&=\left[\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{D})\right]+\mathbf{J}_f-\rho_f\mathbf{v}
 \end{align}
 Para equa\c{c}\~ao \ref{eq.dif_max_4}
 \begin{align}\label{eq.interface_2}\nonumber
@@ -91,7 +91,7 @@ Integrando as equa\c{c}\~oes \ref{eq.div_D_div_B} sobre uma superf\'icie $S'$ en
 \begin{align*}
 \iiint_V\nabla\cdot\mathbf{D}\,dV&=\iiint_V\rho_f\,dV\\\\
 \iiint_V\nabla\cdot\mathbf{B}\,dV&=0\\\\
-\iint_S\nabla\times(\mathbf{H}-\mathbf{v}\times\mathbf{D})\cdot d\mathbf{S}&=\iint_S\left[\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]\cdot d\mathbf{S}+\iint_S\left[\mathbf{J}_f-\rho_f\mathbf{v}\right]\cdot d\mathbf{S}\\\\
+\iint_S\nabla\times(\mathbf{H}-\mathbf{v}\times\mathbf{D})\cdot d\mathbf{S}&=\iint_S\left[\frac{\partial}{\partial t}\mathbf{D}+\mathbf{v}(\nabla\cdot\mathbf{D})-\nabla\times(\mathbf{v}\times\mathbf{D})\right]\cdot d\mathbf{S}+\iint_S\left[\mathbf{J}_f-\rho_f\mathbf{v}\right]\cdot d\mathbf{S}\\\\
 \iint_S\nabla\times(\mathbf{E}+\mathbf{v}\times\mathbf{B})\cdot d\mathbf{S}&=-\iint_S\left[\frac{\partial}{\partial t}\mathbf{B}+\mathbf{v}(\nabla\cdot\mathbf{B})-\nabla\times(\mathbf{v}\times\mathbf{B})\right]\cdot d\mathbf{S}
 \end{align*}
 Aplicando o teorema do Divergente nas duas primeiras equa\c{c}\~oes, e aplicando o teorema de Stokes nas duas \'ultimas equa\c{c}\~oes, temos
@@ -191,14 +191,14 @@ onde agora o colchete duplo deve ser interpretado como a quantidade de fora do c
 
 As equa\c{c}\~oes constitutivas s\~ao dadas pela lei de Hook apresentada na subse\c{c}\~ao \ref{sec.rela-const-hooke}, mas que tamb\'em pode ser escrita como
 \begin{equation}
-\tau{ij}=\lambda\frac{\partial u_k}{\partial x_k}\delta_{ij}+\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right),
+\tau_{ij}=\lambda\frac{\partial u_k}{\partial x_k}\delta_{ij}+\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right),
 \end{equation}
 onde consideramos que a tens\~ao e a deforma\c{c}\~ao para  este sistema tem os mesmos valores tanto medidos propriamente nas camadas como em medi\c{c}\~oes de laborat\'orio. Assumimos tamb\'em que a lei de Hook para corpos puramente el\'asticos n\~ao \'e afetada pela presen\c{c}a de campos eletromagn\'eticos. 
 
 
 \section{Modelo de Dunkin e Erigen}
 
-Podemos resumir o acoplamento magneto-el\'astico proposto por \cite{erigen_1963} destacando as equa\c{c}\~oes b\'asicas de campo e as condi\c{c}\~oes de contorno a serem aplicadas em s\'olidos eletromagn\'eticos e el\'asticos.
+Podemos resumir o acoplamento magneto-el\'astico proposto por \cite{eringen_1963} destacando as equa\c{c}\~oes b\'asicas de campo e as condi\c{c}\~oes de contorno a serem aplicadas em s\'olidos eletromagn\'eticos e el\'asticos.
 
 \subsection{Equa\c{c}\~oes de Campo}
 

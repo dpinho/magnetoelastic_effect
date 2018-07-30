@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,openany]{abntex2}
+\documentclass[12pt,a4paper,oneside]{abntex2}
 % openany - para eliminar paginas em branco, que surgem pois os capitulos so comecam em paginas impares no modo frente e verso
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -15,9 +15,94 @@
 %\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}
 %instalar abntcite.sty
 
+%capa
+\autor{DAVID DA COSTA DE PINHO}% introduz nome do autor
+\titulo{M\'ETODO MATRICIAL APLICADO AO EFEITO MAGNETO-EL\'ASTICO}
+\data{2018}
+\local{MACA\'E}
+
+%anverso da folha de rosto
+\preambulo{Monografia apresentada ao Centro de Ci\^encia e Tecnologia da Universidade Estadual do Norte Fluminense, como parte das exig\^encias para aprova\c{c}\~ao no Exame de Qualifica\c{c}\~ao.}
+\orientador{Viatcheslav Ivanovich Priimenko, Ph.D}
+\tipotrabalho{monografia}
+
 \begin{document}
 
+\imprimircapa
+
+\imprimirfolhaderosto%anverso
+
+%{\ABNTEXchapterfont\Large\textsc{\imprimirautor}} - para aumentar a fonte e colocar em caixa alta
+
+%importante dar enter para pular linha entre os tipos de textos
+
+\begin{folhadeaprovacao}
+
+\begin{center}
+{\ABNTEXchapterfont\Large\bfseries\imprimirtitulo}\\\vspace{1cm}
+{\ABNTEXchapterfont\Large\textsc{\imprimirautor}}
+
+\end{center}
+
+\vspace{1cm}
+\hspace{.45\textwidth} \begin{minipage}{.5\textwidth}
+\imprimirpreambulo
+\end{minipage}
+
+\vspace{1cm}
+Trabalho aprovado em $\,7\,$ de Agosto de \imprimirdata.\\
+
+\vspace{1cm}
+Comiss\~ao Examinadora:\\
+\assinatura{Prof. Marcia Miranda Azeredo, Ds.c - UENF}
+\assinatura{Prof. André Duarte Bueno, Ds.c - UENF}
+\assinatura{Prof. Fernando Diogo de Siqueira, Ds.c - UENF}
+\assinatura{Prof. \imprimirorientador - UENF}
+
+\begin{center}
+\vfill
+{\large\imprimirlocal}
+\par
+{\large\imprimirdata}
+\end{center}
+
+\end{folhadeaprovacao}
+
+\begin{center}
+{\ABNTEXchapterfont\Large\imprimirtitulo}\\\vspace{1cm}
+
+\end{center}
+
+\begin{resumo}
+Esta monografia tem por finalidade essencial o desenvolvimento anal\'itico do m\'etodo matricial de Ursin aplicado ao efeito magneto-el\'astico. Primeiramente, apresentamos uma revis\~ao sobre a utiliza\c{c}\~ao do m\'etodo matricial em problemas de prospec\c{c}\~ao de petr\'oleo, onde v\'arias dessas publica\c{c}\~oes foram produzidas no LENEP. Inclu\'imos uma sumariza\c{c}\~ao das ferramentas da f\'isica-matem\'atica necess\'arias ao entendimento desta obra. Transformamos as EDP's do efeito magneto-el\'astico em EDO's e mostramos como o m\'etodo matricial \'e utilizado na solu\c{c}\~ao de sistemas de EDO's que modelam a propaga\c{c}\~ao de ondas na subsuperf\'icie terrestre. Por fim, aplicamos o m\'etodo matricial nas EDO's da magneto-elasticidade de forma que possamos produzir um algoritmo computacional para obter as solu\c{c}\~oes numericamente.
+
+\vspace{\onelineskip} 
+\noindent 
+\textbf{Palavras-chave}: Magneto-Elasticidade, M\'etodo Matricial de Ursin, Prospec\c{c}\~ao de Petr\'oleo.
+\end{resumo}
+
+\begin{center}
+{\ABNTEXchapterfont\Large MATRICIAL METHOD APPLIED TO MAGNETO-ELASTIC EFFECT}\\\vspace{1cm}
+\end{center}
+
+\begin{resumo}[Abstract]
+\begin{otherlanguage*}{english}
+This paper aims analitical development of Ursin's matricial method applied to magneto-elastic effect. First, we present a review about matricial method applied to different kind of oil prospecting issues, found in surveys produced in LENEP. Summaries of physical and mathematical tools required to understand this text were included. We transform magneto-elastic effect's PDE to ODE ones and we show how the matricial method can be usefull to solve ODE systems that describe propagations of waves in Earth's subsurface. Best for the last, we applied matricial method to magneto-elasticity's ODE in such way that we can build an algorithm to return numerical solutions.
+
+\vspace{\onelineskip} 
+\noindent 
+\textbf{Keywords}: Magneto-Elasticity, Ursin's Matricial Method, Oil Prospecting.
+
+\end{otherlanguage*}
+\end{resumo}
+
+\listoffigures
+
+\newpage
+
 \tableofcontents
+
+\textual
 
 \input{intro_met_matricial}
 \input{revisao_bibliografica}
