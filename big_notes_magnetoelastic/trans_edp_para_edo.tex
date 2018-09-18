@@ -1,0 +1,410 @@
+\chapter{Sistema de EDO's do Efeito Magneto-El\'astico}\label{sec.trans_edp_2_edo}
+Neste cap\'itulo vamos aplicar algumas t\'ecnicas como rota\c{c}\~ao do sistema de coordenadas e Transformadas Laterais de Fourier em EDP's da magneto-elasticidade para que as mesmas possam ser escritas como um sistema de EDO's.
+
+\section{Transformando EDP's em EDO's}
+
+Segundo \cite{eringen_1963}, o acoplamento entre ondas eletromagn\'eticas e el\'asticas se propagando no subsolo caracteriza o efeito magneto-el\'astico, e esse acoplamento pode ser modelado matematicamente atrav\'es de um sistema de equa\c{c}\~oes diferencias parciais. Conforme \cite{pinho_2018}, podemos aplicar uma s\'erie de hip\'oteses oriundas das caracter\'isticas f\'isicas do efeito magneto-el\'astico, as quais visam simplificar e linearizar essas EDP's de forma que as mesmas possam receber um tratamento matem\'atico anal\'itico adequado, para em seguida se obter numericamente os valores dos campos eletromagn\'eticos e el\'asticos envolvidos no sistema. 
+\begin{align}\label{eq.mag_ela_1}
+\nabla\times\mathbf{{E}}&=i\,\omega\,\mu_0\mathbf{{H}}\\\nonumber\\\label{eq.mag_ela_2}
+\nabla\times\mathbf{{H}}&=(\sigma-i\,\epsilon\,\omega)\,\mathbf{{E}}+\mathbf{{v}}\times\sigma\mu_0\mathbf{H}^0+\mathbf{j}\\\nonumber\\\label{eq.mag_ela_3}
+-i\,\omega\rho\,\mathbf{{v}}&=\nabla\cdot{\tau} + \mathbf{{F}}\\\nonumber\\\label{eq.mag_ela_4}
+{\tau}&=\lambda\,\nabla\cdot\mathbf{{u}}\cdot\,I + G\,(\nabla\,\mathbf{{u}}+\nabla\mathbf{{u}}^\top)\\\nonumber\\\label{eq.mag_ela_5}
+\nabla\cdot\mathbf{{H}}&=0.
+\end{align}
+Estas equa\c{c}\~oes est\~ao no dom\'inio da frequ\^encia $\omega$, a depend\^encia do tempo \'e dada por $e^{-i\,\omega\,t}$ e 
+\begin{itemize}
+\item $\mathbf{{E}}$ \'e o campo el\'etrico,
+\item $\mathbf{{B}}$ \'e o campo magn\'etico,
+\item $\mathbf{{D}}$ \'e o campo de densidade de fluxo el\'etrico,
+\item $\mathbf{{H}}$ \'e o campo magn\'etico auxiliar,
+\item $\tau$ \'e o tensor de tens\~oes,
+\item $\mathbf{{u}}$ \'e o deslocamento do meio,
+\item $\mathbf{{v}}$ \'e a velocidade de deslocamento do meio,
+\item $\mathbf{{F}}$ \'e uma for\c{c}a aplicada ao meio,
+\item $\mathbf{H}^0$ \'e campo geomagn\'etico,
+\item $i$ \'e um n\'umero complexo,
+\item $\omega$ \'e a frequ\^encia temporal,
+\item $\mu_0$ \'e a permeabilidade magn\'etica no v\'acuo,
+\item $\sigma$ \'e a condutividade do meio,
+\item $\epsilon$ \'e a permissividade el\'etrica do meio,
+\item $\rho$ \'e a densidade do meio,
+\item $\lambda$ e $G$ s\~ao par\^ametros de Lam\`e.
+\end{itemize}
+Vamos definir $\overline{\sigma}=(\sigma-i\,\epsilon\,\omega)$. No subsolo, por conta do regime quasi-estacion\'ario, $(\sigma>>\epsilon\,\omega)$  e  temos $\overline{\sigma}=\sigma$. No ar, a condutividade \'e zero e a permeabilidade el\'etrica \'e pr\'oxima a do v\'acuo $\epsilon_0$, assim temos $\overline{\sigma}=-i\,\epsilon_0\omega$.
+
+No formato matricial, a equa\c{c}\~ao \ref{eq.mag_ela_1} pode ser escrita como
+\begin{equation*}
+\begin{pmatrix}
+\frac{\partial\,E_3}{\partial\,y}-\frac{\partial\,E_2}{\partial\,z}\\
+\frac{\partial\,E_1}{\partial\,z}-\frac{\partial\,E_3}{\partial\,x}\\
+\frac{\partial\,E_2}{\partial\,x}-\frac{\partial\,E_1}{\partial\,y}
+\end{pmatrix}
+=
+i\,\omega\,\mu_0\,
+\begin{pmatrix}
+H_1\\
+H_2\\
+H_3
+\end{pmatrix}.
+\end{equation*}
+Aplicando as transformadas laterais de Fourier, dada em \ref{eq.trans_fourier_1}, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+i\,k_y\widehat{E}_3-\frac{\partial\,\widehat{E}_2}{\partial\,z}&=i\,\omega\,\mu_0\widehat{H}_1\\
+\frac{\partial\,\widehat{E}_1}{\partial\,z}-i\,k_x\widehat{E}_3&=i\,\omega\,\mu_0\widehat{H}_2\\
+i\,k_x\widehat{E}_2-i\,k_y\widehat{E}_1&=i\,\omega\,\mu_0\widehat{H}_3.
+\end{empheq} 
+Rotacionando o sistema de forma que a primeira coordenada esteja orientada no sentido do vetor de onda horizontal, usando o operador dado pela equa\c{c}\~ao \ref{eq.operador_rotacao}, e fazendo as simplifica\c{c}\~oes, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+-\frac{\partial\,\tilde{E}_2}{\partial\,z}&=i\,\omega\,\mu_0\tilde{H}_1\\
+\frac{\partial\,\tilde{E}_1}{\partial\,z}&=i\,\omega\,\mu_0\tilde{H}_2+i\,k\tilde{E}_3\\
+i\,\tilde{E}_2&=\frac{i\,\omega\,\mu_0}{k}\tilde{H}_3.
+\end{empheq}
+
+Observando que $\mathbf{v}=-i\,\omega\mathbf{u}$ depois de aplicada a transformada de Fourier no tempo, a equa\c{c}\~ao \ref{eq.mag_ela_2} pode ser escrita como
+\begin{equation*}
+\begin{pmatrix}
+\frac{\partial\,H_3}{\partial\,y}-\frac{\partial\,H_2}{\partial\,z}\\
+\frac{\partial\,H_1}{\partial\,z}-\frac{\partial\,H_3}{\partial\,x}\\
+\frac{\partial\,H_2}{\partial\,x}-\frac{\partial\,H_1}{\partial\,y}
+\end{pmatrix}
+=
+(\sigma-i\,\epsilon\,\omega)\,
+\begin{pmatrix}
+E_1\\
+E_2\\
+E_3
+\end{pmatrix}
+-i\,\omega\,\sigma\,\mu_0
+\begin{pmatrix}
+u_2H_3^0-u_3H_2^0\\
+u_3H_1^0-u_1H_3^0\\
+u_1H_2^0-u_2H_1^0
+\end{pmatrix}
++
+\begin{pmatrix}
+j_1\\
+j_2\\
+j_3
+\end{pmatrix}.
+\end{equation*}
+Aplicando as transformadas laterais de Fourier conforme a equa\c{c}\~ao \ref{eq.trans_fourier_1}, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+i\,k_y\widehat{H}_3-\frac{\partial\,\widehat{H}_2}{\partial\,z}&=(\sigma-i\,\epsilon\,\omega)\,\widehat{E}_1-i\,\omega\,\sigma\,\mu_0(u_2H_3^0-u_3H_2^0)+\widehat{j}_1\\
+\frac{\partial\,\widehat{H}_1}{\partial\,z}-i\,k_x\widehat{H}_3&=(\sigma-i\,\epsilon\,\omega)\,\widehat{E}_2-i\,\omega\,\sigma\,\mu_0(u_3H_1^0-u_1H_3)+\widehat{j}_2\\
+i\,k_x\widehat{H}_2-i\,k_y\widehat{H}_1&=(\sigma-i\,\epsilon\,\omega)\,\widehat{E}_3-i\,\omega\,\sigma\,\mu_0(u_1H_2^0-u_2H_1^0)+\widehat{j}_3.
+\end{empheq}
+Rotacionando o sistema usando o operador dado pela equa\c{c}\~ao \ref{eq.operador_rotacao}, e fazendo as simplifica\c{c}\~oes, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+-\frac{\partial\,\tilde{H}_2}{\partial\,z}&=(\sigma-i\,\epsilon\,\omega)\,\tilde{E}_1-i\,\omega\,\sigma\,\mu_0\,\tilde{H}_3^0\tilde{u}_2+i\,\omega\,\sigma\,\mu_0\,\tilde{H}_2^0\tilde{u}_3+\tilde{j}_1\\
+\frac{\partial\,\tilde{H}_1}{\partial\,z}&=(\sigma-i\,\epsilon\,\omega)\,\tilde{E}_2+i\,k\,\tilde{H}_3-i\,\omega\,\sigma\,\mu_0\,\tilde{H}_1^0\tilde{u}_3+i\,\omega\,\sigma\,\mu_0\,\tilde{H}_3^0\tilde{u}_1+\tilde{j}_2\\
+i\,k\,\tilde{H}_2&=(\sigma-i\,\epsilon\,\omega)\tilde{E}_3-i\,\omega\,\sigma\,\mu_0\,(\tilde{H}_2^0\tilde{u}_1-\tilde{H}_1^0\tilde{u}_2)+\tilde{j}_3.
+\end{empheq}
+
+A equa\c{c}\~ao \ref{eq.mag_ela_3} pode ser reescrita como
+
+\begin{empheq}[left=\empheqlbrace]{align*}
+-\omega^2\rho\,u_1&=\frac{\partial \tau_{11}}{\partial\,x}+\frac{\partial \tau_{12}}{\partial\,y}+\frac{\partial \tau_{13}}{\partial\,z}+F_1\\
+-\omega^2\rho\,u_2&=\frac{\partial \tau_{21}}{\partial\,x}+\frac{\partial \tau_{22}}{\partial\,y}+\frac{\partial \tau_{23}}{\partial\,z}+F_2\\
+-\omega^2\rho\,u_3&=\frac{\partial \tau_{31}}{\partial\,x}+\frac{\partial \tau_{32}}{\partial\,y}+\frac{\partial \tau_{33}}{\partial\,z}+F_3
+\end{empheq}
+Aplicando as transformadas laterais de Fourier, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+-\omega^2\rho\,\widehat{u}_1&=i\,k_x\widehat{\tau}_{11}+i\,k_y\widehat{\tau}_{12}+\frac{\partial\widehat{\tau}_{13}}{\partial\,z}+\widehat{F}_1\\
+-\omega^2\rho\,\widehat{u}_2&=i\,k_x\widehat{\tau}_{21}+i\,k_y\widehat{\tau}_{22}+\frac{\partial\widehat{\tau}_{23}}{\partial\,z}+\widehat{F}_2\\
+-\omega^2\rho\,\widehat{u}_3&=i\,k_x\widehat{\tau}_{31}+i\,k_y\widehat{\tau}_{32}+\frac{\partial\widehat{\tau}_{33}}{\partial\,z}+\widehat{F}_3.
+\end{empheq}
+Aplicando a rota\c{c}\~ao e simplificando as equa\c{c}\~oes, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+-\omega^2\rho\,\tilde{u}_1&=i\,k\tilde{\tau}_{11}+\frac{\partial\tilde{\tau}_{13}}{\partial\,z}+\tilde{F}_1\\
+-\omega^2\rho\,\tilde{u}_2&=i\,k\tilde{\tau}_{12}+\frac{\partial\tilde{\tau}_{23}}{\partial\,z}+\tilde{F}_2\\
+-\omega^2\rho\,\tilde{u}_3&=i\,k\tilde{\tau}_{13}+\frac{\partial\tilde{\tau}_{33}}{\partial\,z}+\tilde{F}_3.
+\end{empheq}
+
+A equa\c{c}\~ao \ref{eq.mag_ela_4} pode ser reescrita como
+\begin{equation*}
+\begin{pmatrix}
+\tau_{11}&\tau_{12}&\tau_{13}\\
+\tau_{21}&\tau_{22}&\tau_{23}\\
+\tau_{31}&\tau_{32}&\tau_{33}
+\end{pmatrix}
+=
+\lambda\,\left(\frac{\partial\,u_1}{\partial\,x}+\frac{\partial\,u_2}{\partial\,y}+\frac{\partial\,u_3}{\partial\,z}\right)\,I+G\,
+\begin{pmatrix}
+2\,\frac{\partial\,u_1}{\partial\,x}&\frac{\partial\,u_1}{\partial\,y}+\frac{\partial\,u_2}{\partial\,x}&\frac{\partial\,u_1}{\partial\,z}+\frac{\partial\,u_3}{\partial\,x}\\
+\frac{\partial\,u_2}{\partial\,x}+\frac{\partial\,u_1}{\partial\,y}&2\,\frac{\partial\,u_2}{\partial\,y}&\frac{\partial\,u_2}{\partial\,z}+\frac{\partial\,u_3}{\partial\,y}\\
+\frac{\partial\,u_3}{\partial\,x}+\frac{\partial\,u_1}{\partial\,z}&\frac{\partial\,u_3}{\partial\,y}+\frac{\partial\,u_2}{\partial\,z}&2\,\frac{\partial\,u_3}{\partial\,z}
+\end{pmatrix},
+\end{equation*}
+onde $I$ \'e uma matriz identidade.
+Dada a simetria do tensor $\tau_{ij}$ temos seis equa\c{c}\~oes
+\begin{empheq}[left=\empheqlbrace]{align*}
+\tau_{11}&=\lambda\,\left(\frac{\partial\,u_1}{\partial\,x}+\frac{\partial\,u_2}{\partial\,y}+\frac{\partial\,u_3}{\partial\,z}\right)+2\,G\,\frac{\partial\,u_1}{\partial\,x}\\
+\tau_{12}&=G\,\left(\frac{\partial\,u_1}{\partial\,y}+\frac{\partial\,u_2}{\partial\,x}\right)\\
+\tau_{13}&=G\,\left(\frac{\partial\,u_1}{\partial\,z}+\frac{\partial\,u_3}{\partial\,x}\right)\\
+\tau_{22}&=\lambda\,\left(\frac{\partial\,u_1}{\partial\,x}+\frac{\partial\,u_2}{\partial\,y}+\frac{\partial\,u_3}{\partial\,z}\right)+2\,G\,\frac{\partial\,u_2}{\partial\,y}\\
+\tau_{23}&=G\,\left(\frac{\partial\,u_2}{\partial\,z}+\frac{\partial\,u_3}{\partial\,y}\right)\\
+\tau_{33}&=\lambda\,\left(\frac{\partial\,u_1}{\partial\,x}+\frac{\partial\,u_2}{\partial\,y}+\frac{\partial\,u_3}{\partial\,z}\right)+2\,G\,\frac{\partial\,u_3}{\partial\,z}.
+\end{empheq}
+Aplicando as transformadas laterais de Fourier no sistema acima, temos
+\begin{empheq}[left=\empheqlbrace]{align*}
+\widehat{\tau}_{11}&=\lambda\,\left(-i\,k_x\widehat{u}_1-i\,k_y\widehat{u}_2+\frac{\partial\,\widehat{u}_3}{\partial\,z}\right)-2\,i\,G\,k_x\widehat{u}_1\\
+\widehat{\tau}_{12}&=G\,\left(-i\,k_y\widehat{u}_1-i\,k_x\widehat{u}_2\right)\\
+\widehat{\tau}_{13}&=G\,\left(\frac{\partial\,\widehat{u}_1}{\partial\,z}-i\,k_x\widehat{u}_3\right)\\
+\widehat{\tau}_{22}&=\lambda\,\left(-i\,k_x\widehat{u}_1-i\,k_y\widehat{u}_2+\frac{\partial\,\widehat{u}_3}{\partial\,z}\right)-2\,i\,G\,k_y\widehat{u}_2\\
+\widehat{\tau}_{23}&=G\,\left(\frac{\partial\,\widehat{u}_2}{\partial\,z}-i\,k_y\widehat{u}_3\right)\\
+\widehat{\tau}_{33}&=\lambda\,\left(-i\,k_x\widehat{u}_1-i\,k_y\widehat{u}_2+\frac{\partial\,\widehat{u}_3}{\partial\,z}\right)+2\,G\,\frac{\partial\,\widehat{u}_3}{\partial\,z}.
+\end{empheq}
+E aplicando a rota\c{c}\~ao $\Omega$ na forma dada pela equa\c{c}\~ao \ref{eq.rotacao_tensor}, fazendo as simplifica\c{c}\~oes, finalmente a lei de Hooke se torna
+\begin{empheq}[left=\empheqlbrace]{align*}
+\tilde{\tau}_{11}&=i\,k(\lambda+2\,G)\,\tilde{u}_1+\lambda\,\frac{\partial\,\tilde{u}_3}{\partial\,z}\\
+\tilde{\tau}_{12}&=i\,G\,k\,\tilde{u}_2\\
+\tilde{\tau}_{13}&=G\,\frac{\partial\,\tilde{u}_1}{\partial\,z}+i\,G\,k\,\tilde{u}_3\\
+\tilde{\tau}_{22}&=\lambda\,\frac{\partial\,\tilde{u}_3}{\partial\,z}+i\,\lambda\,k\,\tilde{u}_1\\
+\tilde{\tau}_{23}&=G\,\frac{\partial\,\tilde{u}_2}{\partial\,z}\\
+\tilde{\tau}_{33}&=(\lambda+2\,G)\,\frac{\partial\,\tilde{u}_3}{\partial\,z}+i\,\lambda\,k\,\tilde{u}_1.
+\end{empheq}
+Vimos que as equa\c{c}\~oes \ref{eq.mag_ela_1}, \ref{eq.mag_ela_2}, \ref{eq.mag_ela_3} e \ref{eq.mag_ela_4} escritas no espa\c{c}o horizontal de Fourier e rotacionadas nos fornecem quinze equa\c{c}\~oes. Isolando as vari\'aveis $\tilde{H}_3,\tilde{E}_3,\tilde{\tau}_{11},\tilde{\tau}_{22}$ e $\tilde{\tau}_{12}$, podemos substituir algumas equa\c{c}\~oes em outras e reduzir a quantidade para dez. Fazendo ainda as substitui\c{c}\~oes da vari\'avel $\dot{\tilde{\mathbf{u}}}=-i\,\omega\,\tilde{\mathbf{u}}$, da vagarosidade horizontal conforme a equa\c{c}\~ao \ref{eq.numero_onda_vagarozidade_horizontal} e isolando as derivadas parciais em rela\c{c}\~ao \`a profundidade, temos o seguinte sistema 
+\begin{empheq}[left=\empheqlbrace]{align*}
+\frac{\partial\,\tilde{E}_1}{\partial\,z}&=\left(i\,\omega\,\mu_0+\frac{i^2\gamma^2\omega^2}{\sigma-i\,\epsilon\,\omega}\right)\,\tilde{H}_2-\frac{i\,\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_2^0}{\sigma-i\,\epsilon\,\omega}\dot{\tilde{u}}_1+\frac{i\,\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_1^0}{\sigma-i\,\epsilon\,\omega}\dot{\tilde{u}}_2+\frac{i\,\gamma\,\omega}{\sigma-i\,\epsilon\,\omega}\,\tilde{j}_3\\\\
+\frac{\partial\,\tilde{E}_2}{\partial\,z}&=-i\,\omega\,\mu_0\,\tilde{H}_1\\\\
+-\frac{\partial\,\tilde{H}_1}{\partial\,z}&=-\left(\sigma-i\,\epsilon\,\omega+\frac{i^2\gamma^2\omega^2}{i\,\omega\,\mu_0}\right)\,\tilde{E}_2+\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_1-\sigma\,\mu_0\tilde{H}_1^0\dot{\tilde{u}}_3-\tilde{j}_2\\\\
+\frac{\partial\,\tilde{H}_2}{\partial\,z}&=-\left(\sigma-i\,\epsilon\,\omega\right)\,\tilde{E}_1-\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_2+\sigma\,\mu_0\tilde{H}_2^0\dot{\tilde{u}}_3-\tilde{j}_1\\\\
+\frac{\partial\,\dot{\tilde{u}}_1}{\partial\,z}&=-i\,\gamma\,\omega\,\dot{\tilde{u}}_3-\frac{i\,\omega}{G}\,\tilde{\tau}_{13}\\\\
+\frac{\partial\,\dot{\tilde{u}}_2}{\partial\,z}&=-\frac{i\,\omega}{G}\,\tilde{\tau}_{23}\\\\
+\frac{\partial\,\dot{\tilde{u}}_3}{\partial\,z}&=-\frac{i\,\omega}{\lambda+2\,G}\,\tilde{\tau}_{33}-\frac{i\,\omega\,\gamma\,\lambda}{\lambda+2\,G}\,\dot{\tilde{u}}_1\\\\
+\frac{\partial\,\tilde{\tau}_{13}}{\partial\,z}&=
+\left[\frac{\omega\,\rho}{i}-\frac{i^2\gamma^2\omega}{i}\cdot\frac{\lambda^2-(\lambda+2\,G)^2}{\lambda+2\,G}\right]\,\dot{\tilde{u}}_1-\frac{i\,\omega\,\gamma\,\lambda}{\lambda+2\,G}\,\tilde{\tau}_{33}-\tilde{F}_1\\\\
+\frac{\partial\,\tilde{\tau}_{23}}{\partial\,z}&=\left[\frac{\omega\,\rho}{i}+\frac{i^2\gamma^2\omega\,G}{i}\right]\,\dot{\tilde{u}}_2-\tilde{F}_2\\\\
+\frac{\partial\,\tilde{\tau}_{33}}{\partial\,z}&=\frac{\omega\,\rho}{i}\,\dot{\tilde{u}}_3-i\,\omega\,\gamma\,\tilde{\tau}_{13}-\tilde{F}_3.
+\end{empheq}
+
+%SISTEMA COMO TODO NO FORMATO MATRICIAL
+
+%
+%\begin{landscape}
+%\begin{equation*}
+%\frac{\partial}{\partial\,z}
+%\begin{pmatrix}
+%\tilde{E}_1\\\\
+%\tilde{E}_2\\\\
+%\tilde{H}_1\\\\
+%\tilde{H}_2\\\\
+%\dot{\tilde{u}}_1\\\\
+%\dot{\tilde{u}}_2\\\\
+%\dot{\tilde{u}}_3\\\\
+%\tilde{\tau}_{13}\\\\
+%\tilde{\tau}_{23}\\\\
+%\tilde{\tau}_{33}
+%\end{pmatrix}
+%=
+%\begin{pmatrix}
+%0&0&0&i\,\omega\,\mu_0-\frac{k^2}{\sigma-i\,\epsilon\,\omega}&-\frac{k\,\sigma\,\mu_0\tilde{H}_2^0}{i\,(\sigma-i\,\epsilon\,\omega)}&\frac{k\,\sigma\,\mu_0\tilde{H}_1^0}{i\,(\sigma-i\,\epsilon\,\omega)}&0&0&0&0\\\\
+%0&0&-i\,\omega\,\mu_0&0&0&0&0&0&0&0\\\\
+%0&\sigma-i\,\epsilon\,\omega+\frac{i\,k^2}{\omega\,\mu_0}&0&0&-\sigma\,\mu_0\tilde{H}_3^0&0&\sigma\,\mu_0\tilde{H}_1^0&0&0&0\\\\
+%-(\sigma-i\,\epsilon\,\omega)&0&0&0&0&-\sigma\,\mu_0\tilde{H}_3^0&\sigma\,\mu_0\tilde{H}_2^0&0&0&0\\\\
+%0&0&0&0&0&0&i\,k&0&0&-\frac{i\,\omega}{G}\\\\
+%0&0&0&0&0&0&0&0&-\frac{i\,\omega}{G}&0\\\\
+%0&0&0&0&\frac{i\,\lambda\,k}{\lambda+2\,G}&0&0&0&0&-\frac{i\,\omega}{\lambda+2\,G}\\\\
+%0&0&0&0&\frac{\omega\rho}{i}-\frac{k^2}{i\,\omega}\,\frac{(\lambda+2\,G)^2-\lambda^2}{\lambda+2\,G}&0&0&0&0&\frac{i\,\lambda\,k}{\lambda+2\,G}\\\\
+%0&0&0&0&0&\omega\rho-\frac{G\,k^2}{i\,\omega}&0&0&0&0\\\\
+%0&0&0&0&0&0&\frac{\omega\rho}{i}&i\,k&0&0
+%\end{pmatrix}
+%\begin{pmatrix}
+%\tilde{E}_1\\\\
+%\tilde{E}_2\\\\
+%\tilde{H}_1\\\\
+%\tilde{H}_2\\\\
+%\dot{\tilde{u}}_1\\\\
+%\dot{\tilde{u}}_2\\\\
+%\dot{\tilde{u}}_3\\\\
+%\tilde{\tau}_{13}\\\\
+%\tilde{\tau}_{23}\\\\
+%\tilde{\tau}_{33}
+%\end{pmatrix}
+%+
+%\begin{pmatrix}
+%-\frac{i\,k^2}{\sigma-i\epsilon\omega}\,\tilde{\mathbf{j}}_3\\\\
+%0\\\\
+%\tilde{\mathbf{j}}_2\\\\
+%-\tilde{\mathbf{j}}_1\\\\
+%0\\\\
+%0\\\\
+%0\\\\
+%-\tilde{F}_1\\\\
+%-\tilde{F}_2\\\\
+%-\tilde{F}_3
+%\end{pmatrix}
+%\end{equation*}
+%\end{landscape}
+
+% SISTEMA INICIAL SEPARADO EM DOIS E EM TERMOS DA VAGAROSIDADE HORIZONTAL
+
+%Podemos escrever os sistemas em termos da vagarozidade horizontal, de acordo com a equacao \ref{eq.numero_onda_vagarozidade_horizontal}.
+%\begin{landscape}
+%\begin{equation*}
+%\frac{\partial}{\partial\,z}
+%\begin{pmatrix}
+%\tilde{E}_1\\\\
+%\tilde{E}_2\\\\
+%\tilde{H}_1\\\\
+%\tilde{H}_2
+%\end{pmatrix}
+%=-i\,\omega\,
+%\begin{pmatrix}
+%0&0&0&-\mu_0+\frac{\gamma\,\omega}{i(\sigma-i\,\epsilon\,\omega)}\\\\
+%0&0&\mu_0&0\\\\
+%0&-\frac{\sigma-i\,\epsilon\,\omega}{i\,\omega}-\frac{\gamma^2}{\mu_0}&0&0\\\\
+%\frac{\sigma-i\,\epsilon\,\omega}{i\,\omega}&0&0&0
+%\end{pmatrix}
+%\begin{pmatrix}
+%\tilde{E}_1\\\\
+%\tilde{E}_2\\\\
+%\tilde{H}_1\\\\
+%\tilde{H}_2
+%\end{pmatrix}
+%+
+%\begin{pmatrix}
+%\frac{\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_1^0}{i\,(\sigma-i\,\epsilon\,\omega)}\dot{\tilde{u}}_2-\frac{\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_2^0}{i\,(\sigma-i\,\epsilon\,\omega)}\dot{\tilde{u}}_1-\frac{i\,(\gamma\,\omega)^2}{\sigma-i\epsilon\omega}\,\tilde{j}_3\\\\
+%0\\\\
+%\sigma\,\mu_0\tilde{H}_1^0\dot{\tilde{u}}_3-\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_1 
+%+\tilde{j}_2\\\\
+%\sigma\,\mu_0\tilde{H}_2^0\dot{\tilde{u}}_3-\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_2-\tilde{j}_1
+%\end{pmatrix}
+%\end{equation*}\\
+%\begin{equation*}
+%\frac{\partial}{\partial\,z}
+%\begin{pmatrix}
+%\dot{\tilde{u}}_1\\\\
+%\dot{\tilde{u}}_2\\\\
+%\tilde{\tau}_{33}\\\\
+%\dot{\tilde{u}}_3\\\\
+%\tilde{\tau}_{13}\\\\
+%\tilde{\tau}_{23}
+%\end{pmatrix}
+%=-i\,\omega\,
+%\begin{pmatrix}
+%0&0&0&-\gamma&\frac{1}{G}&0&\\\\
+%0&0&0&0&0&\frac{1}{G}\\\\
+%0&0&0&\rho&-\gamma&0\\\\
+%-\frac{\lambda\,\gamma}{\lambda+2\,G}&0&\frac{1}{\lambda+2\,G}&0&0&0\\\\
+%\rho-\gamma^2\frac{(\lambda+2\,G)^2-\lambda^2}{\lambda+2\,G}&0&-\frac{\lambda\,\gamma}{\lambda+2\,G}&0&0&0\\\\
+%0&-\frac{\rho}{i}-G\,\gamma^2&0&0&0&0\\\\
+%\end{pmatrix}
+%\begin{pmatrix}
+%\dot{\tilde{u}}_1\\\\
+%\dot{\tilde{u}}_2\\\\
+%\tilde{\tau}_{33}\\\\
+%\dot{\tilde{u}}_3\\\\
+%\tilde{\tau}_{13}\\\\
+%\tilde{\tau}_{23}\\\\
+%\end{pmatrix}
+%+
+%\begin{pmatrix}
+%0\\\\
+%0\\\\
+%-\tilde{F}_3\\\\
+%0\\\\
+%-\tilde{F}_1\\\\
+%-\tilde{F}_2
+%\end{pmatrix}
+%\end{equation*}
+%\end{landscape}
+
+O sistema acima pode ser colocado num formato matricial composto por submatrizes nulas e submatrizes sim\'etricas, e para isso precisamos agrupar essa dez equa\c{c}\~oes em quatro equa\c{c}\~oes matriciais.
+
+\begin{align}\label{eq.matricial_1}
+\frac{\partial}{\partial\,z}
+\begin{pmatrix}
+\tilde{E}_1\\\\
+\tilde{H}_2
+\end{pmatrix}
+&=-i\,\omega\,
+\begin{pmatrix}
+0&-\mu_0-\frac{i\,\gamma^2\omega}{\sigma-i\,\epsilon\,\omega}\\\\
+\frac{\sigma-i\,\epsilon\,\omega}{i\,\omega}&0
+\end{pmatrix}
+\begin{pmatrix}
+\tilde{E}_1\\\\
+\tilde{H}_2
+\end{pmatrix}
++
+\begin{pmatrix}
+\frac{i\,\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_1^0}{\sigma-i\,\epsilon\,\omega}\dot{\tilde{u}}_2-\frac{i\,\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_2^0}{\sigma-i\,\epsilon\,\omega}\dot{\tilde{u}}_1+\frac{i\,\gamma\,\omega}{\sigma-i\epsilon\omega}\,\tilde{j}_3\\\\
+\sigma\,\mu_0\tilde{H}_2^0\dot{\tilde{u}}_3-\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_2-\tilde{j}_1
+\end{pmatrix}\\\nonumber\\\label{eq.matricial_2}
+\frac{\partial}{\partial\,z}
+\begin{pmatrix}
+\tilde{E}_2\\\\
+-\tilde{H}_1
+\end{pmatrix}
+&=-i\,\omega\,
+\begin{pmatrix}
+0&-\mu_0\\\\
+\frac{\sigma-i\,\epsilon\,\omega}{i\,\omega}+\frac{i\,\omega\,\gamma^2}{i\,\omega\,\mu_0}&0
+\end{pmatrix}
+\begin{pmatrix}
+\tilde{E}_2\\\\
+-\tilde{H}_1
+\end{pmatrix}
++
+\begin{pmatrix}
+0\\\\
+-\sigma\,\mu_0\tilde{H}_1^0\dot{\tilde{u}}_3+\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_1 
+-\tilde{j}_2
+\end{pmatrix}\\\nonumber\\\label{eq.matricial_3}
+\frac{\partial}{\partial\,z}
+\begin{pmatrix}
+\dot{\tilde{u}}_3\\\\
+\tilde{\tau}_{13}\\\\
+\tilde{\tau}_{33}\\\\
+\dot{\tilde{u}}_1\\\\
+\end{pmatrix}
+&=-i\,\omega\,
+\begin{pmatrix}
+0&0&\frac{1}{\lambda+2\,G}&\frac{\lambda\,\gamma}{\lambda+2\,G}\\\\
+0&0&\frac{\lambda\,\gamma}{\lambda+2\,G}&\rho+\gamma^2\frac{\lambda^2-(\lambda+2\,G)^2}{\lambda+2\,G}\\\\
+\rho&\gamma&0&0\\\\
+\gamma&\frac{1}{G}&0&0\\\\
+\end{pmatrix}
+\begin{pmatrix}
+\dot{\tilde{u}}_3\\\\
+\tilde{\tau}_{13}\\\\
+\tilde{\tau}_{33}\\\\
+\dot{\tilde{u}}_1\\\\
+\end{pmatrix}
++
+\begin{pmatrix}
+0\\\\
+-\tilde{F}_1\\\\
+-\tilde{F}_3\\\\
+0\\\\
+\end{pmatrix}\\\nonumber\\\label{eq.matricial_4}
+\frac{\partial}{\partial\,z}
+\begin{pmatrix}
+\dot{\tilde{u}}_2\\\\
+\tilde{\tau}_{23}
+\end{pmatrix}
+&=-i\,\omega\,
+\begin{pmatrix}
+0&\frac{1}{G}\\\\
+\rho-G\,\gamma^2&0\\\\
+\end{pmatrix}
+\begin{pmatrix}
+\dot{\tilde{u}}_2\\\\
+\tilde{\tau}_{23}\\\\
+\end{pmatrix}
++
+\begin{pmatrix}
+0\\\\
+-\tilde{F}_2
+\end{pmatrix}
+\end{align}
+Uma vez que as dez vari\'aveis das equa\c{c}\~oes matricias acima tenham sido determinadas, podemos determinar tamb\'em as cinco vari\'aveis restantes usando
+\begin{empheq}[left=\empheqlbrace]{align*}
+\tilde{H}_3&=\frac{\gamma}{\mu_0}\,\tilde{E}_2\\
+\tilde{E}_3&=\frac{i\,\omega\,\gamma}{\overline{\sigma}}\,\tilde{H}_2-\frac{\sigma\,\mu_0\tilde{H}_2^0}{\overline{\sigma}}\,\dot{\tilde{u}}_1+\frac{\sigma\,\mu_0\tilde{H}_1^0}{\overline{\sigma}}\,\dot{\tilde{u}}_2-\frac{1}{\overline{\sigma}}\,\tilde{j}_3\\
+\tilde{\tau}_{11}&=\gamma\,\frac{\lambda^2-(\lambda+2\,G)^2}{\lambda+2\,G}\dot{\tilde{u}}_1+\frac{\lambda}{\lambda+2\,G}\,\tilde{\tau}_{33}\\
+\tilde{\tau}_{22}&=\gamma\,\lambda\,\frac{\lambda-(\lambda+2\,G)}{\lambda+2\,G}\dot{\tilde{u}}_1+\frac{\lambda}{\lambda+2\,G}\,\tilde{\tau}_{33}\\
+\tilde{\tau}_{12}&=-\gamma\,G\,\dot{\tilde{u}}_2.
+\end{empheq}
+
