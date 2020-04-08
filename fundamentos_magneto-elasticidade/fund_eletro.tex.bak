@@ -1,6 +1,8 @@
-\chapter{Fundamentos de eletromagnetismo}\label{sec.fund_eletr}
+\chapter{Fundamentos de Eletromagnetismo}\label{sec.fund_eletr}
 
 \section{Introdução}
+Neste cap\'itulo s\~ao apresentados conceitos fundamentais sobre eletromagnetismo considerados importantes para o entendimento do efeito magneto-el\'astico. Partimos de fatos que foram observados primeiramente de forma experimental, como as leis de Gauss para o fluxo el\'etrico e fluxo magn\'etico, a lei de Faraday e a lei de Amp\`ere. O conhecimento dessas leis \'e a base para o desenvolvimento matem\'atico (realizado por Maxwell) dos fen\^omenos eletromagn\'eticos, o que gerou um sistema de EDP's conhecidas como equa\c{c}\~oes de Maxwell.    
+
 
 \section{Fatos experimentais}
 
@@ -9,7 +11,7 @@ De acordo com \cite{jackson_classical_1999} e \cite{sommerfeld_52} , os conceito
 \begin{equation}\label{eq.forc_elet}
 \textbf{F}_e=k\,\frac{q_1\,q_2}{||\textbf{x}_1-\textbf{x}_2||^2}\frac{\textbf{x}_1-\textbf{x}_2}{||\textbf{x}_1-\textbf{x}_2||},
 \end{equation}
-onde $q_i$ são as cargas elétricas (campos escalares) presentes nos pontos $\textbf{x}_i$, respectivamente, $k$ (campo escalar) é uma constante de proporcionalidade cujo valor depende do sistema de unidades de medida adotado, $||\textbf{x}_1-\textbf{x}_2||^2$ é a distância Euclidiana entre as cargas e $\textbf{F}$ é a força elétrica exercida pela carga $q_1$ sobre a carga $q_2$. As notações em negrito representam campos vetorias pertencentes ao espaço $\mathbb{R}^3$, e o vetor normal que fornece a direção de interação entre as cargas é dado por $(\textbf{x}_1-\textbf{x}_2)/||\textbf{x}_1-\textbf{x}_2||$.
+onde $q_i$ são as cargas elétricas (campos escalares) presentes nos pontos $\textbf{x}_i$, respectivamente, $k$ (campo escalar) é uma constante de proporcionalidade cujo valor depende do sistema de unidades de medida adotado, $||\textbf{x}_1-\textbf{x}_2||^2$ é o quadrado da distância Euclidiana entre as cargas e $\textbf{F}_e$ é a força elétrica exercida pela carga $q_1$ sobre a carga $q_2$. As notações em negrito representam campos vetorias pertencentes ao espaço $\mathbb{R}^3$, e o vetor normal que fornece a direção de interação entre as cargas é dado por $(\textbf{x}_1-\textbf{x}_2)/||\textbf{x}_1-\textbf{x}_2||$.
 
 O campo elétrico $\textbf{E}$ é definido como sendo a força elétrica por unidade de carga em um determinado ponto que contém a carga de prova $q_2$, portanto é uma função vetorial que depende da posição da carga de prova em relação à carga fonte $q_1$, ou seja,
 \begin{equation}\label{eq.camp_elet}
@@ -37,7 +39,7 @@ como podemos observar na figura \ref{fig.camp_eletr} simulando um sistema de coo
 %\label{fig.mossul}
 %\end{figure}
 
-Num sistema com mais de uma carga fonte produzindo campos elétricos, foi observado experimentalmente que o campo elétrico total atuando num ponto $\textbf{x}$ é simplesmente o somatório dos campos produzidos por cada carga, o que ficou conhecido como a \textit{Superposição Linear} e pode ser expressada na forma
+Num sistema com mais de uma carga fonte produzindo campos elétricos, foi observado experimentalmente que o campo elétrico total atuando num ponto $\textbf{x}$ é simplesmente o somatório dos campos produzidos por cada carga, o que ficou conhecido como a \textit{Superposição Linear} e pode ser expressa na forma
 \begin{equation*}
 \textbf{E}=k\,\sum_{i=1}^{n}q_i\,\frac{\textbf{x}_i-\textbf{x}}{||\textbf{x}_i-\textbf{x}||^3}.
 \end{equation*} 
@@ -50,7 +52,7 @@ medida, no SI, em $C/m^3$. A quantidade total de carga $Q=\sum_i \Delta\,q_i$ no
 Q=\iiint_{V}\rho_e(\textbf{x}_0)\,dV.
 \end{equation}
 
-O \textit{fluxo elétrico} é definido como a quantidade linhas do campo elétrico que atravessam uma superfície qualquer, e é dado pela equação
+O \textit{fluxo elétrico} é definido como a quantidade de linhas do campo elétrico que atravessam uma superfície qualquer, e é dado pela equação
 \begin{equation*}
 \Phi_\textbf{E}=\textbf{E}\cdot\textbf{A}. 
 \end{equation*} 
@@ -80,7 +82,7 @@ Considere uma carga pontual positiva $q$ localizada no centro de uma esfera imag
 \begin{equation*}
 E=\frac{q}{4\pi\epsilon_0\,r^2},
 \end{equation*}
-assim o fluxo elétrico é calculado usando a equação \ref{eq.fluxo_eletr}.
+onde $\epsilon_0$ \'e a \textit{permissividade el\'etrica do meio} e assim o fluxo elétrico é calculado usando a equação \ref{eq.fluxo_eletr}.
 \begin{align*}
 \Phi_\textbf{E}&=\oiint_S\textbf{E}\cdot\textit{d}\textbf{A}\\
 &=\oiint_S\textbf{E}\cdot\textbf{n}\,\textit{d}A\\
@@ -111,7 +113,7 @@ Como não existem monopolos magnéticos, o campo magnético deve ser definido de
 \begin{itemize}
 \item a magnitude da força magnética $\textbf{F}_m$ é proporcional à $v$, $B$ e $q$, onde $v$ e $B$ são as magnitudes da velocidade e do campo magnético respectivamente,
 \item a direção de $\textbf{F}_m$ é perpendicular ao plano formado por $\textbf{v}$ e $\textbf{B}$,
-\item $\textbf{F}_m$ é proporcional ao $\sin\theta$, o ângulo formado por $\textbf{v}$ e $\textbf{B}$. Se $\textbf{v}$ e $\textbf{B}$ são paralelos então $\textbf{F}_m=0$, e
+\item $\textbf{F}_m$ é proporcional ao $\text{sen}\theta$, o ângulo formado por $\textbf{v}$ e $\textbf{B}$. Se $\textbf{v}$ e $\textbf{B}$ são paralelos então $\textbf{F}_m=0$, e
 \item o sentido de $\textbf{F}_m$ depende do sinal da carga $q$.
 \end{itemize}
 Essas observações são ilustradas na figura \ref{fig.froca_mag_veloc} e a força magnética é definida como
@@ -169,7 +171,7 @@ e o campo magnético no volume ao redor do fio pode ser obtido integrando sobre 
 \textbf{B}=\frac{\mu_0I}{4\,\pi}\int_{\textbf{l}}\frac{d(\textbf{l}\times\textbf{n})}{r^2}.
 \end{equation}
 
-Considere agora um laço circular (linha de campo magnético) de raio $r$ contido num plano perpendicular ao fio condutor, onde esse laço está dividido em pequenos comprimentos $\Delta\textbf{s}=\Delta s\,\pmb{\phi}$, cujos vetores correspondentes a cada ponto do laço apontam na direção do vetor tangencial à circunferência naquele ponto, conforme  a figura \ref{fig.laco_amperiano}. Esse laço fechado contido num plano é denominado \textit{laço Amperiano} e é usado para calcular o campo magnético referente àquela linha de campo tomando o limite quando $\Delta\textbf{s}\to 0$ e integrando no intervalo dado pelo comprimento da circunferência. Nesse caso, $\theta=\pi$ e $\pmb{\phi}$ é perpendicular ao plano formado por $\textbf{l}$ e $\textbf{n}$, portanto a magnitute do vetor  $\textbf{B}$ na direção $\pmb{\phi}$ é dada pela lei de Biot-Savart na equação \ref{eq.lei_biot_savart}.
+Considere agora um laço circular (linha de campo magnético) de raio $r$ contido num plano perpendicular ao fio condutor, onde esse laço está dividido em pequenos comprimentos $\Delta\textbf{s}=\Delta s\,\pmb{\phi}$, cujos vetores correspondentes a cada ponto do laço apontam na direção do vetor tangencial à circunferência naquele ponto, conforme  a figura \ref{fig.laco_amperiano}. Esse laço fechado contido num plano é denominado \textit{laço Amperiano} e é usado para calcular o campo magnético referente àquela linha de campo tomando o limite quando $\Delta\textbf{s}\to 0$ e integrando no intervalo dado pelo comprimento da circunferência. Nesse caso, $\theta=\frac{\pi}{2}$ e $\pmb{\phi}$ é perpendicular ao plano formado por $\textbf{l}$ e $\textbf{n}$, portanto a magnitude do vetor  $\textbf{B}$ na direção $\pmb{\phi}$ é deduzida a partir da lei de Biot-Savart na equação \ref{eq.lei_biot_savart}.
 \begin{equation*}
 \oint_{s}\textbf{B}\cdot d\textbf{s}=B\oint_{s}ds=\frac{\mu_0I}{2\pi\,r}2\pi\,r=\mu_0I.
 \end{equation*} 
@@ -194,7 +196,7 @@ Vamos considerar um outro exemplo de laço amperiano cujo contorno denotado por 
 \caption{\textit{Laço amperiano passando por duas linhas de campo magnético. O ponto no centro significa que o sentido da corrente elétrica está ``saindo do plano do papel".}}
 \label{fig.laco_amper_2}
 \end{figure}
-Vemos o mesmo resultado se o laço amperiano envolve uma ou duas linhas de campo magnético e, usando coordenadas cilíndricas, podemos demonstrar que o mesmo resultado é válido para uma quantidade arbitrária de linhas de campo magnético, ou seja, a integral de linha do campo magnético através de qualquer laço amperiano fechado é proporcional à corrente elétrica inscrita no laço. A \textit{Lei de Ampère} é dada por
+Vemos o mesmo resultado se o laço amperiano envolve uma ou duas linhas de campo magnético e, usando coordenadas cilíndricas, podemos demonstrar que o mesmo resultado é válido para uma quantidade arbitrária de linhas de campo magnético. Ou seja, a integral de linha do campo magnético através de qualquer laço amperiano fechado é proporcional à corrente elétrica inscrita no laço. A \textit{Lei de Ampère} é dada por
 \begin{equation*}
 \oint_{s}\textbf{B}\cdot d\textbf{s}=\mu_0I.
 \end{equation*}
@@ -241,7 +243,7 @@ Agora, num circuito elétrico fechado, as cargas percorrem um determinado caminh
 \end{equation*}
 também medida em volt. Como o campo magnético não produz trabalho, o trabalho realizado sobre o movimento das cargas é devido a um campo elétrico e para escrever a força eletromotriz em termos do campo elétrico de forma análoga ao que foi feito nas equações \ref{eq.trabalho}, \ref{eq.energia_potencial} e \ref{eq.ddp}, devemos utilizar uma integral de linha, pois nesse caso a corrente percorre um determinado caminho. Como o campo elétrico é não-conservativo (senão não haveria corrente) o valor da integral na equação \ref{eq.ddp} é diferente de zero. Assim,
 \begin{equation}\label{eq.emf_E_nc}
-\varepsilon=\oint_s\pmb{E}\cdot d\pmb{s}.
+\varepsilon=\oint_s\mathbf{E}\cdot d\pmb{s}.
 \end{equation}
  
 O \textit{fluxo magnético} é definido de maneira similar ao fluxo elétrico e seu entendimento também pode ser acompanhado pela figura \ref{fig.flux_ele}. O fluxo magnético através de uma superfície é definido como
@@ -254,13 +256,13 @@ onde o vetor área é $\textbf{A}=A\textbf{n}$, $\textbf{n}$ é o vetor normal �
 \end{equation}
 medido em \textit{Weber}, $T/m^2$. 
 
-Em 1831, Faraday descobriu que se pode criar um campo elétrico variando um campo magnético em função do tempo num fenômeno que foi batizado de \textit{indução eletromagnética}. Um dos experimentos de Faraday (figura \ref{fig.exper_faraday}) consiste em movimentar um ímã dentro de uma bobina feita de fio condutor onde se pode observar a geração de uma corrente elétrica, como se a bobina estivesse conectada a fonte de força eletromotriz. O experimento mostra que a força eletromotriz induzida é proporcional à taxa (negativa) de variação do fluxo magnético através da bobina, a \textit{lei de Faraday} é
+Em 1831, Faraday descobriu que se pode criar um campo elétrico variando um campo magnético em função do tempo num fenômeno que foi batizado de \textit{indução eletromagnética}. Um dos experimentos de Faraday (simbolizado pela figura \ref{fig.exper_faraday}) consiste em movimentar um ímã dentro de uma bobina feita de fio condutor onde se pode observar a geração de uma corrente elétrica, como se a bobina estivesse conectada \`a fonte de força eletromotriz. O experimento mostra que a força eletromotriz induzida é proporcional à taxa (negativa) de variação do fluxo magnético através da bobina, a \textit{lei de Faraday} é
 \begin{equation*}
 \varepsilon=-\frac{d\phi_\mathbf{B}}{dt}.
 \end{equation*}
 Podemos reescrever a lei de Faraday usando a equação \ref{eq.emf_E_nc},
 \begin{equation}\label{eq.lei_faraday}
-\varepsilon=\oint_s\pmb{E}\cdot d\pmb{s}=-\frac{d\phi_\mathbf{B}}{dt},
+\varepsilon=\oint_s\mathbf{E}\cdot d\pmb{s}=-\frac{d\phi_\mathbf{B}}{dt},
 \end{equation}
 o que implica que a variação do fluxo magnético induz um campo elétrico não-conservativo que varia com o tempo, diferente do campo elétrico conservativo gerado por cargas elétricas estacionárias.
 
@@ -415,7 +417,7 @@ A densidade de corrente el\'etrica pode ser composta pelas \textit{densidade de 
 \caption{\textit{A magnetiza\c{c}\~ao n\~ao uniforme produz densidade de corrente de magnetiza\c{c}\~ao.}}
 \label{fig.magnetizacao}
 \end{figure}     
-Nas superf\'icies onde as amostras se juntam a corrente final na dire\c{c}\~ao do eixo $x$ \'e dada pela diferen\c{c}a entre as correntes em cada amostra, geradas por suas respectivas magnetiza\c{c}\~oes na dire\c{c}\~ao do eixo $z$. Analogamente, sendo a magnetiza\c{c}\~ao no sentido do eixo $y$, a corrente resultante tamb\'em ser\'a na dire\c{c}\~ao do eixo $x$ mas em sentido oposto. Usando essa diferen\c{c}a de sentido das correstes resultantes e a equa\c{c}\~ao \ref{eq.densidade_corrente} podemos demonstrar que a densidade de corrente de magnetiza\c{c}\~ao \'e dada por
+Nas superf\'icies onde as amostras se juntam a corrente final na dire\c{c}\~ao do eixo $x$ \'e dada pela diferen\c{c}a entre as correntes em cada amostra, geradas por suas respectivas magnetiza\c{c}\~oes na dire\c{c}\~ao do eixo $z$. Analogamente, sendo a magnetiza\c{c}\~ao no sentido do eixo $y$, a corrente resultante tamb\'em ser\'a na dire\c{c}\~ao do eixo $x$ mas em sentido oposto. Usando essa diferen\c{c}a de sentido das correntes resultantes e a equa\c{c}\~ao \ref{eq.densidade_corrente} podemos demonstrar que a densidade de corrente de magnetiza\c{c}\~ao \'e dada por
 \begin{equation}\label{eq.magnetizacao_densi_corrente}
 \iint_S\mathbf{J}_m\cdot d\mathbf{A}=\oint_s \mathbf{M}\cdot d\mathbf{s}.
 \end{equation}
@@ -538,7 +540,7 @@ Assim, a componente normal da diferen\c{c}a entre os campos de densidade de flux
 \begin{equation*}
 (\mathbf{D}_2-\mathbf{D}_1)\cdot\mathbf{n}=\sigma. 
 \end{equation*} 
-Usando a defini\c{c}\~ao de \textit{salto} da componente normal de um campo encontrada em \cite{erigen_1963}, temos
+Usando a defini\c{c}\~ao de \textit{salto} da componente normal de um campo encontrada em \cite{eringen_1963}, temos
 \begin{equation}\label{eq.gau_meio_1}
 (\mathbf{D}_2-\mathbf{D}_1)\cdot\mathbf{n}=\left[\left[\mathbf{D}\right]\right]_n=\sigma.
 \end{equation}

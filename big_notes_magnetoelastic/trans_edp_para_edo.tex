@@ -164,19 +164,21 @@ E aplicando a rota\c{c}\~ao $\Omega$ na forma dada pela equa\c{c}\~ao \ref{eq.ro
 \tilde{\tau}_{33}&=(\lambda+2\,G)\,\frac{\partial\,\tilde{u}_3}{\partial\,z}+i\,\lambda\,k\,\tilde{u}_1.
 \end{empheq}
 Vimos que as equa\c{c}\~oes \ref{eq.mag_ela_1}, \ref{eq.mag_ela_2}, \ref{eq.mag_ela_3} e \ref{eq.mag_ela_4} escritas no espa\c{c}o horizontal de Fourier e rotacionadas nos fornecem quinze equa\c{c}\~oes. Isolando as vari\'aveis $\tilde{H}_3,\tilde{E}_3,\tilde{\tau}_{11},\tilde{\tau}_{22}$ e $\tilde{\tau}_{12}$, podemos substituir algumas equa\c{c}\~oes em outras e reduzir a quantidade para dez. Fazendo ainda as substitui\c{c}\~oes da vari\'avel $\dot{\tilde{\mathbf{u}}}=-i\,\omega\,\tilde{\mathbf{u}}$, da vagarosidade horizontal conforme a equa\c{c}\~ao \ref{eq.numero_onda_vagarozidade_horizontal} e isolando as derivadas parciais em rela\c{c}\~ao \`a profundidade, temos o seguinte sistema 
-\begin{empheq}[left=\empheqlbrace]{align*}
-\frac{\partial\,\tilde{E}_1}{\partial\,z}&=\left(i\,\omega\,\mu_0+\frac{i^2\gamma^2\omega^2}{\sigma-i\,\epsilon\,\omega}\right)\,\tilde{H}_2-\frac{i\,\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_2^0}{\sigma-i\,\epsilon\,\omega}\dot{\tilde{u}}_1+\frac{i\,\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_1^0}{\sigma-i\,\epsilon\,\omega}\dot{\tilde{u}}_2+\frac{i\,\gamma\,\omega}{\sigma-i\,\epsilon\,\omega}\,\tilde{j}_3\\\\
-\frac{\partial\,\tilde{E}_2}{\partial\,z}&=-i\,\omega\,\mu_0\,\tilde{H}_1\\\\
--\frac{\partial\,\tilde{H}_1}{\partial\,z}&=-\left(\sigma-i\,\epsilon\,\omega+\frac{i^2\gamma^2\omega^2}{i\,\omega\,\mu_0}\right)\,\tilde{E}_2+\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_1-\sigma\,\mu_0\tilde{H}_1^0\dot{\tilde{u}}_3-\tilde{j}_2\\\\
-\frac{\partial\,\tilde{H}_2}{\partial\,z}&=-\left(\sigma-i\,\epsilon\,\omega\right)\,\tilde{E}_1-\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_2+\sigma\,\mu_0\tilde{H}_2^0\dot{\tilde{u}}_3-\tilde{j}_1\\\\
-\frac{\partial\,\dot{\tilde{u}}_1}{\partial\,z}&=-i\,\gamma\,\omega\,\dot{\tilde{u}}_3-\frac{i\,\omega}{G}\,\tilde{\tau}_{13}\\\\
-\frac{\partial\,\dot{\tilde{u}}_2}{\partial\,z}&=-\frac{i\,\omega}{G}\,\tilde{\tau}_{23}\\\\
-\frac{\partial\,\dot{\tilde{u}}_3}{\partial\,z}&=-\frac{i\,\omega}{\lambda+2\,G}\,\tilde{\tau}_{33}-\frac{i\,\omega\,\gamma\,\lambda}{\lambda+2\,G}\,\dot{\tilde{u}}_1\\\\
+%\begin{empheq}[left=\empheqlbrace]{align}
+\begin{align}
+\frac{\partial\,\tilde{E}_1}{\partial\,z}&=\left(i\,\omega\,\mu_0+\frac{i^2\gamma^2\omega^2}{\sigma-i\,\epsilon\,\omega}\right)\,\tilde{H}_2-\frac{i\,\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_2^0}{\sigma-i\,\epsilon\,\omega}\dot{\tilde{u}}_1+\frac{i\,\gamma\,\omega\,\sigma\,\mu_0\tilde{H}_1^0}{\sigma-i\,\epsilon\,\omega}\dot{\tilde{u}}_2+\frac{i\,\gamma\,\omega}{\sigma-i\,\epsilon\,\omega}\,\tilde{j}_3\\\nonumber\\\label{eq.edo_2}
+\frac{\partial\,\tilde{E}_2}{\partial\,z}&=-i\,\omega\,\mu_0\,\tilde{H}_1\\\nonumber\\\label{eq.edo_3}
+-\frac{\partial\,\tilde{H}_1}{\partial\,z}&=-\left(\sigma-i\,\epsilon\,\omega+\frac{i^2\gamma^2\omega^2}{i\,\omega\,\mu_0}\right)\,\tilde{E}_2+\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_1-\sigma\,\mu_0\tilde{H}_1^0\dot{\tilde{u}}_3-\tilde{j}_2\\\nonumber\\
+\frac{\partial\,\tilde{H}_2}{\partial\,z}&=-\left(\sigma-i\,\epsilon\,\omega\right)\,\tilde{E}_1-\sigma\,\mu_0\tilde{H}_3^0\dot{\tilde{u}}_2+\sigma\,\mu_0\tilde{H}_2^0\dot{\tilde{u}}_3-\tilde{j}_1\\\nonumber\\\label{eq.edo_5}
+\frac{\partial\,\dot{\tilde{u}}_1}{\partial\,z}&=-i\,\gamma\,\omega\,\dot{\tilde{u}}_3-\frac{i\,\omega}{G}\,\tilde{\tau}_{13}\\\nonumber\\
+\frac{\partial\,\dot{\tilde{u}}_2}{\partial\,z}&=-\frac{i\,\omega}{G}\,\tilde{\tau}_{23}\\\nonumber\\\label{eq.edo_7}
+\frac{\partial\,\dot{\tilde{u}}_3}{\partial\,z}&=-\frac{i\,\omega}{\lambda+2\,G}\,\tilde{\tau}_{33}-\frac{i\,\omega\,\gamma\,\lambda}{\lambda+2\,G}\,\dot{\tilde{u}}_1\\\nonumber\\
 \frac{\partial\,\tilde{\tau}_{13}}{\partial\,z}&=
-\left[\frac{\omega\,\rho}{i}-\frac{i^2\gamma^2\omega}{i}\cdot\frac{\lambda^2-(\lambda+2\,G)^2}{\lambda+2\,G}\right]\,\dot{\tilde{u}}_1-\frac{i\,\omega\,\gamma\,\lambda}{\lambda+2\,G}\,\tilde{\tau}_{33}-\tilde{F}_1\\\\
-\frac{\partial\,\tilde{\tau}_{23}}{\partial\,z}&=\left[\frac{\omega\,\rho}{i}+\frac{i^2\gamma^2\omega\,G}{i}\right]\,\dot{\tilde{u}}_2-\tilde{F}_2\\\\
+\left[\frac{\omega\,\rho}{i}-\frac{i^2\gamma^2\omega}{i}\cdot\frac{\lambda^2-(\lambda+2\,G)^2}{\lambda+2\,G}\right]\,\dot{\tilde{u}}_1-\frac{i\,\omega\,\gamma\,\lambda}{\lambda+2\,G}\,\tilde{\tau}_{33}-\tilde{F}_1\\\nonumber\\
+\frac{\partial\,\tilde{\tau}_{23}}{\partial\,z}&=\left[\frac{\omega\,\rho}{i}+\frac{i^2\gamma^2\omega\,G}{i}\right]\,\dot{\tilde{u}}_2-\tilde{F}_2\\\nonumber\\\label{eq.edo_10}
 \frac{\partial\,\tilde{\tau}_{33}}{\partial\,z}&=\frac{\omega\,\rho}{i}\,\dot{\tilde{u}}_3-i\,\omega\,\gamma\,\tilde{\tau}_{13}-\tilde{F}_3.
-\end{empheq}
+\end{align}
+%\end{empheq}
 
 %SISTEMA COMO TODO NO FORMATO MATRICIAL
 
@@ -311,6 +313,8 @@ Vimos que as equa\c{c}\~oes \ref{eq.mag_ela_1}, \ref{eq.mag_ela_2}, \ref{eq.mag_
 %\end{landscape}
 
 O sistema acima pode ser colocado num formato matricial composto por submatrizes nulas e submatrizes sim\'etricas, e para isso precisamos agrupar essa dez equa\c{c}\~oes em quatro equa\c{c}\~oes matriciais.
+
+INCLUDE HERE THE NEW PARTITION FOR  ODE'S AND CREATE THE TWO NEW SYSTEMS. MAYBE IT'S INTERESTING START ANOTHER CHAPTER OR SECTION. THE PREVIOUS INFORMATION MUST BE THE COMMON ONE FOR BOTH PROPAGATION APPROACH: ONE DIMENSION AND GENERAL CASES.  
 
 \begin{align}\label{eq.matricial_1}
 \frac{\partial}{\partial\,z}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.6.10)  31 AUG 2017 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.6.10)  19 JUL 2018 23:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -519,11 +519,11 @@ Headheight and headsep: 14.5pt and 19.8738pt
 Footskip: 30pt
 Columnsep and columnseprule: 10pt and 0pt
 Marginparsep and marginparwidth: 7pt and 42.9055pt
-Sidecapsep and sidecapwidth: 7pt and 92pt
-Sidebarhsep and sidebarwidth: 7pt and 92pt
+Sidecapsep and sidecapwidth: 7pt and 42pt
+Sidebarhsep and sidebarwidth: 7pt and 42pt
 Sidebarvsep and sidebartopsep: 14.5pt and 0pt
 Sidebarheight: 590.14995pt
-Sidefoothsep and sidefootwidth: 7pt and 92pt
+Sidefoothsep and sidefootwidth: 7pt and 42pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
@@ -1027,25 +1027,28 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \EQ_tag_box=\box33
 \g_EQ_temprow_int=\count186
 )
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
 (./master_matricial.aux)
 \openout1 = `master_matricial.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 14.
+Package hyperref Info: Link coloring OFF on input line 29.
 
 (c:/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1057,10 +1060,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 14.
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
 \myptabbox=\box35
 \myptabboxwidth=\skip266
 (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1094,126 +1097,426 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
+ [1
 
-(./master_matricial.toc
-LaTeX Font Info:    Try loading font information for U+esint on input line 4.
- (c:/texlive/2016/texmf-dist/tex/latex/esint/uesint.fd
+{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]\OT1/cmr/m/n/12 Monografia apre-sen-tada ao Cen-tro de
+ []
+
+LaTeX Font Info:    Try loading font information for U+esint on input line 34.
+(c:/texlive/2016/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
 (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-(./intro_met_matricial.tex [1
-
-{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
-
-]
-
-LaTeX Warning: Citation `eringen_1963' on page 3 undefined on input line 2.
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.34 
+      [1
 
 
-LaTeX Warning: Citation `Ursin-1983' on page 3 undefined on input line 2.
-
-
-LaTeX Warning: Citation `White_Zhou_2006' on page 3 undefined on input line 4.
-
-
-LaTeX Warning: Citation `Azeredo_2013' on page 3 undefined on input line 6.
-
-) (./metodo_matricial_ursin.tex [3] [4
 
 ]
 
-LaTeX Warning: Citation `Ursin-1983' on page 5 undefined on input line 4.
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <17.28> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 43.
 
 
-LaTeX Warning: Citation `eringen_1963' on page 5 undefined on input line 12.
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+[]\OT1/cmr/m/n/12 Monografia apre-sen-tada ao Cen-tro de
+ []
 
 
-LaTeX Warning: Citation `Ursin-1983' on page 5 undefined on input line 12.
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
-[5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+[2
+
+
+]
+Overfull \hbox (15.63078pt too wide) in paragraph at lines 80--82
+\OT1/cmr/bx/n/12 Palavras-chave\OT1/cmr/m/n/12 : Magneto-Elasticidade, M^^Setod
+o Ma-tri-cial de Ur-sin, Pros-pec^^Xc~ao de Petr^^Soleo. 
+ []
+
+[3
+
+]
+
+Package babel Warning: You haven't loaded the language english yet
+(babel)                I'll proceed, but expect unexpected results.
+(babel)                Reported on input line 89.
+
+[4
+
+] (./master_matricial.lof) [5
+
+] (./master_matricial.toc
+Overfull \hbox (8.68137pt too wide) in paragraph at lines 40--40
+ [][] [][]\OT1/cmss/bx/n/12 CONDI[][]OES DE CON-TORNO DO EFEITO MAGNETO-EL[]AST
+ICO 
+ []
+
+[6]) (./intro_met_matricial.tex [7]) (./revisao_bibliografica.tex [8
+
+]
+Overfull \hbox (2.55775pt too wide) in paragraph at lines 3--4
+\OT1/cmr/m/n/12 Existem di-fe-ren-tes ti-pos de mo-de-los f^^S^^Psicos que des-
+cre-vem as pro-paga^^Xc~oes de on-das el^^Sasticas
+ []
+
+
+Overfull \hbox (4.28134pt too wide) in paragraph at lines 7--8
+\OT1/cmr/m/n/12 Alguns pes-qui-sa-do-res j^^Sa tra-ba-lha-ram em sis-tema aco-p
+la-dos, como [[]],
+ []
+
+Package epstopdf Info: Source file: <fig/white_zhou.eps>
+(epstopdf)                    date: 2018-03-29 16:27:05
+(epstopdf)                    size: 6407501 bytes
+(epstopdf)             Output file: <fig/white_zhou-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-29 16:27:33
+(epstopdf)                    size: 106993 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/white_zhou-eps-convert
+ed-to.pdf fig/white_zhou.eps>
+(epstopdf)             \includegraphics on input line 16.
+Package epstopdf Info: Output file is already uptodate.
+<fig/white_zhou-eps-converted-to.pdf, id=181, 185.69376pt x 320.19624pt>
+File: fig/white_zhou-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/white_zhou-eps-converted-to.pdf>
+Package pdftex.def Info: fig/white_zhou-eps-converted-to.pdf used on input line
+ 16.
+(pdftex.def)             Requested size: 185.6933pt x 320.19545pt.
+ [9
+
+]
+Package epstopdf Info: Source file: <fig/simograma_marcia.eps>
+(epstopdf)                    date: 2018-04-02 12:12:52
+(epstopdf)                    size: 4249736 bytes
+(epstopdf)             Output file: <fig/simograma_marcia-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-04-02 12:13:06
+(epstopdf)                    size: 15366 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/simograma_marcia-eps-c
+onverted-to.pdf fig/simograma_marcia.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/simograma_marcia-eps-converted-to.pdf, id=191, 591.20876pt x 309.155pt>
+File: fig/simograma_marcia-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/simograma_marcia-eps-converted-to.pdf>
+Package pdftex.def Info: fig/simograma_marcia-eps-converted-to.pdf used on inpu
+t line 36.
+(pdftex.def)             Requested size: 455.23215pt x 238.05008pt.
+ [10 <./fig/white_zhou-eps-converted-to.pdf>]
+Overfull \hbox (37.25044pt too wide) in paragraph at lines 47--49
+\OT1/cmr/m/n/12 Outro exem-plo de pro-paga^^Xc~ao de on-das em meios po-roel^^S
+asticos pode ser visto em [[]],
+ []
+
+Package epstopdf Info: Source file: <fig/dispersao_mari.eps>
+(epstopdf)                    date: 2018-04-02 14:45:54
+(epstopdf)                    size: 6391208 bytes
+(epstopdf)             Output file: <fig/dispersao_mari-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-02 14:53:40
+(epstopdf)                    size: 159608 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/dispersao_mari-eps-con
+verted-to.pdf fig/dispersao_mari.eps>
+(epstopdf)             \includegraphics on input line 53.
+Package epstopdf Info: Output file is already uptodate.
+<fig/dispersao_mari-eps-converted-to.pdf, id=203, 560.0925pt x 248.93pt>
+File: fig/dispersao_mari-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/dispersao_mari-eps-converted-to.pdf>
+Package pdftex.def Info: fig/dispersao_mari-eps-converted-to.pdf used on input 
+line 53.
+(pdftex.def)             Requested size: 448.0746pt x 199.14426pt.
+ [11 <./fig/simograma_marcia-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/atenuacao_mari.eps>
+(epstopdf)                    date: 2018-04-02 15:11:13
+(epstopdf)                    size: 6391210 bytes
+(epstopdf)             Output file: <fig/atenuacao_mari-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-02 15:11:23
+(epstopdf)                    size: 145427 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/atenuacao_mari-eps-con
+verted-to.pdf fig/atenuacao_mari.eps>
+(epstopdf)             \includegraphics on input line 63.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/atenuacao_mari-eps-converted-to.pdf, id=213, 586.19pt x 265.99374pt>
+File: fig/atenuacao_mari-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/atenuacao_mari-eps-converted-to.pdf>
+Package pdftex.def Info: fig/atenuacao_mari-eps-converted-to.pdf used on input 
+line 63.
+(pdftex.def)             Requested size: 457.22636pt x 207.47427pt.
+
+Overfull \hbox (2.22636pt too wide) in paragraph at lines 63--64
+ [][] 
+ []
+
+[12 <./fig/dispersao_mari-eps-converted-to.pdf> <./fig/atenuacao_mari-eps-conve
+rted-to.pdf>]
+Overfull \hbox (10.0286pt too wide) in paragraph at lines 74--75
+[]\OT1/cmr/m/n/12 A si-mula^^Xc~ao num^^Serica ^^Se re-a-li-zada con-si-de-rand
+o v^^Sarios ca-sos, com alta ou baixa frequ^encia
+ []
+
+Package epstopdf Info: Source file: <fig/igor.eps>
+(epstopdf)                    date: 2018-05-08 16:51:08
+(epstopdf)                    size: 3416211 bytes
+(epstopdf)             Output file: <fig/igor-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-05-08 16:57:31
+(epstopdf)                    size: 87027 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/igor-eps-converted-to.
+pdf fig/igor.eps>
+(epstopdf)             \includegraphics on input line 79.
+Package epstopdf Info: Output file is already uptodate.
+<fig/igor-eps-converted-to.pdf, id=231, 515.9275pt x 312.16624pt>
+File: fig/igor-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/igor-eps-converted-to.pdf>
+Package pdftex.def Info: fig/igor-eps-converted-to.pdf used on input line 79.
+(pdftex.def)             Requested size: 335.34889pt x 202.90565pt.
+ [13 <./fig/igor-eps-converted-to.pdf>]
+Overfull \hbox (6.30185pt too wide) in paragraph at lines 86--86
+[]\OT1/cmss/m/n/17.28 Modelagem Ma-tem^^Satica e Num^^Serica do Efeito Sismo-Ma
+gn^^Setico 
+ []
+
+
+Overfull \hbox (7.32298pt too wide) in paragraph at lines 88--89
+\OT1/cmr/m/n/12 Podemos ob-ser-var uma an^^Salise ma-tem^^Satica e num^^Serica 
+do efeito de indu^^Xc~ao sismo-magn^^Setica
+ []
+
+
+Overfull \hbox (27.8811pt too wide) in paragraph at lines 90--91
+\OT1/cmr/m/n/12 num^^Serica ^^Se ob-tida pelo m^^Setodo de fa-to-riza^^Xc~ao en
+-con-trado em [[]],
+ []
+
+) (./Elementos_da_Fisica_Matematica.tex [14] [15
+
+] [16]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 110.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\delta' on input line 110.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 110.
+
+Package epstopdf Info: Source file: <fig/dirac_function.eps>
+(epstopdf)                    date: 2018-03-08 11:12:06
+(epstopdf)                    size: 2846825 bytes
+(epstopdf)             Output file: <fig/dirac_function-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-08 11:15:57
+(epstopdf)                    size: 45815 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/dirac_function-eps-con
+verted-to.pdf fig/dirac_function.eps>
+(epstopdf)             \includegraphics on input line 119.
+Package epstopdf Info: Output file is already uptodate.
+<fig/dirac_function-eps-converted-to.pdf, id=296, 483.8075pt x 333.245pt>
+File: fig/dirac_function-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/dirac_function-eps-converted-to.pdf>
+Package pdftex.def Info: fig/dirac_function-eps-converted-to.pdf used on input 
+line 119.
+(pdftex.def)             Requested size: 290.28674pt x 199.94853pt.
+ [17] [18 <./fig/dirac_function-eps-converted-to.pdf>]) (./Metodo_Matricial_par
+a_Solucao_de_EDOs.tex [19]
+[20] [21
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
  (c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
- [6] [7] [8] [9]
-[10] [11] [12]
-Package epstopdf Info: Source file: <fig/ondas_ascen_descen.eps>
-(epstopdf)                    date: 2017-03-14 14:26:15
-(epstopdf)                    size: 144462 bytes
-(epstopdf)             Output file: <fig/ondas_ascen_descen-eps-converted-to.pd
-f>
-(epstopdf)                    date: 2017-08-30 11:09:34
-(epstopdf)                    size: 20899 bytes
-(epstopdf)             Command: <repstopdf --outfile=fig/ondas_ascen_descen-eps
--converted-to.pdf fig/ondas_ascen_descen.eps>
-(epstopdf)             \includegraphics on input line 373.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+ [22] [23]
+Overfull \hbox (44.0962pt too wide) in paragraph at lines 175--176
+\OT1/cmr/m/n/12 m^^Setodo uti-li-zado por al-guns au-to-res como [[]], [[]], [[
+]],
+ []
+
+[24] [25]
+Package epstopdf Info: Source file: <fig/ondas_em_zn.eps>
+(epstopdf)                    date: 2018-03-20 18:52:01
+(epstopdf)                    size: 48302 bytes
+(epstopdf)             Output file: <fig/ondas_em_zn-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-20 18:52:56
+(epstopdf)                    size: 7653 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/ondas_em_zn-eps-conver
+ted-to.pdf fig/ondas_em_zn.eps>
+(epstopdf)             \includegraphics on input line 268.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/ondas_ascen_descen-eps-converted-to.pdf, id=146, 275.0275pt x 126.4725pt>
-File: fig/ondas_ascen_descen-eps-converted-to.pdf Graphic file (type pdf)
+<fig/ondas_em_zn-eps-converted-to.pdf, id=430, 247.92625pt x 225.84375pt>
+File: fig/ondas_em_zn-eps-converted-to.pdf Graphic file (type pdf)
 
-<use fig/ondas_ascen_descen-eps-converted-to.pdf>
-Package pdftex.def Info: fig/ondas_ascen_descen-eps-converted-to.pdf used on in
-put line 373.
-(pdftex.def)             Requested size: 440.04459pt x 202.35626pt.
- [13 <./fig/ondas_ascen_descen-eps-converted-to.pdf>] [14])
-No file master_matricial.bbl.
-[15]
-\tf@toc=\write4
-\openout4 = `master_matricial.toc'.
+<use fig/ondas_em_zn-eps-converted-to.pdf>
+Package pdftex.def Info: fig/ondas_em_zn-eps-converted-to.pdf used on input lin
+e 268.
+(pdftex.def)             Requested size: 247.92564pt x 225.84319pt.
+ [26 <./fig/ondas_em_zn-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/n_interfaces.eps>
+(epstopdf)                    date: 2018-02-08 14:17:02
+(epstopdf)                    size: 132792 bytes
+(epstopdf)             Output file: <fig/n_interfaces-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-02-08 14:17:11
+(epstopdf)                    size: 16592 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/n_interfaces-eps-conve
+rted-to.pdf fig/n_interfaces.eps>
+(epstopdf)             \includegraphics on input line 321.
+Package epstopdf Info: Output file is already uptodate.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 24.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 24.
+<fig/n_interfaces-eps-converted-to.pdf, id=441, 257.96375pt x 213.79875pt>
+File: fig/n_interfaces-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/n_interfaces-eps-converted-to.pdf>
+Package pdftex.def Info: fig/n_interfaces-eps-converted-to.pdf used on input li
+ne 321.
+(pdftex.def)             Requested size: 257.9631pt x 213.79822pt.
+ [27] [28 <./fig/n_interfaces-eps-converted-to.pdf>] [29] [30]) (./trans_edp_pa
+ra_edo.tex [31]
+Overfull \hbox (15.1868pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/n/12 Segundo [[]], o aco-pla-mento en-tre on-das ele-tro-magn^^Setic
+as e el^^Sasticas
+ []
+
+[32
+
+] [33] [34] [35]
+Overfull \hbox (34.35057pt too wide) in paragraph at lines 401--401
+[] 
+ []
+
+[36]) (./Condicoes_Contorno_EDOs.tex [37]
+Overfull \hbox (0.1559pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/n/12 ou seja, em $\OML/cmm/m/it/12 z \OT1/cmr/m/n/12 = 0$. Apli-cand
+o ainda as condi^^Xc~oes de in-ter-face en-con-tra-das em [[]],
+ []
+
+
+Overfull \hbox (33.65187pt too wide) in paragraph at lines 26--27
+\OT1/cmr/m/n/12 de-sen-vol-vido por v^^Sarios au-to-res como [[]], [[]], [[]]
+ []
+
+[38
+
+] [39] [40] [41]
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 206--221
+[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--221
+
+ []
+
+[42]
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 239--255
+[]$ $[]$ 
+ []
+
+) (./aplicando_matricial_ursin.tex [43] [44
+
+] [45] [46] [47])
+(./conclusoes_trab_fut.tex [48])
+Overfull \hbox (15.02568pt too wide) in paragraph at lines 10--117
+\OT1/cmr/m/n/12 conta de al-gu-mas ca-rac-ter^^S^^Psticas apre-sen-ta-das por e
+sta lin-gua-gem des-cri-tas em [[]],
+ []
+
+[49
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\uppercase' on input line 121.
+
+bibitemlist
+
+Underfull \hbox (badness 6641) in paragraph at lines 172--177
+\OT1/cmr/m/n/12 analytical method for cal-cu-la-tion of the-o-re-ti-cal seis-mo
+-grams in layered-
+ []
+
+[50
+
+] [51]
+\tf@lof=\write4
+\openout4 = `master_matricial.lof'.
+
+\tf@toc=\write5
+\openout5 = `master_matricial.toc'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
  (./master_matricial.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 24.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 24.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 24.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 246.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
  ) 
 Here is how much of TeX's memory you used:
- 13039 strings out of 493014
- 190941 string characters out of 6137001
- 329673 words of memory out of 5000000
- 16361 multiletter control sequences out of 15000+600000
- 11581 words of font info for 45 fonts, out of 8000000 for 9000
+ 13499 strings out of 493014
+ 198356 string characters out of 6137001
+ 372266 words of memory out of 5000000
+ 16601 multiletter control sequences out of 15000+600000
+ 18460 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,14n,42p,1369b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,18n,42p,1132b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2016/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2016/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><c:/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/esin
-t-type1/esint10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb>
-Output written on master_matricial.pdf (15 pages, 216796 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmss10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12
+.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><c:/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2016/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/esint-type1
+/esint10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb>
+Output written on master_matricial.pdf (52 pages, 998099 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1009 PDF objects out of 1200 (max. 8388607)
+ 906 compressed objects within 10 object streams
+ 232 named destinations out of 1000 (max. 500000)
+ 401 words of extra memory for PDF output out of 10000 (max. 10000000)
 

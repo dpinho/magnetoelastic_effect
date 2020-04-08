@@ -1,16 +1,54 @@
 \changetocdepth {4}
 \select@language {brazil}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Sum\'ario}{1}{section*.1}
+\contentsline {chapter}{Lista de ilustra\c {c}\~{o}es}{5}{section*.5}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{Sum\'ario}{6}{section*.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\c {c}\~ao}}{3}{chapter.1}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\c {c}\~ao e Objetivos}}{8}{chapter.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {M\'etodo Matricial de Ursin para Solu\c {c}\~ao de EDP's}}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introdu\c {c}\~ao}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Sistema de EDP's do Efeito Magnetoel\'astico}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Escrevendo as Equa\c {c}\~oes na Forma Matricial}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}Decomposi\c {c}\~ao em Ondas Ascendentes e Descentes}{8}{section.2.4}
-\contentsline {section}{\numberline {2.5}Matriz de Propaga\c {c}\~ao}{11}{section.2.5}
-\contentsline {section}{\numberline {2.6}Propriedades Invariantes da Propaga\c {c}\~ao}{12}{section.2.6}
-\contentsline {section}{\numberline {2.7}Matrizes de Transmiss\~ao e Reflex\~ao}{13}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Rela\c {c}\~ao das Matrizes de Transmiss\~ao e Reflex\~ao com a matriz de Propaga\c {c}\~ao}{14}{subsection.2.7.1}
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Revis\~ao Bibliogr\'afica}}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Prospec\c {c}\~ao Eletro-s\'ismica}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}M\'etodo Matricial em Meios Poroel\'asticos}{10}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Sistema de Biot para Baixas Frequ\^encias}{10}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Propaga\c {c}\~ao para Altas Frequ\^encias e Sistema de Biot-JKD}{11}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Sistema de Biot e de Biot-JKD para Espa\c {c}o 1D}{13}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Modelagem Matem\'atica e Num\'erica do Efeito Sismo-Magn\'etico}{14}{section.2.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Elementos da F\'isica-Matem\'atica}}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}EDP de uma Onda}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Transformadas Laterais de Fourier}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}Rota\c {c}\~oes}{16}{section.3.3}
+\contentsline {section}{\numberline {3.4}A fun\c {c}\~ao $\delta $ de Dirac}{17}{section.3.4}
+\contentsline {section}{\numberline {3.5}Fun\c {c}\~ao de Bessel de Primeira Esp\'ecie}{19}{section.3.5}
+\contentsline {section}{\numberline {3.6}Transformadas de Hankel}{19}{section.3.6}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {M\'etodo Matricial para Solu\c {c}\~ao de EDO's}}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Caracter\'isticas das Equa\c {c}\~oes na Forma Matricial de Ursin}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Diagonaliza\c {c}\~ao}{22}{section.4.2}
+\contentsline {section}{\numberline {4.3}Solu\c {c}\~ao de EDO's na Aus\^encia de Fonte}{24}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Ondas Ascendentes e Ondas Descendentes}{24}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Matriz de Salto para Camadas Estratificadas}{25}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Matriz de Reflex\~ao e Matriz de Transmiss\~ao}{26}{subsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.1}Reflex\~ao e Transmiss\~ao na \'Ultima Interface}{26}{subsubsection.4.3.3.1}
+\contentsline {subsubsection}{\numberline {4.3.3.2}Reflex\~ao e Transmiss\~ao numa Interface Qualquer}{27}{subsubsection.4.3.3.2}
+\contentsline {section}{\numberline {4.4}Solu\c {c}\~ao na Presen\c {c}a de Fonte}{29}{section.4.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Sistema de EDO's do Efeito Magneto-El\'astico}}{32}{chapter.5}
+\contentsline {section}{\numberline {5.1}Transformando EDP's em EDO's}{32}{section.5.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Condi\c {c}\~oes de Contorno do Efeito Magneto-El\'astico e o Espa\c {c}o Original}}{38}{chapter.6}
+\contentsline {section}{\numberline {6.1}Condi\c {c}\~oes de Contorno}{38}{section.6.1}
+\contentsline {section}{\numberline {6.2}Solu\c {c}\~ao no Espa\c {c}o Original}{41}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Rota\c {c}\~ao Inversa}{42}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Transformada de Hankel e Transformada Lateral de Fourier}{42}{subsection.6.2.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {Aplicando a Diagonaliza\c {c}\~ao de Ursin}}{44}{chapter.7}
+\contentsline {section}{\numberline {7.1}Aplicando a Diagonaliza\c {c}\~ao de Ursin na Equa\c {c}\~ao \ref {eq.matricial_1}}{44}{section.7.1}
+\contentsline {section}{\numberline {7.2}Aplicando a Diagonaliza\c {c}\~ao de Ursin na Equa\c {c}\~ao \ref {eq.matricial_2}}{45}{section.7.2}
+\contentsline {section}{\numberline {7.3}Aplicando a Diagonaliza\c {c}\~ao de Ursin na Equa\c {c}\~ao \ref {eq.matricial_3}}{46}{section.7.3}
+\contentsline {section}{\numberline {7.4}Aplicando a Diagonaliza\c {c}\~ao de Ursin na Equa\c {c}\~ao \ref {eq.matricial_4}}{48}{section.7.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase {Conclus\~oes e Trabalhos Futuros}}{49}{chapter.8}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{50}{section*.16}

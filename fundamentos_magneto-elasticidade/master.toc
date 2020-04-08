@@ -1,53 +1,60 @@
 \changetocdepth {4}
 \select@language {brazil}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Sum\'ario}{1}{section*.1}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{3}{chapter.1}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Fundamentos de eletromagnetismo}}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introdu\IeC {\c c}\IeC {\~a}o}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Fatos experimentais}{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Lei de Gauss para os fluxos el\IeC {\'e}trico e magn\IeC {\'e}tico}{5}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}A Lei de Amp\IeC {\`e}re}{10}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}A Lei de Faraday}{14}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Equa\IeC {\c c}\IeC {\~o}es de Maxwell}{16}{section.2.3}
-\contentsline {section}{\numberline {2.4}Generaliza\IeC {\c c}\IeC {\~o}es da teoria}{18}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}A\IeC {\c c}\IeC {\~a}o do campo el\IeC {\'e}trico na mat\IeC {\'e}ria}{18}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}A\c {c}\~ao de campo magn\'etico na mat\'eria}{21}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Forma diferencial das Equa\c {c}\~oes de Maxwell}{23}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Condi\c {c}\~oes de Contorno entre Meios de Diferentes Composi\c {c}\~oes}{25}{subsection.2.4.4}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Fundamentos de Elasticidade}}{29}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introdu\c {c}\~ao}{29}{section.3.1}
-\contentsline {section}{\numberline {3.2}Fatos experimentais}{29}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Deforma\c {c}\~ao}{29}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Dedu\c {c}\~ao do Tensor de Deforma\c {c}\~oes}{30}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Interpreta\c {c}\~ao Geom\'etrica do Tensor de Deforma\c {c}\~ao}{32}{subsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.3.1}Altera\c {c}\~ao Relativa de Comprimento}{32}{subsubsection.3.2.3.1}
-\contentsline {subsubsection}{\numberline {3.2.3.2}Altera\c {c}\~ao Relativa de Volume}{33}{subsubsection.3.2.3.2}
-\contentsline {subsubsection}{\numberline {3.2.3.3}Altera\c {c}\~ao Relativa na Forma}{34}{subsubsection.3.2.3.3}
-\contentsline {subsection}{\numberline {3.2.4}Conserva\c {c}\~ao da Massa, Tens\~ao e o Equil\'ibrio do Momento Linear}{35}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}O Tensor de Tens\~oes}{37}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Equa\c {c}\~ao do Movimento de um Corpo El\'astico e Cont\'inuo}{39}{subsection.3.2.6}
-\contentsline {section}{\numberline {3.3}Equa\IeC {\c c}\IeC {\~o}es de Lam\IeC {\'e}}{40}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Rela\c {c}\~oes Constitutivas}{40}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Os Par\^ametros de Lam\'e}{41}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Condi\c {c}\~oes de Contorno}{42}{subsection.3.3.3}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Acoplamento Magneto-el\'astico}}{45}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introdu\c {c}\~ao}{45}{section.4.1}
-\contentsline {section}{\numberline {4.2}Equa\c {c}\~oes Constitutivas do Meio}{45}{section.4.2}
-\contentsline {section}{\numberline {4.3}Interface entre Camadas de Materiais Diferentes}{47}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Equa\c {c}\~oes Eletromagn\'eticas}{47}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Equa\c {c}\~oes El\'asticas}{49}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Modelo de Dunkin e Erigen}{51}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Equa\c {c}\~oes de campo}{51}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Equa\c {c}\~oes Constitutivas}{51}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Condi\c {c}\~oes de Fronteira}{52}{subsection.4.4.3}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Recondicionamento do Modelo de Dunkin e Erigen}}{53}{chapter.5}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclus\IeC {\~o}es}}{57}{chapter.6}
+\contentsline {chapter}{Lista de ilustra\c {c}\~{o}es}{5}{section*.5}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{59}{section*.23}
+\contentsline {chapter}{Sum\'ario}{7}{section*.6}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\c {c}\~ao e Objetivos}}{9}{chapter.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Revis\~ao Bibliogr\'afica}}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Efeito Sismo-Magn\'etico}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}Efeitos de Indu\c {c}\~ao devidos a Ondas S\'ismicas}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}Efeito Sismo-Magn\'etico e Terremotos}{12}{section.2.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Fundamentos de Eletromagnetismo}}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Fatos experimentais}{15}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Lei de Gauss para os fluxos el\IeC {\'e}trico e magn\IeC {\'e}tico}{15}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}A Lei de Amp\IeC {\`e}re}{21}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}A Lei de Faraday}{24}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Equa\IeC {\c c}\IeC {\~o}es de Maxwell}{26}{section.3.3}
+\contentsline {section}{\numberline {3.4}Generaliza\IeC {\c c}\IeC {\~o}es da teoria}{29}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}A\IeC {\c c}\IeC {\~a}o do campo el\IeC {\'e}trico na mat\IeC {\'e}ria}{29}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}A\c {c}\~ao de campo magn\'etico na mat\'eria}{31}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Forma diferencial das Equa\c {c}\~oes de Maxwell}{34}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Condi\c {c}\~oes de Contorno entre Meios de Diferentes Composi\c {c}\~oes}{35}{subsection.3.4.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Fundamentos de Elasticidade}}{38}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introdu\c {c}\~ao}{38}{section.4.1}
+\contentsline {section}{\numberline {4.2}Fatos experimentais}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Deforma\c {c}\~ao}{38}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Dedu\c {c}\~ao do Tensor de Deforma\c {c}\~oes}{39}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Interpreta\c {c}\~ao Geom\'etrica do Tensor de Deforma\c {c}\~ao}{41}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}Altera\c {c}\~ao Relativa de Comprimento}{41}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {4.2.3.2}Altera\c {c}\~ao Relativa de Volume}{42}{subsubsection.4.2.3.2}
+\contentsline {subsubsection}{\numberline {4.2.3.3}Altera\c {c}\~ao Relativa na Forma}{43}{subsubsection.4.2.3.3}
+\contentsline {subsection}{\numberline {4.2.4}Conserva\c {c}\~ao da Massa, Tens\~ao e o Equil\'ibrio do Momento Linear}{44}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}O Tensor de Tens\~oes}{46}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Equa\c {c}\~ao do Movimento de um Corpo El\'astico e Cont\'inuo}{48}{subsection.4.2.6}
+\contentsline {section}{\numberline {4.3}Equa\IeC {\c c}\IeC {\~o}es de Lam\IeC {\'e}}{49}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Rela\c {c}\~oes Constitutivas}{49}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Os Par\^ametros de Lam\'e}{50}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Condi\c {c}\~oes de Contorno}{51}{subsection.4.3.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Acoplamento Magneto-el\'astico}}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introdu\c {c}\~ao}{53}{section.5.1}
+\contentsline {section}{\numberline {5.2}Equa\c {c}\~oes Constitutivas do Meio}{53}{section.5.2}
+\contentsline {section}{\numberline {5.3}Interface entre Camadas de Materiais Diferentes}{55}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Equa\c {c}\~oes Eletromagn\'eticas}{55}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Equa\c {c}\~oes El\'asticas}{57}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Modelo de Dunkin e Erigen}{59}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Equa\c {c}\~oes de Campo}{59}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Equa\c {c}\~oes Constitutivas}{59}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Condi\c {c}\~oes de Fronteira}{60}{subsection.5.4.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Recondicionamento do Modelo de Dunkin e Erigen}}{61}{chapter.6}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{64}{chapter.7}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{65}{section*.31}

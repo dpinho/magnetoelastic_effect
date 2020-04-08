@@ -9,6 +9,7 @@
 \graphicspath{{fig/}}
 \providecommand{\norm}[1]{\lVert#1\rVert}
 \usepackage{empheq}
+\usepackage{lscape}
 
 %\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}
 
@@ -21,6 +22,7 @@
 %anverso da folha de rosto
 \preambulo{Tese apresentada ao Centro de Ci\^encia e Tecnologia da Universidade Estadual do Norte Fluminense, como parte das exig\^encias para conclus\~ao do curso de Doutorado.}
 \orientador{Viatcheslav Ivanovich Priimenko, Ph.D}
+\coorientador{Marcia Miranda Azeredo, D.Sc}
 \tipotrabalho{monografia}
 
 \begin{document}
@@ -46,14 +48,16 @@
 \end{minipage}
 
 \vspace{1cm}
-Trabalho aprovado em $\,7\,$ de Agosto de \imprimirdata.\\
+Trabalho aprovado em $\,19\,$ de Agosto de \imprimirdata.\\
 
 \vspace{1cm}
 Comiss\~ao Examinadora:\\
-\assinatura{Prof. Marcia Miranda Azeredo, Ds.c - UENF}
-\assinatura{Prof. André Duarte Bueno, Ds.c - UENF}
-\assinatura{Prof. Fernando Diogo de Siqueira, Ds.c - UENF}
-\assinatura{Prof. \imprimirorientador - UENF}
+\assinatura{Prof. S\'ergio Gon\c{c}alves Pereira, D.Sc \\ FeMASS}
+\assinatura{Prof. André Duarte Bueno, D.Sc \\ UENF}
+\assinatura{Prof. Fernando Diogo de Siqueira, D.Sc \\ UENF}
+\assinatura{Prof. Marcia Miranda Azeredo, D.Sc \\ UENF}
+\assinatura{Prof Viatcheslav Ivanovich Priimenko, Ph.D\\ UENF}
+%\assinatura{Prof. \imprimirorientador\\ UENF}
 
 \begin{center}
 \vfill
@@ -105,24 +109,23 @@ This paper aims analitical development of Ursin's matricial method applied to ma
 
 \textual
 
-\input{introducao}
-\input{revisao_bibliografica}
-\input{Elementos_da_Fisica_Matematica}
-\input{fund_eletro}
-\input{fund_elasti}
-\input{acopla_magneto_elastico}
-\input{recondi-acoplamento}
+%\input{introducao}
+%\input{revisao_bibliografica}
+%\input{Elementos_da_Fisica_Matematica}
+%\input{fund_eletro}
+%\input{fund_elasti}
+%\input{acopla_magneto_elastico}
+%\input{recondi-acoplamento}
+%\input{Metodo_Matricial_para_Solucao_de_EDOs}
 
-\input{Metodo_Matricial_para_Solucao_de_EDOs}
-%\input{solucao_ausencia_fonte}mesclado
-%\input{solucao_presenca_fonte}mesclado
-\input{trans_edp_para_edo}
-\input{Condicoes_Contorno_EDOs}
-\input{aplicando_matricial_ursin}
+%%\input{solucao_ausencia_fonte}mesclado
+% %\input{solucao_presenca_fonte}mesclado
 
-
+%\input{trans_edp_para_edo}
+%\input{Condicoes_Contorno_EDOs}
+%\input{aplicando_matricial_ursin}
 \input{analise_dispersao}
-
+\input{experimetos}
 
 %\input{conclusoes}
 
@@ -385,7 +388,49 @@ Sharma, M. D.
 \newblock Wave Propagation in Thermoelastic Saturated Porous Medium.
 \newblock \emph{J. Earth Syst. Sci.}, 117\penalty0
   (6):\penalty0 951--958, 2008.
+  
+\bibitem[Abramowitz e Stegun (1964)]{abramovitz_64}
+Abramowitz, M. e Stegun, I. A.
+\newblock Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables.
+\newblock \emph{Dover}, ninth Dover printing, tenth GPO printing, 1964.  
+    
+  
+% LEFT TO BE CITED IN TEXT BODY  
+  
+  \bibitem[Powell(2011)]{powell_11}
+Powell, P. D.
+\newblock Calculating Determinants of Block Matrices.
+\newblock \emph{arXiv:1112.4379 [math.RA]}, 2011.
+
+
+\bibitem[Wang(2015)]{wang_15}
+Wang, Y.
+\newblock Frequencies of the Ricker Wavelet.
+\newblock \emph{Geophysics}, 80\penalty0
+  (2):\penalty0 A31--A37, 2015.
+  
+  \bibitem[Chattopadhyay(2011)]{chattopadhyay_11}
+A. Chattopadhyay, S. Gupta, A. K. Singh and S. A. Sahu
+\newblock G-Type Seismic Wave in Magnetoelastic Monoclinic Layer.
+\newblock \emph{Applied Mathematics}, \penalty0
+  (2):\penalty0 145--154, 2011.
+  
+ \bibitem[Jouniaux(2015)]{jouniaux_15}
+ L. Jouniaux e F. Zyserman
+\newblock Seismo-Electrics, Electro-Seismics, and
+Seismo-Magnetics for Earth Sciences.
+\newblock \emph{Solid Earth Discuss}, \penalty0
+  (7):\penalty0 2563--2662, 2015.
+  
+  \bibitem[DeBeer(2008)]{beer_08}
+ M. De Beer e J. W. Maina
+\newblock Some Fundamentals Definitions of the Elastic Parameters for Homogeneous Isotropic Linear Elastic Materials in Pavement Design and Analysis.
+\newblock \emph{Proceedings of the Southern African Transport Conference},\penalty0 282--293, 2008.
+
 
 \end{thebibliography}
+
+\appendix
+\input{apendice.tex}
 
 \end{document}

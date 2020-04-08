@@ -1,0 +1,584 @@
+\chapter{M\'etodo Matricial para Solu\c{c}\~ao de EDO's}
+
+Este cap\'itulo trata do estudo de um m\'etodo matricial para analisar a propaga\c{c}\~ao de ondas em subsuperf\'icie terrestre, conforme estruturado em \cite{Ursin-1983}. Gra\c{c}as a similaridade matem\'atica entre sistemas de EDP's eletromagn\'eticas e sistemas de EDP's el\'asticas, podemos dar um desenvolvimento unificado para esses sistemas. Utilizamos um conjunto de transformadas (Fourier, Laplace e Bessel) para escrever cada um desses sistemas de EDP's numa forma matricial, em fun\c{c}\~ao apenas da profundidade, composta por $2n$ equa\c{c}\~oes diferenciais ordin\'arias. Os coeficientes desse sistema de EDO's podem ser reunidos numa matriz $A$ de dimens\~ao $2n\times 2n$, a qual pode ser particionada em quatro submatrizes de dimens\~ao $n\times n$, e \'e usada como o ponto de partida para o estudo da propaga\c{c}\~ao de ondas em subsuperf\'icie.  
+
+As propriedades de simetria da matriz $M$ nos permitem separar o campo de ondas em ascendentes e descendentes atrav\'es de uma decomposi\c{c}\~ao em autovetores. Essas propriedades nos permitem tamb\'em deduzir caracter\'isticas invariantes da propaga\c{c}\~ao, onde uma dessas caracter\'isticas \'e v\'alida apenas para meios de baixa dissipa\c{c}\~ao de ondas e correspondem \`a conserva\c{c}\~ao de energia. A matriz de propaga\c{c}\~ao de ondas pode ser computada para camadas homog\^eneas ou n\~ao, atrav\'es de um m\'etodo relativamente simples. Dado o vetor de ondas na camada superficial, podemos calcular seu valor para qualquer camada usando a matriz de propaga\c{c}\~ao.
+
+A propaga\c{c}\~ao de ondas em meios estratificados produz fen\^omenos de transmiss\~ao e reflex\~ao de ondas. Dadas as defini\c{c}\~oes das matrizes de transmiss\~ao e reflex\~ao, podemos relacion\'a-las com a matriz de propaga\c{c}\~ao, bem como deduzir propriedades de simetrias para essas matrizes atrav\'es das caracter\'isticas invariantes da propaga\c{c}\~ao. Podemos ainda deduzir as matrizes de transmiss\~ao e reflex\~ao modificadas para pilha de camadas limitadas superiormente por uma superf\'icie livre.
+
+\section{Caracter\'isticas das Equa\c{c}\~oes na Forma Matricial de Ursin}
+
+%Sendo $\mathbf{x}=(x,y,z)^{\top}$ o espa\c{c}o $\mathbb{R}^3$ e aplicando as tranformadas de Fourier direta e inversa na forma
+%\begin{align*}
+%F(\omega,k_1,k_2,z) &= \iiint_{-\infty}^{\infty}f(t,x,y,z)\,e^{i\omega t-ik_1x-ik_2y}dt\,dxdy\\\\
+%f(t,x,y,z) &= \left(\frac{1}{2\,\pi}\right)^3\,\iiint_{-\infty}^{\infty}F(\omega,k_1,k_2,z)\,e^{-i\omega t+ik_1x+ik_2y}d\omega\,dk_1dk_2\,,
+%\end{align*}
+%podemos escrever um conjunto de EDP's que descevem a propaga\c{c}\~ao de ondas sismomagn\'eticas em camadas horizontais da subsuperf\'icie terrestre somente em fun\c{c}\~ao da profundidade $z$. 
+%
+%A t\'itulo de exemplo, tanto as EDP's de Maxwell para o eletromagnetismo
+%\begin{align}\label{eq.faraday_ampere}\nonumber
+%\nabla\times\mathbf{E}&=-\frac{\partial}{\partial t}\mathbf{B}\\\\\nonumber
+%\nabla\times\mathbf{H}&=\sigma\mathbf{E}+\frac{\partial}{\partial t}\mathbf{D}+\mathbf{G}\,,
+%\end{align}
+%como as EDP's el\'asticas
+%\begin{align}\label{eq.cauchy_hooke}\nonumber
+%\rho\frac{\partial^2 \mathbf{U}}{\partial t^2}&=\nabla\cdot\tau+\mathbf{F}\\\\\nonumber
+%\tau&=\lambda\nabla\cdot \mathbf{U}\cdot I + \mu(\nabla \mathbf{U}+\nabla \mathbf{U}^*)\,,
+%\end{align}
+%podem ser escritas no formato matricial apresentado por Ursin, ou seja, 
+\'E poss\'ivel utilizar o m\'etodo matricial no formato preconizado por \cite{Ursin-1983} para resolver sistemas de EDO's desde que se possa escrever tal sistema como
+\begin{align}\label{eq.matricial}
+\frac{\partial\,\mathbf{\Phi}^{(m)}}{\partial\,z} &= -\,i\,\omega\,M^{(m)}\,\mathbf{\Phi}^{(m)}+\mathbf{S}^{(m)},\quad\text{com}\quad m\,\in\mathbb{N},
+\end{align}
+%\begin{bmatrix}
+%\mathbf{\Phi_1}\\
+%\mathbf{\Phi_2}	
+%\end{bmatrix}\,,
+onde $\mathbf{S}^{(m)}$ \'e um vetor de fonte de dimens\~ao $2\,n_m$ e as matrizes $M^{(m)}_{2\,n_m\times2\,n_m}$ t\^em o formato
+\begin{equation}
+M^{(m)}
+=
+\begin{pmatrix}
+\mathbf{0}&M_1^{(m)}\\
+M_2^{(m)}&\mathbf{0}
+\end{pmatrix},
+\end{equation}
+onde $M_1^{(m)}$ e $M_2^{(m)}$ s\~ao submatrizes sim\'etricas de dimens\~ao $n_m\times n_m$.
+
+A equa\c{c}\~ao \ref{eq.matricial} tem as seguintes caracter\'isticas:
+\begin{itemize}
+\item $M^{(m)}_{2\,n\times2\,n}$ \'e uma matriz que pode ser particionada em quatro submatrizes $n\times n$, com submatrizes de zeros na diagonal principal e submatrizes sim\'etricas $M_1^{(m)}$ e $M_2^{(m)}$ na diagonal secund\'aria. As componentes de $M_1^{(m)}$ e $M_2^{(m)}$ s\~ao fun\c{c}\~oes dos par\^ametros das EDP's que est\~ao sendo trabalhadas, s\~ao fun\c{c}\~oes tamb\'em de $z$ e do vetor real de vagarosidade $\mathbf{\gamma}=\frac{\mathbf{k}}{\omega}$. Para meios de baixa dissipa\c{c}\~ao das ondas, as matrizes $M_1^{(m)}$ e $M_2^{(m)}$ s\~ao reais; 
+\item O vetor de onda $\mathbf{\Phi}^{(m)}$ tem dimens\~ao $2n\times1$ e \'e particionado em dois vetores $\mathbf{\Phi}^{(m)}_1$ e $\mathbf{\Phi}^{(m)}_2$ com dimens\~ao $n\times1$ . As componentes do vetor de onda s\~ao escolhidas de forma que $\mathbf{\Phi}^{(m)}$ seja cont\'inuo atrav\'es das fronteiras entre duas camadas;
+\item  Para ondas el\'asticas, metade das componentes de $\mathbf{\Phi}^{(m)}$ s\~ao zeros na superf\'icie livre, ou seja, existe uma matriz de permuta\c{c}\~ao $T_{2n\times2n}$ onde $T^{-1}=T^\top$ e tal que
+\begin{equation*}
+\begin{bmatrix}
+\mathbf{V}_1(\mathbf{0})\\
+\mathbf{0}
+\end{bmatrix}
+=T\,\mathbf{\Phi}^{(m)}\quad\text{quando}\quad z = 0\,;
+\end{equation*}
+\item As componentes do vetor de onda $\mathbf{\Phi}^{(m)}$ s\~ao escolhidas de forma que o fluxo de energia na dire\c{c}\~ao $z$ seja dado por
+\begin{equation*}
+J=-\frac{1}{4}(\mathbf{\Phi}_1^{(m)\,H}\mathbf{\Phi}^{(m)}_2+\mathbf{\Phi}_2^{(m)\,H}\mathbf{\Phi}^{(m)}_1)=-\frac{1}{4}\mathbf{\Phi}^{(m)\,H}\,M\, \mathbf{\Phi}^{(m)}\,,
+\end{equation*}
+onde $H$ denota complexo conjugado transposto,
+\begin{equation*}
+M=
+\begin{bmatrix}
+0_{n\times n}&I\\
+I&0_{n\times n}
+\end{bmatrix}
+\end{equation*}
+e $I$ \'e uma matriz identidade $n\times n$.
+\end{itemize}
+
+O m\'etodo a seguir \'e aplicado em equa\c{c}\~oes escritas no formato matricial \ref{eq.matricial}, com ondas se propagando numa pilha de camadas homog\^eneas e assumimos que os par\^ametros das equa\c{c}\~oes s\~ao fun\c{c}\~oes cont\'inuas no interior de cada camada e que dependem apenas da profundidade $z$. O modelo inclui pilha de camadas homog\^eneas com par\^ametros constantes por camada e consideramos o eixo $z$ como sendo positivo no sentido descendente.
+
+\section{Diagonaliza\c{c}\~ao}
+
+
+
+
+\section{Solu\c{c}\~ao das Equa\c{c}\~oes \ref{eq.matricial_1}-\ref{eq.matricial_4} na Aus\^encia de Fonte}\label{sec.ausencia_fonte}
+
+Vamos determinar inicialmente a solu\c{c}\~ao das equa\c{c}\~oes \ref{eq.matricial_1}-\ref{eq.matricial_4} considerando o meio homog\^eneo e livre de fonte de onda sismica. Apos a diagonalizacao dessas equacoes, podemos aplicar um m\'etodo utilizado por alguns autores como \cite{Ursin-1983}, \cite{Azeredo_2013}, \cite{White_Zhou_2006}, \cite{miranda_2016} entre outros, para determinar as solu\c{c}\~oes na aus\^encia de fonte. Esse mesmo metodo pode ser utilizado para determinar as solucoes na presenca de fonte como veremos no capitulo \ref{sec.presenca_fonte}. Aus\^encia de fonte significa que temos $\mathbf{S}^{(m)}=0$ para $m=1,2,3,4\,$ na equa\c{c}\~ao \ref{eq.matricial}. A matriz $\mathbf{M}^{(m)}$ \'e constante onde as submatrizes na diagonal principal s\~ao nulas e as submatrizes na diagonal secund\'aria s\~ao sim\'etricas. 
+
+
+
+\subsection{Ondas Ascendentes e Ondas Descendentes}
+
+Vamos redefinir o vetor de ondas como
+\begin{equation}\label{eq.Phi}
+\mathbf{\Phi}=L\,\mathbf{\Psi}.
+\end{equation}
+Substituindo a equa\c{c}\~ao \ref{eq.Phi} na equa\c{c}\~ao \ref{eq.matricial}, temos
+\begin{equation}\label{eq.matricial_sem_fonte}
+\frac{\partial\,\mathbf{\Psi}}{\partial\,z} =-\,i\,\omega\,L^{-1}M\,L\,\mathbf{\Psi},
+\end{equation}
+onde o sobrescrito $m$ est\'a sendo omitido por quest\~ao de simplicidade.
+De acordo com a subse\c{c}\~ao \ref{sec.diagonalizacao_ursin}, temos que as matrizes $M$ e $\tilde{\Lambda}$ s\~ao semelhantes, assim
+\begin{equation*}
+\tilde{\Lambda}=L^{-1}M\,L.
+\end{equation*}
+Substituindo $\tilde{\Lambda}$ na equa\c{c}\~ao \ref{eq.matricial_sem_fonte}, temos
+\begin{equation}\label{eq.matricial_sem_fonte_2}
+\frac{\partial\,\mathbf{\Psi}}{\partial\,z} =-\,i\,\omega\,\tilde{\Lambda}\,\mathbf{\Psi}.
+\end{equation}
+Ainda de acordo com a subse\c{c}\~ao \ref{sec.diagonalizacao_ursin}, podemos escrever
+\begin{equation}
+\tilde{\Lambda}=
+\begin{pmatrix}
+\Lambda&0\\
+0&-\Lambda
+\end{pmatrix},
+\end{equation}
+onde $\Lambda$ \'e uma submatriz diagonal contendo os autovalores $q_i$.
+Definindo
+\begin{equation}\label{eq.definicao_psi}
+\mathbf{\Psi}=
+\begin{pmatrix}
+\mathbf{U}\\
+\mathbf{D}
+\end{pmatrix}
+\end{equation}
+e usando o fato de que $\tilde{\Lambda}$ \'e uma matriz diagonal, podemos resolver a equa\c{c}\~ao diferencial \ref{eq.matricial_sem_fonte_2} e expressar a solu\c{c}\~ao na forma
+\begin{align}\nonumber
+\mathbf{\Psi}(z)&=e^{-i\,\omega\,\tilde{\Lambda}(z-z_0)}\mathbf{\Psi}(z_0)\\\label{eq.solucao_psi}
+&=\begin{pmatrix}
+e^{-i\,\omega\,\Lambda(z-z_0)}\,\mathbf{U}(z_0)\\
+e^{i\,\omega\,\Lambda(z-z_0)}\,\,\,\mathbf{D}(z_0)
+\end{pmatrix}.
+\end{align}
+Desta maneira, $\mathbf{U}$ representa ondas ascendentes e $\mathbf{D}$ representa ondas descendentes, $z_0$ \'e um ponto fixo na mesma regi\~ao livre de fonte de $z$ e $e^{\pm i\,\omega\,\Lambda(z-z_0)}$ \'e uma matriz diagonal onde o $i$-ésimo elemento da diagonal principal \'e dado por $e^{\pm i\,\omega\,q_i(z-z_0)}$. 
+
+\subsection{Matriz de Salto para Camadas Estratificadas}
+
+A profundidade onde encontra-se uma interface entre duas camadas estratificadas ser\'a denotada por $\overline{z}$, onde as quantidades avaliadas exatamente abaixo da interface ser\'a denotada por $\overline{z}^+$ e as quantidades avaliadas exatamente acima da interface ser\'a denotada por $\overline{z}^-$.
+De acordo com TAL, temos a continuidade de $\mathbf{\Phi}$ atrav\'es das fronteiras entre as camadas, assim \'e v\'alida a rela\c{c}\~ao $\mathbf{\Phi}^+=\mathbf{\Phi}^-$. Substituindo a equa\c{c}\~ao \ref{eq.Phi}, temos 
+\begin{align}\nonumber
+L^+\mathbf{\Psi}^+&=L^-\mathbf{\Psi}^-\\\nonumber
+\mathbf{\Psi}^+&=(L^+)^{-1}L^-\mathbf{\Psi}^-\\\label{eq.psi_matriz_salto}
+\mathbf{\Psi}^+&=J\,\mathbf{\Psi}^-,
+\end{align}
+onde $J=(L^+)^{-1}L^-$ \'e denominada \textit{matriz de salto}. Pela subse\c{c}\~ao \ref{sec.diagonalizacao_ursin} podemos verificar que
+\begin{equation}\label{eq.matriz_L}
+L=\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+L_1&L_1\\
+L_2&-L_2
+\end{pmatrix},
+\end{equation}
+e podemos expressar a matriz de salto como
+\begin{equation}
+J=
+\begin{pmatrix}
+J_A&J_B\\
+J_B&J_A
+\end{pmatrix},
+\end{equation}
+onde $J_A$ e $J_B$ s\~ao dadas por
+\begin{align}\label{eq.j_a}
+J_A&=\frac{1}{2}\left[(L_2^+)^\top L_1^-+(L_1^+)^\top L_2^-\right]\\\label{eq.j_b}
+J_B&=\frac{1}{2}\left[(L_2^+)^\top L_1^--(L_1^+)^\top L_2^-\right].
+\end{align}
+Com uma simples multiplica\c{c}\~ao de matrizes temos que
+\begin{align}\nonumber
+J^{-1}&=(L^-)^{-1}L^+\\\label{eq.inversa_matriz_salto}
+&=
+\begin{pmatrix}
+J_A^\top&-J_B^\top\\
+-J_B^\top&J_A^\top
+\end{pmatrix}.
+\end{align}
+
+\subsection{Matriz de Reflex\~ao e Matriz de Transmiss\~ao}
+
+Considere um meio estratificado, homog\^eneo no interior de cada camada, com $N$ interfaces nas profundidades $0<z_1<z_2<...<z_N<\infty$ e sem exist\^encia de fonte nessas camadas. 
+
+\subsubsection{Reflex\~ao e Transmiss\~ao na \'Ultima Interface}
+Pela figura \ref{fig.ondas_em_zn}, considerando que n\~ao h\'a ondas ascendentes depois da \'ultima interface em $z=z_N$, podemos substituir a defini\c{c}\~ao \ref{eq.definicao_psi} na equa\c{c}\~ao \ref{eq.psi_matriz_salto} e obter
+\begin{align*}
+\mathbf{\Psi}_N^-&=J_N^{-1}\,\mathbf{\Psi}_N^+\\\\
+\begin{pmatrix}
+\mathbf{U}_N^-\\
+\mathbf{D}_N^-
+\end{pmatrix}
+&=J_N^{-1}\,
+\begin{pmatrix}
+0\\
+\mathbf{D}_N^+
+\end{pmatrix}.
+\end{align*}
+
+\begin{figure}
+\centering
+\includegraphics[scale=1]{ondas_em_zn}
+\caption{\textit{Ondas ascendentes e descendentes na \'ultima interface.}}
+\label{fig.ondas_em_zn}
+\end{figure}
+
+Substituindo a equa\c{c}\~ao \ref{eq.inversa_matriz_salto} na equa\c{c}\~ao anterior, temos
+\begin{align*}
+\begin{pmatrix}
+\mathbf{U}_N^-\\
+\mathbf{D}_N^-
+\end{pmatrix}
+&=
+\begin{pmatrix}
+J_{A,N}^\top&-J_{B,N}^\top\\
+-J_{B,N}^\top&J_{A,N}^\top
+\end{pmatrix}
+\,
+\begin{pmatrix}
+0\\
+\mathbf{D}_N^+
+\end{pmatrix}\\\\
+&=
+\begin{pmatrix}
+-J_{B,N}^\top \mathbf{D}_N^+\\
+ J_{A,N}^\top \mathbf{D}_N^+
+\end{pmatrix},
+\end{align*}
+ou seja,
+\begin{align*}
+\mathbf{U}_N^-&=-J_{B,N}^\top J_{A,N}^{-\top}\mathbf{D}_N^-\\
+\mathbf{D}_N^+&=J_{A,N}^{-\top}\mathbf{D}_N^-.
+\end{align*}
+Assim, vemos que para computar uma onda refletida, ou seja, uma onda ascendente a partir de uma interface entre camadas, usamos uma \textit{matriz de reflex\~ao} que fica definida como
+\begin{equation}\label{eq.reflexao_N}
+\Gamma_N=-J_{B,N}^\top J_{A,N}^{-\top}.
+\end{equation} 
+Analogamente, vemos que para computar uma onda transmitida, ou seja, uma onda descendente a partir de uma interface entre camadas, usamos uma \textit{matriz de transmiss\~ao} que fica definida como
+\begin{equation}\label{eq.transmissao_N}
+T_N=J_{A,N}^{-\top}.
+\end{equation} 
+
+\subsubsection{Reflex\~ao e Transmiss\~ao numa Interface Qualquer}
+Definimos a espessura de uma camada, a partir da interface superior, como
+\begin{equation}
+\Delta\,z_m=z_{m+1}-z_m,\qquad m=1,2,...,N-1,
+\end{equation}
+e temos que uma onda se propagando da interface na profundidade $z_m$ at\'e a interface em $z_{m+1}$ percorre uma profundidade total $\Delta\,z_m$. O valor dessa onda no fim da trajet\'oria, quando $z=z_{m+1}$, \'e aproximadamente igual a $\mathbf{\Psi}^-_{m+1}$, conforme a figura \ref{fig.N_interfaces}. Assim, usando a solu\c{c}\~ao \ref{eq.solucao_psi} podemos escrever
+\begin{equation}\label{eq.solucao_delta_zm}
+\mathbf{\Psi}^-_{m+1}=e^{-i\,\omega\tilde{\Lambda}_m\Delta\,z_m}\mathbf{\Psi}^+_m.
+\end{equation}
+
+\begin{figure}
+\centering
+\includegraphics[scale=1]{n_interfaces}
+\caption{\textit{Visualizacao de $N$ interfaces em subsuperficie e a notacao das ondas nas proximadades de cada interface.}}
+\label{fig.N_interfaces}
+\end{figure}
+
+Sabendo que essa onda se propagando na camada abaixo da interface em $z_m$ veio da camada anterior, podemos usar a matriz de salto na equa\c{c}\~ao \ref{eq.psi_matriz_salto} e escrever
+\begin{align}\label{eq.salto_m}
+\mathbf{\Psi}^+_{m}&=J_m\,\mathbf{\Psi}^-_m.\\
+\end{align}
+Substituindo a equa\c{c}\~ao \ref{eq.salto_m} na equa\c{c}\~ao \ref{eq.solucao_delta_zm}, temos
+\begin{align*}
+\mathbf{\Psi}^-_{m+1}&=e^{-i\,\omega\tilde{\Lambda}_m\Delta\,z_m}\mathbf{\Psi}^+_m\\
+\mathbf{\Psi}^-_{m+1}&=e^{-i\,\omega\tilde{\Lambda}_m\Delta\,z_m}J_m\,\mathbf{\Psi}^-_m\\
+\mathbf{\Psi}^-_m&=J^{-1}_me^{i\,\omega\tilde{\Lambda}_m\Delta\,z_m}\mathbf{\Psi}^-_{m+1}
+\end{align*}
+Substituindo a equa\c{c}\~ao \ref{eq.definicao_psi} e a equa\c{c}\~ao \ref{eq.inversa_matriz_salto}, temos
+\begin{align}\label{eq.refle_trans_1}
+\mathbf{U}_m^-&=J^\top_{A,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\mathbf{U}^-_{m+1}-J^\top_{B,m}e^{-i\,\omega\Lambda_m\Delta\,z_m}\mathbf{D}^-_{m+1}\\\nonumber\\\label{eq.refle_trans_2}
+\mathbf{D}_m^-&=-J^\top_{B,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\mathbf{U}^-_{m+1}+J^\top_{A,m}e^{-i\,\omega\Lambda_m\Delta\,z_m}\mathbf{D}^-_{m+1}.
+\end{align}
+Assim como definimos matriz de reflex\~ao para a \'ultima interface em $z_N$, podemos definir a matriz de reflex\~ao para uma interface qualquer, ou seja,
+\begin{equation}\label{eq.reflexao_m+1}
+\mathbf{U}^-_{m+1}=\Gamma_{m+1}\mathbf{D}^-_{m+1}.
+\end{equation}
+Substituindo a equa\c{c}\~ao \ref{eq.reflexao_m+1} na equa\c{c}\~ao \ref{eq.refle_trans_1} e na equa\c{c}\~ao \ref{eq.refle_trans_2}, temos
+\begin{align}\label{eq.refle_trans_3}
+\mathbf{U}_m^-&=(J^\top_{A,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\Gamma_{m+1}-J^\top_{B,m}e^{-i\,\omega\Lambda_m\Delta\,z_m})\mathbf{D}^-_{m+1}\\\nonumber\\\label{eq.refle_trans_4}
+\mathbf{D}_m^-&=(-J^\top_{B,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\Gamma_{m+1}+J^\top_{A,m}e^{-i\,\omega\Lambda_m\Delta\,z_m})\mathbf{D}^-_{m+1}\,.
+\end{align}
+Substituindo a equa\c{c}\~ao \ref{eq.refle_trans_4} na equa\c{c}\~ao \ref{eq.refle_trans_3}, temos
+\begin{align*}
+\mathbf{U}_m^-&=(J^\top_{A,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\Gamma_{m+1}-J^\top_{B,m}e^{-i\,\omega\Lambda_m\Delta\,z_m})\\
+&\,\,\cdot\,\,(-J^\top_{B,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\Gamma_{m+1}+J^\top_{A,m}e^{-i\,\omega\Lambda_m\Delta\,z_m})^{-1}\mathbf{D}_m^-\,,
+\end{align*}
+de onde podemos concluir que a matriz de reflex\~ao em uma interface em $z_m$ qualquer \'e dada por
+\begin{align*}
+\Gamma_{m}&=(J^\top_{A,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\Gamma_{m+1}-J^\top_{B,m}e^{-i\,\omega\Lambda_m\Delta\,z_m})\\
+&\,\,\cdot\,\,(-J^\top_{B,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\Gamma_{m+1}+J^\top_{A,m}e^{-i\,\omega\Lambda_m\Delta\,z_m})^{-1},
+\end{align*}
+ou
+\begin{align}\nonumber
+\Gamma_{m}&=(J^\top_{A,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\Gamma_{m+1}e^{i\,\omega\Lambda_m\Delta\,z_m}-J^\top_{B,m})\\\label{eq.matriz_reflexao_m}
+&\,\,\cdot\,\,(-J^\top_{B,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\Gamma_{m+1}e^{i\,\omega\Lambda_m\Delta\,z_m}+J^\top_{A,m})^{-1}.
+\end{align}
+Quando uma onda atinge uma interface, alem da possibilidade de reflexao ha tambem a possibilidade de trasmissao da onda para a camada inferior. De maneira analoga ao desenvolvido para reflexao de ondas, podemos deduzir a matriz para a transmissao de ondas em uma interface qualquer, que eh dada por
+\begin{equation}\label{eq.matriz_transmissao_m}
+T_m=T_{m+1}e^{i\,\omega\,\Lambda\Delta\,z_m}(-J^\top_{B,m}e^{i\,\omega\Lambda_m\Delta\,z_m}\Gamma_{m+1}e^{i\,\omega\Lambda_m\Delta\,z_m}+J^\top_{A,m})^{-1}.
+\end{equation}
+A validade das equacoes \ref{eq.matriz_reflexao_m} e \ref{eq.matriz_transmissao_m} para qualquer interface pode ser demonstrada por inducao sobre $m$, e todas as matrizes de reflexao e transmissao podem ser computadas por recurssao partindo das equacoes \ref{eq.reflexao_N} e \ref{eq.transmissao_N}.
+
+\section{Solu\c{c}\~ao na Presen\c{c}a de Fonte}\label{sec.presenca_fonte}
+Em porspec\c{c}\~ao de petr\'oleo s\~ao utilizadas alguns tipos de fontes de ondas, atrav\'es das quais se faz um mapeamento das caracter\'isticas das camadas de subsuperf\'icie. Esses tipos de fontes podem ser uma queda de peso, um caminh\~ao \textit{vibroseis}, explosivos e canh\~ao de ar, esta \'ultima fonte utilizada em prospec\c{c}\~ao mar\'itima. Sendo assim, vamos desenvolver uma solu\c{c}\~ao para o nosso problema considerando agora a presen\c{c}a de uma fonte.
+
+Considere ainda a equa\c{c}\~ao \ref{eq.matricial} com o sobrescrito $m$ omitido. Uma fonte $\mathbf{S}$ localizada numa profundidade $z_s$ pode ser representada na forma
+\begin{equation}\label{eq.fonte_geral}
+\mathbf{S}=\mathbf{S}_0\delta(z-z_s)+\mathbf{S}_1\delta^\prime(z-z_s),
+\end{equation}
+onde $\mathbf{S}_0$ e $\mathbf{S}_1$ n\~ao dependem da profundidade e $\delta$ \'e a fun\c{c}ao \textit{Delta de Dirac}. Fontes que s\~ao distribu\'idas ao longo da profundidade podem, geralmente, ser sintetizadas por superposi\c{c}\~ao de fontes do tipo $\mathbf{S}_0$ e $\mathbf{S}_1$. 
+
+Uma solu\c{c}\~ao por ser escrita como a combina\c{c}\~ao de uma solu\c{c}\~ao inicial sofrendo a a\c{c}\~ao de alguma fonte, ou seja,
+\begin{equation}\label{eq.solucao_inicial_fonte}
+\mathbf{\Phi}=\mathbf{\Phi}_0+\mathbf{S}_1\delta(z-z_s).
+\end{equation} 
+Substituindo a equa\c{c}\~ao \ref{eq.solucao_inicial_fonte} e a equa\c{c}\~ao \ref{eq.fonte_geral} na equa\c{c}\~ao \ref{eq.matricial}, temos
+\begin{equation}\label{eq.matricial_fonte}
+\frac{d\,\mathbf{\Phi}_0}{d\,z}=-i\,\omega\,M\,\mathbf{\Phi}_0+\left[\mathbf{S}_0-i\,\omega\,M\,\mathbf{S}_1\right]\,\delta(z-z_s),
+\end{equation}
+e por simplicidade, vamos escrever
+\begin{equation}\label{eq.fonte_simplificada}
+i\,\omega\,M\,\mathbf{S}_1-\mathbf{S}_0=
+\begin{pmatrix}
+\mathbf{S}_A\\
+\mathbf{S}_B
+\end{pmatrix}.
+\end{equation}
+Considerando a exist\^encia de uma interface imagin\'aria na profundidade $z_s$ da fonte, podemos determinar as condi\c{c}\~oes de salto no local da fonte da mesma forma que estudamos as condi\c{c}\~oes de salto nas interfaces que separam as camadas. Assim, integrando a equa\c{c}\~ao \ref{eq.matricial_fonte} no intervalo que come\c{c}a imediatamente acima da interface imagin\'aria da fonte $z_s^-$, e termina imediatamente abaixo da interface imagin\'aria da fonte em $z_s^+$, e substituindo a equa\c{c}\~ao \ref{eq.fonte_simplificada}, temos como solu\c{c}\~ao
+\begin{equation*}
+\mathbf{\Phi}_0(z_s^-)=\mathbf{\Phi}_0(z_s^+)+
+\begin{pmatrix}
+\mathbf{S}_A\\
+\mathbf{S}_B
+\end{pmatrix}.
+\end{equation*}
+Substituindo a equa\c{c}\~ao \ref{eq.solucao_inicial_fonte} e considerando as caracter\'isticas da fun\c{c}\~ao Delta de Dirac, temos a seguinte condi\c{c}\~ao de salto na profundidade da fonte
+\begin{equation}\label{eq.salto_zs}
+\mathbf{\Phi}(z_s^-)=\mathbf{\Phi}(z_s^+)+
+\begin{pmatrix}
+\mathbf{S}_A\\
+\mathbf{S}_B
+\end{pmatrix}.
+\end{equation}
+
+Vamos agora inserir uma interface imagin\'aria imediatamente abaixo da fonte, em $z=z_s^+$ e utilizar os m\'etodos do cap\'itulo \ref{sec.ausencia_fonte} para computar a matriz de reflex\~ao $\Gamma_s\equiv\Gamma(z_s^+)$ a partir do topo desta camada. J\'a que a interface em $z_s^+$ eh fict\'icia, as propriedades do meio s\~ao iguais acima e abaixo dessa interface, assim temos que $L_2^+=L_2^-$ e $L_1^+=L_1^-$. Substituindo essas identidades nas equa\c{c}\~oes \ref{eq.j_a} e \ref{eq.j_b}, temos
+\begin{align}\label{eq.j_a_ficticia}
+J_A&=\frac{1}{2}\left[(L_2)^\top L_1+(L_1)^\top L_2\right]\\\label{eq.j_b_ficticia}
+J_B&=\frac{1}{2}\left[(L_2)^\top L_1-(L_1)^\top L_2\right].
+\end{align}
+Pela diagonaliza\c{c}\~ao de Ursin apresentada nas subse\c{c}\~oes \ref{sec.diagonalizacao_1}-\ref{sec.diagonalizacao_4}, conclu\'imos que 
+\begin{align*}
+L_1^\top&=L_2^{-1}\\
+L_2^\top&=L_1^{-1},
+\end{align*}
+e substituindo as equa\c{c}\~oes acima nas equa\c{c}\~oes \ref{eq.j_a_ficticia} e \ref{eq.j_b_ficticia}, obtemos que
+\begin{align*}
+J_A&=I\\
+J_B&=0.
+\end{align*}
+Desta forma, a onda ascendente $\mathbf{U}(z_s^+)$ e a onda descendente $\mathbf{D}(z_s^+)$ a partir da interface em $z_s^+$ podem ser introduzidas na equa\c{c}\~ao \ref{eq.definicao_psi} para obtermos
+\begin{equation*}
+\mathbf{\Psi}(z_s^+)=
+\begin{pmatrix}
+\mathbf{U}(z_s^+)\\
+\mathbf{D}(z_s^+)
+\end{pmatrix}.
+\end{equation*}
+Substituindo a equa\c{c}\~ao \ref{eq.reflexao_m+1} na equa\c{c}\~ao acima, temos
+\begin{equation}\label{eq.Psi_descendente}
+\mathbf{\Psi}(z_s^+)=
+\begin{pmatrix}
+\Gamma_s\mathbf{D}(z_s^+)\\
+\mathbf{D}(z_s^+)
+\end{pmatrix},
+\end{equation}
+pois as ondas est\~ao numa mesma camada e da\'i usamos que
+\begin{align*}
+\mathbf{U}^-(z_s^+)&=\mathbf{U}(z_s^+)\\
+\mathbf{D}^-(z_s^+)&=\mathbf{D}(z_s^+).
+\end{align*}
+Multiplicando a equa\c{c}\~ao \ref{eq.salto_zs} por $L^{-1}$ e substituindo a equa\c{c}\~ao \ref{eq.Phi}, obtemos
+\begin{equation}\label{eq.Psi_salto_zs}
+\mathbf{\Psi}(z_s^-)=\mathbf{\Psi}(z_s^+)+L^{-1}
+\begin{pmatrix}
+\mathbf{S}_A\\
+\mathbf{S}_B
+\end{pmatrix}.
+\end{equation}
+Generalizando os desenvolvimentos apresentados nas subse\c{c}\~oes \ref{sec.diagonalizacao_1}-\ref{sec.diagonalizacao_4}, podemos escrever 
+\begin{equation*}
+L^{-1}=\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+L_2^\top&L_1^\top\\
+L_2^\top&-L_1^\top
+\end{pmatrix},
+\end{equation*}
+e substituindo esta express\~ao para $L^{-1}$ juntamente com a equa\c{c}\~ao \ref{eq.Psi_descendente} na equa\c{c}\~ao \ref{eq.Psi_salto_zs}, temos
+\begin{equation}\label{eq.solucao_phi_zs-}
+\mathbf{\Psi}(z_s^-)=
+\begin{pmatrix}
+\Gamma_s\mathbf{D}(z_s^+)\\
+\mathbf{D}(z_s^+)
+\end{pmatrix}
++
+\frac{1}{\sqrt{2}}\,
+\begin{pmatrix}
+L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B\\
+L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B
+\end{pmatrix}.
+\end{equation}
+Admitindo que a fonte esteja no interior da primeira camada, ou seja, $0<z_s<z_1$, a solu\c{c}\~ao dada pela equa\c{c}\~ao \ref{eq.solucao_phi_zs-} \'e propagada para cima a partir de $z_s^-$ usando a equa\c{c}\~ao \ref{eq.solucao_psi}, e o salto atrav\'es das interfaces entre camadas \'e dado pela equa\c{c}\~ao \ref{eq.psi_matriz_salto} at\'e que a onda atinja a interface terra/ar em $z=0^+$. Assim,
+\begin{equation*}
+\mathbf{\Psi}(0^+)=e^{-i\,\omega\,\tilde{\mathbf{\Lambda}}\,(0^+-z_s^-)}\,\mathbf{\Psi}(z_s^-),
+\end{equation*}
+e podemos usar as $n$ condi\c{c}\~oes de fronteira em $z=0$ para determinarmos as $n$ inc\'ognitas de $\mathbf{D}_s$. Os demais termos da solu\c{c}\~ao s\~ao conhecidos. A diferen\c{c}a $z_s^--0^+$ corresponde \`a profundidade da fonte, assim a solu\c{c}\~ao anterior pode ser reescrita como
+\begin{align*}
+\mathbf{\Psi}(0^+)&=e^{-i\,\omega\,\tilde{\mathbf{\Lambda}}\,(-z_s)}\,\mathbf{\Psi}(z_s^-)\\\\
+\mathbf{\Psi}(0^+)&=
+\begin{pmatrix}
+e^{i\,\omega\,\mathbf{\Lambda}\,z_s}&\mathbf{0}\\
+\mathbf{0}&e^{-i\,\omega\,\mathbf{\Lambda}\,z_s}
+\end{pmatrix}
+\mathbf{\Psi}(z_s^-).
+\end{align*}
+Substituindo a equa\c{c}\~ao \ref{eq.solucao_phi_zs-} na equa\c{c}\~ao acima, temos
+\begin{equation}\label{eq.Psi_zero+}
+\mathbf{\Psi}(0^+)=
+\begin{pmatrix}
+e^{i\,\omega\,\mathbf{\Lambda}\,z_s}\,\Gamma_s\mathbf{D}(z_s^+)\\
+e^{-i\,\omega\,\mathbf{\Lambda}\,z_s}\,\mathbf{D}(z_s^+)
+\end{pmatrix}
++
+\frac{1}{\sqrt{2}}\,
+\begin{pmatrix}
+e^{i\,\omega\,\mathbf{\Lambda}\,z_s}\,(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)\\
+e^{-i\,\omega\,\mathbf{\Lambda}\,z_s}\,(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)
+\end{pmatrix}.
+\end{equation}
+
+TALVEZ SEJA INTERESSANTE COLOCAR A PARTE SEGUINTE NO CAPITULO ONDE SE DESENVOLVE AS EQUACOES MAIS PARTICULARES.
+
+Para an\'alises futuras ser\'a interessante escrever a solu\c{c}\~ao na superf\'icie como
+\begin{equation}\label{eq.Phi_G_AB}
+\mathbf{\Phi}(0^+)=
+\begin{pmatrix}
+G_A\mathbf{\Phi}_g\\
+G_B\mathbf{\Phi}_g
+\end{pmatrix},
+\end{equation}
+onde as matrizes $G_A$ $G_B$ s\~ao de dimens\~ao $n\times n$ e $\mathbf{\Phi}_g$ \'e um vetor de dimens\~ao $n$ formado por inc\'ognitas em $z=0$.
+Considerando o sistema \ref{eq.matricial_1}, temos
+\begin{equation*}
+\mathbf{\Phi}^{(1)}=
+\begin{pmatrix}
+\tilde{E}_1\\
+\tilde{H}_2
+\end{pmatrix}
+\end{equation*}
+e sua condi\c{c}\~ao de fronteira, quando $z=0$ \'e dada pela equa\c{c}\~ao \ref{eq.cond_fron_1}, 
+\begin{equation*}
+\tilde{H}_2=-\frac{\epsilon_0}{q_0}\tilde{E}_1.
+\end{equation*}
+Substituindo esta condi\c{c}\~ao em $\mathbf{\Phi}^{(1)}$, temos
+\begin{equation*}
+\mathbf{\Phi}^{(1)}=
+\begin{pmatrix}
+\tilde{E}_1\\\\
+-\frac{\epsilon_0}{q_0}\tilde{E}_1
+\end{pmatrix}_{z=0^+}.
+\end{equation*}
+Colocando a equa\c{c}\~ao acima no formato da equa\c{c}\~ao \ref{eq.Phi_G_AB}, temos que
+\begin{equation*}
+\mathbf{\Phi}_g^{(1)}=\tilde{E}_1,
+\end{equation*}
+\begin{equation*}
+G_A^{(1)}=1\qquad\text{e}\qquad G_B^{(1)}=-\frac{\epsilon_0}{q_0}.
+\end{equation*}
+De maneira an\'aloga, vamos escrever as solu\c{c}\~oes dos tr\^es sistemas restantes na forma dada pela equa\c{c}\~ao \ref{eq.Phi_G_AB}. Substituindo a condi\c{c}\~ao de contorno \ref{eq.cond_fron_2} no sistema \ref{eq.matricial_2}, $\mathbf{\Phi}^{(2)}$ \'e dado por
+\begin{equation*}
+\mathbf{\Phi}^{(2)}=
+\begin{pmatrix}
+\tilde{E}_2\\\\
+-\frac{q_0}{\mu_0}\tilde{E}_2
+\end{pmatrix}_{z=0^+}
+\end{equation*}
+e temos
+\begin{equation*}
+\mathbf{\Phi}_g^{(2)}=\tilde{E}_2,
+\end{equation*}
+\begin{equation*}
+G_A^{(2)}=1\qquad\text{e}\qquad G_B^{(2)}=-\frac{q_0}{\mu_0}.
+\end{equation*}
+Substituindo a condi\c{c}\~ao de contorno \ref{eq.cond_fron_3} no sistema \ref{eq.matricial_3}, $\mathbf{\Phi}^{(3)}$ \'e dado por
+\begin{equation*}
+\mathbf{\Phi}^{(3)}=
+\begin{pmatrix}
+\dot{\tilde{u}}_3\\
+0\\
+0\\
+\dot{\tilde{u}}_1
+\end{pmatrix}_{z=0^+}
+\end{equation*}
+e temos,
+\begin{equation*}
+\mathbf{\Phi}_g^{(3)}=
+\begin{pmatrix}
+\dot{\tilde{u}}_3\\
+\dot{\tilde{u}}_1
+\end{pmatrix},
+\end{equation*}
+\begin{equation*}
+G_A^{(3)}=
+\begin{pmatrix}
+1&0\\
+0&0
+\end{pmatrix}
+\qquad\text{e}\qquad G_B^{(3)}=
+\begin{pmatrix}
+0&0\\
+0&1
+\end{pmatrix}.
+\end{equation*}
+
+Substituindo a condi\c{c}\~ao de contorno \ref{eq.cond_fron_4} no sistema \ref{eq.matricial_4}, $\mathbf{\Phi}^{(4)}$ \'e dado por
+\begin{equation*}
+\mathbf{\Phi}^{(4)}=
+\begin{pmatrix}
+\dot{\tilde{u}}_2\\
+0
+\end{pmatrix}_{z=0^+}
+\end{equation*}
+e temos,
+\begin{equation*}
+\mathbf{\Phi}_g^{(4)}=\dot{\tilde{u}}_2,
+\end{equation*}
+\begin{equation*}
+G_A^{(4)}=1\qquad\text{e}\qquad G_B^{(4)}=0.
+\end{equation*}
+
+De acordo com a equa\c{c}\~ao \ref{eq.Phi}, podemos escrever
+\begin{equation*}
+\mathbf{\Phi}(0^+)=L\,\mathbf{\Psi}(0^+),
+\end{equation*}
+e substituindo as equa\c{c}\~oes \ref{eq.Psi_zero+}, \ref{eq.Phi_G_AB} e \ref{eq.matriz_L} na equa\c{c}\~ao acima, temos
+\begin{align}\label{eq.GA_Phi}
+G_A\mathbf{\Phi}_g&=\frac{1}{\sqrt{2}}\,(L_1e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s+L_1e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s)\\\nonumber
+&+\frac{1}{2}\,\left[L_1e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)+L_1e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)\right]
+\end{align}
+e
+\begin{align}\label{eq.GB_Phi}
+G_B\mathbf{\Phi}_g&=\frac{1}{\sqrt{2}}\,(L_2e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s-L_2e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s)\\\nonumber
+&+\frac{1}{2}\,\left[L_2e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)-L_2e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)\right].
+\end{align}
+Pela diagonaliza\c{c}\~ao de Ursin podemos verificar que $L_1^\top=L_2^{-1}$, e multiplicando pela esquerda a equa\c{c}\~ao \ref{eq.GA_Phi} por $L_2^\top$ e multiplicando pela esquerda a equa\c{c}\~ao \ref{eq.GB_Phi} por $L_1^\top$, temos 
+\begin{align}\label{eq.LGA_Phi}
+L_2^{\top}G_A\mathbf{\Phi}_g&=\frac{1}{\sqrt{2}}\,(e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s+e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s)\\\nonumber
+&+\frac{1}{2}\,\left[e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)+e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)\right]
+\end{align}
+e
+\begin{align}\label{eq.LGB_Phi}
+L_1^\top G_B\mathbf{\Phi}_g&=\frac{1}{\sqrt{2}}\,(e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s-e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s)\\\nonumber
+&+\frac{1}{2}\,\left[e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)-e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)\right].
+\end{align}
+Subtraindo a equa\c{c}\~ao \ref{eq.LGB_Phi} da equa\c{c}\~ao \ref{eq.LGA_Phi}, temos
+\begin{equation}\label{eq.pre_phi_g}
+(L_2^{\top}G_A-L_1^\top G_B)\mathbf{\Phi}_g=\frac{2}{\sqrt{2}}\,e^{-i\,\omega\,\Lambda\,z_s}\mathbf{D}_s+e^{-i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B).
+\end{equation}
+Isolando $\mathbf{D}_s$ obtemos
+\begin{equation*}
+\mathbf{D}_s=\frac{1}{\sqrt{2}}\,e^{i\,\omega\,\Lambda\,z_s}(L_2^{\top}G_A-L_1^\top G_B)\,\mathbf{\Phi}_g-\frac{1}{\sqrt{2}}(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B).
+\end{equation*}
+Ao multiplicar pela esquerda a equa\c{c}\~ao \ref{eq.pre_phi_g} por $e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_se^{i\,\omega\,\Lambda\,z_s}$, temos
+\begin{equation}\label{eq.pre_phi_g2}
+e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_se^{i\,\omega\,\Lambda\,z_s}(L_2^{\top}G_A-L_1^\top G_B)\mathbf{\Phi}_g=\frac{2}{\sqrt{2}}\,e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_s\mathbf{D}_s+e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_s(L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B),
+\end{equation}
+e somando as equa\c{c}\~oes \ref{eq.LGA_Phi} e \ref{eq.LGB_Phi}, temos
+\begin{equation}\label{eq.pre_phi_g+}
+(L_2^{\top}G_A+L_1^\top G_B)\mathbf{\Phi}_g=\frac{2}{\sqrt{2}}\,e^{i\,\omega\,\Lambda\,z_s}\Gamma_s\mathbf{D}_s+e^{i\,\omega\,\Lambda\,z_s}(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B).
+\end{equation}
+Subtraindo a equa\c{c}\~ao \ref{eq.pre_phi_g+} da equa\c{c}\~ao \ref{eq.pre_phi_g2}, obtemos uma rela\c{c}\~ao para $\mathbf{\Phi}_g$, dada por 
+\begin{align*}
+\mathbf{\Phi}_g&=\left[e^{i\,\omega\,\Lambda\,z_s}\,\Gamma_se^{i\,\omega\,\Lambda\,z_s}(L_2^{\top}G_A-L_1^\top G_B)-(L_2^{\top}G_A+L_1^\top G_B)\right]^{-1}\\
+&\,\,\cdot\,\,e^{i\,\omega\,\Lambda\,z_s}\left[\Gamma_s (L_2^\top\mathbf{S}_A-L_1^\top\mathbf{S}_B)-(L_2^\top\mathbf{S}_A+L_1^\top\mathbf{S}_B)\right].
+\end{align*}
+Em particular, quando a fonte est\'a imediatamente abaixo da superf\'icie livre, $z_s\approx0$, temos
+\begin{equation*}
+\mathbf{\Phi}_g=\left[(\Gamma_s-I)L_2^{\top}G_A-(\Gamma_s+I)L_1^\top G_B\right]^{-1}\left[(\Gamma_s-I)L_2^\top\mathbf{S}_A-(\Gamma_s+I)L_1^\top\mathbf{S}_B\right].
+\end{equation*} 
+Ap\'os obtermos $\mathbf{\Phi}_g$, \'e poss\'ivel determinarmos todas as condi\c{c}\~oes iniciais em $z=0$, $\mathbf{D}_s$ e $\mathbf{U}_s=\Gamma\,\mathbf{D}_s$. Em seguida, podemos obter a solu\c{c}\~ao imediatamente abaixo da fonte conforme a rela\c{c}\~ao \ref{eq.Psi_descendente}. Teoricamente, a partir de agora, a solu\c{c}\~ao pode ser computada em qualquer outra profundidade utilizando a propaga\c{c}\~ao atrav\'es das camadas de acordo com a rela\c{c}\~ao \ref{eq.solucao_psi} e o salto atrav\'es das camadas usando a rela\c{c}\~ao \ref{eq.psi_matriz_salto}. No entando, a propaga\c{c}\~ao de uma onda ascendente cont\'inua no sentido descendente \'e numericamente inst\'avel usando a equa\c{c}\~ao \ref{eq.solucao_psi}, pois as exponenciais complexas crescem ao inv\'es de diminuirem com a dist\^ancia. Assim, devemos obter $\mathbf{U}$ a partir de $\mathbf{D}$ usando $\Gamma_m$, ou fazer uso das matrizes de transmiss\~ao $T_m$.

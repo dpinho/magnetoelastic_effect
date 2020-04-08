@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: master.aux
+The style file: plainnat.bst
+I found no \bibdata command---while reading file master.aux
+Warning--I didn't find a database entry for "eringen_1963"
+Warning--I didn't find a database entry for "pinho_2018"
+Warning--I didn't find a database entry for "pride_94"
+Warning--I didn't find a database entry for "White_Zhou_2006"
+Warning--I didn't find a database entry for "Azeredo_2013"
+Warning--I didn't find a database entry for "miranda_2016"
+Warning--I didn't find a database entry for "oliveira_2018"
+Warning--I didn't find a database entry for "Blanc_13"
+Warning--I didn't find a database entry for "sharma_08"
+Warning--I didn't find a database entry for "jackson_classical_1999"
+Warning--I didn't find a database entry for "griffiths"
+Warning--I didn't find a database entry for "Ursin(1983)"
+Warning--I didn't find a database entry for "Knopoff(1955)"
+You've used 0 entries,
+            2773 wiz_defined-function locations,
+            609 strings with 5037 characters,
+and the built_in function-call counts, 33 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 10
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 7
+(There was 1 error message)

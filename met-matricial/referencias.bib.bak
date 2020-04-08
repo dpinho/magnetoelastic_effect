@@ -1,5 +1,4 @@
 @article{eringen_1963,
-doi	= {10.1016/0020-7225(63)90004-1},
 title	= {On the propagation of waves in an electromagnetic elastic solid},
 author	= {J.W. Dunkin and A.C. Eringen},
 publisher	= {Elsevier Science},
@@ -8,12 +7,10 @@ issnp	= {0020-7225},
 year	= {1963},
 volume	= {1},
 issue	= {4},
-page	= {461--495},
-url =       {http://gen.lib.rus.ec/scimag/index.php?s=10.1016/0020-7225(63)90004-1},
+page	= {461-495},
 }
 
 @article{Ursin-1983,
-doi	= {10.1190/1.1441529},
 title	= {Review of elastic and electromagnetic wave propagation in horizontally layered media},
 author	= {B. Ursin},
 publisher	= {Society of Exploration Geophysicists},
@@ -23,8 +20,7 @@ year	= {1983},
 month	= {08},
 volume	= {48},
 issue	= {8},
-page	= {1063--1081},
-url =       {http://gen.lib.rus.ec/scimag/index.php?s=10.1190/1.1441529},
+page	= {1063-1081},
 }
 
 
@@ -38,9 +34,193 @@ number = {1},
 pages = {69-98}
 }
 
-@Book{Azeredo_2013,
+@PhdThesis{Azeredo_2013,
 author = {M. M. Azeredo},
 title = {Modelagem Matem\'atica e Computacional da Propaga\c{c}\~ao de Ondas S\'ismicas em Meios Poroel\'asticos Estratificados},
-publisher = {UENF},
+school = {Universidade Estadual do Norte Fluminense},
 year = {2013}
+}
+
+@Book{lang_1986,
+author = {S. Lang},
+title = {Introduction to Linear Algebra},
+publisher = {Springer},
+year = {1986},
+OPTkey = {•},
+OPTvolume = {•},
+OPTnumber = {•},
+OPTseries = {Undergraduate Texts
+in Mathematics},
+OPTaddress = {•},
+OPTedition = {2^{a} edi\c{c}\~ao},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{pride_94,
+author = {S. Pride},
+title = {Governing Equations for the Coupled Electromagnetics and Acustics of Porous Media},
+journal = {Physical Review B},
+year = {1994},
+OPTkey = {•},
+OPTvolume = {50},
+OPTnumber = {21},
+OPTpages = {•},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Book{miranda_2016,
+author = {M. R. S. T. Miranda},
+title = {M\'etodo Matricial em Modelagem Poroel\'astica: Modelo de Biot-JKD},
+publisher = {UENF},
+year = {2016}
+}
+
+@Book{griffiths,
+author = {D. J. Griffiths},
+title = {Introduction to Electrodynamics},
+publisher = {Prentice-Hall},
+year = {1999},
+OPTedition = {3rd ed.}
+}
+
+@Book{chew,
+author = {W. C. Chew},
+title = {Waves and Fields in Inhomogeneous Media},
+publisher = {IEEE PRESS},
+year = {1995}
+}
+
+@Article{weyl_19,
+author = {H. Weyl},
+title = {Ausbreitung Elektromagnetischen Wellen ueber einem ebenen Leiter},
+journal = {Annalen der Physik},
+year = {1919},
+OPTvolume = {60},
+OPTpages = {481-500},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Book{butkov_88,
+author = {E. Butkov},
+title = {F\'isica Matem\'atica},
+publisher = {LTC},
+year = {1988}
+}
+
+@Book{farlow_93,
+author = {S. J. Farlow},
+title = {Partial Differential Equations for Scientists and Engineers},
+publisher = {Dover},
+year = {1993}
+}
+
+@Book{oliveira_2018,
+author = {I. B. Oliveira},
+title = {Modelagem de Propaga\c{c}\~ao das Ondas El\'asticas em Meios Porosos 1D: Modelo de Biot vs. Biot-JKD},
+publisher = {UENF},
+year = {2018}
+}
+
+@Book{lebedev_2003,
+author = {L. P. Lebedev and M. J. Cloud},
+title = {Tensor Analysis},
+publisher = {World Scientific Publishing},
+year = {2003}
+}
+%acho q esse abaixo nao esta sendo citado
+@Article{knopoff_55,
+author = {E. L. Knopoff},
+title = {The Interaction between Elastic Waves Motions and Magnetic Field in Electrical Conductors},
+journal = {J. Geophys. Res.},
+year = {1955},
+volume = {60},
+number = {4},
+pages = {617-629},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Book{pinho_2018,
+author = {D. C. Pinho},
+title = {Fundamentos de Magneto-Elasticidade},
+publisher = {UENF},
+year = {2018}
+}
+
+@Article{mikhailenko_97,
+author = {B. G. Mikhailenko and O. N. Soboleva},
+title = {Mathematical Modeling of Seismomagnetic
+Efects Arising in the
+Seismic Wave Motion in the
+Earth's Constant Magnetic Field},
+journal = {Appl. Math. Lett.},
+year = {1997},
+volume = {10},
+number = {3},
+pages = {47-51}
+}
+
+@Article{Novacki_83,
+author = {W. Novacki},
+title = {Electromagnetic Efects in Solid Bodies},
+journal = {In Panstwowe Wydawnictwo Naukowe},
+year = {1983},
+volume = {10},
+}
+
+@Article{Mikhailenko_89,
+author = {A.G. Fatianov and B.G. Mikhailenko},
+title = {Numerically-analytical method for calculation of theoretical seismograms in layered-inhomogeneous anelastic media},
+journal = {In Proceedings of the 7 th International Mathematical Geophysics Seminar held at the Free University of Berlin},
+year = {1989},
+}
+
+@article{baruch_2013,
+doi	= {10.1080/10652469.2012.691097},
+title	= {The classical Hankel Transform in the Kirillov Model of Discrete Series},
+author	= {E. M. Baruch},
+journal	= {Integral Transforms and Special Functions},
+year	= {2013},
+volume	= {24},
+issue	= {5},
+page	= {339-356},
+}
+
+@Book{dobrin_88,
+author = {M. B. Dobrin e C. H. Savit},
+title = {Introduction to Geophysical Prospecting},
+publisher = {McGraw-Hill},
+year = {1988},
+OPTkey = {•},
+OPTvolume = {•},
+OPTnumber = {•},
+OPTseries = {•},
+OPTaddress = {•},
+OPTedition = {•},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Book{bueno_2015,
+author = {A. D. Bueno},
+title = {Programa\c{c}\~ao Orientada a Objeto com C++},
+publisher = {Novatec},
+year = {2015},
+OPTkey = {•},
+OPTvolume = {•},
+OPTnumber = {•},
+OPTseries = {•},
+OPTaddress = {•},
+OPTedition = {•},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
 }

@@ -1,0 +1,392 @@
+\documentclass[12pt,a4paper,oneside]{abntex2}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfig}
+\graphicspath{{fig/}}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\usepackage{empheq}
+\usepackage{lscape}
+
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}
+
+%capa
+\autor{DAVID DA COSTA DE PINHO}% introduz nome do autor
+\titulo{MODELAGEM MATEM\'ATICA E NUM\'ERICA DO EFEITO MAGNETO-EL\'ASTICO}
+\data{2020}
+\local{MACA\'E}
+
+%anverso da folha de rosto
+\preambulo{Tese apresentada ao Centro de Ci\^encia e Tecnologia da Universidade Estadual do Norte Fluminense, como parte das exig\^encias para conclus\~ao do curso de Doutorado.}
+\orientador{Viatcheslav Ivanovich Priimenko, Ph.D}
+\tipotrabalho{monografia}
+
+\begin{document}
+
+\imprimircapa
+
+\imprimirfolhaderosto%anverso
+
+%{\ABNTEXchapterfont\Large\textsc{\imprimirautor}} - para aumentar a fonte e colocar em caixa alta
+
+%importante dar enter para pular linha entre os tipos de textos
+
+\begin{folhadeaprovacao}
+
+\begin{center}
+{\ABNTEXchapterfont\Large\bfseries\imprimirtitulo}\\\vspace{1cm}
+{\ABNTEXchapterfont\Large\textsc{\imprimirautor}}
+\end{center}
+
+\vspace{1cm}
+\hspace{.45\textwidth} \begin{minipage}{.5\textwidth}
+\imprimirpreambulo
+\end{minipage}
+
+\vspace{1cm}
+Trabalho aprovado em $\,7\,$ de Agosto de \imprimirdata.\\
+
+\vspace{1cm}
+Comiss\~ao Examinadora:\\
+\assinatura{Prof. Marcia Miranda Azeredo, Ds.c - UENF}
+\assinatura{Prof. André Duarte Bueno, Ds.c - UENF}
+\assinatura{Prof. Fernando Diogo de Siqueira, Ds.c - UENF}
+\assinatura{Prof. \imprimirorientador - UENF}
+
+\begin{center}
+\vfill
+{\large\imprimirlocal}
+\par
+{\large\imprimirdata}
+\end{center}
+
+\end{folhadeaprovacao}
+
+\begin{center}
+{\ABNTEXchapterfont\Large\imprimirtitulo}\\\vspace{1cm}
+
+\end{center}
+
+\begin{resumo}
+O objetivo principal desta obra \'e apresentar os fundamentos das teorias f\'isicas e matem\'atica relacionados ao efeito magneto-el\'astico, bem como um recondicionamento do modelo usado para descrever tal efeito. Inicialmente, apresentamos uma revis\~ao dos principais fen\^omenos pesquisados atualmente, envolvendo propaga\c{c}\~ao de ondas el\'asticas e eletromagn\'eticas. A mec\^anica do cont\'inuo e o eletromagnetismo s\~ao as duas teorias f\'isicas que descrevem a magneto-elasticidade, e introduzimos os principais conceitos dessas \'areas necess\'arios aos propositos desta monografia. Estudamos como ocorre o acoplamento entre ondas el\'asticas e eletromagn\'eticas bem como sua propaga\c{c}\~ao na subsuperf\'icie terrestre, atrav\'es de camadas estratigr\'aficas. Finalizamos com uma reescrita do modelo desse acoplamento de forma que possamos desenvolv\^e-lo analiticamente e produzir uma solu\c{c}\~ao num\'erica em trabalhos posteriores.
+\\
+Esta monografia tem por finalidade essencial o desenvolvimento anal\'itico do m\'etodo matricial de Ursin aplicado ao efeito magneto-el\'astico. Primeiramente, apresentamos uma revis\~ao sobre a utiliza\c{c}\~ao do m\'etodo matricial em problemas de prospec\c{c}\~ao de petr\'oleo, onde v\'arias dessas publica\c{c}\~oes foram produzidas no LENEP. Inclu\'imos uma sumariza\c{c}\~ao das ferramentas da f\'isica-matem\'atica necess\'arias ao entendimento desta obra. Transformamos as EDP's do efeito magneto-el\'astico em EDO's e mostramos como o m\'etodo matricial \'e utilizado na solu\c{c}\~ao de sistemas de EDO's que modelam a propaga\c{c}\~ao de ondas na subsuperf\'icie terrestre. Por fim, aplicamos o m\'etodo matricial nas EDO's da magneto-elasticidade de forma que possamos produzir um algoritmo computacional para obter as solu\c{c}\~oes numericamente.
+
+
+\vspace{\onelineskip} 
+\noindent 
+\textbf{Palavras-chave}: Magneto-Elasticidade, Mec\^anica do Cont\'inuo, Equa\c{c}\~oes de Maxwell, Magneto-Elasticidade, M\'etodo Matricial de Ursin, Prospec\c{c}\~ao de Petr\'oleo.
+\end{resumo}
+
+\begin{center}
+{\ABNTEXchapterfont\Large FOUNDATIONS OF MAGNETO-ELASTICITY}\\\vspace{1cm}
+\end{center}
+
+\begin{resumo}[Abstract]
+\begin{otherlanguage*}{english}
+The main purpose of this paper is present the foundations of physical and mathematical theories about magneto-elastic effect, and a reconditioning model to describe such effect. Firstly, we present a review of some phenomena found in current surveys, involving the propagations of elastic and eletromagnetics waves. Continuous mechanics and eletromagnetism describe magneto-elasticity, and we introduce a lots of required concepts from these areas to achieve the monography's goals. We also study how occurs the coupled propagation of elastic and eletromagnetics waves in Earth's subsurface, through stratigraphics layers. We finished rewriting the coupling's model in such manner that allow us to develope it analiticaly and to build a numerical solver in further works.
+\\
+This paper aims analitical development of Ursin's matricial method applied to magneto-elastic effect. First, we present a review about matricial method applied to different kind of oil prospecting issues, found in surveys produced in LENEP. Summaries of physical and mathematical tools required to understand this text were included. We transform magneto-elastic effect's PDE to ODE ones and we show how the matricial method can be usefull to solve ODE systems that describe propagations of waves in Earth's subsurface. Best for the last, we applied matricial method to magneto-elasticity's ODE in such way that we can build an algorithm to return numerical solutions.
+
+\vspace{\onelineskip} 
+\noindent 
+\textbf{Keywords}: Magneto-Elasticity, Continuous Mechanics, Maxwell's Equations, Magneto-Elasticity, Ursin's Matricial Method, Oil Prospecting.
+
+\end{otherlanguage*}
+\end{resumo}
+
+\listoffigures
+
+\newpage
+
+\tableofcontents
+
+\textual
+
+%\input{introducao}
+%\input{revisao_bibliografica}
+%\input{Elementos_da_Fisica_Matematica}
+%\input{fund_eletro}
+%\input{fund_elasti}
+%\input{acopla_magneto_elastico}
+%\input{recondi-acoplamento}
+
+%\input{Metodo_Matricial_para_Solucao_de_EDOs}
+%%\input{solucao_ausencia_fonte}mesclado
+%%\input{solucao_presenca_fonte}mesclado
+%\input{trans_edp_para_edo}
+%\input{Condicoes_Contorno_EDOs}
+%\input{aplicando_matricial_ursin}
+
+
+\input{analise_dispersao}
+
+
+%\input{conclusoes}
+
+\bibliographystyle{plainnat}
+%\bibliography{referencias}
+
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+
+\bibitem[Cukavac(2008)]{Cukavac_2008}
+M.~S. Cukavac.
+\newblock Seismomagnetic insvestigations in kopaonik area.
+\newblock \emph{MGB}, 2008.
+
+\bibitem[Eringen(1963)]{eringen_1963}
+J.W.~Dunkin e A.C.~Eringen.
+\newblock On the propagation of waves in an electromagnetic elastic solid.
+\newblock \emph{International Journal of Engineering Science}, 1, 1963.
+
+
+\bibitem[Tromp(1998)]{dahlem}
+F.~A.~Dahlem e~J.~Tromp.
+\newblock \emph{Theoretical Global Seismology}.
+\newblock Princeton University Press, 1998.
+
+\bibitem[Soboleva(1997)]{Mikhailenko_1997}
+B.~G.~Mikhailenko e~O.~N.~Soboleva.
+\newblock Mathematical modeling of seismomagnetic efects arising in the seismic
+  wave motion in the earth's constant magnetic field.
+\newblock \emph{Applied Mathematics Lettures}, 10\penalty0 (3):\penalty0
+  47--51, 1997.
+
+\bibitem[Pilipenko(1997)]{surkov_97}
+V.~V.~Surkov e~V.~A.~Pilipenko.
+\newblock Magnetic effects due to earthquakes and underground explosions: a
+  review.
+\newblock \emph{Annali di Geofisica}, XL\penalty0 (2):\penalty0 227--239, 1997.
+
+\bibitem[Eringen(1962)]{Eringen_1962}
+A.~C. Eringen.
+\newblock \emph{Nonlinear Theory of Continuous Media}.
+\newblock McGraw-Hill New York, 1962.
+
+\bibitem[Griffiths(1999)]{griffiths}
+D.~J. Griffiths.
+\newblock \emph{Introduction to Electrodynamics}.
+\newblock Prentice-Hall, 1999.
+
+\bibitem[Guglielmi(1986a)]{guglielmi_86a}
+A.~V. Guglielmi.
+\newblock Magnetoelastic waves.
+\newblock \emph{Izv. Akad. Nauk SSSR, Fizika Zemli}, 7\penalty0 (112), 1986a.
+
+\bibitem[Guglielmi(1986b)]{guglielmi_86b}
+A.~V. Guglielmi.
+\newblock Excitation of oscillations of the electromagnetic field by elastic
+  waves in the conducting body.
+\newblock \emph{Geomagn. Aeron.}, 27\penalty0 (3):\penalty0 467--470, 1986b.
+
+\bibitem[Jackson(1999)]{jackson_classical_1999}
+J.~D. Jackson.
+\newblock \emph{Classical electrodynamics}.
+\newblock Wiley, New York, {NY}, 3rd ed., 1999.
+
+
+\bibitem[Knopoff(1955)]{Knopoff_1955}
+E.~L. Knopoff.
+\newblock The interaction between elastic waves motions and magnetic field in
+  electrical conductors.
+\newblock \emph{J. Geophys. Res.}, 60\penalty0 (4):\penalty0 617--629, 1955.
+
+\bibitem[Yerzhanov(1985)]{yerzhanov_85}
+T.~E. Nasynbaev e A. V.~Bushuev L.~S.~Yerzhanov, A. K.~Kurskeev.
+\newblock Geomagnetics observations during the massa experiments.
+\newblock \emph{Izv. Akad. Nauk SSSR, Fizika Zemli}, 11:\penalty0 80--82, 1985.
+
+\bibitem[Liu(2002)]{liu}
+I.~S. Liu.
+\newblock \emph{Continuum Mechanics}.
+\newblock Spring-Verlag, Berlim-Heidelberg, 2002.
+
+\bibitem[Sadovsky(1980)]{Sadovsky_1980}
+M.A. Sadovsky.
+\newblock Electro magnetic precursors of earthquakes.
+\newblock \emph{Dokl. Acad. Nauka}, 1980.
+
+\bibitem[Slawinski(2007)]{slawinski}
+M.~A. Slawinski.
+\newblock \emph{Waves And rays in elastic continua}.
+\newblock World Scientific Publishing Company, 2 ed, 2007.
+
+
+\bibitem[Sommerfeld(1952)]{sommerfeld_52}
+A.~Sommerfeld.
+\newblock Electrodynamics.
+\newblock \emph{Academic Press}, 1952.
+
+\bibitem[Stacey(1964)]{stacey_64}
+F.~D. Stacey.
+\newblock Seismo-magnetic effect.
+\newblock \emph{Pure Applied Geophysics}, 58\penalty0 (11):\penalty0 5--23,
+  1964.
+
+\bibitem[Surkov(1989a)]{surkov_89a}
+V.~V. Surkov.
+\newblock Local changes in geomagnetics and geoeletrics fields under rocks
+  deformation near the earth surface.
+\newblock \emph{Izv. Akad. Nauk SSSR, Fizika Zemli}, 5:\penalty0 91--96, 1989a.
+
+\bibitem[Surkov(1989b)]{surkov_89b}
+V.~V. Surkov.
+\newblock Distortion of external magnetic field by a longitudinal acoustic
+  wave.
+\newblock \emph{Magnetic Hydro-Dynamics}, 2:\penalty0 9--12, 1989b.
+
+\bibitem[Anisimov(1985)]{Anisimov_1985}
+E.A. Ivanov M.V. Pedanov N.N.Rusakov V.A. Troizhkya e V.E.~Goncharov
+  S.V.~Anisimov, M.B.~Gokhberg.
+\newblock Short period oscillations of electromagnetic field of the earth after
+  explosion.
+\newblock \emph{Dokl. Acad. Nauka}, 281\penalty0 (3):\penalty0 556--559, 1985.
+
+\bibitem[Rikitake(1980)]{Rikitake_80}
+H.~Tanaka N. Ohshiman Y. Sasai Y. Ishikawa S. Koyama M. Kawamura e K.~Ohchi
+  T.~Rikitake, Y.~Honkura.
+\newblock Changes in the geomagnetic field associated with earthquakes in the
+  izu peninsula, japan.
+\newblock \emph{J. Geomag. Geoelectr.}, 32:\penalty0 721--739, 1980.
+
+
+\bibitem[Azeredo(2013)]{Azeredo_2013}
+M.~M. Azeredo.
+\newblock \emph{Modelagem Matem\'atica e Computacional da Propaga\c{c}\~ao de
+  Ondas S\'ismicas em Meios Poroel\'asticos Estratificados}.
+\newblock PhD thesis, Universidade Estadual do Norte Fluminense, 2013.
+
+\bibitem[Baruch(2013)]{baruch_2013}
+E.~M. Baruch.
+\newblock The classical hankel transform in the kirillov model of discrete
+  series.
+\newblock \emph{Integral Transforms and Special Functions}, 24, 2013.
+%\newblock \doi{10.1080/10652469.2012.691097}.
+
+\bibitem[Bueno(2015)]{bueno_2015}
+A.~D. Bueno.
+\newblock \emph{Programa\c{c}\~ao Orientada a Objeto com C++}.
+\newblock Novatec, 2015.
+
+\bibitem[Butkov(1988)]{butkov_88}
+E.~Butkov.
+\newblock \emph{F\'isica Matem\'atica}.
+\newblock LTC, 1988.
+
+\bibitem[Chew(1995)]{chew}
+W.~C. Chew.
+\newblock \emph{Waves and Fields in Inhomogeneous Media}.
+\newblock IEEE PRESS, 1995.
+
+\bibitem[Dunkin and Eringen(1963)]{eringen_1963}
+J.W. Dunkin and A.C. Eringen.
+\newblock On the propagation of waves in an electromagnetic elastic solid.
+\newblock \emph{International Journal of Engineering Science}, 1, 1963.
+
+\bibitem[Savit(1988)]{dobrin_88}
+M.~B.~Dobrin e~C.~H.~Savit.
+\newblock \emph{Introduction to Geophysical Prospecting}.
+\newblock McGraw-Hill, 1988.
+
+\bibitem[Farlow(1993)]{farlow_93}
+S.~J. Farlow.
+\newblock \emph{Partial Differential Equations for Scientists and Engineers}.
+\newblock Dover, 1993.
+
+\bibitem[Fatianov and Mikhailenko(1989)]{Mikhailenko_89}
+A.G. Fatianov and B.G. Mikhailenko.
+\newblock Numerically-analytical method for calculation of theoretical
+  seismograms in layered-inhomogeneous anelastic media.
+\newblock \emph{In Proceedings of the 7 th International Mathematical
+  Geophysics Seminar held at the Free University of Berlin}, 1989.
+
+\bibitem[Griffiths(1999)]{griffiths}
+D.~J. Griffiths.
+\newblock \emph{Introduction to Electrodynamics}.
+\newblock Prentice-Hall, 1999.
+
+\bibitem[Lang(1986)]{lang_1986}
+S.~Lang.
+\newblock \emph{Introduction to Linear Algebra}.
+\newblock Springer, 1986.
+
+\bibitem[Lebedev and Cloud(2003)]{lebedev_2003}
+L.~P. Lebedev and M.~J. Cloud.
+\newblock \emph{Tensor Analysis}.
+\newblock World Scientific Publishing, 2003.
+
+\bibitem[Mikhailenko and Soboleva(1997)]{mikhailenko_97}
+B.~G. Mikhailenko and O.~N. Soboleva.
+\newblock Mathematical modeling of seismomagnetic efects arising in the seismic
+  wave motion in the earth's constant magnetic field.
+\newblock \emph{Appl. Math. Lett.}, 10\penalty0 (3):\penalty0 47--51, 1997.
+
+\bibitem[Miranda(2016)]{miranda_2016}
+M.~R. S.~T. Miranda.
+\newblock \emph{M\'etodo Matricial em Modelagem Poroel\'astica: Modelo de
+  Biot-JKD}.
+\newblock UENF, 2016.
+
+\bibitem[Novacki(1983)]{Novacki_83}
+W.~Novacki.
+\newblock Electromagnetic efects in solid bodies.
+\newblock \emph{In Panstwowe Wydawnictwo Naukowe}, 10, 1983.
+
+\bibitem[Oliveira(2018)]{oliveira_2018}
+I.~B. Oliveira.
+\newblock \emph{Modelagem de Propaga\c{c}\~ao das Ondas El\'asticas em Meios
+  Porosos 1D: Modelo de Biot vs. Biot-JKD}.
+\newblock UENF, 2018.
+
+\bibitem[Pinho(2018)]{pinho_2018}
+D.~C. Pinho.
+\newblock \emph{Fundamentos de Magneto-Elasticidade}.
+\newblock UENF, 2018.
+
+\bibitem[Pride(1994)]{pride_94}
+S.~Pride.
+\newblock Governing equations for the coupled electromagnetics and acustics of
+  porous media.
+\newblock \emph{Physical Review B}, 1994.
+
+\bibitem[Ursin(1983)]{Ursin-1983}
+B.~Ursin.
+\newblock Review of elastic and electromagnetic wave propagation in
+  horizontally layered media.
+\newblock \emph{The Leading Edge}, 48, 08 1983.
+
+\bibitem[Weyl(1919)]{weyl_19}
+H.~Weyl.
+\newblock Ausbreitung elektromagnetischen wellen ueber einem ebenen leiter.
+\newblock \emph{Annalen der Physik}, 1919.
+
+\bibitem[White e Zhou(2006)]{White_Zhou_2006}
+B.S. White e M.~Zhou.
+\newblock Eletroseismic prospecting in layered media.
+\newblock \emph{Society for Industrial and Applied Mathematics}, 67\penalty0
+  (1):\penalty0 69--98, 2006.
+
+\bibitem[Blanc(2013)]{Blanc_13}
+Blanc, E.
+\newblock Time-Domain Numerical Modeling of Poroelastic Waves: The Biot-JKD
+Model with Fractional Derivatives.
+\newblock \emph{Tese (Doutorado) — AIX-Marseille Université}, December 2013.
+
+\bibitem[Sharma(2008)]{sharma_08}
+Sharma, M. D.
+\newblock Wave Propagation in Thermoelastic Saturated Porous Medium.
+\newblock \emph{J. Earth Syst. Sci.}, 117\penalty0
+  (6):\penalty0 951--958, 2008.
+
+\end{thebibliography}
+
+\end{document}

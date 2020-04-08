@@ -1,40 +1,146 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Dunkin and Eringen(1963)]{erigen_1963}
-J.W. Dunkin and A.C. Eringen.
+%\bibitem[aaaa({\natexlab{a}})]{abnt-etal-cite=2}
+%aaaa, {\natexlab{a}}.
+
+%\bibitem[aaaa({\natexlab{b}})]{abnt-etal-list=0}
+%aaaa, {\natexlab{b}}.
+
+%\bibitem[aaaa({\natexlab{c}})]{abnt-etal-text=it}
+%aaaa, {\natexlab{c}}.
+
+%\bibitem[aaaa({\natexlab{d}})]{abnt-url-package=url}
+%aaaa, {\natexlab{d}}.
+
+\bibitem[Cukavac(2008)]{Cukavac_2008}
+M.~S. Cukavac.
+\newblock Seismomagnetic insvestigations in kopaonik area.
+\newblock \emph{MGB}, 2008.
+
+\bibitem[e~A.C.~Eringen(1963)]{eringen_1963}
+J.W.~Dunkin e~A.C.~Eringen.
 \newblock On the propagation of waves in an electromagnetic elastic solid.
 \newblock \emph{International Journal of Engineering Science}, 1, 1963.
 \newblock \doi{10.1016/0020-7225(63)90004-1}.
 \newblock URL
   \url{http://gen.lib.rus.ec/scimag/index.php?s=10.1016/0020-7225(63)90004-1}.
 
+\bibitem[e~J.~Tromp(1998)]{dahlem}
+F.~A.~Dahlem e~J.~Tromp.
+\newblock \emph{Theoretical Global Seismology}.
+\newblock Princeton University Press, 1998.
+
+\bibitem[e~O.~N.~Soboleva(1997)]{Mikhailenko_1997}
+B.~G.~Mikhailenko e~O.~N.~Soboleva.
+\newblock Mathematical modeling of seismomagnetic efects arising in the seismic
+  wave motion in the earth's constant magnetic field.
+\newblock \emph{Applied Mathematics Lettures}, 10\penalty0 (3):\penalty0
+  47--51, 1997.
+
+\bibitem[e~V.~A.~Pilipenko(1997)]{surkov_97}
+V.~V.~Surkov e~V.~A.~Pilipenko.
+\newblock Magnetic effects due to earthquakes and underground explosions: a
+  review.
+\newblock \emph{Annali di Geofisica}, XL\penalty0 (2):\penalty0 227--239, 1997.
+
 \bibitem[Eringen(1962)]{Eringen_1962}
 A.~C. Eringen.
 \newblock \emph{Nonlinear Theory of Continuous Media}.
 \newblock McGraw-Hill New York, 1962.
 
-\bibitem[Mikhailenko and Soboleva(1997)]{Mikhailenko_1997}
-B.~G. Mikhailenko and O.~N. Soboleva.
-\newblock Mathematical modeling of seismomagnetic efects arising in the seismic
-  wave motion in the earth's constant magnetic field.
-\newblock \emph{Applied Mathematics Lettures}, 10\penalty0 (3):\penalty0
-  47--51, 1997.
+\bibitem[Griffiths(1999)]{griffiths}
+D.~J. Griffiths.
+\newblock \emph{Introduction to Electrodynamics}.
+\newblock Prentice-Hall, 1999.
+
+\bibitem[Guglielmi(1986a)]{guglielmi_86a}
+A.~V. Guglielmi.
+\newblock Magnetoelastic waves.
+\newblock \emph{Izv. Akad. Nauk SSSR, Fizika Zemli}, 7\penalty0 (112):\penalty0
+  •, 1986a.
+
+\bibitem[Guglielmi(1986b)]{guglielmi_86b}
+A.~V. Guglielmi.
+\newblock Excitation of oscillations of the electromagnetic field by elastic
+  waves in the conducting body.
+\newblock \emph{Geomagn. Aeron.}, 27\penalty0 (3):\penalty0 467--470, 1986b.
+
+\bibitem[Jackson(1999)]{jackson_classical_1999}
+J.~D. Jackson.
+\newblock \emph{Classical electrodynamics}.
+\newblock Wiley, New York, {NY}, 3rd ed. edition, 1999.
+\newblock ISBN 9780471309321.
+\newblock URL \url{http://cdsweb.cern.ch/record/490457}.
+
+\bibitem[Knopoff(1955)]{Knopoff_1955}
+E.~L. Knopoff.
+\newblock The interaction between elastic waves motions and magnetic field in
+  electrical conductors.
+\newblock \emph{J. Geophys. Res.}, 60\penalty0 (4):\penalty0 617--629, 1955.
+
+\bibitem[L.~S.~Yerzhanov(1985)]{yerzhanov_85}
+T.~E. Nasynbaev e A. V.~Bushuev L.~S.~Yerzhanov, A. K.~Kurskeev.
+\newblock Geomagnetics observations during the massa experiments.
+\newblock \emph{Izv. Akad. Nauk SSSR, Fizika Zemli}, 11:\penalty0 80--82, 1985.
+
+\bibitem[Liu(2002)]{liu}
+I.~S. Liu.
+\newblock \emph{Continuum Mechanics}.
+\newblock Spring-Verlag, Berlim-Heidelberg, 2002.
 
 \bibitem[Sadovsky(1980)]{Sadovsky_1980}
 M.A. Sadovsky.
 \newblock Electro magnetic precursors of earthquakes.
 \newblock \emph{Dokl. Acad. Nauka}, 1980.
 
-\bibitem[S.V.~Anisimov and Goncharov(1985)]{Anisimov_1985}
-E.A. Ivanov M.V. Pedanov N.N.Rusakov V.A.~Troizhkya S.V.~Anisimov,
-  M.B.~Gokhberg and V.E. Goncharov.
+\bibitem[Slawinski(2007)]{slawinski}
+M.~A. Slawinski.
+\newblock \emph{Waves And rays in elastic continua}.
+\newblock World Scientific Publishing Company, 2 edition, 2007.
+\newblock ISBN 9789814289009,9814289000.
+\newblock URL
+  \url{http://gen.lib.rus.ec/book/index.php?md5=4B1483CD09E5DE0051F6053338032FE6}.
+
+\bibitem[Sommerfeld(1952)]{sommerfeld_52}
+A.~Sommerfeld.
+\newblock Electrodynamics.
+\newblock \emph{Academic Press}, 1952.
+
+\bibitem[Stacey(1964)]{stacey_64}
+F.~D. Stacey.
+\newblock Seismo-magnetic effect.
+\newblock \emph{Pure Applied Geophysics}, 58\penalty0 (11):\penalty0 5--23,
+  1964.
+
+\bibitem[Surkov(1989a)]{surkov_89a}
+V.~V. Surkov.
+\newblock Local changes in geomagnetics and geoeletrics fields under rocks
+  deformation near the earth surface.
+\newblock \emph{Izv. Akad. Nauk SSSR, Fizika Zemli}, 5:\penalty0 91--96, 1989a.
+
+\bibitem[Surkov(1989b)]{surkov_89b}
+V.~V. Surkov.
+\newblock Distortion of external magnetic field by a longitudinal acoustic
+  wave.
+\newblock \emph{Magnetic Hydro-Dynamics}, 2:\penalty0 9--12, 1989b.
+
+\bibitem[S.V.~Anisimov(1985)]{Anisimov_1985}
+E.A. Ivanov M.V. Pedanov N.N.Rusakov V.A. Troizhkya e V.E.~Goncharov
+  S.V.~Anisimov, M.B.~Gokhberg.
 \newblock Short period oscillations of electromagnetic field of the earth after
   explosion.
 \newblock \emph{Dokl. Acad. Nauka}, 281\penalty0 (3):\penalty0 556--559, 1985.
+
+\bibitem[T.~Rikitake(1980)]{Rikitake_80}
+H.~Tanaka N. Ohshiman Y. Sasai Y. Ishikawa S. Koyama M. Kawamura e K.~Ohchi
+  T.~Rikitake, Y.~Honkura.
+\newblock Changes in the geomagnetic field associated with earthquakes in the
+  izu peninsula, japan.
+\newblock \emph{J. Geomag. Geoelectr.}, 32:\penalty0 721--739, 1980.
 
 \end{thebibliography}
